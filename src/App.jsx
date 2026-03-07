@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const SG_MAP = "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1400&q=80";
 const HK_MAP = "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=1400&q=80";
+const PATRICK_IMG = "/Firefly_GeminiFlash_picture%20of%20a%20white%2040%20year%20old%20clean%20shaven%20man%20in%20smart%20casual%20clothes%20with%20dark%20hai%20966416%20(1).png";
 
 function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
   const [hovered, setHovered] = useState(false);
@@ -15,82 +16,93 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
         position: "relative",
         overflow: "hidden",
         cursor: "pointer",
-        minHeight: "calc(100vh - 62px)",
+        minHeight: "calc(100vh - 130px)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-end",
         transition: "flex 0.45s cubic-bezier(0.4,0,0.2,1)",
       }}
     >
+      {/* Background photo - crisp, barely blurred */}
       <div style={{
         position: "absolute", inset: 0,
         backgroundImage: `url(${mapUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        filter: hovered ? "blur(2px) brightness(0.35)" : "blur(4px) brightness(0.25)",
-        transform: "scale(1.05)",
-        transition: "filter 0.4s ease",
+        filter: hovered ? "blur(0px) brightness(0.55)" : "blur(1px) brightness(0.65)",
+        transform: "scale(1.03)",
+        transition: "filter 0.4s ease, transform 0.4s ease",
       }} />
+      {/* Subtle colour tint overlay */}
       <div style={{
         position: "absolute", inset: 0,
-        background: hovered ? accent + "44" : accent + "22",
-        transition: "background 0.4s ease",
+        background: `linear-gradient(to top, ${accent}cc 0%, ${accent}22 50%, transparent 100%)`,
+        transition: "opacity 0.4s ease",
       }} />
+      {/* Flag centred in upper portion */}
       <div style={{
-        position: "relative", zIndex: 2,
-        display: "flex", flexDirection: "column",
-        alignItems: "center", gap: "28px",
-        padding: "48px",
-        textAlign: "center",
+        position: "absolute",
+        top: "50%", left: "50%",
+        transform: hovered
+          ? "translate(-50%, -60%) scale(1.15)"
+          : "translate(-50%, -60%) scale(1)",
+        fontSize: "clamp(80px, 10vw, 130px)",
+        lineHeight: 1,
+        filter: "drop-shadow(0 6px 32px rgba(0,0,0,0.7))",
+        transition: "transform 0.4s cubic-bezier(0.4,0,0.2,1)",
+        zIndex: 2,
       }}>
-        <div style={{
-          fontSize: "clamp(90px, 11vw, 140px)",
-          lineHeight: 1,
-          filter: "drop-shadow(0 6px 32px rgba(0,0,0,0.6))",
-          transform: hovered ? "scale(1.1) translateY(-6px)" : "scale(1)",
-          transition: "transform 0.4s cubic-bezier(0.4,0,0.2,1)",
-        }}>
-          {flag}
-        </div>
+        {flag}
+      </div>
+      {/* City name + button at bottom of panel */}
+      <div style={{
+        position: "relative", zIndex: 3,
+        display: "flex", flexDirection: "column",
+        alignItems: "center", gap: "16px",
+        padding: "0 40px 52px",
+        textAlign: "center",
+        width: "100%",
+      }}>
         <h2 style={{
           margin: 0,
           fontFamily: "'Playfair Display', Georgia, serif",
-          fontSize: "clamp(38px, 4.5vw, 68px)",
+          fontSize: "clamp(32px, 4vw, 58px)",
           fontWeight: 700,
           color: "#ffffff",
           letterSpacing: "0.02em",
-          textShadow: "0 2px 20px rgba(0,0,0,0.7)",
+          textShadow: "0 2px 24px rgba(0,0,0,0.8)",
         }}>
           {city}
         </h2>
         <p style={{
           margin: 0,
           fontFamily: "system-ui, -apple-system, sans-serif",
-          fontSize: "clamp(14px, 1.4vw, 17px)",
-          color: "rgba(255,255,255,0.85)",
-          maxWidth: "300px",
+          fontSize: "clamp(13px, 1.3vw, 16px)",
+          color: "rgba(255,255,255,0.9)",
+          maxWidth: "280px",
           lineHeight: 1.6,
-          textShadow: "0 1px 8px rgba(0,0,0,0.8)",
-          opacity: hovered ? 1 : 0.8,
+          textShadow: "0 1px 8px rgba(0,0,0,0.9)",
+          opacity: hovered ? 1 : 0.75,
           transition: "opacity 0.3s ease",
         }}>
           {tagline}
         </p>
         <div style={{
-          padding: "14px 38px",
+          padding: "13px 36px",
           borderRadius: "40px",
-          background: hovered ? "#ffffff" : "rgba(255,255,255,0.12)",
+          background: hovered ? "#ffffff" : "rgba(255,255,255,0.15)",
           color: hovered ? accent : "#ffffff",
           fontFamily: "system-ui, -apple-system, sans-serif",
-          fontWeight: 600,
-          fontSize: "14px",
-          letterSpacing: "0.08em",
+          fontWeight: 700,
+          fontSize: "13px",
+          letterSpacing: "0.1em",
           textTransform: "uppercase",
-          border: "2px solid rgba(255,255,255,0.6)",
+          border: "2px solid rgba(255,255,255,0.7)",
           transition: "all 0.3s ease",
           backdropFilter: "blur(8px)",
-          transform: hovered ? "translateY(-2px)" : "none",
+          transform: hovered ? "translateY(-3px)" : "none",
+          boxShadow: hovered ? "0 8px 32px rgba(0,0,0,0.3)" : "none",
         }}>
           I'm in {city} →
         </div>
@@ -102,31 +114,62 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
 export default function App() {
   return (
     <div style={{ minHeight: "100vh", background: "#0a0c12" }}>
+      {/* NAVBAR - logo only, no city labels */}
       <nav style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-        height: "62px",
-        display: "flex", alignItems: "center", justifyContent: "space-between",
+        height: "68px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         padding: "0 36px",
-        background: "rgba(8,10,18,0.85)",
+        background: "rgba(8,10,18,0.9)",
         backdropFilter: "blur(14px)",
         borderBottom: "1px solid rgba(255,255,255,0.07)",
       }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <span style={{ fontSize: "20px" }}>🚗</span>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <span style={{ fontSize: "22px" }}>🚗</span>
           <span style={{
             fontFamily: "'Playfair Display', Georgia, serif",
-            fontWeight: 700, fontSize: "17px", color: "#fff",
+            fontWeight: 700,
+            fontSize: "clamp(20px, 2.5vw, 28px)",
+            color: "#fff",
+            letterSpacing: "0.01em",
           }}>ExpatAutoAdviser</span>
         </div>
-        <span style={{
-          fontSize: "12px", color: "rgba(255,255,255,0.4)",
-          letterSpacing: "0.1em", textTransform: "uppercase",
-        }}>
-          🇸🇬 Singapore &nbsp;·&nbsp; 🇭🇰 Hong Kong
-        </span>
       </nav>
 
-      <div style={{ display: "flex", minHeight: "100vh", paddingTop: "62px" }}>
+      {/* HERO TITLE */}
+      <div style={{
+        paddingTop: "68px",
+        textAlign: "center",
+        padding: "100px 20px 40px",
+        background: "#0a0c12",
+      }}>
+        <h1 style={{
+          margin: "0 0 12px",
+          fontFamily: "'Playfair Display', Georgia, serif",
+          fontSize: "clamp(40px, 7vw, 96px)",
+          fontWeight: 700,
+          color: "#ffffff",
+          letterSpacing: "-0.01em",
+          lineHeight: 1.1,
+        }}>
+          ExpatAutoAdviser
+        </h1>
+        <p style={{
+          margin: 0,
+          fontFamily: "system-ui, -apple-system, sans-serif",
+          fontSize: "clamp(15px, 1.8vw, 20px)",
+          color: "rgba(255,255,255,0.5)",
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+        }}>
+          Singapore &nbsp;·&nbsp; Hong Kong
+        </p>
+      </div>
+
+      {/* CITY SPLIT */}
+      <div style={{ display: "flex", height: "calc(100vh - 240px)", minHeight: "520px" }}>
         <CityPanel
           city="Singapore"
           flag="🇸🇬"
@@ -135,7 +178,7 @@ export default function App() {
           accent="#e63946"
           href="/singapore"
         />
-        <div style={{ width: "1px", background: "rgba(255,255,255,0.12)", flexShrink: 0, zIndex: 10 }} />
+        <div style={{ width: "2px", background: "rgba(255,255,255,0.15)", flexShrink: 0, zIndex: 10 }} />
         <CityPanel
           city="Hong Kong"
           flag="🇭🇰"
@@ -146,6 +189,7 @@ export default function App() {
         />
       </div>
 
+      {/* PATRICK STRIP */}
       <div style={{
         background: "#0d1117",
         borderTop: "1px solid rgba(255,255,255,0.06)",
@@ -157,7 +201,7 @@ export default function App() {
         flexWrap: "wrap",
       }}>
         <img
-          src="/patrick.png"
+          src={PATRICK_IMG}
           alt="Patrick"
           style={{
             width: "84px", height: "84px",
@@ -190,6 +234,7 @@ export default function App() {
         </div>
       </div>
 
+      {/* NEWSLETTER */}
       <div style={{
         background: "#080b11",
         borderTop: "1px solid rgba(255,255,255,0.04)",
@@ -228,4 +273,4 @@ export default function App() {
       </div>
     </div>
   );
-          }
+      }
