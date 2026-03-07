@@ -166,27 +166,19 @@ export default function App() {
       </div>
 
       {/* Patrick strip */}
-      <div style={{
-        background: "#0d1117",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
-        padding: "52px 40px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: "36px",
-        flexWrap: "wrap",
-      }}>
-        {/* Placeholder portrait — swap src for real Adobe Firefly image later */}
-        <div style={{
-          width: "84px", height: "84px", borderRadius: "50%",
-          background: "linear-gradient(135deg, #2c3e6b 0%, #1a2535 100%)",
-          border: "3px solid rgba(255,255,255,0.15)",
-          flexShrink: 0,
-          display: "flex", alignItems: "center", justifyContent: "center",
-          fontSize: "38px",
-        }}>
-          👨‍💼
-        </div>
+<img
+  src="/patrick.png"
+  alt="Patrick"
+  style={{
+    width: "84px",
+    height: "84px",
+    borderRadius: "50%",
+    objectFit: "cover",
+    objectPosition: "center top",
+    border: "3px solid rgba(255,255,255,0.15)",
+    flexShrink: 0,
+  }}
+/>
         <div style={{ maxWidth: "540px" }}>
           <p style={{
             margin: "0 0 10px",
