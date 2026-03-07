@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const SG_MAP = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Singapore_location_map.svg/800px-Singapore_location_map.svg.png";
-const HK_MAP = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hong_Kong_location_map.svg/800px-Hong_Kong_location_map.svg.png";
+const SG_MAP = "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1400&q=80";
+const HK_MAP = "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=1400&q=80";
 
 function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
   const [hovered, setHovered] = useState(false);
@@ -23,23 +23,20 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
         transition: "flex 0.45s cubic-bezier(0.4,0,0.2,1)",
       }}
     >
-      {/* Blurred map background */}
       <div style={{
         position: "absolute", inset: 0,
         backgroundImage: `url(${mapUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        filter: hovered ? "blur(2px) brightness(0.28)" : "blur(5px) brightness(0.2)",
-        transform: "scale(1.1)",
+        filter: hovered ? "blur(2px) brightness(0.35)" : "blur(4px) brightness(0.25)",
+        transform: "scale(1.05)",
         transition: "filter 0.4s ease",
       }} />
-      {/* Colour tint */}
       <div style={{
         position: "absolute", inset: 0,
-        background: hovered ? accent + "44" : accent + "18",
+        background: hovered ? accent + "44" : accent + "22",
         transition: "background 0.4s ease",
       }} />
-      {/* Content */}
       <div style={{
         position: "relative", zIndex: 2,
         display: "flex", flexDirection: "column",
@@ -47,7 +44,6 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
         padding: "48px",
         textAlign: "center",
       }}>
-        {/* Big flag */}
         <div style={{
           fontSize: "clamp(90px, 11vw, 140px)",
           lineHeight: 1,
@@ -57,7 +53,6 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
         }}>
           {flag}
         </div>
-        {/* City name */}
         <h2 style={{
           margin: 0,
           fontFamily: "'Playfair Display', Georgia, serif",
@@ -73,16 +68,15 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
           margin: 0,
           fontFamily: "system-ui, -apple-system, sans-serif",
           fontSize: "clamp(14px, 1.4vw, 17px)",
-          color: "rgba(255,255,255,0.78)",
+          color: "rgba(255,255,255,0.85)",
           maxWidth: "300px",
           lineHeight: 1.6,
-          textShadow: "0 1px 8px rgba(0,0,0,0.6)",
-          opacity: hovered ? 1 : 0.7,
+          textShadow: "0 1px 8px rgba(0,0,0,0.8)",
+          opacity: hovered ? 1 : 0.8,
           transition: "opacity 0.3s ease",
         }}>
           {tagline}
         </p>
-        {/* CTA */}
         <div style={{
           padding: "14px 38px",
           borderRadius: "40px",
@@ -108,8 +102,6 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, href }) {
 export default function App() {
   return (
     <div style={{ minHeight: "100vh", background: "#0a0c12" }}>
-
-      {/* Navbar */}
       <nav style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         height: "62px",
@@ -134,12 +126,7 @@ export default function App() {
         </span>
       </nav>
 
-      {/* Split hero */}
-      <div style={{
-        display: "flex",
-        minHeight: "100vh",
-        paddingTop: "62px",
-      }}>
+      <div style={{ display: "flex", minHeight: "100vh", paddingTop: "62px" }}>
         <CityPanel
           city="Singapore"
           flag="🇸🇬"
@@ -148,13 +135,7 @@ export default function App() {
           accent="#e63946"
           href="/singapore"
         />
-        {/* Divider */}
-        <div style={{
-          width: "1px",
-          background: "rgba(255,255,255,0.12)",
-          flexShrink: 0,
-          zIndex: 10,
-        }} />
+        <div style={{ width: "1px", background: "rgba(255,255,255,0.12)", flexShrink: 0, zIndex: 10 }} />
         <CityPanel
           city="Hong Kong"
           flag="🇭🇰"
@@ -165,20 +146,28 @@ export default function App() {
         />
       </div>
 
-      {/* Patrick strip */}
-<img
-  src="/patrick.png"
-  alt="Patrick"
-  style={{
-    width: "84px",
-    height: "84px",
-    borderRadius: "50%",
-    objectFit: "cover",
-    objectPosition: "center top",
-    border: "3px solid rgba(255,255,255,0.15)",
-    flexShrink: 0,
-  }}
-/>
+      <div style={{
+        background: "#0d1117",
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        padding: "52px 40px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "36px",
+        flexWrap: "wrap",
+      }}>
+        <img
+          src="/patrick.png"
+          alt="Patrick"
+          style={{
+            width: "84px", height: "84px",
+            borderRadius: "50%",
+            objectFit: "cover",
+            objectPosition: "center top",
+            border: "3px solid rgba(255,255,255,0.15)",
+            flexShrink: 0,
+          }}
+        />
         <div style={{ maxWidth: "540px" }}>
           <p style={{
             margin: "0 0 10px",
@@ -201,7 +190,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* Newsletter bar */}
       <div style={{
         background: "#080b11",
         borderTop: "1px solid rgba(255,255,255,0.04)",
@@ -218,35 +206,26 @@ export default function App() {
           Monthly: COE updates, FRT news, parking tips. None of the noise.
         </p>
         <div style={{ display: "flex", width: "100%", maxWidth: "420px" }}>
-          <input
-            type="email"
-            placeholder="your@email.com"
-            style={{
-              flex: 1, padding: "13px 18px",
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.12)",
-              borderRight: "none", borderRadius: "6px 0 0 6px",
-              color: "#fff", fontSize: "14px", outline: "none",
-            }}
-          />
+          <input type="email" placeholder="your@email.com" style={{
+            flex: 1, padding: "13px 18px",
+            background: "rgba(255,255,255,0.06)",
+            border: "1px solid rgba(255,255,255,0.12)",
+            borderRight: "none", borderRadius: "6px 0 0 6px",
+            color: "#fff", fontSize: "14px", outline: "none",
+          }} />
           <button style={{
             padding: "13px 26px", background: "#e63946",
             color: "#fff", border: "none",
             borderRadius: "0 6px 6px 0",
             fontWeight: 600, fontSize: "13px",
             cursor: "pointer", letterSpacing: "0.05em",
-          }}>
-            Subscribe
-          </button>
+          }}>Subscribe</button>
         </div>
         <p style={{ margin: 0, fontSize: "11px", color: "rgba(255,255,255,0.2)" }}>
           No spam · Unsubscribe anytime ·{" "}
-          <a href="/" style={{ color: "rgba(255,255,255,0.28)", textDecoration: "none" }}>
-            Switch city
-          </a>
+          <a href="/" style={{ color: "rgba(255,255,255,0.28)", textDecoration: "none" }}>Switch city</a>
         </p>
       </div>
-
     </div>
   );
-}
+          }
