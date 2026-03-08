@@ -1,107 +1,86 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const ACCENT = "#2a9d8f";
-const PATRICK_IMG = "/Firefly_GeminiFlash_picture%20of%20a%20white%2040%20year%20old%20clean%20shaven%20man%20in%20smart%20casual%20clothes%20with%20dark%20hai%20966416%20(1).png";
+const guides = [
+  { to: '/hongkong/should-i-get-a-car',  emoji: '🤔', title: 'Should I Get a Car?',  desc: 'HK has a great MTR — but if you live in Sai Kung, South Side or the New Territories, you need a car. Start here.', cta: 'Help me decide →' },
+  { to: '/hongkong/buying-guide',         emoji: '🚗', title: 'Buying Guide',          desc: "New vs used, why most expats buy used, the step-by-step purchase process, and where to find good stock.", cta: 'Read the guide →' },
+  { to: '/hongkong/frt-tax-explained',    emoji: '🧾', title: 'FRT & Tax Explained',   desc: 'First Registration Tax adds 40–115%+ to a new car's price. Understand the bands, exemptions and how to calculate your total cost.', cta: 'Read the guide →' },
+  { to: '/hongkong/insurance-guide',      emoji: '🛡️', title: 'Insurance Guide',       desc: 'Third-party is mandatory. How to transfer your overseas No Claims Bonus and what comprehensive cover costs.', cta: 'Read the guide →' },
+  { to: '/hongkong/mot-maintenance',      emoji: '🔬', title: 'MOT & Maintenance',     desc: 'Cars 7+ years old need an annual roadworthiness test. How to find a good mechanic expats actually trust.', cta: 'Read the guide →' },
+  { to: '/hongkong/licence-conversion',   emoji: '🪪', title: 'Licence Conversion',    desc: 'UK, US, Australian and other licences can convert without a test. Process at the Transport Department, costs and timing.', cta: 'Read the guide →' },
+  { to: '/hongkong/ev-guide',             emoji: '⚡', title: 'EV Guide',              desc: 'FRT concessions for EVs, the One-for-One Replacement Scheme, charging infrastructure across HK.', cta: 'Read the guide →' },
+  { to: '/hongkong/calculators',          emoji: '🧮', title: 'Calculators & Tools',   desc: 'Total ownership cost calculator, FRT calculator, used car true cost estimator, insurance ballpark estimator.', cta: 'Use the tools →' },
+  { to: '/hongkong/garage-finder',        emoji: '🔧', title: 'Garage Finder',         desc: 'Find MOT-approved inspection centres, EV-capable workshops and expat-friendly English-speaking mechanics by district.', cta: 'Find a garage →' },
+];
 
-function Navbar() {
-  return (
-    <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: "68px", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 32px", background: "rgba(8,10,18,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
-      <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
-        <span style={{ fontSize: "20px" }}>🚗</span>
-        <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: "20px", color: "#fff" }}>ExpatAutoAdviser</span>
-      </Link>
-      <div style={{ display: "flex", gap: "8px" }}>
-        <Link to="/singapore" style={{ textDecoration: "none", padding: "6px 16px", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.7)", borderRadius: "20px", fontSize: "13px", fontWeight: 500 }}>🇸🇬 Singapore</Link>
-        <span style={{ padding: "6px 16px", background: ACCENT, color: "#fff", borderRadius: "20px", fontSize: "13px", fontWeight: 600 }}>🇭🇰 Hong Kong</span>
-      </div>
-    </nav>
-  );
-}
-
-function Card({ icon, title, desc, href, cta }) {
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", flexDirection: "column", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "28px", gap: "12px", transition: "all 0.2s ease" }}
-      onMouseEnter={e => { e.currentTarget.style.background = "rgba(42,157,143,0.08)"; e.currentTarget.style.borderColor = "rgba(42,157,143,0.3)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-      onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.04)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; e.currentTarget.style.transform = "none"; }}>
-      <span style={{ fontSize: "32px" }}>{icon}</span>
-      <h3 style={{ margin: 0, fontFamily: "'Playfair Display',Georgia,serif", fontSize: "20px", fontWeight: 700, color: "#fff" }}>{title}</h3>
-      <p style={{ margin: 0, fontSize: "14px", color: "rgba(255,255,255,0.6)", lineHeight: 1.6 }}>{desc}</p>
-      <span style={{ marginTop: "auto", fontSize: "13px", color: ACCENT, fontWeight: 600 }}>{cta} →</span>
-    </a>
-  );
-}
-
-function InfoBox({ label, value, sub }) {
-  return (
-    <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "12px", padding: "20px 24px" }}>
-      <p style={{ margin: "0 0 4px", fontSize: "11px", color: "rgba(255,255,255,0.4)", letterSpacing: "0.08em", textTransform: "uppercase" }}>{label}</p>
-      <p style={{ margin: "0 0 4px", fontFamily: "'Playfair Display',Georgia,serif", fontSize: "24px", fontWeight: 700, color: "#fff" }}>{value}</p>
-      {sub && <p style={{ margin: 0, fontSize: "12px", color: "rgba(255,255,255,0.45)" }}>{sub}</p>}
-    </div>
-  );
-}
+const NUM = [
+  ['FRT on new car', '40–115%+'],
+  ['Used car (3yr sedan)', 'HKD $150–350k'],
+  ['Petrol', 'HKD $24–27/L'],
+  ['Monthly parking (HK Island)', 'HKD $2–6k'],
+];
 
 export default function HongKong() {
   return (
-    <div style={{ minHeight: "100vh", background: "#0a0c12", color: "#fff", fontFamily: "system-ui,sans-serif" }}>
-      <Navbar />
-      {/* HERO */}
-      <div style={{ paddingTop: "68px", background: "linear-gradient(180deg, #0d1117 0%, #0a0c12 100%)" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto", padding: "64px 32px 48px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
-            <span style={{ fontSize: "52px" }}>🇭🇰</span>
-            <div>
-              <h1 style={{ margin: 0, fontFamily: "'Playfair Display',Georgia,serif", fontSize: "clamp(36px,5vw,64px)", fontWeight: 700, color: "#fff", lineHeight: 1.1 }}>Cars in Hong Kong</h1>
-              <p style={{ margin: "8px 0 0", fontSize: "16px", color: "rgba(255,255,255,0.5)" }}>The expat guide to buying, FRT, MOT & driving in the SAR</p>
-            </div>
+    <div style={{ minHeight: '100vh', background: '#fafaf9', fontFamily: 'Inter, sans-serif' }}>
+
+      {/* Navbar */}
+      <nav style={{ background: '#1e3a5f', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 56, position: 'sticky', top: 0, zIndex: 50 }}>
+        <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: 18, letterSpacing: '-0.01em' }}>ExpatAutoAdviser</Link>
+        <div style={{ display: 'flex', gap: 10 }}>
+          <Link to="/singapore" style={{ background: 'rgba(255,255,255,0.12)', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>🇸🇬 Singapore</Link>
+          <span style={{ background: '#0d9488', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600 }}>🇭🇰 Hong Kong</span>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <div style={{ background: 'linear-gradient(135deg, #134e4a 0%, #0f766e 100%)', padding: '64px 32px 52px', textAlign: 'center' }}>
+        <p style={{ color: '#5eead4', fontWeight: 700, fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 14 }}>Hong Kong</p>
+        <h1 style={{ color: 'white', fontSize: 46, fontWeight: 800, margin: '0 0 16px', lineHeight: 1.1 }}>Cars in Hong Kong</h1>
+        <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 18, maxWidth: 540, margin: '0 auto 36px', lineHeight: 1.65 }}>The expat guide to buying, insuring and running a car in the city.</p>
+        <div style={{ background: 'rgba(13,148,136,0.15)', border: '1px solid rgba(13,148,136,0.4)', borderRadius: 10, padding: '16px 24px', maxWidth: 600, margin: '0 auto', textAlign: 'left' }}>
+          <span style={{ color: '#5eead4', fontWeight: 700, fontSize: 13 }}>Patrick's take: </span>
+          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14, lineHeight: 1.65 }}>In HK I bought — I lived in Sai Kung and the MTR was useless to me. But on HK Island? I'd probably have skipped it. The right answer depends entirely on where you live. The guides below will walk you through every decision.</span>
+        </div>
+      </div>
+
+      {/* Key numbers bar */}
+      <div style={{ background: '#0d3d39', padding: '18px 32px', display: 'flex', justifyContent: 'center', gap: 48, flexWrap: 'wrap', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        {NUM.map(([label, val]) => (
+          <div key={label} style={{ textAlign: 'center' }}>
+            <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{label}</div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 15, marginTop: 3 }}>{val}</div>
           </div>
-          <div style={{ background: "rgba(42,157,143,0.1)", border: "1px solid rgba(42,157,143,0.25)", borderRadius: "12px", padding: "16px 20px", fontSize: "14px", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
-            <strong style={{ color: ACCENT }}>Patrick's take:</strong> HK is a genuine car ownership city — no COE lottery, right-hand drive, and brilliant mountain roads. The FRT and annual fees are the complexity. Here's my full breakdown.
-          </div>
+        ))}
+      </div>
+
+      {/* Guides grid */}
+      <div style={{ maxWidth: 1040, margin: '0 auto', padding: '52px 24px 64px' }}>
+        <h2 style={{ fontSize: 24, fontWeight: 800, color: '#1e3a5f', marginBottom: 6 }}>All Hong Kong Guides</h2>
+        <p style={{ color: '#6b7280', fontSize: 15, marginBottom: 36, lineHeight: 1.6 }}>Everything you need, written from experience — not guesswork.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(288px, 1fr))', gap: 18 }}>
+          {guides.map(({ to, emoji, title, desc, cta }) => (
+            <Link key={to} to={to} style={{ textDecoration: 'none' }}>
+              <div
+                style={{ background: 'white', border: '1.5px solid #e5e7eb', borderRadius: 12, padding: '26px 28px', height: '100%', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', transition: 'border-color 0.15s, box-shadow 0.15s' }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = '#0d9488'; e.currentTarget.style.boxShadow = '0 4px 18px rgba(13,148,136,0.1)'; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = '#e5e7eb'; e.currentTarget.style.boxShadow = 'none'; }}
+              >
+                <div style={{ fontSize: 30, marginBottom: 12 }}>{emoji}</div>
+                <h3 style={{ fontSize: 17, fontWeight: 700, color: '#1e3a5f', margin: '0 0 9px', lineHeight: 1.3 }}>{title}</h3>
+                <p style={{ fontSize: 14, color: '#6b7280', lineHeight: 1.6, margin: '0 0 18px', flexGrow: 1 }}>{desc}</p>
+                <span style={{ color: '#0d9488', fontWeight: 600, fontSize: 14 }}>{cta}</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 
-      {/* KEY NUMBERS */}
-      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 32px 48px" }}>
-        <h2 style={{ fontFamily: "'Playfair Display',Georgia,serif", fontSize: "28px", fontWeight: 700, marginBottom: "20px", color: "#fff" }}>Key Numbers (2025)</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "16px" }}>
-          <InfoBox label="FRT (First Reg. Tax)" value="43.1–115%" sub="On taxable value by band" />
-          <InfoBox label="Annual licence fee" value="HK$5,512+" sub="Private car, 1500cc+" />
-          <InfoBox label="MOT (every 1 or 2 yrs)" value="~HK$500–800" sub="At DVLA-approved centres" />
-          <InfoBox label="Petrol (98 RON)" value="HK$20–22/L" sub="May 2025 avg" />
-          <InfoBox label="Monthly parking (CBD)" value="HK$3–6k" sub="Covered private space" />
-          <InfoBox label="Tunnel toll (Cross-Harbour)" value="HK$20–60" sub="By time of day" />
-        </div>
-      </div>
-
-      {/* MAIN GUIDES */}
-      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 32px 48px" }}>
-        <h2 style={{ fontFamily: "'Playfair Display',Georgia,serif", fontSize: "28px", fontWeight: 700, marginBottom: "20px", color: "#fff" }}>Expat Car Guides</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "20px" }}>
-          <Card icon="🏷️" title="First Registration Tax" desc="How FRT is calculated across the 4 tax bands, how to estimate your total landed cost, and EV exemptions." href="https://www.td.gov.hk/en/public_services/licences_and_permits/vehicle_registration/index.html" cta="TD guide" />
-          <Card icon="🔍" title="Buying a Used Car" desc="Where to find used cars in HK, how to run a vehicle history check, and what to inspect before signing." href="https://www.hkcartrader.com" cta="Search listings" />
-          <Card icon="🛡️" title="Car Insurance" desc="Third-party vs comprehensive, insurer options, and how to transfer your UK no-claims bonus to HK." href="https://www.aia.com.hk" cta="Compare quotes" />
-          <Card icon="🔧" title="Annual MOT" desc="Where to get your annual vehicle examination, what fails, and the difference between 1-year and 2-year licences." href="https://www.td.gov.hk/en/public_services/licences_and_permits/vehicle_licences/index.html" cta="Book MOT" />
-          <Card icon="📋" title="Driving Licence" desc="Converting a UK licence at the Transport Department — the form, fee, and same-day turnaround process." href="https://www.td.gov.hk/en/public_services/licences_and_permits/driving_licences/index.html" cta="TD process" />
-          <Card icon="🚗" title="EV in Hong Kong" desc="Waived FRT for EVs, charger network by district, and the full monthly cost comparison vs petrol." href="https://www.ev.gov.hk" cta="EV portal" />
-        </div>
-      </div>
-
-      {/* PATRICK STRIP */}
-      <div style={{ background: "#0d1117", borderTop: "1px solid rgba(255,255,255,0.06)", padding: "48px 40px", display: "flex", alignItems: "center", justifyContent: "center", gap: "32px", flexWrap: "wrap" }}>
-        <img src={PATRICK_IMG} alt="Patrick" style={{ width: "72px", height: "72px", borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: "3px solid rgba(42,157,143,0.4)" }} />
-        <div style={{ maxWidth: "520px" }}>
-          <p style={{ margin: "0 0 8px", fontFamily: "'Playfair Display',Georgia,serif", fontSize: "18px", color: "#fff", lineHeight: 1.6, fontStyle: "italic" }}>"HK was my first car ownership experience in Asia. The FRT calculation tripped me up at first, but once you understand the bands it's actually more predictable than Singapore's COE auction."</p>
-          <p style={{ margin: 0, fontSize: "11px", color: "rgba(255,255,255,0.3)", letterSpacing: "0.06em", textTransform: "uppercase" }}>Patrick · London → Singapore → Hong Kong</p>
-        </div>
-      </div>
-
-      {/* FOOTER NAV */}
-      <div style={{ background: "#080b11", borderTop: "1px solid rgba(255,255,255,0.04)", padding: "28px 40px", display: "flex", justifyContent: "center", gap: "24px", flexWrap: "wrap" }}>
-        <Link to="/" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none", fontSize: "13px" }}>← Home</Link>
-        <Link to="/singapore" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none", fontSize: "13px" }}>← Singapore</Link>
-        <a href="https://www.td.gov.hk" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none", fontSize: "13px" }}>HK Transport Dept</a>
-      </div>
+      {/* Footer */}
+      <footer style={{ borderTop: '1px solid #e5e7eb', padding: '24px 32px', textAlign: 'center' }}>
+        <p style={{ color: '#9ca3af', fontSize: 13, margin: 0 }}>
+          ExpatAutoAdviser &middot; <Link to="/" style={{ color: '#9ca3af' }}>Switch city</Link>
+        </p>
+      </footer>
     </div>
   );
 }
