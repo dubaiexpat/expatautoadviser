@@ -20,6 +20,10 @@ const ROUTES = [
   '/hongkong/mot-maintenance',
   '/hongkong/licence-conversion',
   '/hongkong/ev-guide',
+  '/singapore/calculators',
+  '/singapore/garage-finder',
+  '/hongkong/calculators',
+  '/hongkong/garage-finder',
 ];
 
 const template = fs.readFileSync(path.join(__dirname, 'dist/index.html'), 'utf-8');
