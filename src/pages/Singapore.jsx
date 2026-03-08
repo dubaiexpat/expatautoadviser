@@ -1,107 +1,74 @@
 import { Link } from "react-router-dom";
 
-const ACCENT = "#e63946";
-const PATRICK_IMG = "/Firefly_GeminiFlash_picture%20of%20a%20white%2040%20year%20old%20clean%20shaven%20man%20in%20smart%20casual%20clothes%20with%20dark%20hai%20966416%20(1).png";
-
-function Navbar() {
-  return (
-    <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: "68px", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 32px", background: "rgba(8,10,18,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
-      <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
-        <span style={{ fontSize: "20px" }}>🚗</span>
-        <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: "20px", color: "#fff" }}>ExpatAutoAdviser</span>
-      </Link>
-      <div style={{ display: "flex", gap: "8px" }}>
-        <span style={{ padding: "6px 16px", background: ACCENT, color: "#fff", borderRadius: "20px", fontSize: "13px", fontWeight: 600 }}>🇸🇬 Singapore</span>
-        <Link to="/hongkong" style={{ textDecoration: "none", padding: "6px 16px", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.7)", borderRadius: "20px", fontSize: "13px", fontWeight: 500 }}>🇭🇰 Hong Kong</Link>
-      </div>
-    </nav>
-  );
-}
-
-function Card({ icon, title, desc, href, cta }) {
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "flex", flexDirection: "column", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "28px", gap: "12px", transition: "all 0.2s ease", cursor: "pointer" }}
-      onMouseEnter={e => { e.currentTarget.style.background = "rgba(230,57,70,0.08)"; e.currentTarget.style.borderColor = "rgba(230,57,70,0.3)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-      onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.04)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; e.currentTarget.style.transform = "none"; }}>
-      <span style={{ fontSize: "32px" }}>{icon}</span>
-      <h3 style={{ margin: 0, fontFamily: "'Playfair Display',Georgia,serif", fontSize: "20px", fontWeight: 700, color: "#fff" }}>{title}</h3>
-      <p style={{ margin: 0, fontSize: "14px", color: "rgba(255,255,255,0.6)", lineHeight: 1.6 }}>{desc}</p>
-      <span style={{ marginTop: "auto", fontSize: "13px", color: ACCENT, fontWeight: 600 }}>{cta} →</span>
-    </a>
-  );
-}
-
-function InfoBox({ label, value, sub }) {
-  return (
-    <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "12px", padding: "20px 24px" }}>
-      <p style={{ margin: "0 0 4px", fontSize: "11px", color: "rgba(255,255,255,0.4)", letterSpacing: "0.08em", textTransform: "uppercase" }}>{label}</p>
-      <p style={{ margin: "0 0 4px", fontFamily: "'Playfair Display',Georgia,serif", fontSize: "24px", fontWeight: 700, color: "#fff" }}>{value}</p>
-      {sub && <p style={{ margin: 0, fontSize: "12px", color: "rgba(255,255,255,0.45)" }}>{sub}</p>}
-    </div>
-  );
-}
-
 export default function Singapore() {
+  const guides = [
+    { to: "/singapore/should-i-get-a-car", emoji: "🤔", title: "Should I Get a Car?", desc: "Honest answer: depends on where you live and how long you're staying. Start here.", label: "Help me decide →" },
+    { to: "/singapore/leasing-guide", emoji: "📋", title: "Leasing Guide", desc: "How leasing works, what's bundled, typical costs, and how to choose a lease company.", label: "Read the guide →" },
+    { to: "/singapore/insurance-guide", emoji: "🛡️", title: "Insurance Guide", desc: "Why insurance is almost always bundled in leases — and what to check when it's not.", label: "Read the guide →" },
+    { to: "/singapore/licence-conversion", emoji: "🪪", title: "Licence Conversion", desc: "Which nationalities convert without a test, step-by-step Traffic Police process, costs.", label: "Read the guide →" },
+    { to: "/singapore/ev-guide", emoji: "⚡", title: "EV Guide", desc: "EVs are rising fast in Singapore lease fleets. EEAI incentives, charging, popular models.", label: "Read the guide →" },
+    { to: "/singapore/calculators", emoji: "🧮", title: "Calculators & Tools", desc: "Lease cost estimator, COE buy vs lease comparison, ERP estimator, licence eligibility checker.", label: "Use the tools →" },
+    { to: "/singapore/garage-finder", emoji: "🔧", title: "Garage Finder", desc: "Find expat-friendly, English-speaking garages and workshops near your postcode.", label: "Find a garage →" },
+  ];
+
   return (
-    <div style={{ minHeight: "100vh", background: "#0a0c12", color: "#fff", fontFamily: "system-ui,sans-serif" }}>
-      <Navbar />
-      {/* HERO */}
-      <div style={{ paddingTop: "68px", background: "linear-gradient(180deg, #0d1117 0%, #0a0c12 100%)" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto", padding: "64px 32px 48px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
-            <span style={{ fontSize: "52px" }}>🇸🇬</span>
-            <div>
-              <h1 style={{ margin: 0, fontFamily: "'Playfair Display',Georgia,serif", fontSize: "clamp(36px,5vw,64px)", fontWeight: 700, color: "#fff", lineHeight: 1.1 }}>Cars in Singapore</h1>
-              <p style={{ margin: "8px 0 0", fontSize: "16px", color: "rgba(255,255,255,0.5)" }}>The expat guide to leasing, insuring & driving in the Lion City</p>
-            </div>
+    <div style={{ minHeight: "100vh", background: "#fafaf9", fontFamily: "Inter, sans-serif" }}>
+      {/* Nav */}
+      <nav style={{ background: "#1e3a5f", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56 }}>
+        <Link to="/" style={{ color: "white", textDecoration: "none", fontWeight: 700, fontSize: 18 }}>ExpatAutoAdviser</Link>
+        <div style={{ display: "flex", gap: 12 }}>
+          <span style={{ background: "#e8341c", color: "white", padding: "6px 16px", borderRadius: 20, fontSize: 13, fontWeight: 600 }}>🇸🇬 Singapore</span>
+          <Link to="/hongkong" style={{ background: "rgba(255,255,255,0.15)", color: "white", padding: "6px 16px", borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: "none" }}>🇭🇰 Hong Kong</Link>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <div style={{ background: "linear-gradient(135deg, #1e3a5f 0%, #2d5282 100%)", padding: "60px 32px 48px", textAlign: "center" }}>
+        <p style={{ color: "#e8341c", fontWeight: 700, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 12 }}>Singapore</p>
+        <h1 style={{ color: "white", fontSize: 48, fontWeight: 800, margin: "0 0 16px", lineHeight: 1.15 }}>Cars in Singapore</h1>
+        <p style={{ color: "rgba(255,255,255,0.75)", fontSize: 18, maxWidth: 560, margin: "0 auto 32px", lineHeight: 1.6 }}>The expat guide to leasing, insuring and driving in the Lion City</p>
+        <div style={{ background: "rgba(232,52,28,0.15)", border: "1px solid rgba(232,52,28,0.4)", borderRadius: 10, padding: "16px 24px", maxWidth: 620, margin: "0 auto", textAlign: "left" }}>
+          <span style={{ color: "#e8341c", fontWeight: 700, fontSize: 14 }}>Patrick's take: </span>
+          <span style={{ color: "rgba(255,255,255,0.9)", fontSize: 14, lineHeight: 1.6 }}>Singapore has no car ownership culture for most expats — leasing is almost always cheaper and less stressful than buying. The COE system makes ownership a gamble on short-term contracts. Here's everything I wish I'd known in 2019.</span>
+        </div>
+      </div>
+
+      {/* Key numbers bar */}
+      <div style={{ background: "#1e3a5f", padding: "20px 32px", display: "flex", justifyContent: "center", gap: 48, flexWrap: "wrap" }}>
+        {[["COE (Cat A)", "~SGD $104k"], ["Monthly lease (sedan)", "SGD $1.8–2.5k"], ["Petrol", "~SGD $3.10/L"], ["Annual road tax", "SGD $742+"]].map(([label, val]) => (
+          <div key={label} style={{ textAlign: "center" }}>
+            <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 11, textTransform: "uppercase", letterSpacing: "0.05em" }}>{label}</div>
+            <div style={{ color: "white", fontWeight: 700, fontSize: 16, marginTop: 2 }}>{val}</div>
           </div>
-          <div style={{ background: "rgba(230,57,70,0.1)", border: "1px solid rgba(230,57,70,0.25)", borderRadius: "12px", padding: "16px 20px", fontSize: "14px", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
-            <strong style={{ color: ACCENT }}>Patrick's take:</strong> Singapore has no car ownership culture for most expats — leasing is almost always cheaper and less stressful than buying. Here's everything I wish I'd known in 2019.
-          </div>
+        ))}
+      </div>
+
+      {/* Guides grid */}
+      <div style={{ maxWidth: 1040, margin: "0 auto", padding: "52px 24px" }}>
+        <h2 style={{ fontSize: 26, fontWeight: 800, color: "#1e3a5f", marginBottom: 8 }}>All Singapore Guides</h2>
+        <p style={{ color: "#6b7280", fontSize: 15, marginBottom: 36 }}>Everything you need, in one place — written from experience, not guesswork.</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: 20 }}>
+          {guides.map(({ to, emoji, title, desc, label }) => (
+            <Link key={to} to={to} style={{ textDecoration: "none" }}>
+              <div style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 12, padding: 28, height: "100%", boxSizing: "border-box", transition: "box-shadow 0.15s", cursor: "pointer", display: "flex", flexDirection: "column" }}
+                onMouseEnter={e => e.currentTarget.style.boxShadow = "0 4px 20px rgba(30,58,95,0.12)"}
+                onMouseLeave={e => e.currentTarget.style.boxShadow = "none"}>
+                <div style={{ fontSize: 32, marginBottom: 12 }}>{emoji}</div>
+                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1e3a5f", margin: "0 0 10px" }}>{title}</h3>
+                <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6, margin: "0 0 20px", flexGrow: 1 }}>{desc}</p>
+                <span style={{ color: "#e8341c", fontWeight: 600, fontSize: 14 }}>{label}</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 
-      {/* KEY NUMBERS */}
-      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 32px 48px" }}>
-        <h2 style={{ fontFamily: "'Playfair Display',Georgia,serif", fontSize: "28px", fontWeight: 700, marginBottom: "20px", color: "#fff" }}>Key Numbers (2025)</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "16px" }}>
-          <InfoBox label="COE Cat A (≤1600cc)" value="~S$97k" sub="Valid 10 years" />
-          <InfoBox label="COE Cat B (>1600cc)" value="~S$110k" sub="Valid 10 years" />
-          <InfoBox label="Monthly lease (sedan)" value="S$1.8–2.5k" sub="All-in with insurance" />
-          <InfoBox label="Annual road tax" value="S$742+" sub="Based on engine cc" />
-          <InfoBox label="Petrol (95 RON)" value="S$2.80–3.10/L" sub="May 2025 avg" />
-          <InfoBox label="ERP peak" value="S$1–6/pass" sub="Zone & time dependent" />
-        </div>
-      </div>
-
-      {/* MAIN GUIDES */}
-      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 32px 48px" }}>
-        <h2 style={{ fontFamily: "'Playfair Display',Georgia,serif", fontSize: "28px", fontWeight: 700, marginBottom: "20px", color: "#fff" }}>Expat Car Guides</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "20px" }}>
-          <Card icon="🔑" title="Leasing vs Buying" desc="Why most Singapore expats lease, not buy — the COE premium, resale risk, and true cost breakdown." href="https://www.sgcarmart.com" cta="Compare options" />
-          <Card icon="🛡️" title="Car Insurance" desc="The 3 main insurer groups, NCD transfers from the UK, and how to avoid getting overcharged as a newcomer." href="https://www.directasia.com" cta="Get quotes" />
-          <Card icon="🅿️" title="ERP & Parking" desc="How EZ-Link and In-Vehicle Units work, carpark rates by zone, and the IU installation process." href="https://onemotoring.lta.gov.sg" cta="LTA guide" />
-          <Card icon="📋" title="Driving Licence" desc="Converting your UK driving licence to a Singapore one — what to bring to the CDC and how long it takes." href="https://onemotoring.lta.gov.sg/content/onemotoring/home/driving/getting_a_driving_licence/overseas_licence_holders.html" cta="LTA process" />
-          <Card icon="🔧" title="Servicing & Workshops" desc="Authorised vs independent workshops, what to budget for annual servicing, and the best independents by brand." href="https://www.carousell.sg/cars" cta="Find workshops" />
-          <Card icon="🌍" title="Driving to Malaysia" desc="The VEP sticker, Causeway vs Second Link, and everything you need for a JB day trip or weekend away." href="https://www.vtl.ica.gov.sg" cta="Cross-border guide" />
-        </div>
-      </div>
-
-      {/* PATRICK STRIP */}
-      <div style={{ background: "#0d1117", borderTop: "1px solid rgba(255,255,255,0.06)", padding: "48px 40px", display: "flex", alignItems: "center", justifyContent: "center", gap: "32px", flexWrap: "wrap" }}>
-        <img src={PATRICK_IMG} alt="Patrick" style={{ width: "72px", height: "72px", borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: "3px solid rgba(230,57,70,0.4)" }} />
-        <div style={{ maxWidth: "520px" }}>
-          <p style={{ margin: "0 0 8px", fontFamily: "'Playfair Display',Georgia,serif", fontSize: "18px", color: "#fff", lineHeight: 1.6, fontStyle: "italic" }}>"After 3 years in Singapore I switched from buying to leasing halfway through — it was the right call. The COE system makes ownership a gamble for expats on short-term contracts."</p>
-          <p style={{ margin: 0, fontSize: "11px", color: "rgba(255,255,255,0.3)", letterSpacing: "0.06em", textTransform: "uppercase" }}>Patrick · London → Singapore → Hong Kong</p>
-        </div>
-      </div>
-
-      {/* FOOTER NAV */}
-      <div style={{ background: "#080b11", borderTop: "1px solid rgba(255,255,255,0.04)", padding: "28px 40px", display: "flex", justifyContent: "center", gap: "24px", flexWrap: "wrap" }}>
-        <Link to="/" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none", fontSize: "13px" }}>← Home</Link>
-        <Link to="/hongkong" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none", fontSize: "13px" }}>Hong Kong →</Link>
-        <a href="https://onemotoring.lta.gov.sg" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none", fontSize: "13px" }}>LTA OneMOtoring</a>
-      </div>
+      {/* Footer */}
+      <footer style={{ borderTop: "1px solid #e5e7eb", padding: "24px 32px", textAlign: "center" }}>
+        <p style={{ color: "#9ca3af", fontSize: 13, margin: 0 }}>
+          ExpatAutoAdviser · <Link to="/" style={{ color: "#9ca3af" }}>Switch city</Link>
+        </p>
+      </footer>
     </div>
   );
 }
