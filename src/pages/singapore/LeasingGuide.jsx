@@ -1,0 +1,84 @@
+import Layout from "../../components/Layout";
+import PatrickTip from "../../components/PatrickTip";
+import { Link } from "react-router-dom";
+
+export default function SGLeasingGuide() {
+  return (
+    <Layout
+      city="sg"
+      title="Singapore Car Leasing Guide for Expats"
+      description="Everything expats need to know about leasing a car in Singapore: costs, what's bundled, COE explained, how to choose a lease company, and what to watch out for."
+    >
+      <div style={{ maxWidth: 760 }}>
+        <p style={{ color: "#e8341c", fontWeight: 600, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>Singapore</p>
+        <h1 style={{ fontSize: 36, fontWeight: 800, color: "#1e3a5f", marginBottom: 16, lineHeight: 1.2 }}>
+          Singapore Car Leasing Guide for Expats
+        </h1>
+        <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 40 }}>
+          Leasing is by far the most sensible option for expats in Singapore. Here's exactly how it works, what you should expect to pay, and the pitfalls to avoid.
+        </p>
+
+        <h2 style={h2}>Why lease rather than buy?</h2>
+        <p style={body}>Buying a car in Singapore requires a Certificate of Entitlement (COE) — a government-issued permit that lets you own a car for 10 years. The price is set by open bidding and currently sits at <strong>SGD $104,000–$124,000</strong> for a normal car. That's before you've paid for the car itself.</p>
+        <p style={body}>For a typical expat on a 2–3 year assignment, buying exposes you to significant COE resale risk: if COE prices fall before you leave, your car's value drops sharply. Leasing sidesteps this entirely. You pay a fixed monthly rate, hand the car back, and walk away.</p>
+
+        <h2 style={h2}>What's typically bundled in a Singapore lease?</h2>
+        <div style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, padding: 24, margin: "16px 0 28px" }}>
+          {[
+            ["✅ Comprehensive insurance", "Included in almost all leases"],
+            ["✅ Annual road tax", "Paid by the leasing company"],
+            ["✅ Scheduled servicing", "Manufacturer intervals covered"],
+            ["✅ 24/7 roadside assistance", "Breakdown cover included"],
+            ["✅ Accident support", "Admin and repair coordination"],
+            ["❌ ERP charges", "You pay at the gantry"],
+            ["❌ Petrol", "Your cost"],
+            ["❌ Parking", "Your cost (unless specifically agreed)"],
+          ].map(([item, note]) => (
+            <div key={item} style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid #f3f4f6", gap: 16 }}>
+              <span style={{ fontSize: 15, color: "#374151" }}>{item}</span>
+              <span style={{ fontSize: 13, color: "#6b7280" }}>{note}</span>
+            </div>
+          ))}
+        </div>
+
+        <h2 style={h2}>Typical monthly lease costs (2025–26)</h2>
+        <div style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, overflow: "hidden", margin: "16px 0 28px" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
+            <thead><tr style={{ background: "#f9fafb" }}><th style={th}>Category</th><th style={th}>Example Models</th><th style={th}>Monthly Cost</th></tr></thead>
+            <tbody>
+              {[["Economy", "Toyota Vios, Honda Jazz", "SGD $1,400–$1,800"],["Mid-range", "Toyota Camry, Mazda CX-5", "SGD $2,200–$2,800"],["Premium", "BMW 3 Series, Mercedes C-Class", "SGD $3,200–$4,500"],["Luxury", "BMW 5 Series, Mercedes E-Class", "SGD $4,500–$6,500+"]].map(([cat, models, cost]) => (
+                <tr key={cat} style={{ borderTop: "1px solid #f3f4f6" }}><td style={td}><strong>{cat}</strong></td><td style={td}>{models}</td><td style={{...td, fontWeight:600, color:"#1e3a5f"}}>{cost}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style={h2}>How to choose a leasing company</h2>
+        <ul style={{...body, paddingLeft:20}}>
+          <li style={{marginBottom:8}}><strong>Fleet age</strong> — ask the average age of cars in the category.</li>
+          <li style={{marginBottom:8}}><strong>Replacement car policy</strong> — what happens if your car is in for repair?</li>
+          <li style={{marginBottom:8}}><strong>24/7 contact</strong> — test it. Send a WhatsApp at 9pm.</li>
+          <li style={{marginBottom:8}}><strong>Expat-friendly contracts</strong> — some companies are experienced with early termination, others aren't.</li>
+        </ul>
+
+        <h2 style={h2}>Watch-outs in a lease contract</h2>
+        <div style={{ background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 10, padding: 24, margin: "16px 0 28px" }}>
+          {[["Mileage limits", "Most economy leases cap at 15,000–20,000 km/year. Excess mileage charges add up fast if you're doing Malaysia trips."],["Early termination fees", "Typically 2–3 months' rental. Factor this in if your assignment might end early."],["Damage assessment on return", "Clarify what constitutes fair wear and tear vs chargeable damage before you sign."],["Insurance excess", "Some leases have a high excess (e.g. SGD $3,000). Know this number."]].map(([heading, detail]) => (
+            <div key={heading} style={{marginBottom:16}}><strong style={{fontSize:14,color:"#991b1b"}}>⚠️ {heading}</strong><p style={{margin:"4px 0 0",fontSize:14,color:"#374151",lineHeight:1.6}}>{detail}</p></div>
+          ))}
+        </div>
+
+        <h2 style={h2}>COE explained</h2>
+        <p style={body}>The Certificate of Entitlement is a 10-year permit to own a vehicle in Singapore. When you lease, the leasing company holds the COE risk — not you. This is one of the strongest arguments for leasing over buying as an expat.</p>
+        <p style={body}>Use our <Link to="/singapore/calculators" style={{color:"#e8341c"}}>COE Buy vs Lease Calculator</Link> to see what a car would actually cost you to own vs lease over a typical 3-year expat stint.</p>
+
+        <PatrickTip city="sg">"I went with a mid-size for my Singapore lease and never regretted it. One thing I wish I'd checked earlier: the mileage cap. I did two Malaysia road trips and came back nervous about the odometer. Check yours before you book the hotel in Penang."</PatrickTip>
+      </div>
+    </Layout>
+  );
+}
+
+const h2 = {fontSize:22, fontWeight:700, color:"#1e3a5f", margin:"36px 0 12px"};
+const body = {fontSize:16, color:"#374151", lineHeight:1.8, marginBottom:16};
+const th = {padding:"12px 16px", textAlign:"left", fontWeight:600, fontSize:13, color:"#374151"};
+const td = {padding:"12px 16px", color:"#374151", fontSize:14};
