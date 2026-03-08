@@ -42,9 +42,10 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, to, isMobile }) {
 }
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-  
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    setIsMobile(window.innerWidth < 640);
     const handleResize = () => setIsMobile(window.innerWidth < 640);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
