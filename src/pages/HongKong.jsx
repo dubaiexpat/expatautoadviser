@@ -1,29 +1,29 @@
 import { Link } from 'react-router-dom';
 
 const guides = [
-  { to: '/hongkong/should-i-get-a-car',  emoji: '🤔', title: 'Should I Get a Car?',  desc: 'HK has a great MTR — but if you live in Sai Kung, South Side or the New Territories, you need a car. Start here.', cta: 'Help me decide →' },
-  { to: '/hongkong/buying-guide',         emoji: '🚗', title: 'Buying Guide',          desc: "New vs used, why most expats buy used, the step-by-step purchase process, and where to find good stock.", cta: 'Read the guide →' },
-  { to: '/hongkong/frt-tax-explained',    emoji: '🧾', title: 'FRT & Tax Explained',   desc: 'First Registration Tax adds 40–115%+ to a new car's price. Understand the bands, exemptions and how to calculate your total cost.', cta: 'Read the guide →' },
-  { to: '/hongkong/insurance-guide',      emoji: '🛡️', title: 'Insurance Guide',       desc: 'Third-party is mandatory. How to transfer your overseas No Claims Bonus and what comprehensive cover costs.', cta: 'Read the guide →' },
-  { to: '/hongkong/mot-maintenance',      emoji: '🔬', title: 'MOT & Maintenance',     desc: 'Cars 7+ years old need an annual roadworthiness test. How to find a good mechanic expats actually trust.', cta: 'Read the guide →' },
-  { to: '/hongkong/licence-conversion',   emoji: '🪪', title: 'Licence Conversion',    desc: 'UK, US, Australian and other licences can convert without a test. Process at the Transport Department, costs and timing.', cta: 'Read the guide →' },
-  { to: '/hongkong/ev-guide',             emoji: '⚡', title: 'EV Guide',              desc: 'FRT concessions for EVs, the One-for-One Replacement Scheme, charging infrastructure across HK.', cta: 'Read the guide →' },
-  { to: '/hongkong/calculators',          emoji: '🧮', title: 'Calculators & Tools',   desc: 'Total ownership cost calculator, FRT calculator, used car true cost estimator, insurance ballpark estimator.', cta: 'Use the tools →' },
-  { to: '/hongkong/garage-finder',        emoji: '🔧', title: 'Garage Finder',         desc: 'Find MOT-approved inspection centres, EV-capable workshops and expat-friendly English-speaking mechanics by district.', cta: 'Find a garage →' },
+  { to: '/hongkong/should-i-get-a-car', emoji: '🤔', title: 'Should I Get a Car?',  desc: "HK has a great MTR — but if you live in Sai Kung, the South Side or the New Territories, you need a car. Start here.", cta: 'Help me decide →' },
+  { to: '/hongkong/buying-guide',        emoji: '🚗', title: 'Buying Guide',          desc: "New vs used, why most expats buy used, the full purchase process, and where to find good stock.", cta: 'Read the guide →' },
+  { to: '/hongkong/frt-tax-explained',   emoji: '🧾', title: 'FRT & Tax Explained',  desc: "First Registration Tax adds 40–115%+ to a new car's price. Understand the bands, EV exemptions and your total cost.", cta: 'Read the guide →' },
+  { to: '/hongkong/insurance-guide',     emoji: '🛡️', title: 'Insurance Guide',       desc: "Third-party is mandatory. How to transfer your overseas No Claims Bonus and what comprehensive cover costs.", cta: 'Read the guide →' },
+  { to: '/hongkong/mot-maintenance',     emoji: '🔬', title: 'MOT & Maintenance',     desc: "Cars 7+ years old need an annual roadworthiness test. How to find a mechanic expats actually trust.", cta: 'Read the guide →' },
+  { to: '/hongkong/licence-conversion',  emoji: '🪪', title: 'Licence Conversion',    desc: "UK, US, Australian and other licences convert without a test. Process, costs and timing at the Transport Department.", cta: 'Read the guide →' },
+  { to: '/hongkong/ev-guide',            emoji: '⚡', title: 'EV Guide',              desc: "FRT concessions for EVs, the One-for-One Replacement Scheme, and charging infrastructure across HK.", cta: 'Read the guide →' },
+  { to: '/hongkong/calculators',         emoji: '🧮', title: 'Calculators & Tools',   desc: "FRT calculator, total ownership cost, used car true cost estimator, insurance ballpark estimator.", cta: 'Use the tools →' },
+  { to: '/hongkong/garage-finder',       emoji: '🔧', title: 'Garage Finder',         desc: "Find MOT-approved centres, EV-capable workshops and expat-friendly English-speaking mechanics by district.", cta: 'Find a garage →' },
 ];
 
 const NUM = [
   ['FRT on new car', '40–115%+'],
-  ['Used car (3yr sedan)', 'HKD $150–350k'],
+  ['Used sedan (3yr)', 'HKD $150–350k'],
   ['Petrol', 'HKD $24–27/L'],
-  ['Monthly parking (HK Island)', 'HKD $2–6k'],
+  ['Parking (HK Island)', 'HKD $2–6k/mo'],
 ];
 
 export default function HongKong() {
   return (
     <div style={{ minHeight: '100vh', background: '#fafaf9', fontFamily: 'Inter, sans-serif' }}>
 
-      {/* Navbar */}
+      {/* Navbar — same navy as Singapore */}
       <nav style={{ background: '#1e3a5f', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 56, position: 'sticky', top: 0, zIndex: 50 }}>
         <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: 18, letterSpacing: '-0.01em' }}>ExpatAutoAdviser</Link>
         <div style={{ display: 'flex', gap: 10 }}>
@@ -32,19 +32,19 @@ export default function HongKong() {
         </div>
       </nav>
 
-      {/* Hero */}
-      <div style={{ background: 'linear-gradient(135deg, #134e4a 0%, #0f766e 100%)', padding: '64px 32px 52px', textAlign: 'center' }}>
+      {/* Hero — navy gradient, matching Singapore exactly, teal accents */}
+      <div style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #2d5282 100%)', padding: '64px 32px 52px', textAlign: 'center' }}>
         <p style={{ color: '#5eead4', fontWeight: 700, fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 14 }}>Hong Kong</p>
         <h1 style={{ color: 'white', fontSize: 46, fontWeight: 800, margin: '0 0 16px', lineHeight: 1.1 }}>Cars in Hong Kong</h1>
-        <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 18, maxWidth: 540, margin: '0 auto 36px', lineHeight: 1.65 }}>The expat guide to buying, insuring and running a car in the city.</p>
+        <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 18, maxWidth: 540, margin: '0 auto 36px', lineHeight: 1.65 }}>The expat guide to buying, insuring and running a car in the SAR.</p>
         <div style={{ background: 'rgba(13,148,136,0.15)', border: '1px solid rgba(13,148,136,0.4)', borderRadius: 10, padding: '16px 24px', maxWidth: 600, margin: '0 auto', textAlign: 'left' }}>
           <span style={{ color: '#5eead4', fontWeight: 700, fontSize: 13 }}>Patrick's take: </span>
           <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14, lineHeight: 1.65 }}>In HK I bought — I lived in Sai Kung and the MTR was useless to me. But on HK Island? I'd probably have skipped it. The right answer depends entirely on where you live. The guides below will walk you through every decision.</span>
         </div>
       </div>
 
-      {/* Key numbers bar */}
-      <div style={{ background: '#0d3d39', padding: '18px 32px', display: 'flex', justifyContent: 'center', gap: 48, flexWrap: 'wrap', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+      {/* Key numbers bar — darker navy strip, same as Singapore */}
+      <div style={{ background: '#162d4a', padding: '18px 32px', display: 'flex', justifyContent: 'center', gap: 48, flexWrap: 'wrap', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
         {NUM.map(([label, val]) => (
           <div key={label} style={{ textAlign: 'center' }}>
             <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{label}</div>
