@@ -5,8 +5,30 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npx react-snap",
     "preview": "vite preview"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "minifyHtml": { "collapseWhitespace": false, "removeComments": false },
+    "crawl": true,
+    "routes": [
+      "/",
+      "/singapore",
+      "/singapore/should-i-get-a-car",
+      "/singapore/leasing-guide",
+      "/singapore/insurance-guide",
+      "/singapore/licence-conversion",
+      "/singapore/ev-guide",
+      "/hongkong",
+      "/hongkong/should-i-get-a-car",
+      "/hongkong/buying-guide",
+      "/hongkong/frt-tax-explained",
+      "/hongkong/insurance-guide",
+      "/hongkong/mot-maintenance",
+      "/hongkong/licence-conversion",
+      "/hongkong/ev-guide"
+    ]
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -15,6 +37,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
+    "react-snap": "^1.23.0",
     "vite": "^5.0.8"
   }
 }
