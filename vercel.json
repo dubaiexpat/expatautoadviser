@@ -1,7 +1,14 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
-    { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "index, follow" }] },
-    { "source": "/sitemap.xml", "headers": [{ "key": "Content-Type", "value": "application/xml" }] }
-  ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "index, follow" }]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [{ "key": "Content-Type", "value": "application/xml" }]
+    }
+  ]
 }
