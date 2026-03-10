@@ -32,23 +32,23 @@ const ROUTES = [
 
 const META = {
   '/': {
-    title: 'Expat Auto Adviser — Singapore & Hong Kong Car Guides',
+    title: 'Expat Auto Adviser â Singapore & Hong Kong Car Guides',
     desc: 'Free, independent guides to buying, leasing and insuring a car in Singapore and Hong Kong. Written by expats, for expats.',
     type: 'website',
   },
   '/singapore': {
     title: 'Cars in Singapore: The Complete Expat Guide | ExpatAutoAdviser',
-    desc: 'Everything expats need to know about cars in Singapore — leasing, buying, COE, insurance and licence conversion. Independent advice.',
+    desc: 'Everything expats need to know about cars in Singapore â leasing, buying, COE, insurance and licence conversion. Independent advice.',
     type: 'website',
   },
   '/singapore/should-i-get-a-car': {
     title: 'Should I Get a Car in Singapore? Honest Expat Advice',
-    desc: 'Cars in Singapore are expensive — but so is your time. Our honest breakdown helps you decide if a car makes financial sense for your lifestyle.',
+    desc: 'Cars in Singapore are expensive â but so is your time. Our honest breakdown helps you decide if a car makes financial sense for your lifestyle.',
     type: 'article',
     faq: [
       { q: 'Do expats need a car in Singapore?', a: 'It depends on where you live. In central Singapore the MRT is excellent and most expats do not need a car. In areas like Bukit Timah, Seletar or the East Coast, or if you have school run duties, a car is often worth it.' },
-      { q: 'How much does a car cost per month in Singapore?', a: 'All-in for a mid-range lease: roughly SGD $2,000–$3,500/month including insurance and fuel. Ownership costs more when you factor in COE and depreciation.' },
-      { q: 'Is leasing or buying better for expats in Singapore?', a: 'For most expats on 2–5 year assignments, leasing is better — no COE risk, no need to sell, insurance often bundled. Buying makes sense if you plan to stay 7+ years.' },
+      { q: 'How much does a car cost per month in Singapore?', a: 'All-in for a mid-range lease: roughly SGD $2,000â$3,500/month including insurance and fuel. Ownership costs more when you factor in COE and depreciation.' },
+      { q: 'Is leasing or buying better for expats in Singapore?', a: 'For most expats on 2â5 year assignments, leasing is better â no COE risk, no need to sell, insurance often bundled. Buying makes sense if you plan to stay 7+ years.' },
     ],
   },
   '/singapore/leasing-guide': {
@@ -56,9 +56,9 @@ const META = {
     desc: "How car leasing works in Singapore, what's bundled in a lease, typical monthly costs from economy to premium, and how to pick the right company.",
     type: 'article',
     faq: [
-      { q: 'Can expats lease a car in Singapore?', a: 'Yes. Most leasing companies accept expats with a valid Employment Pass or S-Pass. You need a valid driving licence and usually a deposit of 1–2 months.' },
+      { q: 'Can expats lease a car in Singapore?', a: 'Yes. Most leasing companies accept expats with a valid Employment Pass or S-Pass. You need a valid driving licence and usually a deposit of 1â2 months.' },
       { q: 'What is included in a Singapore car lease?', a: 'Full-service leases typically include road tax, maintenance, 24/7 roadside assistance and often insurance. Always clarify what is bundled before signing.' },
-      { q: 'How long is a typical car lease in Singapore?', a: 'Most expat leases run 12–36 months. Shorter leases exist but cost significantly more per month.' },
+      { q: 'How long is a typical car lease in Singapore?', a: 'Most expat leases run 12â36 months. Shorter leases exist but cost significantly more per month.' },
     ],
   },
   '/singapore/buying-guide': {
@@ -67,8 +67,8 @@ const META = {
     type: 'article',
     faq: [
       { q: 'Can foreigners buy a car in Singapore?', a: 'Yes. Any valid Employment Pass or Dependant Pass holder can buy a car in Singapore. You need a valid driving licence and SingPass for the registration process.' },
-      { q: 'What is COE in Singapore?', a: 'The Certificate of Entitlement is a government quota system controlling vehicle numbers. Required for every new car, it is bid fortnightly and currently costs SGD $80,000–$130,000+ depending on category.' },
-      { q: 'What happens to my car when I leave Singapore?', a: 'You can sell privately, trade in to a dealer, or export. Most expats sell 6–12 months before departure to avoid a fire sale. Dealers will buy at any time.' },
+      { q: 'What is COE in Singapore?', a: 'The Certificate of Entitlement is a government quota system controlling vehicle numbers. Required for every new car, it is bid fortnightly and currently costs SGD $80,000â$130,000+ depending on category.' },
+      { q: 'What happens to my car when I leave Singapore?', a: 'You can sell privately, trade in to a dealer, or export. Most expats sell 6â12 months before departure to avoid a fire sale. Dealers will buy at any time.' },
     ],
   },
   '/singapore/insurance-guide': {
@@ -78,7 +78,7 @@ const META = {
     faq: [
       { q: 'Is car insurance mandatory in Singapore?', a: 'Yes. Third-party liability insurance is a legal requirement. Comprehensive cover is strongly recommended given repair costs and traffic density.' },
       { q: 'Can I transfer my No Claims Discount from overseas?', a: 'Yes, Singapore insurers recognise overseas NCD from many countries including UK, Australia and USA. You need a letter from your previous insurer.' },
-      { q: 'How much does car insurance cost in Singapore?', a: 'For a leased mid-range car, expect SGD $1,500–$3,000/year for comprehensive cover. New and young drivers pay significantly more.' },
+      { q: 'How much does car insurance cost in Singapore?', a: 'For a leased mid-range car, expect SGD $1,500â$3,000/year for comprehensive cover. New and young drivers pay significantly more.' },
     ],
   },
   '/singapore/licence-conversion': {
@@ -87,7 +87,7 @@ const META = {
     type: 'article',
     faq: [
       { q: 'Which countries can convert to a Singapore licence without a test?', a: 'Citizens from most developed countries including UK, USA, Australia, Canada and Germany can convert without a test. Check the Traffic Police website for the current approved list.' },
-      { q: 'How long does licence conversion take in Singapore?', a: 'Typically 1–3 weeks from application at a driving centre, once you have all documents ready.' },
+      { q: 'How long does licence conversion take in Singapore?', a: 'Typically 1â3 weeks from application at a driving centre, once you have all documents ready.' },
       { q: 'Can I drive in Singapore on my foreign licence?', a: 'Yes, for up to 12 months on a valid foreign licence. After that you must convert or obtain a Singapore licence.' },
     ],
   },
@@ -108,17 +108,17 @@ const META = {
   },
   '/hongkong': {
     title: 'Cars in Hong Kong: The Complete Expat Guide | ExpatAutoAdviser',
-    desc: 'Everything expats need to know about cars in Hong Kong — buying, FRT tax, leasing, insurance and licence conversion. Independent advice.',
+    desc: 'Everything expats need to know about cars in Hong Kong â buying, FRT tax, leasing, insurance and licence conversion. Independent advice.',
     type: 'website',
   },
   '/hongkong/should-i-get-a-car': {
     title: 'Should I Get a Car in Hong Kong? Honest Expat Advice',
-    desc: "HK's public transport is exceptional — but so are its hills and school run logistics. Our honest breakdown helps you decide if a car is worth it.",
+    desc: "HK's public transport is exceptional â but so are its hills and school run logistics. Our honest breakdown helps you decide if a car is worth it.",
     type: 'article',
     faq: [
       { q: 'Do expats need a car in Hong Kong?', a: 'In central urban areas (HK Island, Kowloon) the MTR is world-class and most expats do not need a car. In Sai Kung, the South Side or the New Territories, a car makes a significant difference.' },
-      { q: 'How much does a car cost per month in Hong Kong?', a: 'All-in for a mid-range used car: HKD $8,000–$15,000/month including insurance, parking and fuel. Parking alone on HK Island can be HKD $4,000–$6,000/month.' },
-      { q: 'Can I buy a used car in Hong Kong as an expat?', a: 'Yes. Used cars are the norm for expats in HK. There is no equivalent of Singapore COE, though First Registration Tax adds 40–115%+ to new car prices.' },
+      { q: 'How much does a car cost per month in Hong Kong?', a: 'All-in for a mid-range used car: HKD $8,000â$15,000/month including insurance, parking and fuel. Parking alone on HK Island can be HKD $4,000â$6,000/month.' },
+      { q: 'Can I buy a used car in Hong Kong as an expat?', a: 'Yes. Used cars are the norm for expats in HK. There is no equivalent of Singapore COE, though First Registration Tax adds 40â115%+ to new car prices.' },
     ],
   },
   '/hongkong/buying-guide': {
@@ -126,7 +126,7 @@ const META = {
     desc: 'New vs used cars in HK, why most expats buy used, the full purchase process, where to find good stock, and FRT explained simply.',
     type: 'article',
     faq: [
-      { q: 'Why do most expats buy used cars in Hong Kong?', a: 'First Registration Tax adds 40–115%+ to new car prices, making used cars far better value. The used market in HK is large and well-regulated.' },
+      { q: 'Why do most expats buy used cars in Hong Kong?', a: 'First Registration Tax adds 40â115%+ to new car prices, making used cars far better value. The used market in HK is large and well-regulated.' },
       { q: 'Where can I buy a used car in Hong Kong?', a: 'Main options: licensed dealers (most reliable, check TADA membership), private sellers via classifieds, and car auctions. Cheung Sha Wan and Kowloon Bay have dealer clusters.' },
       { q: 'Do I need a HK driving licence to buy a car?', a: 'No, but you need one to drive it. You have 12 months from arrival to drive on a valid overseas licence before needing to convert.' },
     ],
@@ -137,12 +137,12 @@ const META = {
     type: 'article',
     faq: [
       { q: 'Is car leasing popular in Hong Kong?', a: 'Leasing is less common than buying in HK, but growing. It suits expats on shorter assignments who want to avoid the complexity of buying and selling a used car.' },
-      { q: 'What does a car lease include in Hong Kong?', a: 'Full-service leases typically include maintenance, road tax and sometimes insurance. Always check what is excluded — tyres and accident damage are common exclusions.' },
+      { q: 'What does a car lease include in Hong Kong?', a: 'Full-service leases typically include maintenance, road tax and sometimes insurance. Always check what is excluded â tyres and accident damage are common exclusions.' },
     ],
   },
   '/hongkong/frt-tax-explained': {
     title: 'Hong Kong First Registration Tax (FRT) Explained for Expats',
-    desc: 'FRT adds 40–115%+ to new car prices in Hong Kong. Understand the tax bands, EV exemptions, and how to calculate your true total cost.',
+    desc: 'FRT adds 40â115%+ to new car prices in Hong Kong. Understand the tax bands, EV exemptions, and how to calculate your true total cost.',
     type: 'article',
     faq: [
       { q: 'What is First Registration Tax in Hong Kong?', a: 'FRT is levied on all newly registered vehicles. It ranges from 40% on the first HKD $150,000 of taxable value to 115% on higher bands, making new cars very expensive.' },
@@ -237,10 +237,9 @@ for (const route of ROUTES) {
 
   const html = template
     .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
-    .replace('<!--META_TITLE-->', meta.title)
+    .replace(/<!--META_TITLE-->/g, meta.title)
     .replace(/<!--META_DESC-->/g, meta.desc)
     .replace('<!--OG_URL-->', canonicalUrl)
-    .replace('<!--OG_TITLE-->', meta.title)
     .replace('<!--CANONICAL-->', `<link rel="canonical" href="${canonicalUrl}" />`)
     .replace('<!--PAGE_SCHEMA-->', buildSchema(route, meta));
 
