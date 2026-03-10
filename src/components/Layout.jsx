@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import AskPatrick from "./AskPatrick";
 
 export default function Layout({ children, city, title, description }) {
   const location = useLocation();
@@ -35,8 +34,6 @@ export default function Layout({ children, city, title, description }) {
   const navLinks = city === "sg" ? sgLinks : city === "hk" ? hkLinks : [];
   const accentColor = city === "sg" ? "#e8341c" : city === "hk" ? "#0d9488" : "#1e3a5f";
   const cityLabel = city === "sg" ? "🇸🇬 Singapore" : city === "hk" ? "🇭🇰 Hong Kong" : null;
-  // Only show Ask Patrick on individual guide pages (not hub overview pages)
-  const isGuidePage = city && location.pathname.split("/").length > 2;
 
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", minHeight: "100vh", background: "#fafaf9" }}>
@@ -67,7 +64,6 @@ export default function Layout({ children, city, title, description }) {
       )}
       <main style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 24px" }}>
         {children}
-        {isGuidePage && <AskPatrick city={city} />}
       </main>
       <footer style={{ background: "#1e3a5f", color: "rgba(255,255,255,0.7)", padding: "32px 24px", marginTop: 80, fontSize: 13 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
