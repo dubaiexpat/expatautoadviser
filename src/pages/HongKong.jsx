@@ -4,6 +4,7 @@ import CredibilityBar from '../components/CredibilityBar';
 const guides = [
   { to: '/hongkong/should-i-get-a-car', emoji: '🤔', title: 'Should I Get a Car?', desc: "HK has a great MTR — but if you live in Sai Kung, the South Side or the New Territories, you need a car. Start here.", cta: 'Help me decide →' },
   { to: '/hongkong/buying-guide', emoji: '🚗', title: 'Buying Guide', desc: "New vs used, why most expats buy used, the full purchase process, and where to find good stock.", cta: 'Read the guide →' },
+  { to: '/hongkong/leasing-guide', emoji: '📋', title: 'Leasing Guide', desc: "How leasing works in HK, full-service vs operating leases, typical monthly costs, and how to avoid hidden charges.", cta: 'Read the guide →' },
   { to: '/hongkong/frt-tax-explained', emoji: '🧾', title: 'FRT & Tax Explained', desc: "First Registration Tax adds 40–115%+ to a new car's price. Understand the bands, EV exemptions and your total cost.", cta: 'Read the guide →' },
   { to: '/hongkong/insurance-guide', emoji: '🛡️', title: 'Insurance Guide', desc: "Third-party is mandatory. How to transfer your overseas No Claims Bonus and what comprehensive cover costs.", cta: 'Read the guide →' },
   { to: '/hongkong/mot-maintenance', emoji: '🔬', title: 'MOT & Maintenance', desc: "Cars 7+ years old need an annual roadworthiness test. How to find a mechanic expats actually trust.", cta: 'Read the guide →' },
