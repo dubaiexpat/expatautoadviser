@@ -37,37 +37,63 @@ export default function Layout({ children, city, title, description }) {
 
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", minHeight: "100vh", background: "#fafaf9" }}>
-      <header style={{ background: "#1e3a5f", color: "white", padding: "0 24px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: 60 }}>
-          <Link to="/" style={{ color: "white", textDecoration: "none", fontWeight: 700, fontSize: 18, letterSpacing: "-0.3px" }}>ExpatAutoAdviser</Link>
-          <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
-            {cityLabel && (<span style={{ background: accentColor, padding: "4px 12px", borderRadius: 4, fontSize: 13, fontWeight: 600 }}>{cityLabel}</span>)}
-            <Link to="/singapore" style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none", fontSize: 14 }}>Singapore</Link>
-            <Link to="/hongkong" style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none", fontSize: 14 }}>Hong Kong</Link>
+      <header style={{ background: "#1e3a5f", color: "white", padding: "0 16px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56, gap: 8 }}>
+          <Link to="/" style={{ color: "white", textDecoration: "none", fontWeight: 700, fontSize: 16, letterSpacing: "-0.3px", whiteSpace: "nowrap", flexShrink: 0 }}>
+            ExpatAutoAdviser
+          </Link>
+          {/* Only show the OTHER city link — never duplicate the current city */}
+          <div style={{ display: "flex", gap: 8, alignItems: "center", flexShrink: 0 }}>
+            {cityLabel && (
+              <span style={{ background: accentColor, padding: "5px 12px", borderRadius: 20, fontSize: 13, fontWeight: 600, whiteSpace: "nowrap" }}>
+                {cityLabel}
+              </span>
+            )}
+            {city !== "sg" && (
+              <Link to="/singapore" style={{ color: "rgba(255,255,255,0.85)", textDecoration: "none", fontSize: 13, whiteSpace: "nowrap", padding: "5px 10px", borderRadius: 20, background: "rgba(255,255,255,0.1)" }}>
+                🇸🇬 SG
+              </Link>
+            )}
+            {city !== "hk" && (
+              <Link to="/hongkong" style={{ color: "rgba(255,255,255,0.85)", textDecoration: "none", fontSize: 13, whiteSpace: "nowrap", padding: "5px 10px", borderRadius: 20, background: "rgba(255,255,255,0.1)" }}>
+                🇭🇰 HK
+              </Link>
+            )}
           </div>
         </div>
       </header>
+
       {navLinks.length > 0 && (
-        <nav style={{ background: "white", borderBottom: "1px solid #e5e7eb", overflowX: "auto" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 0, padding: "0 24px" }}>
+        <nav style={{ background: "white", borderBottom: "1px solid #e5e7eb", overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+          <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", padding: "0 16px", width: "max-content", minWidth: "100%" }}>
             {navLinks.map(({ to, label }) => {
               const isActive = location.pathname === to;
               return (
-                <Link key={to} to={to} style={{ padding: "12px 14px", textDecoration: "none", fontSize: 13,
-                  fontWeight: isActive ? 600 : 400, color: isActive ? accentColor : "#374151",
+                <Link key={to} to={to} style={{
+                  padding: "12px 12px", textDecoration: "none", fontSize: 13,
+                  fontWeight: isActive ? 600 : 400,
+                  color: isActive ? accentColor : "#374151",
                   borderBottom: isActive ? `2px solid ${accentColor}` : "2px solid transparent",
-                  whiteSpace: "nowrap", transition: "color 0.15s" }}>{label}</Link>
+                  whiteSpace: "nowrap", transition: "color 0.15s",
+                }}>
+                  {label}
+                </Link>
               );
             })}
           </div>
         </nav>
       )}
-      <main style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 24px" }}>
+
+      <main style={{ maxWidth: 1100, margin: "0 auto", padding: "32px 16px 60px" }}>
         {children}
       </main>
-      <footer style={{ background: "#1e3a5f", color: "rgba(255,255,255,0.7)", padding: "32px 24px", marginTop: 80, fontSize: 13 }}>
+
+      <footer style={{ background: "#1e3a5f", color: "rgba(255,255,255,0.7)", padding: "32px 16px", fontSize: 13 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
-          <div><strong style={{ color: "white" }}>ExpatAutoAdviser</strong><br />Honest car advice for expats in Singapore & Hong Kong.</div>
+          <div>
+            <strong style={{ color: "white" }}>ExpatAutoAdviser</strong><br />
+            Honest car advice for expats in Singapore & Hong Kong.
+          </div>
           <div style={{ display: "flex", gap: 20 }}>
             <Link to="/singapore" style={{ color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>Singapore</Link>
             <Link to="/hongkong" style={{ color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>Hong Kong</Link>
