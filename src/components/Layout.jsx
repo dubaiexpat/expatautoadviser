@@ -33,7 +33,7 @@ const mobileCSS = [
   '}',
 ].join('\n');
 
-export default function Layout({ city, active, children }) {
+export default function Layout({ city, active, children, relatedLinks }) {
   const meta = CITY_META[city] || CITY_META.sg;
   const links = NAV_LINKS[city] || NAV_LINKS.sg;
 
@@ -50,7 +50,7 @@ export default function Layout({ city, active, children }) {
         padding: '0 20px', height: '56px', gap: 12,
       }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', flexShrink: 0 }}>
-          <span style={{ fontSize: 20 }}>🚗</span>
+          <span style={{ fontSize: 20 }}>ð</span>
           <span className="eaa-brand-text" style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: 18, color: '#1a1a2e' }}>
             ExpatAutoAdviser
           </span>
@@ -90,6 +90,23 @@ export default function Layout({ city, active, children }) {
       {/* Page content */}
       <main style={{ maxWidth: 780, margin: '0 auto', padding: '32px 20px 80px' }}>
         {children}
+      {relatedLinks && relatedLinks.length > 0 && (
+        <div style={{ marginTop: '40px', borderTop: '2px solid #e5e7eb', paddingTop: '32px' }}>
+          <h2 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '16px', color: '#1a1a2e', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Related Guides</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            {relatedLinks.map(link => (
+              <Link key={link.to} to={link.to} style={{
+                display: 'inline-block', padding: '10px 18px',
+                background: '#eef2ff', borderRadius: '8px',
+                color: '#3730a3', textDecoration: 'none', fontWeight: 600,
+                fontSize: '14px', border: '1px solid #c7d2fe'
+              }}>
+                {link.label} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
       </main>
 
       {/* Footer */}
@@ -98,14 +115,14 @@ export default function Layout({ city, active, children }) {
         padding: '32px 20px', textAlign: 'center',
       }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-          <span style={{ fontSize: 18 }}>🚗</span>
+          <span style={{ fontSize: 18 }}>ð</span>
           <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: 16, color: '#1a1a2e' }}>ExpatAutoAdviser</span>
         </Link>
         <p style={{ margin: '0 0 8px', fontSize: 13, color: '#9ca3af' }}>
           Independent car advice for expats in Singapore and Hong Kong.
         </p>
         <p style={{ margin: 0, fontSize: 12, color: '#d1d5db' }}>
-          © 2025 ExpatAutoAdviser · Not financial advice · Partner links may earn commission
+          Â© 2025 ExpatAutoAdviser Â· Not financial advice Â· Partner links may earn commission
         </p>
       </footer>
     </div>
