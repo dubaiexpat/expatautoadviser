@@ -12,16 +12,16 @@ const good = { background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius:
 const HERO_IMG = "https://images.unsplash.com/photo-1507941097613-9f2157b69235?w=1200&q=80";
 
 const faqItems = [
-  { q: "Is Hong Kong's public transport good enough to go car-free?", a: "For most urban areas — absolutely yes. The MTR is one of the best metro systems in the world: fast, punctual, and cheap. Add the Star Ferry, trams, and minibuses, and central HK is genuinely easier without a car." },
-  { q: "How much does car ownership actually cost per month in Hong Kong?", a: "A rough all-in figure for a mid-range petrol car: loan repayment HKD $10,000, insurance $2,500, fuel $4,000, parking $5,000–$8,000, tunnel tolls $1,000. That's HKD $22,500–$25,500/month. Urban parking alone often costs more than a lease payment." },
-  { q: "Are there areas in HK where a car is basically essential?", a: "Yes — Sai Kung, Clear Water Bay, Clearwater Bay, Discovery Bay (no cars allowed, but ferries), the New Territories, and the southern side of Hong Kong Island. If you're in these areas and have family, a car makes a genuine quality-of-life difference." },
-  { q: "Can I lease a car in Hong Kong?", a: "Yes, though leasing is less common than in Singapore. Operating leases (full-service including insurance and maintenance) are available from several providers for 1–3 year terms. Monthly costs typically range from HKD $7,000 for economy to HKD $22,000+ for premium models." },
-  { q: "What about Uber and taxis? Can I rely on those?", a: "HK taxis are plentiful and cheap by international standards, but there are colour zones and they can be hard to hail on rainy days. Uber operates in HK. For urban dwellers, taxis plus MTR often works out cheaper than owning a car — especially factoring in parking." },
+  { q: "Is Hong Kong's public transport good enough to go car-free?", a: "For most urban areas â absolutely yes. The MTR is one of the best metro systems in the world: fast, punctual, and cheap. Add the Star Ferry, trams, and minibuses, and central HK is genuinely easier without a car." },
+  { q: "How much does car ownership actually cost per month in Hong Kong?", a: "A rough all-in figure for a mid-range petrol car: loan repayment HKD $10,000, insurance $2,500, fuel $4,000, parking $5,000â$8,000, tunnel tolls $1,000. That's HKD $22,500â$25,500/month. Urban parking alone often costs more than a lease payment." },
+  { q: "Are there areas in HK where a car is basically essential?", a: "Yes â Sai Kung, Clear Water Bay, Clearwater Bay, Discovery Bay (no cars allowed, but ferries), the New Territories, and the southern side of Hong Kong Island. If you're in these areas and have family, a car makes a genuine quality-of-life difference." },
+  { q: "Can I lease a car in Hong Kong?", a: "Yes, though leasing is less common than in Singapore. Operating leases (full-service including insurance and maintenance) are available from several providers for 1â3 year terms. Monthly costs typically range from HKD $7,000 for economy to HKD $22,000+ for premium models." },
+  { q: "What about Uber and taxis? Can I rely on those?", a: "HK taxis are plentiful and cheap by international standards, but there are colour zones and they can be hard to hail on rainy days. Uber operates in HK. For urban dwellers, taxis plus MTR often works out cheaper than owning a car â especially factoring in parking." },
 ];
 
 export default function HKShouldIGetACar() {
   return (
-    <Layout city="hk" active="Should I Get a Car?">
+    <Layout city="hk" active="Should I Get a Car?" relatedLinks={[{ label: 'Leasing Guide', to: '/hongkong/leasing-guide' }, { label: 'Buying Guide', to: '/hongkong/buying-guide' }, { label: 'FRT Tax Explained', to: '/hongkong/frt-tax-explained' }, { label: 'Cost Calculator', to: '/hongkong/calculators' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Hong Kong streets" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
@@ -32,7 +32,7 @@ export default function HKShouldIGetACar() {
 
       <p style={{ margin: "0 0 6px", fontSize: 12, fontWeight: 700, color: "#2a9d8f", textTransform: "uppercase", letterSpacing: "0.1em" }}>Hong Kong</p>
       <h1 style={h1}>Should I Get a Car in Hong Kong?</h1>
-      <p style={{ ...body, fontSize: 17, color: "#6b7280" }}>HK's public transport is exceptional — but so are its hills, its sprawl, and its school run logistics. Here's how to decide.</p>
+      <p style={{ ...body, fontSize: 17, color: "#6b7280" }}>HK's public transport is exceptional â but so are its hills, its sprawl, and its school run logistics. Here's how to decide.</p>
 
       <CredibilityBar />
 
@@ -41,18 +41,18 @@ export default function HKShouldIGetACar() {
       </div>
 
       <h2 style={h2}>The real cost of owning a car in Hong Kong</h2>
-      <p style={body}>Hong Kong applies a First Registration Tax (FRT) of 100–115% on top of a car's value — meaning a HKD $200,000 car costs HKD $400,000–$430,000 all-in. Add to that parking (HKD $4,000–$8,000/month in urban areas), fuel (HKD $21–$24/litre), insurance, and tunnel tolls, and the monthly cost of car ownership regularly exceeds HKD $20,000.</p>
-      <p style={body}>For expats on 2–3 year assignments, leasing is almost always a better financial decision than buying. You avoid the FRT exposure and the hassle of selling before you leave.</p>
+      <p style={body}>Hong Kong applies a First Registration Tax (FRT) of 100â115% on top of a car's value â meaning a HKD $200,000 car costs HKD $400,000â$430,000 all-in. Add to that parking (HKD $4,000â$8,000/month in urban areas), fuel (HKD $21â$24/litre), insurance, and tunnel tolls, and the monthly cost of car ownership regularly exceeds HKD $20,000.</p>
+      <p style={body}>For expats on 2â3 year assignments, leasing is almost always a better financial decision than buying. You avoid the FRT exposure and the hassle of selling before you leave.</p>
 
       <h2 style={h2}>When a car makes sense in Hong Kong</h2>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12, margin: "16px 0 28px" }}>
         {[
-          { icon: "🏘️", title: "New Territories / Sai Kung", desc: "Public transport is patchy in many NT areas. A car changes your access to beaches, hiking, and weekend life." },
-          { icon: "🏫", title: "School runs", desc: "Multiple children at different international schools on different schedules — a car becomes almost essential." },
-          { icon: "🐕", title: "Pets or large families", desc: "Dogs can't take the MTR. Large families with kit need the boot space." },
-          { icon: "🌙", title: "Late-night work", desc: "Taxis can be scarce late at night and surge-priced. A car removes that stress." },
-          { icon: "⛰️", title: "The Peak / Mid-Levels", desc: "The escalator helps, but for families with young children, a car gives real freedom on the island." },
-          { icon: "🏖️", title: "Weekend lifestyle", desc: "Sai Kung beaches, Clearwater Bay, Shek O — you need a car to unlock Hong Kong's outdoor lifestyle." },
+          { icon: "ðï¸", title: "New Territories / Sai Kung", desc: "Public transport is patchy in many NT areas. A car changes your access to beaches, hiking, and weekend life." },
+          { icon: "ð«", title: "School runs", desc: "Multiple children at different international schools on different schedules â a car becomes almost essential." },
+          { icon: "ð", title: "Pets or large families", desc: "Dogs can't take the MTR. Large families with kit need the boot space." },
+          { icon: "ð", title: "Late-night work", desc: "Taxis can be scarce late at night and surge-priced. A car removes that stress." },
+          { icon: "â°ï¸", title: "The Peak / Mid-Levels", desc: "The escalator helps, but for families with young children, a car gives real freedom on the island." },
+          { icon: "ðï¸", title: "Weekend lifestyle", desc: "Sai Kung beaches, Clearwater Bay, Shek O â you need a car to unlock Hong Kong's outdoor lifestyle." },
         ].map(({ icon, title, desc }) => (
           <div key={title} style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, padding: "14px 16px" }}>
             <p style={{ margin: "0 0 6px", fontSize: 20 }}>{icon}</p>
@@ -66,7 +66,7 @@ export default function HKShouldIGetACar() {
       <div style={good}>
         <strong>Consider skipping if:</strong> you live in Central, Wan Chai, Causeway Bay, or any walkable urban area; your office is MTR-accessible; you're here for under 2 years; or you don't have children on school runs. HK taxis are cheap by world standards and Uber also operates here.
       </div>
-      <p style={body}>Hong Kong's taxi system is still among the cheapest in any world-class city. A cross-harbour taxi rarely exceeds HKD $200. For occasional use — evenings, weekends, rain days — taxis plus MTR is a perfectly viable strategy.</p>
+      <p style={body}>Hong Kong's taxi system is still among the cheapest in any world-class city. A cross-harbour taxi rarely exceeds HKD $200. For occasional use â evenings, weekends, rain days â taxis plus MTR is a perfectly viable strategy.</p>
 
       <h2 style={h2}>Leasing vs buying vs taxis: a rough comparison</h2>
       <div style={{ overflowX: "auto", margin: "16px 0 28px" }}>
@@ -80,9 +80,9 @@ export default function HKShouldIGetACar() {
           </thead>
           <tbody>
             {[
-              ["Buy (mid-range)", "HKD $20,000–$26,000", "Long stay (5+ yrs), NT families, heavy users"],
-              ["Lease (full-service)", "HKD $10,000–$18,000", "2–4 yr stays, avoid FRT risk, flexibility"],
-              ["Taxis + MTR", "HKD $3,000–$8,000", "Urban dwellers, occasional use, short stays"],
+              ["Buy (mid-range)", "HKD $20,000â$26,000", "Long stay (5+ yrs), NT families, heavy users"],
+              ["Lease (full-service)", "HKD $10,000â$18,000", "2â4 yr stays, avoid FRT risk, flexibility"],
+              ["Taxis + MTR", "HKD $3,000â$8,000", "Urban dwellers, occasional use, short stays"],
               ["MTR pass only", "HKD ~$500", "Central/urban, solo or couple, no school runs"],
             ].map(([option, cost, best], i) => (
               <tr key={i} style={{ borderBottom: "1px solid #f3f4f6", background: i % 2 === 0 ? "white" : "#fafafa" }}>
@@ -96,12 +96,12 @@ export default function HKShouldIGetACar() {
       </div>
 
       <div style={note}>
-        <strong>Leasing tip:</strong> If you're new to HK and unsure whether you need a car, start with a 12-month lease. You get the flexibility to test whether a car improves your daily life — and you avoid committing capital to a car that might not work for your lifestyle.
+        <strong>Leasing tip:</strong> If you're new to HK and unsure whether you need a car, start with a 12-month lease. You get the flexibility to test whether a car improves your daily life â and you avoid committing capital to a car that might not work for your lifestyle.
       </div>
 
       <h2 style={h2}>Our verdict</h2>
       <p style={body}>Urban expats in Central, Sheung Wan, or Wan Chai: you almost certainly don't need a car. The MTR is fast, clean, and omnipresent. Save the money.</p>
-      <p style={body}>Families in Sai Kung, the NT, or with complex school run arrangements: a car will meaningfully improve your quality of life. Lease rather than buy if your assignment is under 4 years — the FRT economics rarely work in your favour on short stays.</p>
+      <p style={body}>Families in Sai Kung, the NT, or with complex school run arrangements: a car will meaningfully improve your quality of life. Lease rather than buy if your assignment is under 4 years â the FRT economics rarely work in your favour on short stays.</p>
       <p style={body}>Mid-levels, the Peak, or southern HK Island: it depends heavily on your specific street and situation. Leasing for 12 months to test is the sensible approach.</p>
 
       <FAQ items={faqItems} city="hk" />
