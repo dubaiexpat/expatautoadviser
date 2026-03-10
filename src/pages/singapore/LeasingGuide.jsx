@@ -1,6 +1,52 @@
 import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
+import AffiliateBox from "../../components/AffiliateBox";
+import FAQ from "../../components/FAQ";
 import { Link } from "react-router-dom";
+
+const leasingPartners = [
+  {
+    name: "Goldbell Fleet Management",
+    desc: "Singapore's largest fleet operator. Wide model range, expat-friendly contracts with early-termination options.",
+    badge: "Popular",
+    url: "#", // Replace with affiliate URL once deal is agreed
+  },
+  {
+    name: "Prime Car Management",
+    desc: "Well-regarded for responsive customer service and flexible mileage packages. Good choice for expats on 2-year contracts.",
+    badge: null,
+    url: "#",
+  },
+  {
+    name: "Carro.co",
+    desc: "Compare lease and buy options side-by-side. Transparent pricing, digital-first process.",
+    badge: "Compare",
+    url: "#",
+  },
+];
+
+const leasingFAQ = [
+  {
+    q: "Do I need a Singapore driving licence to lease a car?",
+    a: "You can drive on a valid foreign licence for up to 12 months from your arrival date. After that, you need a Singapore licence. Most leasing companies will sign a lease with a foreign licence, but check with them first — some require conversion before handing over keys.",
+  },
+  {
+    q: "What happens if my assignment ends early?",
+    a: "Most leases carry an early termination fee of 2–3 months' rental. Some companies, particularly those with experience dealing with expats, offer more flexible terms — worth asking explicitly before you sign. Get the early termination clause in writing.",
+  },
+  {
+    q: "Can I take a leased Singapore car into Malaysia?",
+    a: "Yes, but you must inform your leasing company and check your insurance policy. Most comprehensive policies cover Malaysia, but coverage often reduces to third-party-only once you cross the Causeway. Ask for this in writing.",
+  },
+  {
+    q: "How much deposit is typically required?",
+    a: "Usually 1–2 months' rental upfront as a security deposit. This is refunded at the end of the lease if the car is returned in acceptable condition (fair wear and tear).",
+  },
+  {
+    q: "Is it worth leasing an EV in Singapore?",
+    a: "Increasingly yes. EV lease prices have come down significantly as supply has increased. The main consideration is charging — if you don't have overnight charging at home, factor in the cost and hassle of public charging. See our EV Guide for a full breakdown.",
+  },
+];
 
 export default function SGLeasingGuide() {
   return (
@@ -44,41 +90,71 @@ export default function SGLeasingGuide() {
         <h2 style={h2}>Typical monthly lease costs (2025–26)</h2>
         <div style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, overflow: "hidden", margin: "16px 0 28px" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-            <thead><tr style={{ background: "#f9fafb" }}><th style={th}>Category</th><th style={th}>Example Models</th><th style={th}>Monthly Cost</th></tr></thead>
+            <thead><tr style={{ background: "#f9fafb" }}>
+              <th style={th}>Category</th><th style={th}>Example Models</th><th style={th}>Monthly Cost</th>
+            </tr></thead>
             <tbody>
-              {[["Economy", "Toyota Vios, Honda Jazz", "SGD $1,400–$1,800"],["Mid-range", "Toyota Camry, Mazda CX-5", "SGD $2,200–$2,800"],["Premium", "BMW 3 Series, Mercedes C-Class", "SGD $3,200–$4,500"],["Luxury", "BMW 5 Series, Mercedes E-Class", "SGD $4,500–$6,500+"]].map(([cat, models, cost]) => (
-                <tr key={cat} style={{ borderTop: "1px solid #f3f4f6" }}><td style={td}><strong>{cat}</strong></td><td style={td}>{models}</td><td style={{...td, fontWeight:600, color:"#1e3a5f"}}>{cost}</td></tr>
+              {[
+                ["Economy", "Toyota Vios, Honda Jazz", "SGD $1,400–$1,800"],
+                ["Mid-range", "Toyota Camry, Mazda CX-5", "SGD $2,200–$2,800"],
+                ["Premium", "BMW 3 Series, Mercedes C-Class", "SGD $3,200–$4,500"],
+                ["Luxury", "BMW 5 Series, Mercedes E-Class", "SGD $4,500–$6,500+"],
+              ].map(([cat, models, cost]) => (
+                <tr key={cat} style={{ borderTop: "1px solid #f3f4f6" }}>
+                  <td style={td}><strong>{cat}</strong></td>
+                  <td style={td}>{models}</td>
+                  <td style={{ ...td, fontWeight: 600, color: "#1e3a5f" }}>{cost}</td>
+                </tr>
               ))}
             </tbody>
           </table>
         </div>
 
         <h2 style={h2}>How to choose a leasing company</h2>
-        <ul style={{...body, paddingLeft:20}}>
-          <li style={{marginBottom:8}}><strong>Fleet age</strong> — ask the average age of cars in the category.</li>
-          <li style={{marginBottom:8}}><strong>Replacement car policy</strong> — what happens if your car is in for repair?</li>
-          <li style={{marginBottom:8}}><strong>24/7 contact</strong> — test it. Send a WhatsApp at 9pm.</li>
-          <li style={{marginBottom:8}}><strong>Expat-friendly contracts</strong> — some companies are experienced with early termination, others aren't.</li>
+        <ul style={{ ...body, paddingLeft: 20 }}>
+          <li style={{ marginBottom: 8 }}><strong>Fleet age</strong> — ask the average age of cars in the category.</li>
+          <li style={{ marginBottom: 8 }}><strong>Replacement car policy</strong> — what happens if your car is in for repair?</li>
+          <li style={{ marginBottom: 8 }}><strong>24/7 contact</strong> — test it. Send a WhatsApp at 9pm.</li>
+          <li style={{ marginBottom: 8 }}><strong>Expat-friendly contracts</strong> — some companies are experienced with early termination, others aren't.</li>
         </ul>
+
+        {/* Affiliate box — URLs are placeholders until deals are signed */}
+        <AffiliateBox
+          city="sg"
+          type="leasing"
+          title="Companies worth getting a quote from"
+          partners={leasingPartners}
+        />
 
         <h2 style={h2}>Watch-outs in a lease contract</h2>
         <div style={{ background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 10, padding: 24, margin: "16px 0 28px" }}>
-          {[["Mileage limits", "Most economy leases cap at 15,000–20,000 km/year. Excess mileage charges add up fast if you're doing Malaysia trips."],["Early termination fees", "Typically 2–3 months' rental. Factor this in if your assignment might end early."],["Damage assessment on return", "Clarify what constitutes fair wear and tear vs chargeable damage before you sign."],["Insurance excess", "Some leases have a high excess (e.g. SGD $3,000). Know this number."]].map(([heading, detail]) => (
-            <div key={heading} style={{marginBottom:16}}><strong style={{fontSize:14,color:"#991b1b"}}>⚠️ {heading}</strong><p style={{margin:"4px 0 0",fontSize:14,color:"#374151",lineHeight:1.6}}>{detail}</p></div>
+          {[
+            ["Mileage limits", "Most economy leases cap at 15,000–20,000 km/year. Excess mileage charges add up fast if you're doing Malaysia trips."],
+            ["Early termination fees", "Typically 2–3 months' rental. Factor this in if your assignment might end early."],
+            ["Damage assessment on return", "Clarify what constitutes fair wear and tear vs chargeable damage before you sign."],
+            ["Insurance excess", "Some leases have a high excess (e.g. SGD $3,000). Know this number."],
+          ].map(([heading, detail]) => (
+            <div key={heading} style={{ marginBottom: 16 }}>
+              <strong style={{ fontSize: 14, color: "#991b1b" }}>⚠️ {heading}</strong>
+              <p style={{ margin: "4px 0 0", fontSize: 14, color: "#374151", lineHeight: 1.6 }}>{detail}</p>
+            </div>
           ))}
         </div>
 
         <h2 style={h2}>COE explained</h2>
         <p style={body}>The Certificate of Entitlement is a 10-year permit to own a vehicle in Singapore. When you lease, the leasing company holds the COE risk — not you. This is one of the strongest arguments for leasing over buying as an expat.</p>
-        <p style={body}>Use our <Link to="/singapore/calculators" style={{color:"#e8341c"}}>COE Buy vs Lease Calculator</Link> to see what a car would actually cost you to own vs lease over a typical 3-year expat stint.</p>
+        <p style={body}>Use our <Link to="/singapore/calculators" style={{ color: "#e8341c" }}>COE Buy vs Lease Calculator</Link> to see what a car would actually cost you to own vs lease over a typical 3-year expat stint.</p>
 
         <PatrickTip city="sg">"I went with a mid-size for my Singapore lease and never regretted it. One thing I wish I'd checked earlier: the mileage cap. I did two Malaysia road trips and came back nervous about the odometer. Check yours before you book the hotel in Penang."</PatrickTip>
+
+        {/* FAQ section */}
+        <FAQ city="sg" items={leasingFAQ} />
       </div>
     </Layout>
   );
 }
 
-const h2 = {fontSize:22, fontWeight:700, color:"#1e3a5f", margin:"36px 0 12px"};
-const body = {fontSize:16, color:"#374151", lineHeight:1.8, marginBottom:16};
-const th = {padding:"12px 16px", textAlign:"left", fontWeight:600, fontSize:13, color:"#374151"};
-const td = {padding:"12px 16px", color:"#374151", fontSize:14};
+const h2 = { fontSize: 22, fontWeight: 700, color: "#1e3a5f", margin: "36px 0 12px" };
+const body = { fontSize: 16, color: "#374151", lineHeight: 1.8, marginBottom: 16 };
+const th = { padding: "12px 16px", textAlign: "left", fontWeight: 600, fontSize: 13, color: "#374151" };
+const td = { padding: "12px 16px", color: "#374151", fontSize: 14 };
