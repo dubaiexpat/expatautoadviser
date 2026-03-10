@@ -12,16 +12,16 @@ const good = { background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius:
 const HERO_IMG = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80";
 
 const faqItems = [
-  { q: "Is Singapore's public transport good enough to go car-free?", a: "For most urban locations — yes. The MRT and bus network covers the island well and is clean, air-conditioned and affordable. Most expats living in Orchard, Tanjong Pagar, Novena, or the CBD manage easily without a car." },
-  { q: "How much does car ownership actually cost per month in Singapore?", a: "A rough all-in figure for a mid-range car (Toyota Camry): mortgage repayment SGD $2,500, insurance $250, road tax $80, fuel $300, ERP $100, parking $400. That's around SGD $3,600–$4,500/month. Compare that to a monthly MRT pass at about SGD $128." },
-  { q: "Are there areas where a car is basically essential in Singapore?", a: "Yes — Sentosa, the western industrial areas (Jurong, Tuas), parts of the East Coast far from MRT, Bukit Timah, and most of the northern areas near the causeway. If your workplace or home is more than 10 minutes walk from an MRT, a car becomes much more useful." },
-  { q: "Can I lease instead of buy if I'm not sure?", a: "Absolutely — leasing is often the smart choice for expats who aren't sure how long they'll stay. No COE risk, no resale hassle. A full-service lease for a mid-range car runs SGD $2,200–$3,000/month including insurance and maintenance." },
-  { q: "What about Grab and taxis? Can I rely on those instead?", a: "Grab is excellent in Singapore and very reliable. If your car use is mostly occasional — nights out, family trips, weekend errands — Grab plus public transport often works out cheaper than owning a car, particularly when you factor in ERP, parking, and COE." },
+  { q: "Is Singapore's public transport good enough to go car-free?", a: "For most urban locations â yes. The MRT and bus network covers the island well and is clean, air-conditioned and affordable. Most expats living in Orchard, Tanjong Pagar, Novena, or the CBD manage easily without a car." },
+  { q: "How much does car ownership actually cost per month in Singapore?", a: "A rough all-in figure for a mid-range car (Toyota Camry): mortgage repayment SGD $2,500, insurance $250, road tax $80, fuel $300, ERP $100, parking $400. That's around SGD $3,600â$4,500/month. Compare that to a monthly MRT pass at about SGD $128." },
+  { q: "Are there areas where a car is basically essential in Singapore?", a: "Yes â Sentosa, the western industrial areas (Jurong, Tuas), parts of the East Coast far from MRT, Bukit Timah, and most of the northern areas near the causeway. If your workplace or home is more than 10 minutes walk from an MRT, a car becomes much more useful." },
+  { q: "Can I lease instead of buy if I'm not sure?", a: "Absolutely â leasing is often the smart choice for expats who aren't sure how long they'll stay. No COE risk, no resale hassle. A full-service lease for a mid-range car runs SGD $2,200â$3,000/month including insurance and maintenance." },
+  { q: "What about Grab and taxis? Can I rely on those instead?", a: "Grab is excellent in Singapore and very reliable. If your car use is mostly occasional â nights out, family trips, weekend errands â Grab plus public transport often works out cheaper than owning a car, particularly when you factor in ERP, parking, and COE." },
 ];
 
 export default function SGShouldIGetACar() {
   return (
-    <Layout city="sg" active="Should I Get a Car?">
+    <Layout city="sg" active="Should I Get a Car?" relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Singapore MRT and city" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
@@ -32,7 +32,7 @@ export default function SGShouldIGetACar() {
 
       <p style={{ margin: "0 0 6px", fontSize: 12, fontWeight: 700, color: "#e63946", textTransform: "uppercase", letterSpacing: "0.1em" }}>Singapore</p>
       <h1 style={h1}>Should I Get a Car in Singapore?</h1>
-      <p style={{ ...body, fontSize: 17, color: "#6b7280" }}>Cars in Singapore are expensive — but so is your time. Here's how to decide honestly.</p>
+      <p style={{ ...body, fontSize: 17, color: "#6b7280" }}>Cars in Singapore are expensive â but so is your time. Here's how to decide honestly.</p>
 
       <CredibilityBar />
 
@@ -41,18 +41,18 @@ export default function SGShouldIGetACar() {
       </div>
 
       <h2 style={h2}>The real cost of owning a car in Singapore</h2>
-      <p style={body}>Singapore has some of the most expensive car ownership costs in the world. A mid-range car (Toyota Camry equivalent) will cost you around SGD $180,000–$220,000 all-in, including the Certificate of Entitlement (COE). Monthly outgoings typically run to SGD $3,500–$4,500 when you add up loan repayment, insurance, road tax, fuel, ERP charges, and parking.</p>
-      <p style={body}>That figure dwarfs what you'd spend in London, Sydney, or New York. Before committing, run the numbers for your specific situation — the calculator below can help.</p>
+      <p style={body}>Singapore has some of the most expensive car ownership costs in the world. A mid-range car (Toyota Camry equivalent) will cost you around SGD $180,000â$220,000 all-in, including the Certificate of Entitlement (COE). Monthly outgoings typically run to SGD $3,500â$4,500 when you add up loan repayment, insurance, road tax, fuel, ERP charges, and parking.</p>
+      <p style={body}>That figure dwarfs what you'd spend in London, Sydney, or New York. Before committing, run the numbers for your specific situation â the calculator below can help.</p>
 
       <h2 style={h2}>When a car makes sense in Singapore</h2>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12, margin: "16px 0 28px" }}>
         {[
-          { icon: "🏫", title: "School runs", desc: "Multiple children at different schools, especially if MRT access is limited or hours are awkward." },
-          { icon: "🏠", title: "Suburban location", desc: "If you live in Bukit Timah, the West, or North, distances to MRT make a car genuinely useful." },
-          { icon: "🌙", title: "Late-night work", desc: "If you regularly work past midnight, Grab surcharges add up. A car pays for itself quickly." },
-          { icon: "👶", title: "Young children", desc: "Car seats, prams, and tired toddlers on public transport is a specific kind of challenge." },
-          { icon: "🐕", title: "Pets", desc: "Pets can't travel on MRT. If you have a dog, a car becomes almost essential for vets and parks." },
-          { icon: "📦", title: "Frequent bulk shopping", desc: "Costco, IKEA, and wet market runs are genuinely much easier with a car." },
+          { icon: "ð«", title: "School runs", desc: "Multiple children at different schools, especially if MRT access is limited or hours are awkward." },
+          { icon: "ð ", title: "Suburban location", desc: "If you live in Bukit Timah, the West, or North, distances to MRT make a car genuinely useful." },
+          { icon: "ð", title: "Late-night work", desc: "If you regularly work past midnight, Grab surcharges add up. A car pays for itself quickly." },
+          { icon: "ð¶", title: "Young children", desc: "Car seats, prams, and tired toddlers on public transport is a specific kind of challenge." },
+          { icon: "ð", title: "Pets", desc: "Pets can't travel on MRT. If you have a dog, a car becomes almost essential for vets and parks." },
+          { icon: "ð¦", title: "Frequent bulk shopping", desc: "Costco, IKEA, and wet market runs are genuinely much easier with a car." },
         ].map(({ icon, title, desc }) => (
           <div key={title} style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, padding: "14px 16px" }}>
             <p style={{ margin: "0 0 6px", fontSize: 20 }}>{icon}</p>
@@ -66,7 +66,7 @@ export default function SGShouldIGetACar() {
       <div style={good}>
         <strong>Consider skipping the car if:</strong> you live within 10 minutes of an MRT; you work in the CBD; your kids school is on an MRT line; you're here for under 3 years; or your employer provides transport. Singapore's Grab is reliable, fast, and often faster than driving during peak hours.
       </div>
-      <p style={body}>Grab's base fare is reasonable and surge pricing, while annoying, is rare outside peak hours and rain. Many expats find a combination of MRT for daily commutes and Grab for evenings and weekends works extremely well — and is significantly cheaper than car ownership.</p>
+      <p style={body}>Grab's base fare is reasonable and surge pricing, while annoying, is rare outside peak hours and rain. Many expats find a combination of MRT for daily commutes and Grab for evenings and weekends works extremely well â and is significantly cheaper than car ownership.</p>
 
       <h2 style={h2}>Leasing vs buying vs Grab: a rough comparison</h2>
       <div style={{ overflowX: "auto", margin: "16px 0 28px" }}>
@@ -80,9 +80,9 @@ export default function SGShouldIGetACar() {
           </thead>
           <tbody>
             {[
-              ["Buy (mid-range)", "SGD $3,500–$4,500", "Long stay (5+ yrs), families, frequent use"],
-              ["Lease (full-service)", "SGD $2,200–$3,200", "2–4 yr stays, flexibility, hassle-free"],
-              ["Grab + MRT", "SGD $400–$900", "City dwellers, under 2 yr stays, light users"],
+              ["Buy (mid-range)", "SGD $3,500â$4,500", "Long stay (5+ yrs), families, frequent use"],
+              ["Lease (full-service)", "SGD $2,200â$3,200", "2â4 yr stays, flexibility, hassle-free"],
+              ["Grab + MRT", "SGD $400â$900", "City dwellers, under 2 yr stays, light users"],
               ["MRT pass only", "SGD $128", "Central locations, solo or couple, no kids"],
             ].map(([option, cost, best], i) => (
               <tr key={i} style={{ borderBottom: "1px solid #f3f4f6", background: i % 2 === 0 ? "white" : "#fafafa" }}>
@@ -100,8 +100,8 @@ export default function SGShouldIGetACar() {
       </div>
 
       <h2 style={h2}>Our verdict</h2>
-      <p style={body}>If you're a couple or single, living centrally, and here for under 3 years — skip the car. The maths almost never works out in your favour, and Singapore's public transport will serve you well.</p>
-      <p style={body}>If you have children doing school runs, live outside the central belt, plan to stay 3+ years, or simply value having a car available — leasing is the smart first move. It gives you the benefits of a car without locking in capital on a depreciating COE.</p>
+      <p style={body}>If you're a couple or single, living centrally, and here for under 3 years â skip the car. The maths almost never works out in your favour, and Singapore's public transport will serve you well.</p>
+      <p style={body}>If you have children doing school runs, live outside the central belt, plan to stay 3+ years, or simply value having a car available â leasing is the smart first move. It gives you the benefits of a car without locking in capital on a depreciating COE.</p>
       <p style={body}>Buying makes sense only for longer-term residents (5+ years) who want to build equity in a vehicle, or who use a car heavily enough to justify the higher upfront outlay.</p>
 
       <FAQ items={faqItems} city="sg" />
