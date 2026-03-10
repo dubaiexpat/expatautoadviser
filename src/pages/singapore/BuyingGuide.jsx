@@ -101,7 +101,7 @@ export default function SGBuyingGuide() {
 
       <h2 style={h2}>The buying process, step by step</h2>
       <p style={body}>Buying a car in Singapore is done almost entirely through dealers. There is no private bidding system you have to manage yourself — dealers handle the COE bidding on your behalf. The process typically takes 4–8 weeks from deposit to collection.</p>
-      <ol style={{ margin: "0 0 24px 20px", paddingLeft: 0, fontSize: 15, color: "#374151", lineHeight: 2 }}>
+      <ol style={{ margin: "0 0 24px 20px", paddingLeft: 0, fontSize: 15, color: "#374151", lineHeight: 2, listStyle: 'none' }}>
         {[
           "Choose your car and dealer — get quotes from 2–3 dealers for the same model",
           "Agree a price and pay a booking deposit (usually SGD $500–$2,000, refundable within cooling-off period)",
