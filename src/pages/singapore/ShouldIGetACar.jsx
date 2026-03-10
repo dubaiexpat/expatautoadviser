@@ -15,15 +15,15 @@ const AREAS = [
 
 export default function SGShouldIGetACar() {
   return (
-    <Layout city="sg" title="Should I Get a Car in Singapore? Honest Expat Advice (2025–26)" description="Should you lease a car in Singapore? The honest answer depends on where you live. MRT map, neighbourhood breakdown, real costs, and a practical decision guide.">
+    <Layout city="sg" title="Should I Get a Car in Singapore? Honest Expat Advice (2025â26)" description="Should you lease a car in Singapore? The honest answer depends on where you live. MRT map, neighbourhood breakdown, real costs, and a practical decision guide.">
       <div style={{ maxWidth: 760 }}>
         <p style={{ color: "#e8341c", fontWeight: 600, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>Singapore</p>
         <h1 style={{ fontSize: 36, fontWeight: 800, color: "#1e3a5f", marginBottom: 16, lineHeight: 1.2 }}>Should I Get a Car in Singapore?</h1>
-        <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 40 }}>The honest answer: most Singapore expats don't need one. But for some lifestyles and locations, a car changes everything. Here's a clear-eyed look at how to decide — including a neighbourhood-by-neighbourhood breakdown.</p>
+        <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 40 }}>The honest answer: most Singapore expats don't need one. But for some lifestyles and locations, a car changes everything. Here's a clear-eyed look at how to decide â including a neighbourhood-by-neighbourhood breakdown.</p>
 
         <h2 style={h2}>The case for not having a car</h2>
-        <p style={body}>Singapore's public transport system is genuinely world-class. The MRT covers most of the island with high frequency and reliability, buses fill the gaps, and Grab is cheap and plentiful. For expats living within a few stops of Orchard, the CBD, or major town centres, many complete their entire assignment without ever needing a car — and are arguably better off for it.</p>
-        <p style={body}>Add to that the extraordinary cost of car ownership: a Certificate of Entitlement (COE) alone currently runs <strong>SGD $104,000–$124,000</strong>, and that's before you've paid for the car itself. Even leasing — the sensible choice for expats — adds a minimum of SGD $1,400/month to your expenses. The MRT costs SGD $1.50. Grab across town costs SGD $12–$18. The maths matter.</p>
+        <p style={body}>Singapore's public transport system is genuinely world-class. The MRT covers most of the island with high frequency and reliability, buses fill the gaps, and Grab is cheap and plentiful. For expats living within a few stops of Orchard, the CBD, or major town centres, many complete their entire assignment without ever needing a car â and are arguably better off for it.</p>
+        <p style={body}>Add to that the extraordinary cost of car ownership: a Certificate of Entitlement (COE) alone currently runs <strong>SGD $104,000â$124,000</strong>, and that's before you've paid for the car itself. Even leasing â the sensible choice for expats â adds a minimum of SGD $1,400/month to your expenses. The MRT costs SGD $1.50. Grab across town costs SGD $12â$18. The maths matter.</p>
 
         <h2 style={h2}>When a car genuinely changes your quality of life</h2>
         <p style={body}>There are specific situations where a car shifts from luxury to genuine necessity:</p>
@@ -31,7 +31,7 @@ export default function SGShouldIGetACar() {
           {[
             ["Young children and school runs", "Singapore's school locations are spread across the island and rarely align with your home and workplace. Multiple drop-offs across different schools at 7:30am is genuinely difficult without a car."],
             ["Living east of Tampines or west of Jurong", "The further you are from the central MRT spine, the more a car makes sense. Pasir Ris, Changi Village, Tuas, and parts of the west are poorly served for spontaneous trips."],
-            ["Regular Malaysia trips", "A Singapore-registered car makes JB crossings trivial. The causeway crossing by car (with CashCard and Autopass) takes 20–40 minutes vs 1.5+ hours by bus. If you're in Johor regularly, a car pays for itself in time alone."],
+            ["Regular Malaysia trips", "A Singapore-registered car makes JB crossings trivial. The causeway crossing by car (with CashCard and Autopass) takes 20â40 minutes vs 1.5+ hours by bus. If you're in Johor regularly, a car pays for itself in time alone."],
             ["Weekend lifestyle requiring flexibility", "Beach clubs, nature reserves, golf courses, and off-the-beaten-track hawker centres are often difficult or expensive to reach by Grab late on a Saturday night. If your social life is spread across the island, a car matters."],
           ].map(([title, detail]) => (
             <div key={title} style={{ marginBottom: 16, paddingBottom: 16, borderBottom: "1px solid #f3f4f6" }}>
@@ -54,7 +54,7 @@ export default function SGShouldIGetACar() {
           ].map(({ q, lean }) => (
             <div key={q} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", padding: "12px 0", borderBottom: "1px solid #f3f4f6", gap: 16 }}>
               <span style={{ color: "#374151", fontSize: 15 }}>{q}</span>
-              <span style={{ fontSize: 13, fontWeight: 600, color: lean.startsWith("Get") || lean.startsWith("Lean toward") ? "#e8341c" : "#6b7280", whiteSpace: "nowrap", minWidth: 120, textAlign: "right" }}>{lean}</span>
+              <span style={{ fontSize: 13, fontWeight: 600, color: lean.startsWith("Get") || lean.startsWith("Lean toward") ? "#e8341c" : "#6b7280", flexShrink: 0, maxWidth: "48%", wordBreak: "break-word", textAlign: "right" }}>{lean}</span>
             </div>
           ))}
         </div>
@@ -95,13 +95,13 @@ export default function SGShouldIGetACar() {
             </thead>
             <tbody>
               {[
-                ["Lease rate (economy)", "Insurance, road tax, servicing, breakdown", "SGD $1,400–$1,800"],
-                ["Lease rate (mid-range)", "Insurance, road tax, servicing, breakdown", "SGD $2,200–$2,800"],
-                ["Petrol", "Not included", "SGD $250–$400"],
-                ["ERP charges", "Not included", "SGD $80–$200 (commuter)"],
-                ["Parking", "Not included — depends on building", "SGD $0–$400"],
-                ["Total (economy)", "All in", "SGD $1,730–$2,400"],
-                ["Total (mid-range)", "All in", "SGD $2,530–$3,400"],
+                ["Lease rate (economy)", "Insurance, road tax, servicing, breakdown", "SGD $1,400â$1,800"],
+                ["Lease rate (mid-range)", "Insurance, road tax, servicing, breakdown", "SGD $2,200â$2,800"],
+                ["Petrol", "Not included", "SGD $250â$400"],
+                ["ERP charges", "Not included", "SGD $80â$200 (commuter)"],
+                ["Parking", "Not included â depends on building", "SGD $0â$400"],
+                ["Total (economy)", "All in", "SGD $1,730â$2,400"],
+                ["Total (mid-range)", "All in", "SGD $2,530â$3,400"],
               ].map(([cat, inc, cost]) => (
                 <tr key={cat} style={{ borderTop: "1px solid #f3f4f6", background: cat.startsWith("Total") ? "#fef2f2" : "white" }}>
                   <td style={{ padding: "12px 16px", color: "#374151", fontWeight: cat.startsWith("Total") ? 700 : 400 }}>{cat}</td>
@@ -117,9 +117,9 @@ export default function SGShouldIGetACar() {
         <p style={body}>Many expats underestimate how much they spend on Grab. Here's a rough monthly Grab spend at different usage levels:</p>
         <div style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, padding: 24, margin: "0 0 28px" }}>
           {[
-            { usage: "Light user (3–4 trips/week)", spend: "SGD $200–$350/month", note: "Car is expensive at this level — stick with Grab" },
-            { usage: "Moderate user (daily commute alternative, weekend trips)", spend: "SGD $400–$700/month", note: "Car starts to look competitive when you add convenience" },
-            { usage: "Heavy user (family, school runs, evenings out)", spend: "SGD $800–$1,400/month", note: "Economy lease likely cheaper and far more convenient" },
+            { usage: "Light user (3â4 trips/week)", spend: "SGD $200â$350/month", note: "Car is expensive at this level â stick with Grab" },
+            { usage: "Moderate user (daily commute alternative, weekend trips)", spend: "SGD $400â$700/month", note: "Car starts to look competitive when you add convenience" },
+            { usage: "Heavy user (family, school runs, evenings out)", spend: "SGD $800â$1,400/month", note: "Economy lease likely cheaper and far more convenient" },
           ].map(({ usage, spend, note }) => (
             <div key={usage} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", padding: "12px 0", borderBottom: "1px solid #f3f4f6", gap: 16, flexWrap: "wrap" }}>
               <div style={{ minWidth: 200 }}>
@@ -135,7 +135,7 @@ export default function SGShouldIGetACar() {
         <p style={body}>For assignments under 18 months, the economics of leasing rarely work out well once you account for the upfront setup (usually first and last month's payment), administrative hassle, and the practical difficulty of finding and returning a lease at both ends of a short assignment. Under 18 months: heavy Grab usage and occasional car rental for Malaysia trips is almost always the better answer.</p>
         <p style={body}>Over 2 years: leasing becomes compelling for most family or lifestyle situations that aren't perfectly served by the MRT. See the <Link to="/singapore/leasing-guide" style={{ color: "#e8341c" }}>full Singapore Leasing Guide</Link> for what to look for in a lease contract and typical costs by category.</p>
 
-        <PatrickTip city="sg">"I lasted 6 months without a car. When I finally leased one, I wondered why I'd waited — but also why I hadn't used Grab more strategically during that first period. My first flat was near Tanjong Pagar — the MRT was genuinely fine. When I moved to Buona Vista the calculation changed completely. Know your postcode before you decide. And if you're on the fence, try Grab aggressively for the first month and see if you're fighting it constantly. You'll know pretty quickly."</PatrickTip>
+        <PatrickTip city="sg">"I lasted 6 months without a car. When I finally leased one, I wondered why I'd waited â but also why I hadn't used Grab more strategically during that first period. My first flat was near Tanjong Pagar â the MRT was genuinely fine. When I moved to Buona Vista the calculation changed completely. Know your postcode before you decide. And if you're on the fence, try Grab aggressively for the first month and see if you're fighting it constantly. You'll know pretty quickly."</PatrickTip>
       </div>
     </Layout>
   );
