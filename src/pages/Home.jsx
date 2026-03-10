@@ -4,7 +4,7 @@ const SG_MAP = "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1
 const HK_MAP = "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=1400&q=80";
 const PATRICK_IMG = "/Firefly_GeminiFlash_picture%20of%20a%20white%2040%20year%20old%20clean%20shaven%20man%20in%20smart%20casual%20clothes%20with%20dark%20hai%20966416%20(1).png";
 
-const styles = \`
+const styles = `
   .eaa-home * { box-sizing: border-box; }
   .city-panels {
     display: flex;
@@ -101,7 +101,7 @@ const styles = \`
     .newsletter-form input { border-right: 1px solid rgba(255,255,255,0.12); border-radius: 6px; }
     .newsletter-form button { border-radius: 6px; width: 100%; }
   }
-\`;
+`;
 
 function CityPanel({ city, flag, mapUrl, tagline, accent, to }) {
   return (
@@ -112,7 +112,7 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, to }) {
       <div style={{ position: "relative", zIndex: 3, display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", padding: "0 40px 52px", textAlign: "center", width: "100%" }}>
         <h2 style={{ margin: 0, fontFamily: "'Playfair Display',Georgia,serif", fontSize: "clamp(32px,4vw,58px)", fontWeight: 700, color: "#fff", textShadow: "0 2px 24px rgba(0,0,0,0.8)" }}>{city}</h2>
         <p className="city-tagline" style={{ margin: 0, fontSize: "clamp(13px,1.3vw,16px)", color: "rgba(255,255,255,0.9)", maxWidth: "280px", lineHeight: 1.6, textShadow: "0 1px 8px rgba(0,0,0,0.9)" }}>{tagline}</p>
-        <div className="city-btn">I'm in {city} →</div>
+        <div className="city-btn">{"I'm in " + city + " \u2192"}</div>
       </div>
     </Link>
   );
@@ -124,7 +124,7 @@ export default function Home() {
       <style>{styles}</style>
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: "56px", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(8,10,18,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <span style={{ fontSize: "20px" }}>&#x1F697;</span>
+          <span style={{ fontSize: "20px" }}>🚗</span>
           <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: "clamp(18px,2.5vw,26px)", color: "#fff" }}>ExpatAutoAdviser</span>
         </div>
       </nav>
@@ -133,9 +133,9 @@ export default function Home() {
         <p style={{ margin: 0, fontFamily: "system-ui,sans-serif", fontSize: "clamp(12px,1.8vw,20px)", color: "rgba(255,255,255,0.5)", letterSpacing: "0.12em", textTransform: "uppercase" }}>Singapore · Hong Kong</p>
       </div>
       <div className="city-panels">
-        <CityPanel city="Singapore" flag="&#x1F1F8;&#x1F1EC;" mapUrl={SG_MAP} tagline="Leasing, insurance & everything you need to get moving in the Lion City." accent="#e63946" to="/singapore" />
+        <CityPanel city="Singapore" flag="🇸🇬" mapUrl={SG_MAP} tagline="Leasing, insurance & everything you need to get moving in the Lion City." accent="#e63946" to="/singapore" />
         <div className="city-panel-divider" />
-        <CityPanel city="Hong Kong" flag="&#x1F1ED;&#x1F1F0;" mapUrl={HK_MAP} tagline="Buying, FRT, MOT & everything you need to own a car in the SAR." accent="#2a9d8f" to="/hongkong" />
+        <CityPanel city="Hong Kong" flag="🇭🇰" mapUrl={HK_MAP} tagline="Buying, FRT, MOT & everything you need to own a car in the SAR." accent="#2a9d8f" to="/hongkong" />
       </div>
       <div className="patrick-strip" style={{ background: "#0d1117", borderTop: "1px solid rgba(255,255,255,0.06)", padding: "52px 40px" }}>
         <img src={PATRICK_IMG} alt="Patrick" style={{ width: "80px", height: "80px", borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: "3px solid rgba(255,255,255,0.15)", flexShrink: 0 }} />
