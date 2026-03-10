@@ -4,6 +4,7 @@ import CredibilityBar from '../components/CredibilityBar';
 const guides = [
   { to: '/singapore/should-i-get-a-car', emoji: '🤔', title: 'Should I Get a Car?', desc: "Honest answer: depends on where you live and how long you're staying. Start here before anything else.", cta: 'Help me decide →' },
   { to: '/singapore/leasing-guide', emoji: '📋', title: 'Leasing Guide', desc: "How leasing works, what's bundled, typical costs from economy to premium, and how to pick a lease company.", cta: 'Read the guide →' },
+  { to: '/singapore/buying-guide', emoji: '🚗', title: 'Buying Guide', desc: "When buying beats leasing: how COE, ARF and registration fees work, total cost of ownership, and how to sell before you leave.", cta: 'Read the guide →' },
   { to: '/singapore/insurance-guide', emoji: '🛡️', title: 'Insurance Guide', desc: 'Why insurance is almost always bundled in leases — and what to check when it is not.', cta: 'Read the guide →' },
   { to: '/singapore/licence-conversion', emoji: '🪪', title: 'Licence Conversion', desc: 'Which nationalities convert without a test, the step-by-step Traffic Police process, costs and timeline.', cta: 'Read the guide →' },
   { to: '/singapore/ev-guide', emoji: '⚡', title: 'EV Guide', desc: 'EVs are rising fast in lease fleets. EEAI incentives, charging infrastructure, popular models for expats.', cta: 'Read the guide →' },
