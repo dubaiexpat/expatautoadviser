@@ -9,8 +9,10 @@ import SGLicenceConversion from './pages/singapore/LicenceConversion';
 import SGEVGuide from './pages/singapore/EVGuide';
 import SGCalculators from './pages/singapore/Calculators';
 import SGGarageFinder from './pages/singapore/GarageFinder';
+import SGBuyingGuide from './pages/singapore/BuyingGuide';
 import HKShouldIGetACar from './pages/hongkong/ShouldIGetACar';
 import HKBuyingGuide from './pages/hongkong/BuyingGuide';
+import HKLeasingGuide from './pages/hongkong/LeasingGuide';
 import HKFRTExplained from './pages/hongkong/FRTExplained';
 import HKInsuranceGuide from './pages/hongkong/InsuranceGuide';
 import HKMOTMaintenance from './pages/hongkong/MOTMaintenance';
@@ -25,6 +27,7 @@ export function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/singapore" element={<Singapore />} />
       <Route path="/singapore/should-i-get-a-car" element={<SGShouldIGetACar />} />
+        <Route path="/singapore/buying-guide" element={<SGBuyingGuide />} />
       <Route path="/singapore/leasing-guide" element={<SGLeasingGuide />} />
       <Route path="/singapore/insurance-guide" element={<SGInsuranceGuide />} />
       <Route path="/singapore/licence-conversion" element={<SGLicenceConversion />} />
@@ -34,6 +37,7 @@ export function AppRoutes() {
       <Route path="/hongkong" element={<HongKong />} />
       <Route path="/hongkong/should-i-get-a-car" element={<HKShouldIGetACar />} />
       <Route path="/hongkong/buying-guide" element={<HKBuyingGuide />} />
+        <Route path="/hongkong/leasing-guide" element={<HKLeasingGuide />} />
       <Route path="/hongkong/frt-tax-explained" element={<HKFRTExplained />} />
       <Route path="/hongkong/insurance-guide" element={<HKInsuranceGuide />} />
       <Route path="/hongkong/mot-maintenance" element={<HKMOTMaintenance />} />
