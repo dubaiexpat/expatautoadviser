@@ -5,14 +5,14 @@ const NAV_LINKS = {
     { label: 'Overview', to: '/singapore' },
     { label: 'Leasing Guide', to: '/singapore/leasing-guide' },
     { label: 'Buying Guide', to: '/singapore/buying-guide' },
-    { label: 'Insurance', to: '/singapore/insurance' },
+    { label: 'Insurance', to: '/singapore/insurance-guide' },
     { label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' },
   ],
   hk: [
     { label: 'Overview', to: '/hongkong' },
     { label: 'Buying Guide', to: '/hongkong/buying-guide' },
     { label: 'Leasing Guide', to: '/hongkong/leasing-guide' },
-    { label: 'Insurance', to: '/hongkong/insurance' },
+    { label: 'Insurance', to: '/hongkong/insurance-guide' },
     { label: 'Should I Get a Car?', to: '/hongkong/should-i-get-a-car' },
   ],
 };
