@@ -1,8 +1,6 @@
 const items = [
-  { icon: '🔍', label: 'To Trust or Not', desc: 'We tell you which providers to use — and which to avoid' },
-  { icon: '🤝', label: 'Independent advice', desc: 'No manufacturer or dealer funding. We earn only from referrals.' },
-  { icon: '🌏', label: '600+ expats helped', desc: 'Across Singapore and Hong Kong since 2022' },
-  { icon: '⚡', label: 'Up-to-date pricing', desc: 'COE and FRT data updated monthly' },
+  { icon: 'ð', label: 'To Trust or Not', desc: 'We tell you which providers to use â and which to avoid' },
+  { icon: 'â¡', label: 'Up-to-date pricing', desc: 'COE and FRT data updated monthly' },
 ];
 
 export default function CredibilityBar() {
