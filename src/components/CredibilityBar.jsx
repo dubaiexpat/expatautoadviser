@@ -1,4 +1,4 @@
-// CredibilityBar â honest trust signals based on Patrick's real experience
+// CredibilityBar Ã¢ÂÂ honest trust signals based on Patrick's real experience
 // NO fake testimonials. Just verifiable facts about the site and its author.
 
 export default function CredibilityBar({ city }) {
@@ -6,10 +6,10 @@ export default function CredibilityBar({ city }) {
   const cityName = city === "sg" ? "Singapore" : "Hong Kong";
 
   const stats = [
-    { icon: "ð§âð¼", value: "Real expat", label: "Patrick moved from London â SG â HK" },
-    { icon: "ð", value: "19 guides", label: "Written from personal experience, not research" },
-    { icon: "ð§®", value: "Free tools", label: "COE, FRT, cost calculators â no paywall" },
-    { icon: "ð§", value: "To Trust or Not", label: "Affiliate partners shown transparently. Editorial stays independent." },
+    { icon: "Ã°ÂÂ§ÂÃ¢ÂÂÃ°ÂÂÂ¼", value: "Real expat", label: "Patrick moved from London Ã¢ÂÂ SG Ã¢ÂÂ HK" },
+    { icon: "Ã°ÂÂÂ", value: "19 guides", label: "Written from personal experience, not research" },
+    { icon: "Ã°ÂÂ§Â®", value: "Free tools", label: "COE, FRT, cost calculators Ã¢ÂÂ no paywall" },
+    { icon: "Ã°ÂÂÂ§", value: "To Trust or Not", label: "Affiliate partners shown transparently. Editorial stays independent." },
   ];
 
   return (
@@ -30,27 +30,6 @@ export default function CredibilityBar({ city }) {
           ))}
         </div>
         {/* Book Patrick CTA */}
-        <div style={{ marginTop: 32, background: "white", border: `1.5px solid ${accent}30`, borderRadius: 12, padding: "24px 28px", display: "flex", flexDirection: "column", alignItems: "center", gap: 12, textAlign: "center" }}>
-          <p style={{ fontSize: 15, fontWeight: 700, color: "#1e3a5f", margin: 0 }}>
-            Want a second opinion before you commit?
-          </p>
-          <p style={{ fontSize: 14, color: "#6b7280", margin: 0, maxWidth: 480, lineHeight: 1.6 }}>
-            Book a 30-minute call with Patrick. He's done this in both {cityName} and Singapore â
-            he'll tell you exactly what he'd do in your situation.
-          </p>
-          <a
-            href="https://calendly.com/expatautoadviser/consultation"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: "inline-block", padding: "12px 28px", background: accent, color: "white", borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: "none" }}
-          >
-            Book a call with Patrick â
-          </a>
-          <p style={{ fontSize: 11, color: "#9ca3af", margin: 0 }}>
-            SGD $75 Â· 30 minutes Â· Zoom or Google Meet
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
