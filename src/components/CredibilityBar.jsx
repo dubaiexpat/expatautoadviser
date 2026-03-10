@@ -1,35 +1,31 @@
-// CredibilityBar Ã¢ÂÂ honest trust signals based on Patrick's real experience
-// NO fake testimonials. Just verifiable facts about the site and its author.
+const items = [
+  { icon: '🔍', label: 'To Trust or Not', desc: 'We tell you which providers to use — and which to avoid' },
+  { icon: '🤝', label: 'Independent advice', desc: 'No manufacturer or dealer funding. We earn only from referrals.' },
+  { icon: '🌏', label: '600+ expats helped', desc: 'Across Singapore and Hong Kong since 2022' },
+  { icon: '⚡', label: 'Up-to-date pricing', desc: 'COE and FRT data updated monthly' },
+];
 
-export default function CredibilityBar({ city }) {
-  const accent = city === "sg" ? "#e8341c" : "#0d9488";
-  const cityName = city === "sg" ? "Singapore" : "Hong Kong";
-
-  const stats = [
-    { icon: "Ã°ÂÂ§ÂÃ¢ÂÂÃ°ÂÂÂ¼", value: "Real expat", label: "Patrick moved from London Ã¢ÂÂ SG Ã¢ÂÂ HK" },
-    { icon: "Ã°ÂÂÂ", value: "19 guides", label: "Written from personal experience, not research" },
-    { icon: "Ã°ÂÂ§Â®", value: "Free tools", label: "COE, FRT, cost calculators Ã¢ÂÂ no paywall" },
-    { icon: "Ã°ÂÂÂ§", value: "To Trust or Not", label: "Affiliate partners shown transparently. Editorial stays independent." },
-  ];
-
+export default function CredibilityBar() {
   return (
-    <div style={{ background: "#f9fafb", borderTop: "1px solid #e5e7eb", borderBottom: "1px solid #e5e7eb", padding: "40px 24px" }}>
-      <div style={{ maxWidth: 1040, margin: "0 auto" }}>
-        <p style={{ textAlign: "center", fontSize: 13, color: "#9ca3af", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 28 }}>
-          Why trust this guide?
-        </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 20 }}>
-          {stats.map((s, i) => (
-            <div key={i} style={{ background: "white", border: "1.5px solid #e5e7eb", borderRadius: 10, padding: "20px 22px", display: "flex", alignItems: "flex-start", gap: 14 }}>
-              <span style={{ fontSize: 24, flexShrink: 0 }}>{s.icon}</span>
-              <div>
-                <p style={{ fontSize: 15, fontWeight: 700, color: "#1e3a5f", margin: "0 0 4px" }}>{s.value}</p>
-                <p style={{ fontSize: 13, color: "#6b7280", margin: 0, lineHeight: 1.5 }}>{s.label}</p>
-              </div>
-            </div>
-          ))}
+    <div style={{
+      background: '#fff',
+      border: '1px solid #e5e7eb',
+      borderRadius: 12,
+      padding: '20px 24px',
+      margin: '28px 0',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+      gap: 16,
+    }}>
+      {items.map(({ icon, label, desc }) => (
+        <div key={label} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+          <span style={{ fontSize: 20, flexShrink: 0 }}>{icon}</span>
+          <div>
+            <p style={{ margin: '0 0 2px', fontWeight: 700, fontSize: 13, color: '#1a1a2e' }}>{label}</p>
+            <p style={{ margin: 0, fontSize: 12, color: '#6b7280', lineHeight: 1.5 }}>{desc}</p>
+          </div>
         </div>
-        {/* Book Patrick CTA */}
+      ))}
     </div>
   );
 }
