@@ -3,32 +3,32 @@ import PatrickTip from "../../components/PatrickTip";
 import { Link } from "react-router-dom";
 
 const EV_MODELS = [
-  { model: "Tesla Model 3", type: "Sedan", range: "~500 km", lease: "SGD $3,400â$4,200/mth", note: "Most common EV in Singapore lease fleets. Supercharger network is the best in Singapore." },
-  { model: "Tesla Model Y", type: "SUV", range: "~530 km", lease: "SGD $3,800â$4,800/mth", note: "Family-sized, excellent cargo space. Increasingly common as an expat family lease." },
-  { model: "BYD Atto 3", type: "SUV", range: "~420 km", lease: "SGD $2,400â$3,200/mth", note: "Strong value EV. Rising fast in Singapore lease fleets since 2023." },
-  { model: "Hyundai Ioniq 6", type: "Sedan", range: "~520 km", lease: "SGD $3,200â$4,000/mth", note: "Elegant design, ultra-efficient. 800V architecture means faster charging." },
-  { model: "Hyundai Ioniq 5", type: "SUV", range: "~480 km", lease: "SGD $3,400â$4,200/mth", note: "Practical family-sized EV with distinctive retro design." },
-  { model: "BMW iX3", type: "SUV", range: "~440 km", lease: "SGD $4,200â$5,200/mth", note: "Premium EV lease. Familiar driving dynamics for existing BMW drivers." },
+  { model: "Tesla Model 3", type: "Sedan", range: "~500 km", lease: "SGD $3,400–$4,200/mth", note: "Most common EV in Singapore lease fleets. Supercharger network is the best in Singapore." },
+  { model: "Tesla Model Y", type: "SUV", range: "~530 km", lease: "SGD $3,800–$4,800/mth", note: "Family-sized, excellent cargo space. Increasingly common as an expat family lease." },
+  { model: "BYD Atto 3", type: "SUV", range: "~420 km", lease: "SGD $2,400–$3,200/mth", note: "Strong value EV. Rising fast in Singapore lease fleets since 2023." },
+  { model: "Hyundai Ioniq 6", type: "Sedan", range: "~520 km", lease: "SGD $3,200–$4,000/mth", note: "Elegant design, ultra-efficient. 800V architecture means faster charging." },
+  { model: "Hyundai Ioniq 5", type: "SUV", range: "~480 km", lease: "SGD $3,400–$4,200/mth", note: "Practical family-sized EV with distinctive retro design." },
+  { model: "BMW iX3", type: "SUV", range: "~440 km", lease: "SGD $4,200–$5,200/mth", note: "Premium EV lease. Familiar driving dynamics for existing BMW drivers." },
 ];
 
 const CHARGING_NETWORKS = [
-  { name: "SP Group (BlueSG / SP Charge)", speed: "Level 2 (7â22 kW)", locations: "4,000+ points across Singapore â HDBs, condos, commercial buildings", note: "Largest network. Integrated with SP Utilities app." },
+  { name: "SP Group (BlueSG / SP Charge)", speed: "Level 2 (7–22 kW)", locations: "4,000+ points across Singapore — HDBs, condos, commercial buildings", note: "Largest network. Integrated with SP Utilities app." },
   { name: "Tesla Supercharger", speed: "V3: up to 250 kW", locations: "30+ Supercharger stations; major malls, Changi, Marina Bay", note: "Tesla owners only. By far the most reliable and fastest for compatible vehicles." },
   { name: "ChargeEV", speed: "Level 2 to DC Fast (50 kW)", locations: "Commercial buildings, hotels, selected carparks", note: "Subscription or pay-per-use." },
-  { name: "Greenlots / Shell Recharge", speed: "DC Fast (50â150 kW)", locations: "Shell stations and selected sites", note: "Good for top-ups on longer journeys. Pay-per-use via app." },
-  { name: "Building chargers", speed: "Level 1â2 (3â22 kW)", locations: "Condos and landed properties (if retrofitted)", note: "Most convenient if available at home. Check before committing to an EV lease." },
+  { name: "Greenlots / Shell Recharge", speed: "DC Fast (50–150 kW)", locations: "Shell stations and selected sites", note: "Good for top-ups on longer journeys. Pay-per-use via app." },
+  { name: "Building chargers", speed: "Level 1–2 (3–22 kW)", locations: "Condos and landed properties (if retrofitted)", note: "Most convenient if available at home. Check before committing to an EV lease." },
 ];
 
 export default function SGEVGuide() {
   return (
-    <Layout city="sg" title="Electric Vehicles in Singapore: Complete Expat Guide (2025â26)" description="Should you lease an EV in Singapore? EEAI incentives, charging infrastructure, model comparison, real costs, and practical advice for expats." relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }]}>
+    <Layout city="sg" title="Electric Vehicles in Singapore: Complete Expat Guide (2025–26)" description="Should you lease an EV in Singapore? EEAI incentives, charging infrastructure, model comparison, real costs, and practical advice for expats." relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }]}>
       <div style={{ maxWidth: 760 }}>
         <p style={{ color: "#e8341c", fontWeight: 600, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>Singapore</p>
         <h1 style={{ fontSize: 36, fontWeight: 800, color: "#1e3a5f", marginBottom: 16, lineHeight: 1.2 }}>Electric Vehicles in Singapore: What Expats Need to Know</h1>
-        <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 40 }}>EVs are increasingly common in Singapore lease fleets and the infrastructure has improved dramatically since 2022. Here's whether an EV makes sense for your situation â including the real costs, charging realities, and which models to consider.</p>
+        <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 40 }}>EVs are increasingly common in Singapore lease fleets and the infrastructure has improved dramatically since 2022. Here's whether an EV makes sense for your situation — including the real costs, charging realities, and which models to consider.</p>
 
         <h2 style={h2}>Why EVs make particular sense in Singapore</h2>
-        <p style={body}>Singapore is one of the most EV-friendly countries in the world for practical use. The island is small (roughly 50km end-to-end), so range anxiety is almost non-existent â even a 300 km EV will handle a full week of driving comfortably. Petrol costs around <strong>SGD $3.00â$3.30/litre</strong>, making charging significantly cheaper per kilometre.</p>
+        <p style={body}>Singapore is one of the most EV-friendly countries in the world for practical use. The island is small (roughly 50km end-to-end), so range anxiety is almost non-existent — even a 300 km EV will handle a full week of driving comfortably. Petrol costs around <strong>SGD $3.00–$3.30/litre</strong>, making charging significantly cheaper per kilometre.</p>
         <p style={body}>For expats on a lease, the economics are increasingly compelling: EV leases are priced more competitively than you'd expect given the underlying car cost, partly because leasing companies benefit from government incentives. Insurance and road tax are also bundled in most leases, removing the usual EV cost premium from your monthly calculation.</p>
 
         <h2 style={h2}>Singapore's EV policy and incentives</h2>
@@ -37,7 +37,7 @@ export default function SGEVGuide() {
             ["2030 ICE phase-out", "Singapore has committed to phasing out new petrol and diesel car registrations by 2030. This is driving rapid EV adoption and ensuring a growing charging network."],
             ["EEAI incentive", "The Enhanced EV Incentive for Accessibility provides rebates of up to SGD $25,000 on EV purchase (reducing ARF). Leasing companies benefit from related schemes that flow through to competitive lease pricing."],
             ["VES (Vehicle Emissions Scheme)", "EVs attract the highest VES rebate tier (up to SGD $25,000 rebate on registration). Combined incentives make EV total costs of ownership increasingly competitive with petrol equivalents."],
-            ["EV Early Adopter Initiative", "First-registered EVs benefit from preferential EV road tax. The annual road tax for an EV is typically SGD $700â$900 vs SGD $1,400â$3,000 for equivalent petrol cars."],
+            ["EV Early Adopter Initiative", "First-registered EVs benefit from preferential EV road tax. The annual road tax for an EV is typically SGD $700–$900 vs SGD $1,400–$3,000 for equivalent petrol cars."],
           ].map(([heading, detail]) => (
             <div key={heading} style={{ marginBottom: 18, paddingBottom: 18, borderBottom: "1px solid #f3f4f6" }}>
               <strong style={{ fontSize: 14, color: "#1e3a5f" }}>{heading}</strong>
@@ -58,12 +58,12 @@ export default function SGEVGuide() {
             </thead>
             <tbody>
               {[
-                ["Monthly lease rate", "SGD $2,200â$2,800", "SGD $2,400â$3,200"],
-                ["Petrol / charging (est.)", "SGD $250â$400/mth", "SGD $60â$120/mth"],
+                ["Monthly lease rate", "SGD $2,200–$2,800", "SGD $2,400–$3,200"],
+                ["Petrol / charging (est.)", "SGD $250–$400/mth", "SGD $60–$120/mth"],
                 ["Insurance", "Bundled in lease", "Bundled in lease"],
                 ["Road tax", "Bundled in lease", "Bundled in lease"],
                 ["Servicing", "Bundled in lease", "Bundled in lease"],
-                ["Total monthly est.", "SGD $2,450â$3,200", "SGD $2,460â$3,320"],
+                ["Total monthly est.", "SGD $2,450–$3,200", "SGD $2,460–$3,320"],
               ].map(([item, petrol, ev]) => (
                 <tr key={item} style={{ borderTop: "1px solid #f3f4f6" }}>
                   <td style={{ padding: "12px 16px", color: "#374151" }}>{item}</td>
@@ -84,7 +84,7 @@ export default function SGEVGuide() {
                 <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "#1e3a5f" }}>{name}</h3>
                 <span style={{ background: "#f0f9ff", color: "#0c4a6e", fontSize: 12, padding: "3px 10px", borderRadius: 12, fontWeight: 600 }}>{speed}</span>
               </div>
-              <p style={{ margin: "0 0 6px", fontSize: 13, color: "#6b7280" }}>ð {locations}</p>
+              <p style={{ margin: "0 0 6px", fontSize: 13, color: "#6b7280" }}>📍 {locations}</p>
               <p style={{ margin: 0, fontSize: 14, color: "#374151" }}>{note}</p>
             </div>
           ))}
@@ -92,7 +92,7 @@ export default function SGEVGuide() {
 
         <div style={{ background: "#fffbeb", border: "1px solid #fde68a", borderRadius: 10, padding: 20, margin: "0 0 36px" }}>
           <p style={{ margin: "0 0 6px", fontSize: 14, fontWeight: 700, color: "#92400e" }}>Check your building before committing</p>
-          <p style={{ margin: 0, fontSize: 14, color: "#92400e", lineHeight: 1.6 }}>Home charging is the biggest practical variable. Before signing an EV lease, ask your building management: (1) Does the car park have EV chargers installed? (2) If not, are there plans to install them? (3) Is there a dedicated circuit or shared load capacity? An overnight home charge is the most convenient and cheapest charging option â losing it means relying entirely on public infrastructure.</p>
+          <p style={{ margin: 0, fontSize: 14, color: "#92400e", lineHeight: 1.6 }}>Home charging is the biggest practical variable. Before signing an EV lease, ask your building management: (1) Does the car park have EV chargers installed? (2) If not, are there plans to install them? (3) Is there a dedicated circuit or shared load capacity? An overnight home charge is the most convenient and cheapest charging option — losing it means relying entirely on public infrastructure.</p>
         </div>
 
         <h2 style={h2}>EV models in Singapore lease fleets</h2>
@@ -114,7 +114,7 @@ export default function SGEVGuide() {
             </div>
           ))}
         </div>
-        <p style={{ fontSize: 13, color: "#9ca3af" }}>Lease estimates are indicative for 2025â26 and vary by company, duration, and mileage allowance. Request quotes from at least two leasing companies to compare.</p>
+        <p style={{ fontSize: 13, color: "#9ca3af" }}>Lease estimates are indicative for 2025–26 and vary by company, duration, and mileage allowance. Request quotes from at least two leasing companies to compare.</p>
 
         <h2 style={h2}>Is an EV lease right for you?</h2>
         <div style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, padding: 24, margin: "16px 0 28px" }}>
@@ -128,7 +128,7 @@ export default function SGEVGuide() {
             { label: "You're on a short (under 18 month) assignment with uncertain extension", good: false },
           ].map(({ label, good }) => (
             <div key={label} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: "1px solid #f3f4f6", alignItems: "flex-start" }}>
-              <span style={{ color: good ? "#16a34a" : "#dc2626", fontSize: 18, flexShrink: 0, lineHeight: 1 }}>{good ? "â" : "â"}</span>
+              <span style={{ color: good ? "#16a34a" : "#dc2626", fontSize: 18, flexShrink: 0, lineHeight: 1 }}>{good ? "✓" : "✗"}</span>
               <span style={{ fontSize: 15, color: "#374151" }}>{label}</span>
             </div>
           ))}
@@ -136,19 +136,19 @@ export default function SGEVGuide() {
 
         <h2 style={h2}>Malaysia trips: the one practical limitation</h2>
         <p style={body}>Singapore's EV charging network does not extend into Malaysia. If you regularly drive to Johor Bahru or take longer Malaysian road trips, a petrol or hybrid lease is more practical. EV range is sufficient for the JB crossing, but public charging in southern Johor is sparse and unreliable.</p>
-        <p style={body}>If Malaysia trips are occasional (once or twice a year), an EV lease is still very practical â top up to 100% before crossing and plan charging stops if going further north.</p>
+        <p style={body}>If Malaysia trips are occasional (once or twice a year), an EV lease is still very practical — top up to 100% before crossing and plan charging stops if going further north.</p>
 
-        <PatrickTip city="sg">"I didn't go EV in Singapore â my building got chargers installed 6 months after I arrived and I was already locked into a petrol lease. If I was doing it again I'd ask my building management about EV charging infrastructure before I signed anything. It's a standard question now. The EV lease rates have come down a lot and the charging network is genuinely good. Don't assume you need a reason to go EV â assume you need a reason not to."</PatrickTip>
+        <PatrickTip city="sg">"I didn't go EV in Singapore — my building got chargers installed 6 months after I arrived and I was already locked into a petrol lease. If I was doing it again I'd ask my building management about EV charging infrastructure before I signed anything. It's a standard question now. The EV lease rates have come down a lot and the charging network is genuinely good. Don't assume you need a reason to go EV — assume you need a reason not to."</PatrickTip>
 
         <div style={{ marginTop: 40, padding: 24, background: "#f9fafb", borderRadius: 10 }}>
           <p style={{ margin: "0 0 12px", fontWeight: 700, fontSize: 15, color: "#1e3a5f" }}>Related guides</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {[
-              ["/singapore/leasing-guide", "Singapore Leasing Guide â how leasing works, what's bundled"],
-              ["/singapore/calculators", "Calculators â lease cost estimator and COE comparison"],
+              ["/singapore/leasing-guide", "Singapore Leasing Guide — how leasing works, what's bundled"],
+              ["/singapore/calculators", "Calculators — lease cost estimator and COE comparison"],
               ["/singapore/should-i-get-a-car", "Should I Get a Car in Singapore?"],
             ].map(([to, label]) => (
-              <Link key={to} to={to} style={{ color: "#e8341c", fontSize: 14, textDecoration: "none" }}>â {label}</Link>
+              <Link key={to} to={to} style={{ color: "#e8341c", fontSize: 14, textDecoration: "none" }}>→ {label}</Link>
             ))}
           </div>
         </div>
