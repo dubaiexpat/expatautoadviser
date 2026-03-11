@@ -7,24 +7,24 @@ export default function HKMOTMaintenance() {
       <div style={{maxWidth:760}}>
         <p style={{color:"#0d9488",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>MOT &amp; Car Maintenance in Hong Kong</h1>
-        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Cars aged 7 years or older need an annual inspection in Hong Kong. Here's what's involved â and how to find a mechanic you can actually trust.</p>
+        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Cars aged 7 years or older need an annual inspection in Hong Kong. Here's what's involved — and how to find a mechanic you can actually trust.</p>
 
         <h2 style={h2}>When is an MOT (Annual Inspection) required?</h2>
         <p style={body}>In Hong Kong, private cars that are <strong>6 years old or older</strong> must pass an Annual Vehicle Inspection before their Vehicle Licence can be renewed. The inspection is typically due annually from the 7th year of registration. This is roughly equivalent to the UK MOT.</p>
         <div style={{background:"#f0fdfa",border:"1px solid #99f6e4",borderRadius:10,padding:20,margin:"16px 0 28px"}}>
-          <p style={{margin:0,fontSize:14,color:"#134e4a"}}><strong>Practical tip:</strong> When buying a used car aged 6+, always check when the inspection is next due. If it's overdue or about to expire, factor the cost of a pass â or potential remediation work â into your purchase price negotiation.</p>
+          <p style={{margin:0,fontSize:14,color:"#134e4a"}}><strong>Practical tip:</strong> When buying a used car aged 6+, always check when the inspection is next due. If it's overdue or about to expire, factor the cost of a pass — or potential remediation work — into your purchase price negotiation.</p>
         </div>
 
         <h2 style={h2}>Approved inspection centres</h2>
-        <p style={body}>Inspections must be carried out at a Transport Department-approved Vehicle Examination Centre. There are centres across HK Island, Kowloon, and the New Territories. Book in advance â popular centres fill up weeks ahead.</p>
-        <p style={body}>Find the current list of approved centres at <strong>td.gov.hk</strong> (search "Vehicle Examination Centre"). The inspection itself costs approximately <strong>HKD $200â300</strong> and typically takes 45â90 minutes.</p>
+        <p style={body}>Inspections must be carried out at a Transport Department-approved Vehicle Examination Centre. There are centres across HK Island, Kowloon, and the New Territories. Book in advance — popular centres fill up weeks ahead.</p>
+        <p style={body}>Find the current list of approved centres at <strong>td.gov.hk</strong> (search "Vehicle Examination Centre"). The inspection itself costs approximately <strong>HKD $200–300</strong> and typically takes 45–90 minutes.</p>
 
         <h2 style={h2}>What gets checked</h2>
         <div style={{background:"white",border:"1px solid #e5e7eb",borderRadius:10,padding:24,margin:"16px 0 28px"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
-            {["Brakes (service and handbrake)","Steering and suspension","Tyres (condition and tread depth)","Lights (all â headlights, brake, indicators)","Exhaust emissions","Windscreen and wipers","Horn","Seat belts","Body condition (serious rust/damage)","Under-vehicle inspection"].map(item => (
+            {["Brakes (service and handbrake)","Steering and suspension","Tyres (condition and tread depth)","Lights (all — headlights, brake, indicators)","Exhaust emissions","Windscreen and wipers","Horn","Seat belts","Body condition (serious rust/damage)","Under-vehicle inspection"].map(item => (
               <div key={item} style={{display:"flex",gap:8,alignItems:"flex-start"}}>
-                <span style={{color:"#0d9488",fontSize:16,marginTop:1}}>â</span>
+                <span style={{color:"#0d9488",fontSize:16,marginTop:1}}>✓</span>
                 <span style={{fontSize:14,color:"#374151"}}>{item}</span>
               </div>
             ))}
@@ -32,18 +32,18 @@ export default function HKMOTMaintenance() {
         </div>
 
         <h2 style={h2}>Finding a trustworthy mechanic</h2>
-        <p style={body}>This is genuinely one of the most valuable things you can sort early. A good, honest mechanic is worth their weight in gold in HK â and the best ones get passed around by expat word of mouth.</p>
+        <p style={body}>This is genuinely one of the most valuable things you can sort early. A good, honest mechanic is worth their weight in gold in HK — and the best ones get passed around by expat word of mouth.</p>
         <div style={{background:"white",border:"1px solid #e5e7eb",borderRadius:10,padding:24,margin:"16px 0 28px"}}>
           {[["Ask other expats first","The Facebook groups (Expats in HK, Sai Kung community groups, etc.) consistently recommend the same few trusted mechanics. This is by far the best way to find one."],
             ["English-speaking garages","Several garages in areas with high expat concentration (Sai Kung, Clearwater Bay, Discovery Bay) have English-speaking staff and experience dealing with foreign cars."],
-            ["Main dealer vs independent","Main dealers (BMW, Mercedes, Toyota) are reliable but expensive. Good independent garages can cost 40â60% less for servicing with equivalent quality."],
+            ["Main dealer vs independent","Main dealers (BMW, Mercedes, Toyota) are reliable but expensive. Good independent garages can cost 40–60% less for servicing with equivalent quality."],
             ["Questions to ask","How long have you been here? Do you keep a service record I can take away? Can I see the parts you're replacing? Any good mechanic will answer these without hesitation."],
           ].map(([heading, detail]) => (
             <div key={heading} style={{marginBottom:16}}><strong style={{fontSize:14,color:"#0d9488"}}>{heading}</strong><p style={{margin:"4px 0 0",fontSize:14,color:"#374151",lineHeight:1.6}}>{detail}</p></div>
           ))}
         </div>
 
-        <PatrickTip city="hk">"Finding a trustworthy mechanic in HK is gold. I found mine through a Sai Kung Facebook group â two separate people recommended the same guy independently. He's been looking after my car ever since. Ask other expats. The good ones get passed around by word of mouth and that reputation matters enormously to them."</PatrickTip>
+        <PatrickTip city="hk">"Finding a trustworthy mechanic in HK is gold. I found mine through a Sai Kung Facebook group — two separate people recommended the same guy independently. He's been looking after my car ever since. Ask other expats. The good ones get passed around by word of mouth and that reputation matters enormously to them."</PatrickTip>
       </div>
     </Layout>
   );
