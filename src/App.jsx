@@ -20,6 +20,8 @@ import HKLicenceConversion from './pages/hongkong/LicenceConversion';
 import HKEVGuide from './pages/hongkong/EVGuide';
 import HKCalculators from './pages/hongkong/Calculators';
 import HKGarageFinder from './pages/hongkong/GarageFinder';
+import SGLeaseChecker from './pages/singapore/LeaseChecker';
+import HKLeaseChecker from './pages/hongkong/LeaseChecker';
 import ScrollToTop from './components/ScrollToTop';
 
 export function AppRoutes() {
@@ -35,6 +37,7 @@ export function AppRoutes() {
       <Route path="/singapore/ev-guide" element={<SGEVGuide />} />
       <Route path="/singapore/calculators" element={<SGCalculators />} />
       <Route path="/singapore/garage-finder" element={<SGGarageFinder />} />
+      <Route path="/singapore/lease-checker" element={<SGLeaseChecker />} />
       <Route path="/hongkong" element={<HongKong />} />
       <Route path="/hongkong/should-i-get-a-car" element={<HKShouldIGetACar />} />
       <Route path="/hongkong/buying-guide" element={<HKBuyingGuide />} />
@@ -46,6 +49,7 @@ export function AppRoutes() {
       <Route path="/hongkong/ev-guide" element={<HKEVGuide />} />
       <Route path="/hongkong/calculators" element={<HKCalculators />} />
       <Route path="/hongkong/garage-finder" element={<HKGarageFinder />} />
+      <Route path="/hongkong/lease-checker" element={<HKLeaseChecker />} />
     </Routes>
   );
 }
