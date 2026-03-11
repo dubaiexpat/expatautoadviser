@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import Layout from "../../components/Layout";
 import { Link } from "react-router-dom";
+import AffiliateBox from "../../components/AffiliateBox";
+import EmailCapture from "../../components/EmailCapture";
 
 /* ─── Singapore Calculators Page ─────────────────────────────────────────── */
 
@@ -661,20 +663,26 @@ export default function Calculators() {
           {activeTab === "licence" && <LicenceChecker />}
         </div>
 
+        {/* Affiliate Box */}
+        <AffiliateBox
+          city="sg"
+          type="insurance"
+          title="Ready to get insured? Compare Singapore car insurance"
+          partners={[
+            { name: 'DirectAsia', badge: 'Popular with expats', desc: 'Online quotes in 3 minutes. Comprehensive cover, easy NCD transfer for overseas drivers.', url: '#' },
+            { name: 'Income Insurance', desc: 'Competitive rates, 24/7 claims, flexible workshop choice.', url: '#' },
+            { name: 'SingSaver — Compare All Insurers', desc: 'Compare multiple Singapore insurers side-by-side. Free, takes 2 minutes.', url: '#' },
+          ]}
+        />
+
         {/* Email CTA */}
-        <div style={{ marginTop: 48, background: "#1a1a2e", borderRadius: 12, padding: 28, textAlign: "center", color: "#fff" }}>
-          <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>Get the monthly COE update</h3>
-          <p style={{ fontSize: 14, color: "#9ca3af", marginBottom: 20 }}>
-            COE premiums change every fortnight. We send one email per month with the latest figures and what they mean for you.
-          </p>
-          <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
-            <input type="email" placeholder="your@email.com" style={{ padding: "10px 16px", borderRadius: 8, border: "none", fontSize: 14, width: 240 }} />
-            <button style={{ padding: "10px 20px", background: "#dc2626", color: "#fff", border: "none", borderRadius: 8, fontSize: 14, fontWeight: 600, cursor: "pointer" }}>
-              Send me updates
-            </button>
-          </div>
-          <p style={{ fontSize: 11, color: "#6b7280", marginTop: 8 }}>No spam. Unsubscribe anytime.</p>
-        </div>
+        <EmailCapture
+          city="sg"
+          source="sg-calculators"
+          title="📊 Get the monthly COE price update"
+          subtitle="COE premiums change every fortnight. We send one email per month with the latest figures and what they mean for expats deciding whether to buy or lease."
+          buttonText="Send me updates →"
+        />
       </div>
     </Layout>
   );

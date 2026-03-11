@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import Layout from "../../components/Layout";
 import { Link } from "react-router-dom";
+import AffiliateBox from "../../components/AffiliateBox";
+import EmailCapture from "../../components/EmailCapture";
 
 /* ─── Hong Kong Calculators Page ────────────────────────────────────────── */
 
@@ -683,20 +685,26 @@ export default function Calculators() {
           {activeTab === "licence" && <HKLicenceChecker />}
         </div>
 
+        {/* Affiliate Box */}
+        <AffiliateBox
+          city="hk"
+          type="insurance"
+          title="Ready to get insured? Compare Hong Kong car insurance"
+          partners={[
+            { name: 'AXA Hong Kong', badge: 'Popular with expats', desc: 'English-language service, easy overseas NCD recognition, flexible workshop choice.', url: '#' },
+            { name: 'Zurich Insurance HK', desc: 'Strong expat reputation. Competitive premiums. Trusted claims process.', url: '#' },
+            { name: 'Compare.com.hk', desc: 'Compare multiple HK car insurers in one place. Free, instant quotes.', url: '#' },
+          ]}
+        />
+
         {/* Email CTA */}
-        <div style={{ marginTop: 48, background: "#1a1a2e", borderRadius: 12, padding: 28, textAlign: "center", color: "#fff" }}>
-          <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>Get the monthly FRT update</h3>
-          <p style={{ fontSize: 14, color: "#9ca3af", marginBottom: 20 }}>
-            Hong Kong FRT policy changes regularly. We send one email per month covering key HK car market updates.
-          </p>
-          <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
-            <input type="email" placeholder="your@email.com" style={{ padding: "10px 16px", borderRadius: 8, border: "none", fontSize: 14, width: 240 }} />
-            <button style={{ padding: "10px 20px", background: "#dc2626", color: "#fff", border: "none", borderRadius: 8, fontSize: 14, fontWeight: 600, cursor: "pointer" }}>
-              Send me updates
-            </button>
-          </div>
-          <p style={{ fontSize: 11, color: "#6b7280", marginTop: 8 }}>No spam. Unsubscribe anytime.</p>
-        </div>
+        <EmailCapture
+          city="hk"
+          source="hk-calculators"
+          title="📊 Get the monthly HK car market update"
+          subtitle="FRT policy, EV incentives, and HK car market news — one email per month. Free, unsubscribe any time."
+          buttonText="Send me updates →"
+        />
       </div>
     </Layout>
   );

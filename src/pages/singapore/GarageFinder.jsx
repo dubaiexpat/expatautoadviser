@@ -1,4 +1,6 @@
 import Layout from "../../components/Layout";
+import AffiliateBox from "../../components/AffiliateBox";
+import EmailCapture from "../../components/EmailCapture";
 import PatrickTip from "../../components/PatrickTip";
 import { Link } from "react-router-dom";
 
@@ -173,6 +175,23 @@ export default function SGGarageFinder() {
           </div>
         </div>
       </div>
+      {/* Affiliate: Leasing */}
+      <AffiliateBox
+        city="sg"
+        type="leasing"
+        title="Need a car lease? Compare expat-friendly companies"
+        partners={[
+          { name: 'PHV Leasing SG', badge: 'Expat favourite', desc: 'Transparent pricing, English-speaking team, flexible lease terms from 6 months.', url: '#' },
+          { name: 'Goldbell Leasing', desc: 'One of Singapore's largest fleet operators. Comprehensive packages including maintenance.', url: '#' },
+          { name: 'ComfortDelGro Rent-a-Car', desc: 'Wide vehicle choice, competitive pricing, island-wide service network.', url: '#' },
+        ]}
+      />
+      <EmailCapture
+        city="sg"
+        source="sg-garage-finder"
+        title="📋 Get the free Singapore Car Buyer Checklist"
+        subtitle="Includes our vetted garage list, servicing price benchmarks, and what to watch out for at lease return. Free."
+      />
     </Layout>
   );
 }

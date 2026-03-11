@@ -289,6 +289,40 @@ const META = {
     desc: `Find reliable, English-speaking garages and service centres in Hong Kong. Recommended by expats for fair pricing and quality work.`,
     type: `website`,
   },
+  '/singapore/lease-checker': {
+    title: `Singapore Lease Checker — Is Your Car Lease a Fair Deal?`,
+    desc: `Check if your Singapore car lease is fairly priced. Enter your terms and compare against real market data from expat lease submissions.`,
+    type: `website`,
+    faq: [
+      {
+        q: `What is a fair monthly price for a car lease in Singapore?`,
+        a: `A mid-range sedan lease in Singapore typically costs SGD 1,650 to 2,300 per month. Economy cars range from SGD 1,150 to 1,580, while premium cars can cost SGD 2,150 to 3,050 per month. These figures are for 36-month leases — shorter terms cost more.`,
+      },
+      {
+        q: `Does a Singapore car lease include insurance?`,
+        a: `It depends on the lease. Many Singapore leases include comprehensive car insurance, road tax, and servicing in the monthly price. Always check what is included — a lease at SGD 2,500 with insurance included may be cheaper than one at SGD 2,000 without it.`,
+      },
+      {
+        q: `How do I compare car lease prices in Singapore?`,
+        a: `Get at least three quotes for the same car segment and lease term. Ask each company to quote with and without insurance and servicing so you can compare on a like-for-like basis. Use our Lease Checker to benchmark any quote against current market rates.`,
+      },
+    ],
+  },
+  '/hongkong/lease-checker': {
+    title: `Hong Kong Lease Checker — Is Your Car Lease a Fair Deal?`,
+    desc: `Check if your Hong Kong car lease is fairly priced. Compare your lease terms against current HK market rates from real expat data.`,
+    type: `website`,
+    faq: [
+      {
+        q: `What is a fair monthly price for a car lease in Hong Kong?`,
+        a: `A standard sedan lease in Hong Kong typically costs HKD 10,000 to 16,000 per month excluding insurance. Prices vary by car model, lease length, and what is included.`,
+      },
+      {
+        q: `Should I lease or buy a car in Hong Kong as an expat?`,
+        a: `Leasing is generally better for expats on 1 to 3 year assignments. Buying involves First Registration Tax of 40 to 115 percent on top of the vehicle price, making it only worthwhile for longer stays.`,
+      },
+    ],
+  },
 };
 
 function buildSchema(route, meta) {

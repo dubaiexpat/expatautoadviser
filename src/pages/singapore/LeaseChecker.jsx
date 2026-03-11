@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import AffiliateBox from '../../components/AffiliateBox';
+import EmailCapture from '../../components/EmailCapture';
 
 const SUPABASE_URL = 'https://lywjdihnnajvhfcpmxnw.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5d2pkaWhubmFqdmhmY3BteG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyMzA4MjEsImV4cCI6MjA4ODgwNjgyMX0.x6A081ICya-DOqW6eeyZnDICltJTroEFSoYONH4WZAk';
@@ -94,7 +96,7 @@ async function saveToSupabase(form) {
   } catch(e) { /* silent fail */ }
 }
 
-const inputStyle = { width: '100%', padding: '10px 14px', border: '1.5px solid #d1d5db', borderRadius: 8, fontSize: 14, fontFamily: 'Inter, sans-serif', color: '#1f2937', background: 'white', boxSizing: 'border-box', outline: 'none' };
+const inputStyle = { width: '100%', padding: '10px 14px', border: '1.5px solid #d1d5db', borderRadius: 8, fontSize: 16, fontFamily: 'Inter, sans-serif', color: '#1f2937', background: 'white', boxSizing: 'border-box', outline: 'none' };
 const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 };
 const hintStyle = { fontSize: 12, color: '#9ca3af', marginTop: 4 };
 const cardStyle = { background: 'white', border: '1.5px solid #e5e7eb', borderRadius: 12, padding: '24px 28px', marginBottom: 20 };
@@ -155,7 +157,7 @@ export default function SGLeaseChecker() {
               <h2 style={{ fontSize: 16, fontWeight: 700, color: '#1e3a5f', margin: '0 0 20px' }}>Your details</h2>
               <div>
                 <label style={labelStyle}>Email address <span style={{ color: '#e8341c' }}>*</span></label>
-                <input style={{ ...inputStyle, borderColor: errors.email ? '#e8341c' : '#d1d5db' }} type="email" placeholder="you@example.com" value={form.email} onChange={e => set('email', e.target.value)} />
+                <input style={{ ...inputStyle, borderColor: errors.email ? '#e8341c' : '#d1d5db' }} type="email" placeholder="you@example.com" value={form.email} style={{ ...inputStyle, fontSize: 16, borderColor: errors.email ? '#e8341c' : '#d1d5db' }} onChange={e => set('email', e.target.value)} />
                 {errors.email && <p style={{ ...hintStyle, color: '#e8341c' }}>{errors.email}</p>}
                 <p style={hintStyle}>Your report will also be emailed to you.</p>
               </div>
@@ -175,7 +177,7 @@ export default function SGLeaseChecker() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                   <div>
                     <label style={labelStyle}>Monthly cost (SGD) <span style={{ color: '#e8341c' }}>*</span></label>
-                    <input style={{ ...inputStyle, borderColor: errors.cost ? '#e8341c' : '#d1d5db' }} type="number" placeholder="e.g. 2200" value={form.cost} onChange={e => set('cost', e.target.value)} />
+                    <input style={{ ...inputStyle, borderColor: errors.cost ? '#e8341c' : '#d1d5db' }} type="number" inputMode="decimal" placeholder="e.g. 2200" value={form.cost} onChange={e => set('cost', e.target.value)} />
                     {errors.cost && <p style={{ ...hintStyle, color: '#e8341c' }}>{errors.cost}</p>}
                   </div>
                   <div>
@@ -188,11 +190,11 @@ export default function SGLeaseChecker() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                   <div>
                     <label style={labelStyle}>Monthly mileage (km)</label>
-                    <input style={inputStyle} type="number" placeholder="e.g. 2000" value={form.mileage} onChange={e => set('mileage', e.target.value)} />
+                    <input style={inputStyle} type="number" inputMode="decimal" placeholder="e.g. 2000" value={form.mileage} onChange={e => set('mileage', e.target.value)} />
                   </div>
                   <div>
                     <label style={labelStyle}>Excess charge (SGD/km)</label>
-                    <input style={inputStyle} type="number" step="0.01" placeholder="e.g. 0.30" value={form.excess} onChange={e => set('excess', e.target.value)} />
+                    <input style={inputStyle} type="number" inputMode="decimal" step="0.01" placeholder="e.g. 0.30" value={form.excess} onChange={e => set('excess', e.target.value)} />
                   </div>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
@@ -314,9 +316,30 @@ export default function SGLeaseChecker() {
               )}
             </div>
 
-            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/singapore/leasing-guide" style={{ background: '#1e3a5f', color: 'white', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Read our leasing guide â</Link>
-              <button onClick={() => { setReport(null); setForm(f => ({ ...f, cost: '', segment: '', insurance: false, roadTax: false, servicing: false, tyres: false, breakdown: false })); }} style={{ background: 'white', color: '#1e3a5f', border: '1.5px solid #1e3a5f', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, cursor: 'pointer', fontFamily: 'Inter, sans-serif' }}>Check another lease</button>
+            {/* ── Affiliate: Insurance ── */}
+            <AffiliateBox
+              city="sg"
+              type="insurance"
+              title="Compare car insurance before you sign"
+              partners={[
+                { name: 'DirectAsia', badge: 'Popular with expats', desc: 'Online quotes in 3 minutes. Comprehensive cover, easy NCD transfer for overseas licence holders.', url: '#' },
+                { name: 'Income Insurance', desc: 'Competitive comprehensive rates, 24/7 claims line, and flexible workshop options.', url: '#' },
+                { name: 'SingSaver — Compare All Insurers', desc: 'See quotes from all major Singapore car insurers side-by-side. Takes 2 minutes.', url: '#' },
+              ]}
+            />
+
+            {/* ── Email capture ── */}
+            <EmailCapture
+              city="sg"
+              source="sg-lease-checker-result"
+              title="📋 Get your free Singapore Car Buyer Checklist"
+              subtitle="Step-by-step from COE bidding to insurance to your first drive. Plus monthly COE price updates when results drop."
+            />
+
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginTop: 8 }}>
+              <Link to="/singapore/leasing-guide" style={{ background: '#1e3a5f', color: 'white', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Read our leasing guide →</Link>
+              <Link to="/singapore/insurance-guide" style={{ background: 'white', color: '#1e3a5f', border: '1.5px solid #1e3a5f', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Insurance guide →</Link>
+              <button onClick={() => { setReport(null); setForm(f => ({ ...f, cost: '', segment: '', insurance: false, roadTax: false, servicing: false, tyres: false, breakdown: false })); }} style={{ background: '#f3f4f6', color: '#374151', border: 'none', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, cursor: 'pointer', fontFamily: 'Inter, sans-serif' }}>Check another lease</button>
             </div>
           </>
         )}
