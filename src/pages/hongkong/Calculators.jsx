@@ -1,1 +1,703 @@
-aW1wb3J0IHsgdXNlU3RhdGUsIHVzZU1lbW8gfSBmcm9tICJyZWFjdCI7CmltcG9ydCBMYXlvdXQgZnJvbSAiLi4vLi4vY29tcG9uZW50cy9MYXlvdXQiOwppbXBvcnQgeyBMaW5rIH0gZnJvbSAicmVhY3Qtcm91dGVyLWRvbSI7CgovKiDilIDilIDilIAgSG9uZyBLb25nIENhbGN1bGF0b3JzIFBhZ2Ug4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAICovCgovLyDilIDilIAgRlJUIGNhbGN1bGF0aW9uIGhlbHBlcnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmZ1bmN0aW9uIGNhbGNGUlQodGF4YWJsZVZhbHVlKSB7CiAgLy8gRlJUIGJhbmRzIChIS0QpOgogIC8vIEZpcnN0ICQxNTAsMDAwIEAgNDAlCiAgLy8gTmV4dCAkMTUwLDAwMCBAIDc1JQogIC8vIE5leHQgJDIwMCwwMDAgQCAxMDAlCiAgLy8gUmVtYWluZGVyIEAgMTE1JQogIGlmICh0YXhhYmxlVmFsdWUgPD0gMCkgcmV0dXJuIDA7CiAgbGV0IGZydCA9IDA7CiAgY29uc3QgdDEgPSBNYXRoLm1pbih0YXhhYmxlVmFsdWUsIDE1MDAwMCk7CiAgZnJ0ICs9IHQxICogMC40MDsKICBpZiAodGF4YWJsZVZhbHVlID4gMTUwMDAwKSB7CiAgICBjb25zdCB0MiA9IE1hdGgubWluKHRheGFibGVWYWx1ZSAtIDE1MDAwMCwgMTUwMDAwKTsKICAgIGZydCArPSB0MiAqIDAuNzU7CiAgfQogIGlmICh0YXhhYmxlVmFsdWUgPiAzMDAwMDApIHsKICAgIGNvbnN0IHQzID0gTWF0aC5taW4odGF4YWJsZVZhbHVlIC0gMzAwMDAwLCAyMDAwMDApOwogICAgZnJ0ICs9IHQzICogMS4wMDsKICB9CiAgaWYgKHRheGFibGVWYWx1ZSA+IDUwMDAwMCkgewogICAgZnJ0ICs9ICh0YXhhYmxlVmFsdWUgLSA1MDAwMDApICogMS4xNTsKICB9CiAgcmV0dXJuIE1hdGgucm91bmQoZnJ0KTsKfQoKLy8gRlJUIGRlcmVnaXN0cmF0aW9uIHJlYmF0ZSAoc2xpZGluZyBzY2FsZSkKLy8gRnVsbCByZWJhdGUgZm9yIGNhcnMgMOKAkzMgeWVhcnMgb2xkLCB0YXBlcnMgdG8gMCBhdCB+MTAgeWVhcnMKZnVuY3Rpb24gY2FsY0ZSVFJlYmF0ZShmcnQsIHllYXJzT2xkKSB7CiAgaWYgKHllYXJzT2xkIDw9IDAgfHwgZnJ0IDw9IDApIHJldHVybiAwOwogIC8vIEFwcHJveGltYXRlIHJlYmF0ZSBzY2hlZHVsZSAoYmFzZWQgb24gVEQgc2xpZGluZyBzY2FsZSkKICBjb25zdCByZWJhdGVGYWN0b3JzID0gewogICAgMDogMS4wMCwgMTogMC45MCwgMjogMC44MCwgMzogMC43MCwKICAgIDQ6IDAuNTUsIDU6IDAuNDAsIDY6IDAuMzAsIDc6IDAuMjAsCiAgICA4OiAwLjEwLCA5OiAwLjA1LCAxMDogMC4wMAogIH07CiAgY29uc3QgZmFjdG9yID0gcmViYXRlRmFjdG9yc1tNYXRoLm1pbih5ZWFyc09sZCwgMTApXSB8fCAwOwogIHJldHVybiBNYXRoLnJvdW5kKGZydCAqIGZhY3Rvcik7Cn0KCmZ1bmN0aW9uIGZtdChuKSB7CiAgcmV0dXJuICJISyQiICsgTWF0aC5yb3VuZChuKS50b0xvY2FsZVN0cmluZygiZW4tSEsiKTsKfQoKLy8g4pSA4pSAIFRvb2x0aXAgY29tcG9uZW50IOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApmdW5jdGlvbiBUb29sdGlwKHsgdGV4dCB9KSB7CiAgY29uc3QgW3Nob3csIHNldFNob3ddID0gdXNlU3RhdGUoZmFsc2UpOwogIHJldHVybiAoCiAgICA8c3BhbiBzdHlsZT17eyBwb3NpdGlvbjogInJlbGF0aXZlIiwgZGlzcGxheTogImlubGluZS1ibG9jayIsIG1hcmdpbkxlZnQ6IDQgfX0+CiAgICAgIDxidXR0b24KICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRTaG93KCFzaG93KX0KICAgICAgICBzdHlsZT17ewogICAgICAgICAgd2lkdGg6IDE2LCBoZWlnaHQ6IDE2LCBib3JkZXJSYWRpdXM6ICI1MCUiLCBib3JkZXI6ICIxcHggc29saWQgIzljYTNhZiIsCiAgICAgICAgICBiYWNrZ3JvdW5kOiAiI2YzZjRmNiIsIGZvbnRTaXplOiAxMCwgY3Vyc29yOiAicG9pbnRlciIsIGNvbG9yOiAiIzZiNzI4MCIsCiAgICAgICAgICBsaW5lSGVpZ2h0OiAiMTRweCIsIHBhZGRpbmc6IDAsIGZvbnRXZWlnaHQ6IDcwMCwgZGlzcGxheTogImlubGluZS1mbGV4IiwKICAgICAgICAgIGFsaWduSXRlbXM6ICJjZW50ZXIiLCBqdXN0aWZ5Q29udGVudDogImNlbnRlciIKICAgICAgICB9fQogICAgICAgIGFyaWEtbGFiZWw9Ik1vcmUgaW5mbyIKICAgICAgPj88L2J1dHRvbj4KICAgICAge3Nob3cgJiYgKAogICAgICAgIDxzcGFuIHN0eWxlPXt7CiAgICAgICAgICBwb3NpdGlvbjogImFic29sdXRlIiwgYm90dG9tOiAyMiwgbGVmdDogIjUwJSIsIHRyYW5zZm9ybTogInRyYW5zbGF0ZVgoLTUwJSkiLAogICAgICAgICAgYmFja2dyb3VuZDogIiMxZjI5MzciLCBjb2xvcjogIiNmZmYiLCBmb250U2l6ZTogMTEsIHBhZGRpbmc6ICI2cHggMTBweCIsCiAgICAgICAgICBib3JkZXJSYWRpdXM6IDYsIHdoaXRlU3BhY2U6ICJub3dyYXAiLCBtYXhXaWR0aDogMjYwLCBsaW5lSGVpZ2h0OiAxLjUsCiAgICAgICAgICB6SW5kZXg6IDEwLCBib3hTaGFkb3c6ICIwIDJweCA4cHggcmdiYSgwLDAsMCwwLjMpIiwgdGV4dEFsaWduOiAibGVmdCIKICAgICAgICB9fT4KICAgICAgICAgIHt0ZXh0fQogICAgICAgIDwvc3Bhbj4KICAgICAgKX0KICAgIDwvc3Bhbj4KICAKICK=Cn0KCmZ1bmN0aW9uIFJlc3VsdFJvdyh7IGxhYmVsLCB2YWx1ZSwgdG9vbHRpcCwgaGlnaGxpZ2h0LCBzdWIgfSkgewogIHJldHVybiAoCiAgICA8ZGl2IHN0eWxlPXt7CiAgICAgIGRpc3BsYXk6ICJmbGV4IiwganVzdGlmeUNvbnRlbnQ6ICJzcGFjZS1iZXR3ZWVuIiwgYWxpZ25JdGVtczogImNlbnRlciIsCiAgICAgIHBhZGRpbmc6ICIxMHB4IDAiLCBib3JkZXJCb3R0b206ICIxcHggc29saWQgI2YzZjRmNiIsCiAgICAgIGJhY2tncm91bmQ6IGhpZ2hsaWdodCA/ICIjZmZmYmViIiA6ICJ0cmFuc3BhcmVudCIsCiAgICAgIGJvcmRlclJhZGl1czogaGlnaGxpZ2h0ID8gNiA6IDAsCiAgICAgIHBhZGRpbmdMZWZ0OiBoaWdobGlnaHQgPyA4IDogMCwgcGFkZGluZ1JpZ2h0OiBoaWdobGlnaHQgPyA4IDogMCwKICAgIH19PgogICAgICA8c3BhbiBzdHlsZT17eyBmb250U2l6ZTogc3ViID8gMTIgOiAxNCwgY29sb3I6IGhpZ2hsaWdodCA/ICIjOTI0MDBlIiA6IHN1YiA/ICIjOWNhM2FmIiA6ICIjMzc0MTUxIiwgZm9udFdlaWdodDogaGlnaGxpZ2h0ID8gNzAwIDogNDAwLCBmb250U3R5bGU6IHN1YiA/ICJpdGFsaWMiIDogIm5vcm1hbCIgfX0+CiAgICAgICAge2xhYmVsfQogICAgICAgIHt0b29sdGlwICYmIDxUb29sdGlwIHRleHQ9e3RvbHRpcH0gLz59CiAgICAgIDwvc3Bhbj4KICAgICAgPHNwYW4gc3R5bGU9e3sgZm9udFNpemU6IGhpZ2hsaWdodCA/IDE4IDogMTQsIGZvbnRXZWlnaHQ6IGhpZ2hsaWdodCA/IDcwMCA6IDYwMCwgY29sb3I6IGhpZ2hsaWdodCA/ICIjOTI0MDBlIiA6ICIjMTExODI3IiB9fT4KICAgICAgICB7dmFsdWV9CiAgICAgIDwvc3Bhbj4KICAgIDwvZGl2PgogICk7Cn0KCi8vIOKUgOKUgCBGUlQgT24tUm9hZCBDYWxjdWxhdG9yIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApmdW5jdGlvbiBGUlRDYWxjdWxhdG9yKCkgewogIGNvbnN0IFt0YXhhYmxlVmFsdWUsIHNldFRheGFibGVWYWx1ZV0gPSB1c2VTdGF0ZSgiIik7CiAgY29uc3QgW3ZlaGljbGVUeXBlLCBzZXRWZWhpY2xlVHlwZV0gPSB1c2VTdGF0ZSgiaWNlIik7CiAgY29uc3QgW3JlZ1llYXIsIHNldFJlZ1llYXJdID0gdXNlU3RhdGUoIiIpOwoKICBjb25zdCBjdXJyZW50WWVhciA9IG5ldyBEYXRlKCkuZ2V0RnVsbFllYXIoKTsKICBjb25zdCB0dk51bSA9IHBhcnNlRmxvYXQodGF4YWJsZVZhbHVlKSB8fCAwOwogIGNvbnN0IHllYXJzT2xkID0gcmVnWWVhciA/IGN1cnJlbnRZZWFyIC0gcGFyc2VJbnQocmVnWWVhcikgOiBudWxsOwoKICBjb25zdCByZXN1bHRzID0gdXNlTWVtbygoKSA9PiB7CiAgICBpZiAodHZOdW0gPD0gMCkgcmV0dXJuIG51bGw7CiAgICBpZiAodmVoaWNsZVR5cGUgPT09ICJldiIpIHsKICAgICAgLy8gRVY6IHBvdGVudGlhbGx5IGZ1bGwgRlJUIGV4ZW1wdGlvbiB1bmRlciBPbmUtZm9yLU9uZSBzY2hlbWUKICAgICAgY29uc3QgZnJ0SWZOb0V4ZW1wdGlvbiA9IGNhbGNGUlQodHZOdW0pOwogICAgICBjb25zdCB0b3RhbFdpdGhvdXRFeGVtcHRpb24gPSB0dk51bSArIGZydElmTm9FeGVtcHRpb247CiAgICAgIHJldHVybiB7IGlzRVY6IHRydWUsIGZydElmTm9FeGVtcHRpb24sIHRvdGFsV2l0aG91dEV4ZW1wdGlvbiwgdGF4YWJsZVZhbHVlOiB0dk51bSB9OwogICAgfQogICAgY29uc3QgZnJ0ID0gY2FsY0ZSVCh0dk51bSk7CiAgICBjb25zdCB0b3RhbE9uUm9hZCA9IHR2TnVtICsgZnJ0OwogICAgY29uc3QgZnJ0UmF0ZSA9IHR2TnVtID4gMCA/IE1hdGgucm91bmQoKGZydCAvIHR2TnVtKSAqIDEwMCkgOiAwOwogICAgY29uc3QgcmViYXRlID0geWVhcnNPbGQgIT09IG51bGwgPyBjYWxjRlJUUmViYXRlKGZydCwgeWVhcnNPbGQpIDogbnVsbDsKICAgIHJldHVybiB7IGlzRVY6IGZhbHNlLCBmcnQsIHRvdGFsT25Sb2FkLCBmcnRSYXRlLCByZWJhdGUsIHllYXJzT2xkLCB0YXhhYmxlVmFsdWU6IHR2TnVtIH07CiAgfSwgW3R2TnVtLCB2ZWhpY2xlVHlwZSwgeWVhcnNPbGRdKTsKCiAgLy8gU2hvdyBGUlQgYmFuZCBicmVha2Rvd24KICBDB25zdCBiYW5kQnJlYWtkb3duID0gdXNlTWVtbygoKSA9PiB7CiAgICBpZiAodHZOdW0gPD0gMCkgcmV0dXJuIFtdOwogICAgY29uc3QgYmFuZHMgPSBbXTsKICAgIGNvbnN0IHQxID0gTWF0aC5taW4odHZOdW0sIDE1MDAwMCk7CiAgICBiYW5kcy5wdXNoKHsgcmFuZ2U6ICJGaXJzdCBISyQxNTAsMDAwIiwgcmF0ZTogIjQwJSIsIHRheDogTWF0aC5yb3VuZCh0MSAqIDAuNDApLCBhcHBsaWNhYmxlOiB0dk51bSA+IDAgfSk7CiAgICBpZiAodHZOdW0gPiAxNTAwMDApIHsKICAgICAgY29uc3QgdDIgPSBNYXRoLm1pbih0dk51bSAtIDE1MDAwMCwgMTUwMDAwKTsKICAgICAgYmFuZHMucHVzaCh7IHJhbmdlOiAiTmV4dCBISyQxNTAsMDAwIiwgcmF0ZTogIjc1JSIsIHRheDogTWF0aC5yb3VuZCh0MiAqIDAuNzUpLCBhcHBsaWNhYmxlOiB0cnVlIH0pOwogICAgfQogICAgaWYgKHR2TnVtID4gMzAwMDAwKSB7CiAgICAgIGNvbnN0IHQzID0gTWF0aC5taW4odHZOdW0gLSAzMDAwMDAsIDIwMDAwMCk7CiAgICAgIGJhbmRzLnB1c2goeyByYW5nZTogIk5leHQgSEskMjAwLDAwMCIsIHJhdGU6ICIxMDAlIiwgdGF4OiBNYXRoLnJvdW5kKHQzICogMS4wMCksIGFwcGxpY2FibGU6IHRydWUgfSk7CiAgICB9CiAgICBpZiAodHZOdW0gPiA1MDAwMDApIHsKICAgICAgYmFuZHMucHVzaCh7IHJhbmdlOiAiUmVtYWluZGVyIiwgcmF0ZTogIjExNSUiLCB0YXg6IE1hdGgucm91bmQoKHR2TnVtIC0gNTAwMDAwKSAqIDEuMTUpLCBhcHBsaWNhYmxlOiB0cnVlIH0pOwogICAgfQogICAgcmV0dXJuIGJhbmRzOwogIH0sIFt0dk51bV0pOwoKICBjb25zdCBpbnB1dFN0eWxlID0gewogICAgd2lkdGg6ICIxMDAlIiwgcGFkZGluZzogIjEwcHggMTJweCIsIGJvcmRlclJhZGl1czogOCwKICAgIGJvcmRlcjogIjFweCBzb2xpZCAjZDFkNWRiIiwgZm9udFNpemU6IDE0LCBib3hTaXppbmc6ICJib3JkZXItYm94IiwKICAgIGNvbG9yOiAiIzExMTgyNyIsIGJhY2tncm91bmQ6ICIjZmZmIgogIH07CiAgY29uc3QgbGFiZWxTdHlsZSA9IHsgZm9udFNpemU6IDEzLCBmb250V2VpZ2h0OiA2MDAsIGNvbG9yOiAiIzM3NDE1MSIsIGRpc3BsYXk6ICJibG9jayIsIG1hcmdpbkJvdHRvbTogNiB9OwogIGNvbnN0IGdyb3VwU3R5bGUgPSB7IG1hcmdpbkJvdHRvbTogMTYgfTsKCiAgcmV0dXJuICgKICAgIDxkaXY+CiAgICAgIDxoMiBzdHlsZT17eyBmb250U2l6ZTogMjIsIGZvbnRXZWlnaHQ6IDcwMCwgY29sb3I6ICIjMWExYTJlIiwgbWFyZ2luQm90dG9tOiA4IH19PgogICAgICAgIEZSVCBPbi1Sb2FkIFByaWNlIENhbGN1bGF0b3IKICAgICAgPC9oMj4KICAgICAgPHAgc3R5bGU9e3sgY29sb3I6ICIjNmI3MjgwIiwgZm9udFNpemU6IDE0LCBtYXJnaW5Cb3R0b206IDI0LCBsaW5lSGVpZ2h0OiAxLjYgfX0+CiAgICAgICAgRW50ZXIgYSB2ZWhpY2xlJ3MgdGF4YWJsZSB2YWx1ZSB0byBzZWUgaG93IG11Y2ggRmlyc3QgUmVnaXN0cmF0aW9uIFRheCBhcHBsaWVzIGFuZCB3aGF0IHRoZSB0b3RhbCBvbi1yb2FkIHByaWNlIHdpbGwgYmUuIFJlc3VsdHMgdXBkYXRlIGFzIHlvdSB0eXBlLgogICAgICA8L3A+CgogICAgICA8ZGl2IHN0eWxlPXt7IGRpc3BsYXk6ICJncmlkIiwgZ3JpZFRlbXBsYXRlQ29sdW1uczogInJlcGVhdChhdXRvLWZpbGwsIG1pbm1heCgyNjBweCwgMWZyKSkiLCBnYXA6IDE2LCBtYXJnaW5Cb3R0b206IDI0IH19PgogICAgICAgIHsvKiBUYXhhYmxlIHZhbHVlICovfQogICAgICAgIDxkaXYgc3R5bGU9e2dyb3VwU3R5bGV9PgogICAgICAgICAgPGxhYmVsIHN0eWxlPXtsYWJlbFN0eWxlfT4KICAgICAgICAgICAgVmVoaWNsZSBUYXhhYmxlIFZhbHVlCiAgICAgICAgICAgIDxUb29sdGlwIHRleHQ9IlRoaXMgaXMgdGhlIE9wZW4gTWFya2V0IFZhbHVlIGFzIGFzc2Vzc2VkIGJ5IHRoZSBUcmFuc3BvcnQgRGVwYXJ0bWVudCDigJQgbm90IG5lY2Vzc2FyaWx5IHRoZSBwdXJjaGFzZSBwcmljZSBvciB0aGUgc3RpY2tlciBwcmljZSBhdCB0aGUgZGVhbGVyLiIgLz4KICAgICAgICAgIDwvbGFiZWw+CiAgICAgICAgICA8ZGl2IHN0eWxlPXt7IHBvc2l0aW9uOiAicmVsYXRpdmUiIH19PgogICAgICAgICAgICA8c3BhbiBzdHlsZT17eyBwb3NpdGlvbjogImFic29sdXRlIiwgbGVmdDogMTIsIHRvcDogIjUwJSIsIHRyYW5zZm9ybTogInRyYW5zbGF0ZVkoLTUwJSkiLCBjb2xvcjogIiM2YjcyODAiLCBmb250U2l6ZTogMTQgfX0+SEskPC9zcGFuPgogICAgICAgICAgICA8aW5wdXQKICAgICAgICAgICAgICB0eXBlPSJudW1iZXIiCiAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9ImUuZy4gMjAwMDAwIgogICAgICAgICAgICAgIHZhbHVlPXt0YXhhYmxlVmFsdWV9CiAgICAgICAgICAgICAgb25DaGFuZ2U9e2UgPT4gc2V0VGF4YWJsZVZhbHVlKGUudGFyZ2V0LnZhbHVlKX0KICAgICAgICAgICAgICBzdHlsZT17eyAuLi5pbnB1dFN0eWxlLCBwYWRkaW5nTGVmdDogNDQgfX0KICAgICAgICAgICAgLz4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgoKICAgICAgICB7LyogVmVoaWNsZSB0eXBlICovfQogICAgICAgIDxkaXYgc3R5bGU9e2dyb3VwU3R5bGV9PgogICAgICAgICAgPGxhYmVsIHN0eWxlPXtsYWJlbFN0eWxlfT4KICAgICAgICAgICAgVmVoaWNsZSBUeXBlCiAgICAgICAgICAgIDxUb29sdGlwIHRleHQ9IkVsZWN0cmljIHZlaGljbGVzIG1heSBxdWFsaWZ5IGZvciBmdWxsIEZSVCBleGVtcHRpb24gdW5kZXIgdGhlIE9uZS1mb3ItT25lIFJlcGxhY2VtZW50IFNjaGVtZS4gRWxpZ2liaWxpdHkgY29uZGl0aW9ucyBhcHBseSDigJQgY2hlY2sgdGhlIEVNU0Qgd2Vic2l0ZS4iIC8+CiAgICAgICAgICA8L2xhYmVsPgogICAgICAgICAgPHNlbGVjdCB2YWx1ZT17dmVoaWNsZVR5cGV9IG9uQ2hhbmdlPXtlID0+IHNldFZlaGljbGVUeXBlKGUudGFyZ2V0LnZhbHVlKX0gc3R5bGU9e2lucHV0U3R5bGV9PgogICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJpY2UiPlBldHJvbCAvIERpZXNlbCAoSUNFKTwvb3B0aW9uPgogICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJldiI+RWxlY3RyaWMgVmVoaWNsZSAoRVYpPC9vcHRpb24+CiAgICAgICAgICA8L3NlbGVjdD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgeyAvKiBZZWFyIG9mIGZpcnN0IHJlZ2lzdHJhdGlvbiAodXNlZCBjYXJzKSAqL30KICAgICAgICA8ZGl2IHN0eWxlPXtncm91cFN0eWxlfT4KICAgICAgICAgIDxsYWJlbCBzdHlsZT17bGFiZWxTdHlsZX0+CiAgICAgICAgICAgIFllYXIgb2YgRmlyc3QgUmVnaXN0cmF0aW9uIChvcHRpb25hbCkKICAgICAgICAgICAgPFRvb2x0aXAgdGV4dD0iRm9yIHVzZWQgdmVoaWNsZXMg4oCUIGVudGVyIHRoZSBvcmlnaW5hbCByZWdpc3RyYXRpb24geWVhciB0byBlc3RpbWF0ZSB0aGUgRlJUIGRlcmVnaXN0cmF0aW9uIHJlYmF0ZSB5b3UnZCByZWNlaXZlIHdoZW4geW91IGV2ZW50dWFsbHkgc2VsbCBvciBzY3JhcCB0aGUgY2FyLiIgLz4KICAgICAgICAgIDwvbGFiZWw+CiAgICAgICAgICA8c2VsZWN0IHZhbHVlPXtyZWdZZWFyfSBvbkNoYW5nZT17ZSA9PiBzZXRSZWdZZWFyKGUudGFyZ2V0LnZhbHVlKX0gc3R5bGU9e2lucHV0U3R5bGV9PgogICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSIiPk5vdCBhcHBsaWNhYmxlIC8gTmV3IGNhcjwvb3B0aW9uPgogICAgICAgICAgICB7QXJyYXkuZnJvbSh7IGxlbmd0aDogMTUgfSwgKF8sIGkpID0+IGN1cnJlbnRZZWFyIC0gaSkubWFwKHlyID0+ICgKICAgICAgICAgICAgICA8b3B0aW9uIGtleT17eXJ9IHZhbHVlPXt5cn0+e3lyfSAoe2N1cnJlbnRZZWFyIC0geXJ9IHlyIG9sZCk8L29wdGlvbj4KICAgICAgICAgICAgKSl9CiAgICAgICAgICA8L3NlbGVjdD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CgogICAgICB7LyogUmVzdWx0cyAqL30KICAgICAgeyByZXN1bHRzID8gKAogICAgICAgIHJlc3VsdHMuaXNFViA/ICgKICAgICAgICAgIDxkaXYgc3R5bGU9e3sgYmFja2dyb3VuZDogIiNmMGZkZjQiLCBib3JkZXJSYWRpdXM6IDEyLCBwYWRkaW5nOiAyNCwgYm9yZGVyOiAiMXB4IHNvbGlkICM4NmVmYWMiIH19PgogICAgICAgICAgICA8ZGl2IHN0eWxlPXt7IGZvbnRTaXplOiAyNCwgbWFyZ2luQm90dG9tOiA4IH19PuKaoTwvZGl2PgogICAgICAgICAgICA8aDMgc3R5bGU9e3sgZm9udFNpemU6IDE3LCBmb250V2VpZ2h0OiA3MDAsIGNvbG9yOiAiIzE1ODAzZCIsIG1hcmdpbkJvdHRvbTogMTIgfX0+CiAgICAgICAgICAgICAgRWxlY3RyaWMgVmVoaWNsZSDiloDlgIrgJAogQkV4ZW1wdGlvbiBNYXkgQXBwbHkKICAgICAgICAgICAgPC9oMz4KICAgICAgICAgICAgPHAgc3R5bGU9e3sgZm9udFNpemU6IDE0LCBjb2xvcjogIiMzNzQxNTEiLCBtYXJnaW5Cb3R0b206IDE2LCBsaW5lSGVpZ2h0OiAxLjYgfX0+CiAgICAgICAgICAgICAgVW5kZXIgdGhlIDxzdHJvbmc+T25lLWZvci1PbmUgUmVwbGFjZW1lbnQgU2NoZW1lPC9zdHJvbmc+LCBlbGVjdHJpYyB2ZWhpY2xlcyBjYW4gcXVhbGlmeSBmb3IgYSA8c3Ryb25nPmZ1bGwgRlJUIGV4ZW1wdGlvbjwvc3Ryb25nPiwgd2hpY2ggd291bGQgcmVkdWNlIHRoZSBvbi1yb2FkIHByaWNlIGZyb20ge2ZtdChyZXN1bHRzLnRvdGFsV2l0aG91dEV4ZW1wdGlvbil9IHRvIHtmbXQocmVzdWx0cy50YXhhYmxlVmFsdWUpfeKAlCBhIHNhdmluZyBvZiA8c3Ryb25nPntmbXQocmVzdWx0cy5mcnRJZk5vRXhlbXB0aW9uKX08L3N0cm9uZz4uCiAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgPGRpdiBzdHlsZT17eyBiYWNrZ3JvdW5kOiAiI2ZmZiIsIGJvcmRlclJhZGl1czogOCwgcGFkZGluZzogMTYsIGJvcmRlcjogIjFweCBzb2xpZCAjZDFmYWU1IiwgbWFyZ2luQm90dG9tOiAxNiB9fT4KICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXt7IGRpc3BsYXk6ICJmbGV4IiwganVzdGlmeUNvbnRlbnQ6ICJzcGFjZS1iZXR3ZWVuIiwgbWFyZ2luQm90dG9tOiA4IH19PgogICAgICAgICAgICAgICAgPHNwYW4gc3R5bGU9e3sgZm9udFNpemU6IDEzLCBjb2xvcjogIiMzNzQxNTEiIH19PkZSVCBpZiBubyBleGVtcHRpb248L3NwYW4+CiAgICAgICAgICAgICAgICA8c3BhbiBzdHlsZT17eyBmb250U2l6ZTogMTQsIGZvbnRXZWlnaHQ6IDYwMCwgY29sb3I6ICIjZGMyNjI2IiB9fT57Zm10KHJlc3VsdHMuZnJ0SWZOb0V4ZW1wdGlvbil9PC9zcGFuPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3sgZGlzcGxheTogImZsZXgiLCBqdXN0aWZ5Q29udGVudDogInNwYWNlLWJldHdlZW4iLCBtYXJnaW5Cb3R0b206IDggfX0+CiAgICAgICAgICAgICAgICA8c3BhbiBzdHlsZT17eyBmb250U2l6ZTogMTMsIGNvbG9yOiAiIzM3NDE1MSIgfX0+RlJUIHdpdGggZnVsbCBleGVtcHRpb248L3NwYW4+CiAgICAgICAgICAgICAgICA8c3BhbiBzdHlsZT17eyBmb250U2l6ZTogMTQsIGZvbnRXZWlnaHQ6IDYwMCwgY29sb3I6ICIjMTU4MDNkIiB9fT5IS0swPC9zcGFuPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3sgZGlzcGxheTogImZsZXgiLCBqdXN0aWZ5Q29udGVudDogInNwYWNlLWJldHdlZW4iLCBib3JkZXJUb3A6ICIxcHggc29saWQgI2U1ZTdlYiIsIHBhZGRpbmdUb3A6IDggfX0+CiAgICAgICAgICAgICAgICA8c3BhbiBzdHlsZT17eyBmb250U2l6ZTogMTQsIGZvbnRXZWlnaHQ6IDcwMCwgY29sb3I6ICIjMzcwMTUxIiB9fT5Ub3RhbCBvbi1yb2FkICh3aXRoIGV4ZW1wdGlvbik8L3NwYW4+CiAgICAgICAgICAgICAgICA8c3BhbiBzdHlsZT17eyBmb250U2l6ZTogMTYsIGZvbnRXZWlnaHQ6IDgwMCwgY29sb3I6ICIjMTU4MDNkIiB9fT57Zm10KHJlc3VsdHMudGF4YWJsZVZhbHVlKX08L3NwYW4+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IHN0eWxlPXt7IGJhY2tncm91bmQ6ICIjZmZmYmViIiwgYm9yZGVyUmFkaXVzOiA4LCBwYWRkaW5nOiAxMiwgZm9udFNpemU6IDEzLCBjb2xvcjogIiM5MjQwMGUiLCBsaW5lSGVpZ2h0OiAxLjYgfX0+CiAgICAgICAgICAgICAgPHN0cm9uZz5JbXBvcnRhbnQ6PC9zdHJvbmc+IEVsaWdpYmlsaXR5IHJlcXVpcmVzIHNjcmFwcGluZyBhbiAFV2lzdGluZyByZWdpc3RlcmVkIHZlaGljbGUuIFRoZSBzY2hlbWUgaGFzIGJlZW4gYWRqdXN0ZWQgbXVsdGlwbGUgdGltZXMgYnkgdGhlIGdvdmVybm1lbnQg4oCUIGFsd2F5cyB2ZXJpZnkgY3VycmVudCBydWxlcyBhdCB0aGV7IiAgIn0KICAgICAgICAgICAgICA8YSBocmVmPSJodHRwczovL3d3dy5lbXNkLmdvdi5payIgdGFyZ2V0PSJfYmxhbmsiIHJlbD0ibm9vcGVuZXIgbm9yZWZlcnJlciIgc3R5bGU9e3sgY29sb3I6ICIjOTI0MDBlIiB9fT5FTVNEIHdlYnNpdGU8L2E+IGJlZm9yZSBwdXJjaGFzaW5nLgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBzdHlsZT17eyBtYXJnaW5Ub3A6IDE2IH19PgogICAgICAgICAgICAgIDxMaW5rIHRvPSIvaG9uZ2tvbmcvZXYtZ3VpZGUiIHN0eWxlPXt7IGZvbnRTaXplOiAxMywgY29sb3I6ICIjMTU4MDNkIiwgdGV4dERlY29yYXRpb246ICJub25lIiwgZm9udFdlaWdodDogNjAwIH19PgogICAgICAgICAgICAgICAgRnVsbCBFViBndWlkZSBmb3IgSG9uZyBLb25nIOKAlCBPbmUtZm9yLU9uZSBleHBsYWluZWQg4oaSCiAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICkgOiAoCiAgICAgICAgICA8ZGl2IHN0eWxlPXt7IGJhY2tncm91bmQ6ICIjZjlmYWZiIiwgYm9yZGVyUmFkaXVzOiAxMiwgcGFkZGluZzogMjQsIGJvcmRlcjogIjFweCBzb2xpZCAjZTVlN2ViIiB9fT4KICAgICAgICAgICAgPGgzIHN0eWxlPXt7IGZvbnRTaXplOiAxNiwgZm9udFdlaWdodDogNzAwLCBjb2xvcjogIiMxYTFhMmUiLCBtYXJnaW5Cb3R0b206IDQgfX0+CiAgICAgICAgICAgICAgRlJUIENvc3QgQnJlYWtkb3duCiAgICAgICAgICAgIDwvaDM+CiAgICAgICAgICAgIDxwIHN0eWxlPXt7IGZvbnRTaXplOiAxMiwgY29sb3I6ICIjOWNhM2FmIiwgbWFyZ2luQm90dG9tOiAxNiB9fT4KICAgICAgICAgICAgICBUYXhhYmxlIHZhbHVlOiB7Zm10KHR2TnVtKX0g4oCUIEZSVCBlZmZlY3RpdmUgcmF0ZTogfntyZXN1bHRzLmZydFJhdGV9JSBvZiB0YXhhYmxlIHZhbHVlCiAgICAgICAgICAgIDwvcD4KCiAgICAgICAgICAgIHsvKiBCYW5kIGJyZWFrZG93biAqL30KICAgICAgICAgICAgPGRpdiBzdHlsZT17eyBtYXJnaW5Cb3R0b206IDIwIH19PgogICAgICAgICAgICAgIHtiYW5kQnJlYWtkb3duLm1hcCgoYiwgaSkgPT4gKAogICAgICAgICAgICAgICAgPFJlc3VsdFJvdwogICAgICAgICAgICAgICAgICBrZXk9e2l9CiAgICAgICAgICAgICAgICAgIGxhYmVsPXtgJHtiLnJhbmdlfSBAICR7Yi5yYXRlfWB9CiAgICAgICAgICAgICAgICAgIHZhbHVlPXtmbXQoYi50YXgpfQogICAgICAgICAgICAgICAgICBzdWI9e3RydWV9CiAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgICkpfQogICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgIDxSZXN1bHRSb3cKICAgICAgICAgICAgICBsYWJlbD0iVGF4YWJsZSBWYWx1ZSIKICAgICAgICAgICAgICB2YWx1ZT17Zm10KHR2TnVtKX0KICAgICAgICAgICAgICB0b29sdGlwPSJUaGUgT3BlbiBNYXJrZXQgVmFsdWUgYXMgYXNzZXNzZWQgYnkgdGhlIFRyYW5zcG9ydCBEZXBhcnRtZW50LiIKICAgICAgICAgICAgLz4KICAgICAgICAgICAgPFJlc3VsdFJvdwogICAgICAgICAgICAgIGxhYmVsPSJUb3RhbCBGUlQgUGF5YWJsZSIKICAgICAgICAgICAgICB2YWx1ZT17Zm10KHJlc3VsdHMuZnJ0KX0KICAgICAgICAgICAgICB0b29sdGlwPSJTdW0gb2YgYWxsIEZSVCBiYW5kcyBhYm92ZS4iCiAgICAgICAgICAgIC8+CgogICAgICAgICAgICA8ZGl2IHN0eWxlPXt7IGJvcmRlclRvcDogIjJweCBzb2xpZCAjZTVlN2ViIiwgbWFyZ2luVG9wOiA4LCBwYWRkaW5nVG9wOiA4IH19PgogICAgICAgICAgICAgIDxSZXN1bHRSb3cKICAgICAgICAgICAgICAgIGxhYmVsPSJUb3RhbCBPbi1Sb2FkIFByaWNlIgogICAgICAgICAgICAgICAgdmFsdWU9e2ZtdChyZXN1bHRzLnRvdGFsT25Sb2FkKX0KICAgICAgICAgICAgICAgIGhpZ2hsaWdodD17dHJ1ZX0KICAgICAgICAgICAgICAgIHRvb2x0aXA9IlRheGFibGUgdmFsdWUgcGx1cyBGUlQuIERvZXMgbm90IGluY2x1ZGUgZGVhbGVyIG1hcmdpbiwgaW5zdXJhbmNlLCBvciByZWdpc3RyYXRpb24gYWRtaW4gZmVlcy4iCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICB7LyogUmViYXRlIGlmIHJlZ2lzdHJhdGlvbiB5ZWFyIHByb3ZpZGVkICovfQogICAgICAgICAgICB7cmVzdWx0cy5yZWJhdGUgIT09IG51bGwgJiYgKAogICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3sgbWFyZ2luVG9wOiAyMCwgYmFja2dyb3VuZDogIiNlZmY2ZmYiLCBib3JkZXJSYWRpdXM6IDgsIHBhZGRpbmc6IDE2LCBib3JkZXI6ICIxcHggc29saWQgI2JmZGJmZSIgfX0+CiAgICAgICAgICAgICAgICA8aDQgc3R5bGU9e3sgZm9udFNpemU6IDE0LCBmb250V2VpZ2h0OiA3MDAsIGNvbG9yOiAiIzFlNDBhZiIsIG1hcmdpbkJvdHRvbTogOCB9fT4KICAgICAgICAgICAgICAgICAgRXN0aW1hdGVkIERlcmVnaXN0cmF0aW9uIEZSVCBSZWJhdGUKICAgICAgICAgICAgICAgIDwvaDQ+CiAgICAgICAgICAgICAgICA8cCBzdHlsZT17eyBmb250U2l6ZTogMTMsIGNvbG9yOiAiIzM3NDE1MSIsIG1hcmdpbkJvdHRvbTogOCwgbGluZUhlaWdodDogMS42IH19PgogICAgICAgICAgICAgICAgICBJZiB0aGlzIGNhciB3YXMgZmlyc3QgcmVnaXN0ZXJlZCBpbiA8c3Ryb25nPntcbiHjYWPYAEcZVlLVmMrXQ==
+import { useState, useMemo } from "react";
+import Layout from "../../components/Layout";
+import { Link } from "react-router-dom";
+
+/* ─── Hong Kong Calculators Page ────────────────────────────────────────── */
+
+// ── FRT calculation helpers ──────────────────────────────────────────────
+function calcFRT(taxableValue) {
+  // FRT bands (HKD):
+  // First $150,000 @ 40%
+  // Next $150,000 @ 75%
+  // Next $200,000 @ 100%
+  // Remainder @ 115%
+  if (taxableValue <= 0) return 0;
+  let frt = 0;
+  const t1 = Math.min(taxableValue, 150000);
+  frt += t1 * 0.40;
+  if (taxableValue > 150000) {
+    const t2 = Math.min(taxableValue - 150000, 150000);
+    frt += t2 * 0.75;
+  }
+  if (taxableValue > 300000) {
+    const t3 = Math.min(taxableValue - 300000, 200000);
+    frt += t3 * 1.00;
+  }
+  if (taxableValue > 500000) {
+    frt += (taxableValue - 500000) * 1.15;
+  }
+  return Math.round(frt);
+}
+
+// FRT deregistration rebate (sliding scale)
+// Full rebate for cars 0–3 years old, tapers to 0 at ~10 years
+function calcFRTRebate(frt, yearsOld) {
+  if (yearsOld <= 0 || frt <= 0) return 0;
+  // Approximate rebate schedule (based on TD sliding scale)
+  const rebateFactors = {
+    0: 1.00, 1: 0.90, 2: 0.80, 3: 0.70,
+    4: 0.55, 5: 0.40, 6: 0.30, 7: 0.20,
+    8: 0.10, 9: 0.05, 10: 0.00
+  };
+  const factor = rebateFactors[Math.min(yearsOld, 10)] || 0;
+  return Math.round(frt * factor);
+}
+
+function fmt(n) {
+  return "HK$" + Math.round(n).toLocaleString("en-HK");
+}
+
+// ── Tooltip component ────────────────────────────────────────────────────
+function Tooltip({ text }) {
+  const [show, setShow] = useState(false);
+  return (
+    <span style={{ position: "relative", display: "inline-block", marginLeft: 4 }}>
+      <button
+        onClick={() => setShow(!show)}
+        style={{
+          width: 16, height: 16, borderRadius: "50%", border: "1px solid #9ca3af",
+          background: "#f3f4f6", fontSize: 10, cursor: "pointer", color: "#6b7280",
+          lineHeight: "14px", padding: 0, fontWeight: 700, display: "inline-flex",
+          alignItems: "center", justifyContent: "center"
+        }}
+        aria-label="More info"
+      >?</button>
+      {show && (
+        <span style={{
+          position: "absolute", bottom: 22, left: "50%", transform: "translateX(-50%)",
+          background: "#1f2937", color: "#fff", fontSize: 11, padding: "6px 10px",
+          borderRadius: 6, whiteSpace: "nowrap", maxWidth: 260, lineHeight: 1.5,
+          zIndex: 10, boxShadow: "0 2px 8px rgba(0,0,0,0.3)", textAlign: "left"
+        }}>
+          {text}
+        </span>
+      )}
+    </span>
+  );
+}
+
+function ResultRow({ label, value, tooltip, highlight, sub }) {
+  return (
+    <div style={{
+      display: "flex", justifyContent: "space-between", alignItems: "center",
+      padding: "10px 0", borderBottom: "1px solid #f3f4f6",
+      background: highlight ? "#fffbeb" : "transparent",
+      borderRadius: highlight ? 6 : 0,
+      paddingLeft: highlight ? 8 : 0, paddingRight: highlight ? 8 : 0,
+    }}>
+      <span style={{ fontSize: sub ? 12 : 14, color: highlight ? "#92400e" : sub ? "#9ca3af" : "#374151", fontWeight: highlight ? 700 : 400, fontStyle: sub ? "italic" : "normal" }}>
+        {label}
+        {tooltip && <Tooltip text={tooltip} />}
+      </span>
+      <span style={{ fontSize: highlight ? 18 : 14, fontWeight: highlight ? 700 : 600, color: highlight ? "#92400e" : "#111827" }}>
+        {value}
+      </span>
+    </div>
+  );
+}
+
+// ── FRT On-Road Calculator ───────────────────────────────────────────────
+function FRTCalculator() {
+  const [taxableValue, setTaxableValue] = useState("");
+  const [vehicleType, setVehicleType] = useState("ice");
+  const [regYear, setRegYear] = useState("");
+
+  const currentYear = new Date().getFullYear();
+  const tvNum = parseFloat(taxableValue) || 0;
+  const yearsOld = regYear ? currentYear - parseInt(regYear) : null;
+
+  const results = useMemo(() => {
+    if (tvNum <= 0) return null;
+    if (vehicleType === "ev") {
+      // EV: potentially full FRT exemption under One-for-One scheme
+      const frtIfNoExemption = calcFRT(tvNum);
+      const totalWithoutExemption = tvNum + frtIfNoExemption;
+      return { isEV: true, frtIfNoExemption, totalWithoutExemption, taxableValue: tvNum };
+    }
+    const frt = calcFRT(tvNum);
+    const totalOnRoad = tvNum + frt;
+    const frtRate = tvNum > 0 ? Math.round((frt / tvNum) * 100) : 0;
+    const rebate = yearsOld !== null ? calcFRTRebate(frt, yearsOld) : null;
+    return { isEV: false, frt, totalOnRoad, frtRate, rebate, yearsOld, taxableValue: tvNum };
+  }, [tvNum, vehicleType, yearsOld]);
+
+  // Show FRT band breakdown
+  const bandBreakdown = useMemo(() => {
+    if (tvNum <= 0) return [];
+    const bands = [];
+    const t1 = Math.min(tvNum, 150000);
+    bands.push({ range: "First HK$150,000", rate: "40%", tax: Math.round(t1 * 0.40), applicable: tvNum > 0 });
+    if (tvNum > 150000) {
+      const t2 = Math.min(tvNum - 150000, 150000);
+      bands.push({ range: "Next HK$150,000", rate: "75%", tax: Math.round(t2 * 0.75), applicable: true });
+    }
+    if (tvNum > 300000) {
+      const t3 = Math.min(tvNum - 300000, 200000);
+      bands.push({ range: "Next HK$200,000", rate: "100%", tax: Math.round(t3 * 1.00), applicable: true });
+    }
+    if (tvNum > 500000) {
+      bands.push({ range: "Remainder", rate: "115%", tax: Math.round((tvNum - 500000) * 1.15), applicable: true });
+    }
+    return bands;
+  }, [tvNum]);
+
+  const inputStyle = {
+    width: "100%", padding: "10px 12px", borderRadius: 8,
+    border: "1px solid #d1d5db", fontSize: 14, boxSizing: "border-box",
+    color: "#111827", background: "#fff"
+  };
+  const labelStyle = { fontSize: 13, fontWeight: 600, color: "#374151", display: "block", marginBottom: 6 };
+  const groupStyle = { marginBottom: 16 };
+
+  return (
+    <div>
+      <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1a1a2e", marginBottom: 8 }}>
+        FRT On-Road Price Calculator
+      </h2>
+      <p style={{ color: "#6b7280", fontSize: 14, marginBottom: 24, lineHeight: 1.6 }}>
+        Enter a vehicle's taxable value to see how much First Registration Tax applies and what the total on-road price will be. Results update as you type.
+      </p>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16, marginBottom: 24 }}>
+        {/* Taxable value */}
+        <div style={groupStyle}>
+          <label style={labelStyle}>
+            Vehicle Taxable Value
+            <Tooltip text="This is the Open Market Value as assessed by the Transport Department — not necessarily the purchase price or the sticker price at the dealer." />
+          </label>
+          <div style={{ position: "relative" }}>
+            <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", color: "#6b7280", fontSize: 14 }}>HK$</span>
+            <input
+              type="number"
+              placeholder="e.g. 200000"
+              value={taxableValue}
+              onChange={e => setTaxableValue(e.target.value)}
+              style={{ ...inputStyle, paddingLeft: 44 }}
+            />
+             </div>
+        </div>
+
+        {/* Vehicle type */}
+        <div style={groupStyle}>
+          <label style={labelStyle}>
+            Vehicle Type
+            <Tooltip text="Electric vehicles may qualify for full FRT exemption under the One-for-One Replacement Scheme. Eligibility conditions apply — check the EMSD website." />
+          </label>
+          <select value={vehicleType} onChange={e => setVehicleType(e.target.value)} style={inputStyle}>
+            <option value="ice">Petrol / Diesel (ICE)</option>
+            <option value="ev">Electric Vehicle (EV)</option>
+          </select>
+        </div>
+
+        {/* Year of first registration (used cars) */}
+        <div style={groupStyle}>
+          <label style={labelStyle}>
+            Year of First Registration (optional)
+            <Tooltip text="For used vehicles — enter the original registration year to estimate the FRT deregistration rebate you'd receive when you eventually sell or scrap the car." />
+          </label>
+          <select value={regYear} onChange={e => setRegYear(e.target.value)} style={inputStyle}>
+            <option value="">Not applicable / New car</option>
+            {Array.from({ length: 15 }, (_, i) => currentYear - i).map(yr => (
+              <option key={yr} value={yr}>{yr} ({currentYear - yr} yr old)</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* Results */}
+      {results ? (
+        results.isEV ? (
+          <div style={{ background: "#f0fdf4", borderRadius: 12, padding: 24, border: "1px solid #86efac" }}>
+            <div style={{ fontSize: 24, marginBottom: 8 }}>⚡</div>
+            <h3 style={{ fontSize: 17, fontWeight: 700, color: "#15803d", marginBottom: 12 }}>
+              Electric Vehicle — FRT Exemption May Apply
+            </h3>
+            <p style={{ fontSize: 14, color: "#374151", marginBottom: 16, lineHeight: 1.6 }}>
+              Under the <strong>One-for-One Replacement Scheme</strong>, electric vehicles can qualify for a <strong>full FRT exemption</strong>, which would reduce the on-road price from {fmt(results.totalWithoutExemption)} to {fmt(results.taxableValue)} — a saving of <strong>{fmt(results.frtIfNoExemption)}</strong>.
+            </p>
+            <div style={{ background: "#fff", borderRadius: 8, padding: 16, border: "1px solid #d1fae5", marginBottom: 16 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
+                <span style={{ fontSize: 13, color: "#374151" }}>FRT if no exemption</span>
+                <span style={{ fontSize: 14, fontWeight: 600, color: "#dc2626" }}>{fmt(results.frtIfNoExemption)}</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
+                <span style={{ fontSize: 13, color: "#374151" }}>FRT with full exemption</span>
+                <span style={{ fontSize: 14, fontWeight: 600, color: "#15803d" }}>HK$0</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid #e5e7eb", paddingTop: 8 }}>
+                <span style={{ fontSize: 14, fontWeight: 700, color: "#374151" }}>Total on-road (with exemption)</span>
+                <span style={{ fontSize: 16, fontWeight: 800, color: "#15803d" }}>{fmt(results.taxableValue)}</span>
+              </div>
+            </div>
+            <div style={{ background: "#fffbeb", borderRadius: 8, padding: 12, fontSize: 13, color: "#92400e", lineHeight: 1.6 }}>
+              <strong>Important:</strong> Eligibility requires scrapping an existing registered vehicle. The scheme has been adjusted multiple times by the government — always verify current rules at the{" "}
+              <a href="https://www.emsd.gov.hk" target="_blank" rel="noopener noreferrer" style={{ color: "#92400e" }}>EMSD website</a> before purchasing.
+            </div>
+            <div style={{ marginTop: 16 }}>
+              <Link to="/hongkong/ev-guide" style={{ fontSize: 13, color: "#15803d", textDecoration: "none", fontWeight: 600 }}>
+                Full EV guide for Hong Kong — One-for-One explained →
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div style={{ background: "#f9fafb", borderRadius: 12, padding: 24, border: "1px solid #e5e7eb" }}>
+            <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1a1a2e", marginBottom: 4 }}>
+              FRT Cost Breakdown
+            </h3>
+            <p style={{ fontSize: 12, color: "#9ca3af", marginBottom: 16 }}>
+              Taxable value: {fmt(tvNum)} — FRT effective rate: ~{results.frtRate}% of taxable value
+            </p>
+
+            {/* Band breakdown */}
+            <div style={{ marginBottom: 20 }}>
+              {bandBreakdown.map((b, i) => (
+                <ResultRow
+                  key={i}
+                  label={`${b.range} @ ${b.rate}`}
+                  value={fmt(b.tax)}
+                  sub={true}
+                />
+              ))}
+            </div>
+
+            <ResultRow
+              label="Taxable Value"
+              value={fmt(tvNum)}
+              tooltip="The Open Market Value as assessed by the Transport Department."
+            />
+            <ResultRow
+              label="Total FRT Payable"
+              value={fmt(results.frt)}
+              tooltip="Sum of all FRT bands above."
+            />
+
+            <div style={{ borderTop: "2px solid #e5e7eb", marginTop: 8, paddingTop: 8 }}>
+              <ResultRow
+                label="Total On-Road Price"
+                value={fmt(results.totalOnRoad)}
+                highlight={true}
+                tooltip="Taxable value plus FRT. Does not include dealer margin, insurance, or registration admin fees."
+              />
+            </div>
+
+            {/* Rebate if registration year provided */}
+            {results.rebate !== null && (
+              <div style={{ marginTop: 20, background: "#eff6ff", borderRadius: 8, padding: 16, border: "1px solid #bfdbfe" }}>
+                <h4 style={{ fontSize: 14, fontWeight: 700, color: "#1e40af", marginBottom: 8 }}>
+                  Estimated Deregistration FRT Rebate
+                </h4>
+                <p style={{ fontSize: 13, color: "#374151", marginBottom: 8, lineHeight: 1.6 }}>
+                  If this car was first registered in <strong>{regYear}</strong> ({results.yearsOld} years ago), you'd receive an estimated <strong>{fmt(results.rebate)}</strong> FRT rebate when deregistering — based on the Transport Department's sliding scale.
+                </p>
+                <p style={{ fontSize: 11, color: "#6b7280" }}>
+                  Rebate reduces to zero at approximately 10 years old. Actual amount confirmed by TD at deregistration.
+                </p>
+              </div>
+            )}
+
+            <div style={{ background: "#fef3c7", borderRadius: 8, padding: 12, marginTop: 16, fontSize: 12, color: "#92400e", lineHeight: 1.6 }}>
+              <strong>Disclaimer:</strong> These estimates are based on the published FRT band schedule. The actual taxable value is determined by the Transport Department and may differ from the dealer's asking price. Verify with the <a href="https://www.td.gov.hk" target="_blank" rel="noopener noreferrer" style={{ color: "#92400e" }}>Transport Department</a> before purchasing.
+            </div>
+
+            <div style={{ marginTop: 16, display: "flex", gap: 16, flexWrap: "wrap" }}>
+              <Link to="/hongkong/frt-tax-explained" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
+                How does FRT work in detail? →
+              </Link>
+              <Link to="/hongkong/buying-guide" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
+                Buying guide for HK expats →
+              </Link>
+            </div>
+          </div>
+        )
+      ) : (
+        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
+          <div style={{ fontSize: 32, marginBottom: 12 }}>🧮</div>
+          <p style={{ color: "#6b7280", fontSize: 14 }}>Enter the vehicle's taxable value above to see the full FRT breakdown.</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Lease Cost Estimator (HK) ─────────────────────────────────────────────
+const HK_LEASE_DATA = {
+  economy: { min: 5500, max: 7500, examples: "Toyota Vios, Honda City, Nissan Almera", included: ["Comprehensive insurance", "Road tax / licence fees", "Routine servicing", "24/7 roadside assist"] },
+  midrange: { min: 8000, max: 14000, examples: "Toyota RAV4, Honda CR-V, Mazda CX-5", included: ["Comprehensive insurance", "Road tax / licence fees", "Routine servicing", "Tyres", "24/7 roadside assist"] },
+  premium: { min: 15000, max: 28000, examples: "BMW 3-Series, Mercedes C-Class, Range Rover Sport", included: ["Comprehensive insurance", "Road tax / licence fees", "Full servicing", "Tyres", "Loan car", "24/7 roadside assist"] },
+};
+
+function HKLeaseCostEstimator() {
+  const [category, setCategory] = useState("midrange");
+  const [duration, setDuration] = useState("24");
+
+  const data = HK_LEASE_DATA[category];
+  const durationNum = parseInt(duration);
+  const discount = durationNum >= 36 ? 0.95 : durationNum >= 24 ? 0.97 : 1.0;
+  const minCost = Math.round(data.min * discount);
+  const maxCost = Math.round(data.max * discount);
+  const labels = { economy: "Economy", midrange: "Mid-range / SUV", premium: "Premium / Luxury" };
+
+  return (
+    <div>
+      <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1a1a2e", marginBottom: 8 }}>
+        Lease Cost Estimator
+      </h2>
+      <p style={{ color: "#6b7280", fontSize: 14, marginBottom: 24 }}>
+        Typical monthly costs for a full-service lease in Hong Kong. Corporate leasing is common for expat packages.
+      </p>
+
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }}>
+        <div>
+          <label style={{ fontSize: 13, fontWeight: 600, color: "#374151", display: "block", marginBottom: 6 }}>Car Category</label>
+          <select value={category} onChange={e => setCategory(e.target.value)}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #d1d5db", fontSize: 14 }}>
+            <option value="economy">Economy / Compact</option>
+            <option value="midrange">Mid-range / SUV</option>
+            <option value="premium">Premium / Luxury</option>
+          </select>
+          <p style={{ fontSize: 11, color: "#9ca3af", marginTop: 4 }}>e.g. {data.examples}</p>
+        </div>
+        <div>
+          <label style={{ fontSize: 13, fontWeight: 600, color: "#374151", display: "block", marginBottom: 6 }}>Lease Duration</label>
+          <select value={duration} onChange={e => setDuration(e.target.value)}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #d1d5db", fontSize: 14 }}>
+            <option value="12">12 months</option>
+            <option value="24">24 months</option>
+            <option value="36">36 months</option>
+            <option value="48">48 months</option>
+          </select>
+        </div>
+      </div>
+
+      <div style={{ background: "#f9fafb", borderRadius: 12, padding: 24, border: "1px solid #e5e7eb" }}>
+        <div style={{ textAlign: "center", marginBottom: 20 }}>
+          <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 4 }}>
+            Typical monthly cost — {labels[category]}, {duration}-month lease
+          </p>
+          <div style={{ fontSize: 32, fontWeight: 800, color: "#1a1a2e" }}>
+            HK${minCost.toLocaleString()} – HK${maxCost.toLocaleString()}
+            <span style={{ fontSize: 14, fontWeight: 400, color: "#6b7280" }}>/month</span>
+          </div>
+          {durationNum >= 36 && <p style={{ fontSize: 12, color: "#16a34a", marginTop: 4 }}>✓ Longer-term discount applied</p>}
+        </div>
+
+        <div>
+          <p style={{ fontSize: 13, fontWeight: 600, color: "#374151", marginBottom: 8 }}>Typically included:</p>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            {data.included.map(item => (
+              <li key={item} style={{ fontSize: 13, color: "#374151", padding: "4px 0", display: "flex", gap: 8 }}>
+                <span style={{ color: "#16a34a", fontWeight: 700 }}>✓</span> {item}
+              </li>
+            ))}
+          </ul>
+          <p style={{ fontSize: 12, color: "#9ca3af", marginTop: 12 }}>
+            Typically <em>not</em> included: excess mileage charges, accident damage excess, tunnel tolls, parking.
+          </p>
+        </div>
+      </div>
+
+      <div style={{ marginTop: 16 }}>
+        <Link to="/hongkong/leasing-guide" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
+          Read the full HK leasing guide →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+// ── Licence Eligibility Checker (HK) ────────────────────────────────────
+const HK_LICENCE_DATA = {
+  UK: { country: "United Kingdom", result: "direct", note: "Convert directly at a Transport Department licensing office — no test required. Bring original licence, HKID, and proof of address." },
+  AU: { country: "Australia", result: "direct", note: "Convert directly. Valid foreign licence + HKID + photos required." },
+  NZ: { country: "New Zealand", result: "direct", note: "Convert directly. Same process as Australian licence." },
+  US: { country: "United States", result: "direct", note: "Convert directly. State driving licence accepted — no test required." },
+  CA: { country: "Canada", result: "direct", note: "Convert directly. Provincial licence accepted." },
+  IE: { country: "Ireland", result: "direct", note: "Convert directly." },
+  DE: { country: "Germany", result: "direct", note: "Convert directly." },
+  FR: { country: "France", result: "direct", note: "Convert directly." },
+  NL: { country: "Netherlands", result: "direct", note: "Convert directly." },
+  SE: { country: "Sweden", result: "direct", note: "Convert directly." },
+  JP: { country: "Japan", result: "direct", note: "Convert directly. Bring official English translation if your licence is not in English." },
+  SG: { country: "Singapore", result: "direct", note: "Singapore driving licence converts directly to HK licence." },
+  IN: { country: "India", result: "test", note: "Must pass Hong Kong driving test. Theory and practical required at a TD licensing office." },
+  CN: { country: "China (Mainland)", result: "test", note: "Mainland China driving licence does not convert directly — must sit HK driving test." },
+  PH: { country: "Philippines", result: "test", note: "Must pass HK driving test." },
+};
+
+function HKLicenceChecker() {
+  const [country, setCountry] = useState("");
+  const selected = HK_LICENCE_DATA[country];
+
+  return (
+    <div>
+      <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1a1a2e", marginBottom: 8 }}>
+        Licence Eligibility Checker
+      </h2>
+      <p style={{ color: "#6b7280", fontSize: 14, marginBottom: 24 }}>
+        Most Western nationalities convert directly — no test. Check your licence country below.
+      </p>
+
+      <div style={{ marginBottom: 24 }}>
+        <label style={{ fontSize: 13, fontWeight: 600, color: "#374151", display: "block", marginBottom: 6 }}>Your current licence country</label>
+        <select value={country} onChange={e => setCountry(e.target.value)}
+          style={{ width: "100%", maxWidth: 360, padding: "12px 16px", borderRadius: 8, border: "1px solid #d1d5db", fontSize: 14 }}>
+          <option value="">Select a country...</option>
+          {Object.entries(HK_LICENCE_DATA).map(([code, d]) => (
+            <option key={code} value={code}>{d.country}</option>
+          ))}
+          <option value="OTHER">Other country</option>
+        </select>
+      </div>
+
+      {country === "OTHER" ? (
+        <div style={{ background: "#fef3c7", borderRadius: 12, padding: 20, border: "1px solid #fcd34d" }}>
+          <p style={{ fontSize: 14, color: "#92400e", margin: 0 }}>
+            Check the <a href="https://www.td.gov.hk" target="_blank" rel="noopener noreferrer" style={{ color: "#92400e" }}>Transport Department website</a> for the current full list. If your country isn't listed as a recognised jurisdiction, you'll need to sit the HK driving test.
+          </p>
+        </div>
+      ) : selected ? (
+        <div style={{ background: selected.result === "direct" ? "#f0fdf4" : "#fef2f2", borderRadius: 12, padding: 24, border: `1px solid ${selected.result === "direct" ? "#86efac" : "#fca5a5"}` }}>
+          <div style={{ fontSize: 24, marginBottom: 8 }}>{selected.result === "direct" ? "✅" : "⚠️"}</div>
+          <h3 style={{ fontSize: 17, fontWeight: 700, color: selected.result === "direct" ? "#15803d" : "#dc2626", marginBottom: 8 }}>
+            {selected.result === "direct" ? "Direct conversion — no test required" : "Driving test required"}
+          </h3>
+          <p style={{ fontSize: 14, color: "#374151", marginBottom: 0 }}>{selected.note}</p>
+          {selected.result === "direct" && (
+            <div style={{ marginTop: 16, fontSize: 13, color: "#374151" }}>
+              <strong>What to bring:</strong> HKID card, original foreign licence (valid), proof of HK address, 2 passport photos. Visit a TD licensing office — no appointment needed for conversion.
+            </div>
+          )}
+        </div>
+      ) : (
+        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
+          <p style={{ color: "#6b7280", fontSize: 14 }}>Select your licence country above to check eligibility.</p>
+        </div>
+      )}
+
+      <div style={{ marginTop: 16 }}>
+        <Link to="/hongkong/licence-conversion" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
+          Full licence conversion guide for Hong Kong →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+// ── Buy vs Lease (HK) ────────────────────────────────────────────────────
+function HKBuyVsLease() {
+  const [taxableValue, setTaxableValue] = useState("");
+  const [leaseMonthly, setLeaseMonthly] = useState(10000);
+  const [years, setYears] = useState(3);
+  const [regYear, setRegYear] = useState("");
+
+  const currentYear = new Date().getFullYear();
+  const tvNum = parseFloat(taxableValue) || 0;
+  const yearsOld = regYear ? currentYear - parseInt(regYear) : 0;
+
+  const results = useMemo(() => {
+    if (tvNum <= 0) return null;
+    const frt = yearsOld > 0 ? 0 : calcFRT(tvNum); // used cars: FRT already paid, reflected in price
+    const purchasePrice = tvNum + frt;
+
+    // Rough depreciation: ~8-10% per year for typical HK used cars
+    const depreciation = purchasePrice * 0.09 * years;
+    const resaleValue = Math.max(0, purchasePrice - depreciation);
+    const netCostBuy = purchasePrice - resaleValue;
+
+    // Running costs: insurance ~HK$12k/yr, road tax ~HK$3k/yr, servicing ~HK$8k/yr
+    const annualRunning = 12000 + 3000 + 8000;
+    const totalCostBuy = netCostBuy + (annualRunning * years);
+    const totalCostLease = leaseMonthly * 12 * years;
+
+    return {
+      purchasePrice, resaleValue, netCostBuy, totalCostBuy,
+      totalCostLease, monthlyBuyEquiv: Math.round(totalCostBuy / (years * 12)),
+      isUsed: yearsOld > 0
+    };
+  }, [tvNum, leaseMonthly, years, yearsOld]);
+
+  return (
+    <div>
+      <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1a1a2e", marginBottom: 8 }}>Buy vs Lease Comparison</h2>
+      <p style={{ color: "#6b7280", fontSize: 14, marginBottom: 24 }}>
+        Compare total cost of ownership vs leasing for your HK posting length.
+      </p>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16, marginBottom: 24 }}>
+        <div>
+          <label style={{ fontSize: 13, fontWeight: 600, color: "#374151", display: "block", marginBottom: 6 }}>Car Taxable Value (HK$)</label>
+          <input type="number" placeholder="e.g. 200000" value={taxableValue} onChange={e => setTaxableValue(e.target.value)}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #d1d5db", fontSize: 14, boxSizing: "border-box" }} />
+        </div>
+        <div>
+          <label style={{ fontSize: 13, fontWeight: 600, color: "#374151", display: "block", marginBottom: 6 }}>Year Registered (if used)</label>
+          <select value={regYear} onChange={e => setRegYear(e.target.value)}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #d1d5db", fontSize: 14 }}>
+            <option value="">New car</option>
+            {Array.from({ length: 10 }, (_, i) => currentYear - i).map(yr => (
+              <option key={yr} value={yr}>{yr}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label style={{ fontSize: 13, fontWeight: 600, color: "#374151", display: "block", marginBottom: 6 }}>Monthly Lease (HK$)</label>
+          <input type="number" value={leaseMonthly} onChange={e => setLeaseMonthly(e.target.value)}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #d1d5db", fontSize: 14, boxSizing: "border-box" }} />
+        </div>
+        <div>
+          <label style={{ fontSize: 13, fontWeight: 600, color: "#374151", display: "block", marginBottom: 6 }}>Years in Hong Kong</label>
+          <select value={years} onChange={e => setYears(parseInt(e.target.value))}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #d1d5db", fontSize: 14 }}>
+            {[1,2,3,4,5,6,7].map(y => <option key={y} value={y}>{y} {y===1?"year":"years"}</option>)}
+          </select>
+        </div>
+      </div>
+
+      {results ? (
+        <div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+            <div style={{ background: "#f9fafb", borderRadius: 12, padding: 20, border: "1px solid #e5e7eb" }}>
+              <h3 style={{ fontSize: 15, fontWeight: 700, color: "#374151", marginBottom: 16 }}>🚗 Buying</h3>
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 12, color: "#9ca3af" }}>{results.isUsed ? "Purchase price (used)" : "Total on-road price (new)"}</span>
+                <div style={{ fontSize: 16, fontWeight: 700 }}>{fmt(results.purchasePrice)}</div>
+              </div>
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 12, color: "#9ca3af" }}>Estimated resale after {years} yr</span>
+                <div style={{ fontSize: 16, fontWeight: 700, color: "#16a34a" }}>+{fmt(results.resaleValue)}</div>
+              </div>
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 12, color: "#9ca3af" }}>Running costs ({years} yr)</span>
+                <div style={{ fontSize: 13, color: "#374151" }}>ins + road tax + servicing</div>
+              </div>
+              <div style={{ borderTop: "1px solid #e5e7eb", marginTop: 12, paddingTop: 12 }}>
+                <span style={{ fontSize: 12, color: "#9ca3af" }}>Total net cost over {years} yr</span>
+                <div style={{ fontSize: 22, fontWeight: 800, color: "#1a1a2e" }}>{fmt(results.totalCostBuy)}</div>
+                <div style={{ fontSize: 12, color: "#6b7280" }}>≈ {fmt(results.monthlyBuyEquiv)}/month</div>
+              </div>
+            </div>
+
+            <div style={{ background: "#f9fafb", borderRadius: 12, padding: 20, border: "1px solid #e5e7eb" }}>
+              <h3 style={{ fontSize: 15, fontWeight: 700, color: "#374151", marginBottom: 16 }}>📋 Leasing</h3>
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 12, color: "#9ca3af" }}>Monthly payment</span>
+                <div style={{ fontSize: 16, fontWeight: 700 }}>{fmt(leaseMonthly)}/mo</div>
+              </div>
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 12, color: "#9ca3af" }}>Includes</span>
+                <div style={{ fontSize: 13, color: "#374151" }}>insurance, road tax, servicing</div>
+              </div>
+              <div style={{ borderTop: "1px solid #e5e7eb", marginTop: 12, paddingTop: 12 }}>
+                <span style={{ fontSize: 12, color: "#9ca3af" }}>Total cost over {years} yr</span>
+                <div style={{ fontSize: 22, fontWeight: 800, color: "#1a1a2e" }}>{fmt(results.totalCostLease)}</div>
+                <div style={{ fontSize: 12, color: "#6b7280" }}>{fmt(leaseMonthly)}/month all-in</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            {results.totalCostBuy < results.totalCostLease ? (
+              <div style={{ background: "#f0fdf4", border: "1px solid #86efac", borderRadius: 8, padding: 14, fontSize: 13, color: "#15803d" }}>
+                <strong>Buying appears cheaper</strong> by {fmt(results.totalCostLease - results.totalCostBuy)} over {years} years — though actual resale value is uncertain.
+              </div>
+            ) : (
+              <div style={{ background: "#fff7ed", border: "1px solid #fed7aa", borderRadius: 8, padding: 14, fontSize: 13, color: "#9a3412" }}>
+                <strong>Leasing is cheaper</strong> by {fmt(results.totalCostBuy - results.totalCostLease)} over {years} years — and no resale or depreciation risk.
+              </div>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
+          <p style={{ color: "#6b7280", fontSize: 14 }}>Enter the car's taxable value above to compare costs.</p>
+        </div>
+      )}
+      <p style={{ fontSize: 11, color: "#9ca3af", marginTop: 12, lineHeight: 1.6 }}>
+        Estimates only. Depreciation based on ~9%/year — actual varies by make, age, and market conditions. Running costs are illustrative averages.
+      </p>
+    </div>
+  );
+}
+
+// ── Main Page ─────────────────────────────────────────────────────────────
+const TABS = [
+  { id: "frt", label: "FRT Calculator" },
+  { id: "lease", label: "Lease Estimator" },
+  { id: "buyvslease", label: "Buy vs Lease" },
+  { id: "licence", label: "Licence Eligibility" },
+];
+
+const relatedLinks = [
+  { to: "/hongkong/frt-tax-explained", label: "FRT Explained" },
+  { to: "/hongkong/leasing-guide", label: "Leasing Guide" },
+  { to: "/hongkong/buying-guide", label: "Buying Guide" },
+  { to: "/hongkong/should-i-get-a-car", label: "Should I Get a Car?" },
+];
+
+export default function Calculators() {
+  const [activeTab, setActiveTab] = useState("frt");
+
+  return (
+    <Layout city="hongkong" relatedLinks={relatedLinks}>
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 20px" }}>
+        <div style={{ marginBottom: 8, fontSize: 12, fontWeight: 600, color: "#dc2626", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+          Hong Kong
+        </div>
+        <h1 style={{ fontSize: 32, fontWeight: 800, color: "#1a1a2e", marginBottom: 12 }}>
+          Hong Kong Car Calculators &amp; Tools
+        </h1>
+        <p style={{ color: "#4b5563", fontSize: 16, marginBottom: 32, lineHeight: 1.7 }}>
+          Four tools to work out the full FRT cost, compare leasing vs buying, estimate lease costs, and check if your foreign licence converts directly in Hong Kong.
+        </p>
+
+        {/* Tab nav */}
+        <div style={{ display: "flex", gap: 0, borderBottom: "2px solid #e5e7eb", marginBottom: 32, overflowX: "auto" }}>
+          {TABS.map(tab => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              style={{
+                padding: "12px 20px",
+                background: "transparent",
+                border: "none",
+                borderBottom: activeTab === tab.id ? "2px solid #dc2626" : "2px solid transparent",
+                marginBottom: -2,
+                fontSize: 14,
+                fontWeight: activeTab === tab.id ? 700 : 500,
+                color: activeTab === tab.id ? "#dc2626" : "#6b7280",
+                cursor: "pointer",
+                whiteSpace: "nowrap",
+                transition: "all 0.15s",
+              }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Tab content */}
+        <div>
+          {activeTab === "frt" && <FRTCalculator />}
+          {activeTab === "lease" && <HKLeaseCostEstimator />}
+          {activeTab === "buyvslease" && <HKBuyVsLease />}
+          {activeTab === "licence" && <HKLicenceChecker />}
+        </div>
+
+        {/* Email CTA */}
+        <div style={{ marginTop: 48, background: "#1a1a2e", borderRadius: 12, padding: 28, textAlign: "center", color: "#fff" }}>
+          <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>Get the monthly FRT update</h3>
+          <p style={{ fontSize: 14, color: "#9ca3af", marginBottom: 20 }}>
+            Hong Kong FRT policy changes regularly. We send one email per month covering key HK car market updates.
+          </p>
+          <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
+            <input type="email" placeholder="your@email.com" style={{ padding: "10px 16px", borderRadius: 8, border: "none", fontSize: 14, width: 240 }} />
+            <button style={{ padding: "10px 20px", background: "#dc2626", color: "#fff", border: "none", borderRadius: 8, fontSize: 14, fontWeight: 600, cursor: "pointer" }}>
+              Send me updates
+            </button>
+          </div>
+          <p style={{ fontSize: 11, color: "#6b7280", marginTop: 8 }}>No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
