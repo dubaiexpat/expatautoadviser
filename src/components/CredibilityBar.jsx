@@ -1,6 +1,6 @@
 const items = [
-  { icon: 'ð', label: 'To Trust or Not', desc: 'We tell you which providers to use â and which to avoid' },
-  { icon: 'â¡', label: 'Up-to-date pricing', desc: 'COE and FRT data updated monthly' },
+  { icon: '🔍', label: 'To Trust or Not', desc: 'We tell you which providers to use — and which to avoid' },
+  { icon: '⚡', label: 'Up-to-date pricing', desc: 'COE and FRT data updated monthly' },
 ];
 
 export default function CredibilityBar() {
