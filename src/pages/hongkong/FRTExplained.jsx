@@ -10,7 +10,7 @@ export default function HKFRTExplained() {
         <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>The First Registration Tax is why new cars in Hong Kong cost roughly double what you'd pay elsewhere. Here's exactly how it works.</p>
 
         <h2 style={h2}>What is the First Registration Tax?</h2>
-        <p style={body}>The FRT is a one-time tax applied when a new private car is first registered in Hong Kong. It's charged on the car's "taxable value" â essentially the import cost plus charges. The tax is progressive, meaning higher-value cars are taxed at increasingly steep rates.</p>
+        <p style={body}>The FRT is a one-time tax applied when a new private car is first registered in Hong Kong. It's charged on the car's "taxable value" — essentially the import cost plus charges. The tax is progressive, meaning higher-value cars are taxed at increasingly steep rates.</p>
         <p style={body}>FRT only applies once. If you buy a second-hand car, FRT has already been paid by the original owner. This is precisely why most expats buy used.</p>
 
         <h2 style={h2}>FRT rate bands (private cars)</h2>
@@ -18,7 +18,7 @@ export default function HKFRTExplained() {
           <table style={{width:"100%",borderCollapse:"collapse",fontSize:14}}>
             <thead><tr style={{background:"#f9fafb"}}><th style={th}>Taxable Value (HKD)</th><th style={th}>FRT Rate</th></tr></thead>
             <tbody>
-              {[["First $150,000","40%"],["Next $150,000 ($150,001â$300,000)","75%"],["Next $200,000 ($300,001â$500,000)","100%"],["Remainder (above $500,000)","115%"]].map(([band,rate]) => (
+              {[["First $150,000","40%"],["Next $150,000 ($150,001–$300,000)","75%"],["Next $200,000 ($300,001–$500,000)","100%"],["Remainder (above $500,000)","115%"]].map(([band,rate]) => (
                 <tr key={band} style={{borderTop:"1px solid #f3f4f6"}}><td style={td}>{band}</td><td style={{...td,fontWeight:700,color:"#0d9488"}}>{rate}</td></tr>
               ))}
             </tbody>
@@ -43,14 +43,14 @@ export default function HKFRTExplained() {
           <table style={{width:"100%",borderCollapse:"collapse",fontSize:14}}>
             <thead><tr style={{background:"#f9fafb"}}><th style={th}>Engine Capacity</th><th style={th}>Annual Licence Fee</th></tr></thead>
             <tbody>
-              {[["Up to 1,500cc","HKD $3,718"],["1,501ccâ2,500cc","HKD $5,074"],["Above 2,500cc","HKD $9,144"],["Electric vehicles","HKD $728 (reduced rate)"]].map(([eng,fee]) => (
+              {[["Up to 1,500cc","HKD $3,718"],["1,501cc–2,500cc","HKD $5,074"],["Above 2,500cc","HKD $9,144"],["Electric vehicles","HKD $728 (reduced rate)"]].map(([eng,fee]) => (
                 <tr key={eng} style={{borderTop:"1px solid #f3f4f6"}}><td style={td}>{eng}</td><td style={{...td,fontWeight:600,color:"#1e3a5f"}}>{fee}</td></tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        <PatrickTip city="hk">"FRT is the single biggest shock for expats buying new in HK. I briefly considered a new car before the numbers hit me. The maths on used is just overwhelming â same car, built same year, properly maintained, half the price effectively. Don't even look at new unless you're buying an EV with the concession scheme."</PatrickTip>
+        <PatrickTip city="hk">"FRT is the single biggest shock for expats buying new in HK. I briefly considered a new car before the numbers hit me. The maths on used is just overwhelming — same car, built same year, properly maintained, half the price effectively. Don't even look at new unless you're buying an EV with the concession scheme."</PatrickTip>
       </div>
     </Layout>
   );
