@@ -16,6 +16,7 @@ const ROUTES = [
   '/singapore/ev-guide',
   '/singapore/calculators',
   '/singapore/garage-finder',
+    '/singapore/lease-checker',
   '/hongkong',
   '/hongkong/should-i-get-a-car',
   '/hongkong/buying-guide',
@@ -27,6 +28,7 @@ const ROUTES = [
   '/hongkong/ev-guide',
   '/hongkong/calculators',
   '/hongkong/garage-finder',
+    '/hongkong/lease-checker',
 ];
 
 const META = {
