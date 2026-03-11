@@ -50,7 +50,7 @@ export default function Layout({ city, active, children, relatedLinks }) {
         padding: '0 20px', height: '56px', gap: 12,
       }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', flexShrink: 0 }}>
-          <span style={{ fontSize: 20 }}>ð</span>
+          <span style={{ fontSize: 20 }}>🚗</span>
           <span className="eaa-brand-text" style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: 18, color: '#1a1a2e' }}>
             ExpatAutoAdviser
           </span>
@@ -115,14 +115,14 @@ export default function Layout({ city, active, children, relatedLinks }) {
         padding: '32px 20px', textAlign: 'center',
       }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-          <span style={{ fontSize: 18 }}>ð</span>
+          <span style={{ fontSize: 18 }}>🚗</span>
           <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: 16, color: '#1a1a2e' }}>ExpatAutoAdviser</span>
         </Link>
         <p style={{ margin: '0 0 8px', fontSize: 13, color: '#9ca3af' }}>
           Independent car advice for expats in Singapore and Hong Kong.
         </p>
         <p style={{ margin: 0, fontSize: 12, color: '#d1d5db' }}>
-          Â© 2025 ExpatAutoAdviser Â· Not financial advice Â· Partner links may earn commission
+          © 2025 ExpatAutoAdviser · Not financial advice · Partner links may earn commission
         </p>
       </footer>
     </div>
