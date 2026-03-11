@@ -31,12 +31,12 @@ const ROUTES = [
 
 const META = {
   '/': {
-    title: `Expat Auto Adviser — Singapore & Hong Kong Car Guides`,
+    title: `Expat Auto Adviser â Singapore & Hong Kong Car Guides`,
     desc: `Free guides for expats on leasing or buying a car in Singapore and Hong Kong. Compare costs, understand rules, and make the right choice.`,
     type: `website`,
   },
   '/singapore': {
-    title: `Singapore Expat Car Guide — Lease, Buy or Skip?`,
+    title: `Singapore Expat Car Guide â Lease, Buy or Skip?`,
     desc: `Everything expats need to know about getting a car in Singapore. COE, leasing vs buying, insurance, and cost calculators.`,
     type: `website`,
   },
@@ -60,7 +60,7 @@ const META = {
     ],
   },
   '/singapore/leasing-guide': {
-    title: `How to Lease a Car in Singapore — Expat Guide`,
+    title: `How to Lease a Car in Singapore â Expat Guide`,
     desc: `A step-by-step guide to leasing a car in Singapore as an expat. What to look for in a lease, typical costs, and which companies are expat-friendly.`,
     type: `article`,
     faq: [
@@ -79,7 +79,7 @@ const META = {
     ],
   },
   '/singapore/buying-guide': {
-    title: `Buying a Car in Singapore as an Expat — Full Guide`,
+    title: `Buying a Car in Singapore as an Expat â Full Guide`,
     desc: `Everything you need to know about buying a car in Singapore. COE explained, dealers, financing, and whether buying actually makes financial sense for expats.`,
     type: `article`,
     faq: [
@@ -94,7 +94,7 @@ const META = {
     ],
   },
   '/singapore/insurance-guide': {
-    title: `Car Insurance in Singapore — Expat Guide`,
+    title: `Car Insurance in Singapore â Expat Guide`,
     desc: `Compare car insurance options in Singapore as an expat. Understand comprehensive vs third-party coverage, NCD transfers, and how to get the best rate.`,
     type: `article`,
     faq: [
@@ -109,7 +109,7 @@ const META = {
     ],
   },
   '/singapore/licence-conversion': {
-    title: `Converting Your Driving Licence in Singapore — Expat Guide`,
+    title: `Converting Your Driving Licence in Singapore â Expat Guide`,
     desc: `How to convert a foreign driving licence to a Singapore licence. Which licences qualify for direct conversion, the process, costs, and timelines.`,
     type: `article`,
     faq: [
@@ -124,7 +124,7 @@ const META = {
     ],
   },
   '/singapore/ev-guide': {
-    title: `Electric Cars in Singapore — Expat EV Guide`,
+    title: `Electric Cars in Singapore â Expat EV Guide`,
     desc: `Thinking about an electric car in Singapore? This guide covers EV grants, charging infrastructure, COE implications, and which EVs work best for expat lifestyles.`,
     type: `article`,
     faq: [
@@ -139,7 +139,7 @@ const META = {
     ],
   },
   '/singapore/calculators': {
-    title: `Singapore Car Cost Calculator — Lease vs Buy`,
+    title: `Singapore Car Cost Calculator â Lease vs Buy`,
     desc: `Use our free calculator to compare the true monthly cost of leasing vs buying a car in Singapore. Includes COE, insurance, road tax, and running costs.`,
     type: `website`,
   },
@@ -149,7 +149,7 @@ const META = {
     type: `website`,
   },
   '/hongkong': {
-    title: `Hong Kong Expat Car Guide — Lease, Buy or Skip?`,
+    title: `Hong Kong Expat Car Guide â Lease, Buy or Skip?`,
     desc: `Everything expats need to know about getting a car in Hong Kong. FRT tax, leasing vs buying, insurance, and practical advice for expatriates.`,
     type: `website`,
   },
@@ -173,7 +173,7 @@ const META = {
     ],
   },
   '/hongkong/buying-guide': {
-    title: `Buying a Car in Hong Kong as an Expat — Full Guide`,
+    title: `Buying a Car in Hong Kong as an Expat â Full Guide`,
     desc: `Everything you need to know about buying a car in Hong Kong. First Registration Tax explained, dealers, financing, and whether buying makes sense for expats.`,
     type: `article`,
     faq: [
@@ -188,7 +188,7 @@ const META = {
     ],
   },
   '/hongkong/leasing-guide': {
-    title: `How to Lease a Car in Hong Kong — Expat Guide`,
+    title: `How to Lease a Car in Hong Kong â Expat Guide`,
     desc: `A practical guide to leasing a car in Hong Kong as an expat. Typical costs, what to look for in a lease agreement, and expat-friendly leasing companies.`,
     type: `article`,
     faq: [
@@ -218,7 +218,7 @@ const META = {
     ],
   },
   '/hongkong/insurance-guide': {
-    title: `Car Insurance in Hong Kong — Expat Guide`,
+    title: `Car Insurance in Hong Kong â Expat Guide`,
     desc: `Compare car insurance options in Hong Kong as an expat. Third-party vs comprehensive coverage, NCD, and tips for getting a fair quote.`,
     type: `article`,
     faq: [
@@ -233,7 +233,7 @@ const META = {
     ],
   },
   '/hongkong/mot-maintenance': {
-    title: `Car Maintenance and Inspection in Hong Kong — Expat Guide`,
+    title: `Car Maintenance and Inspection in Hong Kong â Expat Guide`,
     desc: `What expats need to know about car maintenance, roadworthiness testing, and finding reliable garages in Hong Kong.`,
     type: `article`,
     faq: [
@@ -248,7 +248,7 @@ const META = {
     ],
   },
   '/hongkong/licence-conversion': {
-    title: `Converting Your Driving Licence in Hong Kong — Expat Guide`,
+    title: `Converting Your Driving Licence in Hong Kong â Expat Guide`,
     desc: `How to convert a foreign driving licence to a Hong Kong licence. Which licences qualify, the process, costs, and how long it takes.`,
     type: `article`,
     faq: [
@@ -263,7 +263,7 @@ const META = {
     ],
   },
   '/hongkong/ev-guide': {
-    title: `Electric Cars in Hong Kong — Expat EV Guide`,
+    title: `Electric Cars in Hong Kong â Expat EV Guide`,
     desc: `Thinking about an electric car in Hong Kong? This guide covers FRT concessions, charging infrastructure, and which EVs suit expat life in HK.`,
     type: `article`,
     faq: [
@@ -278,7 +278,7 @@ const META = {
     ],
   },
   '/hongkong/calculators': {
-    title: `Hong Kong Car Cost Calculator — Lease vs Buy`,
+    title: `Hong Kong Car Cost Calculator â Lease vs Buy`,
     desc: `Use our free calculator to compare the true cost of leasing vs buying a car in Hong Kong. Includes FRT, insurance, and running costs.`,
     type: `website`,
   },
@@ -358,6 +358,7 @@ for (const route of ROUTES) {
   const html = template
     .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
     .replace(/<!--META_TITLE-->/g, meta.title)
+    .replace('PAGE_TITLE_HERE', meta.title)
     .replace(/<!--META_DESC-->/g, meta.desc)
     .replace('<!--OG_URL-->', canonicalUrl)
     .replace('<!--CANONICAL-->', `<link rel="canonical" href="${canonicalUrl}" />`)
