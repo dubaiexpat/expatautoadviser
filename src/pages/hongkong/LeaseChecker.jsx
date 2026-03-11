@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const SUPABASE_URL = 'https://PLACEHOLDER.supabase.co';
-const SUPABASE_KEY = 'PLACEHOLDER_ANON_KEY';
+const SUPABASE_URL = 'https://lywjdihnnajvhfcpmxnw.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5d2pkaWhubmFqdmhmY3BteG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyMzA4MjEsImV4cCI6MjA4ODgwNjgyMX0.x6A081ICya-DOqW6eeyZnDICltJTroEFSoYONH4WZAk';
 
 const SEGMENTS = [
   { value: 'economy', label: 'Economy', examples: 'Toyota Axio / Vios, Honda Jazz, Suzuki Swift' },
   { value: 'midrange', label: 'Mid-range', examples: 'Toyota Camry, Honda Accord, Mazda 6' },
   { value: 'premium', label: 'Premium', examples: 'BMW 3 Series, Audi A4, Mercedes C-Class' },
   { value: 'luxury', label: 'Luxury', examples: 'BMW 5 Series, Mercedes E-Class, Audi A6' },
-  { value: 'suv_mid', label: 'SUV — Mid', examples: 'Honda CR-V, Mazda CX-5, Toyota RAV4' },
-  { value: 'suv_premium', label: 'SUV — Premium', examples: 'BMW X3, Mercedes GLC, Audi Q5' },
+  { value: 'suv_mid', label: 'SUV â Mid', examples: 'Honda CR-V, Mazda CX-5, Toyota RAV4' },
+  { value: 'suv_premium', label: 'SUV â Premium', examples: 'BMW X3, Mercedes GLC, Audi Q5' },
 ];
 
 const BENCHMARKS_HK = {
@@ -135,15 +135,15 @@ export default function HKLeaseChecker() {
       <nav style={{ background: '#1e3a5f', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 56, position: 'sticky', top: 0, zIndex: 50 }}>
         <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: 18 }}>ExpatAutoAdviser</Link>
         <div style={{ display: 'flex', gap: 10 }}>
-          <Link to="/singapore" style={{ background: 'rgba(255,255,255,0.12)', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>🇸🇬 Singapore</Link>
-          <Link to="/hongkong" style={{ background: '#0d9488', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>🇭🇰 Hong Kong</Link>
+          <Link to="/singapore" style={{ background: 'rgba(255,255,255,0.12)', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>ð¸ð¬ Singapore</Link>
+          <Link to="/hongkong" style={{ background: '#0d9488', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>ð­ð° Hong Kong</Link>
         </div>
       </nav>
 
       <div style={{ background: 'linear-gradient(135deg, #0f2236 0%, #1a3a50 100%)', padding: '48px 32px 40px', textAlign: 'center' }}>
-        <p style={{ color: '#5eead4', fontWeight: 700, fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.12em', margin: '0 0 12px' }}>Hong Kong • Free Tool</p>
+        <p style={{ color: '#5eead4', fontWeight: 700, fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.12em', margin: '0 0 12px' }}>Hong Kong â¢ Free Tool</p>
         <h1 style={{ color: 'white', fontSize: 38, fontWeight: 800, margin: '0 0 14px', lineHeight: 1.1 }}>Is your lease a fair deal?</h1>
-        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 16, maxWidth: 520, margin: '0 auto', lineHeight: 1.65 }}>Enter your lease terms and we’ll compare them against current Hong Kong market rates.</p>
+        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 16, maxWidth: 520, margin: '0 auto', lineHeight: 1.65 }}>Enter your lease terms and weâll compare them against current Hong Kong market rates.</p>
       </div>
 
       <div style={{ maxWidth: 720, margin: '40px auto', padding: '0 20px 60px' }}>
@@ -165,8 +165,8 @@ export default function HKLeaseChecker() {
                 <div>
                   <label style={labelStyle}>Car segment <span style={{ color: '#0d9488' }}>*</span></label>
                   <select style={{ ...inputStyle, borderColor: errors.segment ? '#dc2626' : '#d1d5db' }} value={form.segment} onChange={e => set('segment', e.target.value)}>
-                    <option value="">Select segment…</option>
-                    {SEGMENTS.map(s => <option key={s.value} value={s.value}>{s.label} — {s.examples}</option>)}
+                    <option value="">Select segmentâ¦</option>
+                    {SEGMENTS.map(s => <option key={s.value} value={s.value}>{s.label} â {s.examples}</option>)}
                   </select>
                   {errors.segment && <p style={{ ...hintStyle, color: '#dc2626' }}>{errors.segment}</p>}
                 </div>
@@ -210,7 +210,7 @@ export default function HKLeaseChecker() {
             </div>
 
             <div style={cardStyle}>
-              <h2 style={{ fontSize: 16, fontWeight: 700, color: '#1e3a5f', margin: '0 0 6px' }}>What’s included?</h2>
+              <h2 style={{ fontSize: 16, fontWeight: 700, color: '#1e3a5f', margin: '0 0 6px' }}>Whatâs included?</h2>
               <p style={{ fontSize: 13, color: '#6b7280', margin: '0 0 18px', lineHeight: 1.55 }}>Tick everything your lease covers. This significantly affects the market comparison.</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                 {[
@@ -222,7 +222,7 @@ export default function HKLeaseChecker() {
                 ].map(({ key, label, hint }) => (
                   <label key={key} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, cursor: 'pointer', padding: '10px 14px', border: `1.5px solid ${form[key] ? '#0d9488' : '#e5e7eb'}`, borderRadius: 8, background: form[key] ? '#f0fdfa' : 'white' }} onClick={() => toggle(key)}>
                     <div style={{ width: 18, height: 18, borderRadius: 4, border: `2px solid ${form[key] ? '#0d9488' : '#d1d5db'}`, background: form[key] ? '#0d9488' : 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
-                      {form[key] && <span style={{ color: 'white', fontSize: 11, fontWeight: 700 }}>✓</span>}
+                      {form[key] && <span style={{ color: 'white', fontSize: 11, fontWeight: 700 }}>â</span>}
                     </div>
                     <div>
                       <div style={{ fontSize: 14, fontWeight: 600, color: '#1f2937' }}>{label}</div>
@@ -236,7 +236,7 @@ export default function HKLeaseChecker() {
             <div style={{ ...cardStyle, background: '#f9fafb' }}>
               <label style={{ display: 'flex', alignItems: 'flex-start', gap: 12, cursor: 'pointer' }} onClick={() => toggle('consent')}>
                 <div style={{ width: 18, height: 18, borderRadius: 4, border: `2px solid ${form.consent ? '#0d9488' : '#d1d5db'}`, background: form.consent ? '#0d9488' : 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>
-                  {form.consent && <span style={{ color: 'white', fontSize: 11, fontWeight: 700 }}>✓</span>}
+                  {form.consent && <span style={{ color: 'white', fontSize: 11, fontWeight: 700 }}>â</span>}
                 </div>
                 <div>
                   <div style={{ fontSize: 14, fontWeight: 600, color: '#374151' }}>Share anonymously to improve benchmarks</div>
@@ -246,7 +246,7 @@ export default function HKLeaseChecker() {
             </div>
 
             <button onClick={handleSubmit} style={{ width: '100%', background: '#0d9488', color: 'white', border: 'none', borderRadius: 10, padding: '15px 24px', fontSize: 16, fontWeight: 700, cursor: 'pointer', fontFamily: 'Inter, sans-serif' }}>
-              Check my lease →
+              Check my lease â
             </button>
 
             {Object.keys(errors).length > 0 && (
@@ -274,7 +274,7 @@ export default function HKLeaseChecker() {
                   <div style={{ background: '#bfdbfe', flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 600, color: '#1e40af' }}>Median {report.adjBench.median.toLocaleString()}</div>
                   <div style={{ background: '#fee2e2', flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 600, color: '#991b1b' }}>Max {report.adjBench.max.toLocaleString()}</div>
                 </div>
-                <div style={{ fontSize: 14, fontWeight: 700, color: '#1f2937' }}>Your lease: HKD {parseFloat(form.cost).toLocaleString()}/mo — <span style={{ color: report.color }}>{report.verdict}</span></div>
+                <div style={{ fontSize: 14, fontWeight: 700, color: '#1f2937' }}>Your lease: HKD {parseFloat(form.cost).toLocaleString()}/mo â <span style={{ color: report.color }}>{report.verdict}</span></div>
               </div>
 
               <div style={{ marginBottom: 18 }}>
@@ -282,9 +282,9 @@ export default function HKLeaseChecker() {
                 <div style={{ display: 'grid', gap: 8 }}>
                   {report.inclusions.map(inc => (
                     <div key={inc.key} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', background: inc.included ? '#f0fdf4' : '#fef2f2', borderRadius: 6 }}>
-                      <span style={{ fontSize: 14, color: '#1f2937' }}>{inc.included ? '✅' : '❌'} {inc.label}</span>
+                      <span style={{ fontSize: 14, color: '#1f2937' }}>{inc.included ? 'â' : 'â'} {inc.label}</span>
                       <span style={{ fontSize: 13, color: inc.included ? '#16a34a' : '#dc2626', fontWeight: 600 }}>
-                        {inc.included ? `Included (~HKD ${inc.value.toLocaleString()}/mo value)` : `Not included — budget ~HKD ${inc.value.toLocaleString()}/mo extra`}
+                        {inc.included ? `Included (~HKD ${inc.value.toLocaleString()}/mo value)` : `Not included â budget ~HKD ${inc.value.toLocaleString()}/mo extra`}
                       </span>
                     </div>
                   ))}
@@ -299,21 +299,21 @@ export default function HKLeaseChecker() {
 
               {form.mileage && form.excess && (
                 <div style={{ marginTop: 14, background: '#fffbeb', border: '1px solid #fde68a', borderRadius: 8, padding: '12px 16px', fontSize: 13, color: '#92400e' }}>
-                  <strong>Mileage note:</strong> At {parseInt(form.mileage).toLocaleString()} km/mo, if you exceed by 500 km you’ll pay ~HKD {Math.round(parseFloat(form.excess) * 500).toLocaleString()} extra that month.
+                  <strong>Mileage note:</strong> At {parseInt(form.mileage).toLocaleString()} km/mo, if you exceed by 500 km youâll pay ~HKD {Math.round(parseFloat(form.excess) * 500).toLocaleString()} extra that month.
                 </div>
               )}
             </div>
 
             <div style={{ textAlign: 'center', marginBottom: 24 }}>
               {saving ? (
-                <p style={{ fontSize: 13, color: '#6b7280' }}>Saving your data…</p>
+                <p style={{ fontSize: 13, color: '#6b7280' }}>Saving your dataâ¦</p>
               ) : (
-                <p style={{ fontSize: 13, color: '#6b7280' }}>✅ {form.consent ? 'Your data has been saved anonymously to our benchmarks. Thank you!' : 'Report ready. Your email has been noted for future updates.'}</p>
+                <p style={{ fontSize: 13, color: '#6b7280' }}>â {form.consent ? 'Your data has been saved anonymously to our benchmarks. Thank you!' : 'Report ready. Your email has been noted for future updates.'}</p>
               )}
             </div>
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/hongkong/leasing-guide" style={{ background: '#1e3a5f', color: 'white', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Read our leasing guide →</Link>
+              <Link to="/hongkong/leasing-guide" style={{ background: '#1e3a5f', color: 'white', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Read our leasing guide â</Link>
               <button onClick={() => { setReport(null); setForm(f => ({ ...f, cost: '', segment: '', insurance: false, roadTax: false, servicing: false, tyres: false, breakdown: false })); }} style={{ background: 'white', color: '#1e3a5f', border: '1.5px solid #1e3a5f', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, cursor: 'pointer', fontFamily: 'Inter, sans-serif' }}>Check another lease</button>
             </div>
           </>
