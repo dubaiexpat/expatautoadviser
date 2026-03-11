@@ -13,7 +13,7 @@ export default function HKLicenceConversion() {
         <h2 style={h2}>Which nationalities can convert without a test?</h2>
         <p style={body}>Hong Kong has a reciprocal licence exchange arrangement with a wide range of countries. Holders of licences from these countries can convert directly:</p>
         <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:8,margin:"16px 0 28px"}}>
-          {countries.map(c => <div key={c} style={{background:"#f0fdfa",border:"1px solid #99f6e4",borderRadius:6,padding:"8px 12px",fontSize:13,color:"#134e4a",fontWeight:500}}>â {c}</div>)}
+          {countries.map(c => <div key={c} style={{background:"#f0fdfa",border:"1px solid #99f6e4",borderRadius:6,padding:"8px 12px",fontSize:13,color:"#134e4a",fontWeight:500}}>✓ {c}</div>)}
         </div>
         <p style={body}>If your country isn't listed, you can still drive on a valid foreign licence for up to 12 months from arrival, or obtain an International Driving Permit (IDP) from your home country before travelling.</p>
 
@@ -21,7 +21,7 @@ export default function HKLicenceConversion() {
         <div style={{margin:"16px 0 28px"}}>
           {[{n:"1",t:"Gather your documents",d:"Valid foreign driving licence (with certified translation if not in English or Chinese), valid Hong Kong ID card or passport with valid visa, and one recent passport photo."},
             {n:"2",t:"Complete the application form",d:"Form TD 51 is the Application for Issue/Renewal of Driving Licence. Available at any Transport Department licensing office or download from td.gov.hk."},
-            {n:"3",t:"Visit a Transport Department licensing office",d:"Bring all originals. Main offices: Cheung Sha Wan, Sha Tin, and Tuen Mun. No appointment needed for licence exchange â take a queue number on arrival."},
+            {n:"3",t:"Visit a Transport Department licensing office",d:"Bring all originals. Main offices: Cheung Sha Wan, Sha Tin, and Tuen Mun. No appointment needed for licence exchange — take a queue number on arrival."},
             {n:"4",t:"Pay the fee and collect",d:"The licence fee varies by licence class and validity period. A full private car licence (Class 1) for 10 years costs approximately HKD $900. You'll typically receive a temporary licence on the day and the permanent card by post."},
           ].map(({n,t,d}) => (
             <div key={n} style={{display:"flex",gap:16,marginBottom:20}}>
@@ -32,7 +32,7 @@ export default function HKLicenceConversion() {
         </div>
 
         <h2 style={h2}>International Driving Permit (IDP)</h2>
-        <p style={body}>An IDP is a translation of your home licence issued by your home country's motoring authority (e.g. AA or RAC in the UK, AAA in the US). In HK, an IDP allows you to drive for up to 12 months alongside your foreign licence. It's a useful backup if your conversion is taking time â and essential if you plan to drive on the mainland.</p>
+        <p style={body}>An IDP is a translation of your home licence issued by your home country's motoring authority (e.g. AA or RAC in the UK, AAA in the US). In HK, an IDP allows you to drive for up to 12 months alongside your foreign licence. It's a useful backup if your conversion is taking time — and essential if you plan to drive on the mainland.</p>
 
         <h2 style={h2}>Cost and timing summary</h2>
         <div style={{background:"white",border:"1px solid #e5e7eb",borderRadius:10,padding:24,margin:"16px 0 28px",display:"grid",gridTemplateColumns:"1fr 1fr",gap:20}}>
