@@ -8,12 +8,15 @@ export default function SGLicenceConversion() {
       <div style={{maxWidth:760}}>
         <p style={{color:"#e8341c",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Singapore</p>
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>Converting Your Driving Licence in Singapore</h1>
-        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Most Western expats can convert their foreign licence to a Singapore one without sitting a test. Here's exactly how.</p>
+        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Holders of licences from approved countries can convert directly to a Singapore licence — no theory test, no practical test required. If your country is not on the approved list, Singapore's full driving test process applies. Check eligibility below.</p>
 
-        <h2 style={h2}>Can you convert without a test?</h2>
-        <p style={body}>Singapore allows holders of licences from certain countries to convert directly — no theory test, no practical test, just paperwork. Qualifying countries include:</p>
+        <h2 style={h2}>Which countries qualify for direct conversion?</h2>
+        <p style={body}>Singapore's Traffic Police allows holders of licences from the following countries to convert directly — no test of any kind required, just a paperwork process:</p>
         <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:8,margin:"16px 0 28px"}}>
           {countries.map(c => <div key={c} style={{background:"#f0fdf4",border:"1px solid #86efac",borderRadius:6,padding:"8px 12px",fontSize:13,color:"#166534",fontWeight:500}}>✓ {c}</div>)}
+        </div>
+        <div style={{background:"#fef2f2",border:"1px solid #fecaca",borderRadius:8,padding:"14px 18px",margin:"0 0 28px",fontSize:14,color:"#991b1b",lineHeight:1.6}}>
+          <strong>Not on the list?</strong> Licence holders from countries not listed above must pass Singapore's full driving test — this includes the Basic Theory Test (BTT), Final Theory Test (FTT), and practical driving test. Check the official list at <strong>onemotoring.com.sg</strong> or contact Traffic Police if you are unsure about your specific licence.
         </div>
 
         <h2 style={h2}>Step-by-step process</h2>

@@ -150,7 +150,7 @@ export default function Home() {
         <div style={{ background: "rgba(232,52,28,0.08)", border: "1px solid rgba(232,52,28,0.2)", borderRadius: 10, padding: "14px 24px", maxWidth: 480 }}>
           <p style={{ margin: 0, fontSize: "12px", fontWeight: 700, color: "#e63946", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Free download</p>
           <p style={{ margin: 0, fontSize: "clamp(16px,2vw,18px)", fontWeight: 700, color: "#fff", lineHeight: 1.4 }}>Get the Expat Car Checklist</p>
-          <p style={{ margin: "8px 0 0", fontSize: "13px", color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>The 12 questions to ask before you sign any lease or buy any car in Singapore or HK. Used by 600+ expats.</p>
+          <p style={{ margin: "8px 0 0", fontSize: "13px", color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>The 12 questions to ask before you sign any lease or buy any car in Singapore or HK.</p>
         </div>
         <div className="newsletter-form">
           <input type="email" placeholder="your@email.com" />

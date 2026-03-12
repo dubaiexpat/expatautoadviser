@@ -23,11 +23,9 @@ const CITY_META = {
 };
 
 const mobileCSS = [
-  '.eaa-brand-text { display: inline; }',
   '.eaa-city-label { font-size: 13px; padding: 5px 12px; }',
   '.eaa-city-pill { font-size: 13px; padding: 5px 10px; }',
   '@media (max-width: 639px) {',
-  '  .eaa-brand-text { display: none; }',
   '  .eaa-city-label { font-size: 11px !important; padding: 4px 8px !important; }',
   '  .eaa-city-pill { font-size: 11px !important; padding: 4px 8px !important; }',
   '}',
@@ -51,9 +49,6 @@ export default function Layout({ city, active, children, relatedLinks }) {
       }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', flexShrink: 0 }}>
           <span style={{ fontSize: 20 }}>🚗</span>
-          <span className="eaa-brand-text" style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: 18, color: '#1a1a2e' }}>
-            ExpatAutoAdviser
-          </span>
         </Link>
 
         <span

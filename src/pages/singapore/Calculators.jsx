@@ -550,7 +550,7 @@ function LicenceChecker() {
     <div>
       <h2 style={{ fontSize: 22, fontWeight: 700, color: "#1a1a2e", marginBottom: 8 }}>Licence Eligibility Checker</h2>
       <p style={{ color: "#6b7280", fontSize: 14, marginBottom: 24 }}>
-        Most Western nationalities can convert directly — no test needed. Check your country below.
+        Direct conversion without any test is only available for specific approved countries. Select yours below — if it's not listed, Singapore's full driving test applies.
       </p>
 
       <div style={{ marginBottom: 24 }}>

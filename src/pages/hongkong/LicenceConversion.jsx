@@ -8,14 +8,16 @@ export default function HKLicenceConversion() {
       <div style={{maxWidth:760}}>
         <p style={{color:"#0d9488",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>Converting Your Driving Licence in Hong Kong</h1>
-        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Most Western expats can exchange their home licence for a Hong Kong one without any test. Here's how the process works.</p>
+        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Holders of licences from approved countries can exchange their foreign licence for a Hong Kong one without any test. If your country is not on the approved list, the Transport Department will require a theory or practical test. Check your eligibility below.</p>
 
-        <h2 style={h2}>Which nationalities can convert without a test?</h2>
-        <p style={body}>Hong Kong has a reciprocal licence exchange arrangement with a wide range of countries. Holders of licences from these countries can convert directly:</p>
+        <h2 style={h2}>Which countries qualify for direct exchange?</h2>
+        <p style={body}>Hong Kong's Transport Department has reciprocal licence exchange arrangements with the following countries. Holders of licences from these countries can convert directly — no test required:</p>
         <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:8,margin:"16px 0 28px"}}>
           {countries.map(c => <div key={c} style={{background:"#f0fdfa",border:"1px solid #99f6e4",borderRadius:6,padding:"8px 12px",fontSize:13,color:"#134e4a",fontWeight:500}}>✓ {c}</div>)}
         </div>
-        <p style={body}>If your country isn't listed, you can still drive on a valid foreign licence for up to 12 months from arrival, or obtain an International Driving Permit (IDP) from your home country before travelling.</p>
+        <div style={{background:"#fef2f2",border:"1px solid #fecaca",borderRadius:8,padding:"14px 18px",margin:"0 0 28px",fontSize:14,color:"#991b1b",lineHeight:1.6}}>
+          <strong>Not on the list?</strong> Licence holders from countries not listed above are not eligible for direct exchange. You may drive on a valid foreign licence for up to 12 months from arrival, but to obtain a Hong Kong licence after that you will need to sit a theory test and/or practical driving test as determined by the Transport Department. An International Driving Permit (IDP) obtained in your home country can also extend the period you may drive legally. Check with the <strong>Transport Department (td.gov.hk)</strong> for your specific situation.
+        </div>
 
         <h2 style={h2}>Step-by-step conversion process</h2>
         <div style={{margin:"16px 0 28px"}}>
