@@ -50,7 +50,7 @@ export default function HKEVGuide() {
           ))}
         </div>
 
-        <PatrickTip city="hk">"I drove petrol in HK, and given the fuel prices I paid, I'd seriously consider EV next time. The one thing to sort first is charging — if your building has it, or you have a house with a garage, it's a no-brainer. If you're in a flat without charging sorted, that's the blocker. Check the building before the car."</PatrickTip>
+        <PatrickTip city="hk">"EV makes strong economic sense in HK given fuel prices, and the FRT concession scheme makes new EVs more accessible than new petrol cars. The one thing to confirm first is home charging — if your building has EV charging available, it's straightforward. If you're in a flat without charging sorted, that's the real question to resolve before choosing a car. Sort the infrastructure first."</PatrickTip>
       </div>
     </Layout>
   );

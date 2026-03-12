@@ -43,7 +43,7 @@ export default function HKMOTMaintenance() {
           ))}
         </div>
 
-        <PatrickTip city="hk">"Finding a trustworthy mechanic in HK is gold. I found mine through a Sai Kung Facebook group — two separate people recommended the same guy independently. He's been looking after my car ever since. Ask other expats. The good ones get passed around by word of mouth and that reputation matters enormously to them."</PatrickTip>
+        <PatrickTip city="hk">"Finding a trustworthy mechanic in HK is genuinely valuable — and word of mouth is by far the most reliable way to find one. Ask other expats in your area, your building WhatsApp group, or local community pages online. When two or three people independently recommend the same workshop, that's your answer. The good ones know their reputation matters and they work to keep it."</PatrickTip>
       </div>
     </Layout>
   );

@@ -138,7 +138,7 @@ export default function SGEVGuide() {
         <p style={body}>Singapore's EV charging network does not extend into Malaysia. If you regularly drive to Johor Bahru or take longer Malaysian road trips, a petrol or hybrid lease is more practical. EV range is sufficient for the JB crossing, but public charging in southern Johor is sparse and unreliable.</p>
         <p style={body}>If Malaysia trips are occasional (once or twice a year), an EV lease is still very practical — top up to 100% before crossing and plan charging stops if going further north.</p>
 
-        <PatrickTip city="sg">"I didn't go EV in Singapore — my building got chargers installed 6 months after I arrived and I was already locked into a petrol lease. If I was doing it again I'd ask my building management about EV charging infrastructure before I signed anything. It's a standard question now. The EV lease rates have come down a lot and the charging network is genuinely good. Don't assume you need a reason to go EV — assume you need a reason not to."</PatrickTip>
+        <PatrickTip city="sg">"The EV market in Singapore has matured considerably — lease rates are competitive and the charging network is genuinely good. Before committing, confirm one thing: whether your condo or building has EV charging, or has it planned. It's now a standard question to ask building management before you sign a lease. If charging is sorted, the economics are compelling. If it's not sorted, that's the real question to push on first."</PatrickTip>
 
         <div style={{ marginTop: 40, padding: 24, background: "#f9fafb", borderRadius: 10 }}>
           <p style={{ margin: "0 0 12px", fontWeight: 700, fontSize: 15, color: "#1e3a5f" }}>Related guides</p>

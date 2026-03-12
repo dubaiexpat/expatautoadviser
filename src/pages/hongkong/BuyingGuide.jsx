@@ -53,7 +53,7 @@ export default function HKBuyingGuide() {
         <h2 style={h2}>Exit strategy: selling before you leave</h2>
         <p style={body}>Budget 2–3 months to sell privately for a good price, or 2–4 weeks if you're willing to accept a dealer trade-in (typically HKD $20,000–$40,000 below market). The expat Facebook groups often move cars in days if priced fairly. Cars in good condition with full service history command a premium.</p>
 
-        <PatrickTip city="hk">"I bought a 3-year-old Japanese SUV from another expat who was leaving. Full service history, one careful owner, sensible price. I sold it 2.5 years later for almost exactly what I paid — slightly less, but the running costs were all I really lost. That's the HK used car maths working in your favour."</PatrickTip>
+        <PatrickTip city="hk">"The best used car deals in HK consistently come from expats who are leaving. They price to sell quickly, the cars are typically well-maintained, and the paperwork is usually in English. Keep an eye on expat Facebook groups and community boards — good cars go fast, but they come up regularly. The HK used market holds value well if you buy sensibly."</PatrickTip>
       </div>
     </Layout>
   );

@@ -160,7 +160,7 @@ export default function SGGarageFinder() {
         <h2 style={h2}>Continental car owners</h2>
         <p style={body}>BMW, Mercedes-Benz, Audi, and Volvo all have authorised service networks in Singapore. For older continental cars (7+ years), independent specialists in Ubi and Pandan Gardens often know the cars better and charge significantly less than dealer workshops. Ask specifically for a mechanic with experience on your marque.</p>
 
-        <PatrickTip city="sg">"I drove a BMW in Singapore. Dealer servicing was painless but expensive. I switched to an independent in Ubi after year one — half the price, same quality. The key was getting a personal recommendation from someone at the office who had the same car. Don't trust Google alone. Ask a human who's actually been there."</PatrickTip>
+        <PatrickTip city="sg">"Dealer servicing in Singapore is reliable but expensive. After the manufacturer warranty period, many expats switch to independent workshops — the savings can be significant and quality at the better independents is genuinely good. The most reliable way to find one: ask someone at your office who drives the same make. A personal recommendation beats any review site."</PatrickTip>
 
         <div style={{ marginTop: 40, padding: 24, background: "#f9fafb", borderRadius: 10 }}>
           <p style={{ margin: "0 0 12px", fontWeight: 700, fontSize: 15, color: "#1e3a5f" }}>Related guides</p>

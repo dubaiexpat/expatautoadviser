@@ -145,7 +145,7 @@ export default function SGLeasingGuide() {
         <p style={body}>The Certificate of Entitlement is a 10-year permit to own a vehicle in Singapore. When you lease, the leasing company holds the COE risk — not you. This is one of the strongest arguments for leasing over buying as an expat.</p>
         <p style={body}>Use our <Link to="/singapore/calculators" style={{ color: "#e8341c" }}>COE Buy vs Lease Calculator</Link> to see what a car would actually cost you to own vs lease over a typical 3-year expat stint.</p>
 
-        <PatrickTip city="sg">"I went with a mid-size for my Singapore lease and never regretted it. One thing I wish I'd checked earlier: the mileage cap. I did two Malaysia road trips and came back nervous about the odometer. Check yours before you book the hotel in Penang."</PatrickTip>
+        <PatrickTip city="sg">"Mid-size saloons are the sweet spot for Singapore leasing — practical enough for a family, manageable in tight carparks. One thing to check before you sign: the annual mileage cap. If you're planning cross-causeway trips to Malaysia or regular weekend drives, it's easier to hit the limit than you'd think. Excess mileage charges add up, and no one mentions them until the bill arrives."</PatrickTip>
 
         {/* FAQ section */}
         <FAQ city="sg" items={leasingFAQ} />

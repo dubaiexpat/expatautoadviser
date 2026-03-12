@@ -50,7 +50,7 @@ export default function HKFRTExplained() {
           </table>
         </div>
 
-        <PatrickTip city="hk">"FRT is the single biggest shock for expats buying new in HK. I briefly considered a new car before the numbers hit me. The maths on used is just overwhelming — same car, built same year, properly maintained, half the price effectively. Don't even look at new unless you're buying an EV with the concession scheme."</PatrickTip>
+        <PatrickTip city="hk">"FRT is the single biggest shock for expats buying new in HK. Run the numbers once and the used market makes overwhelming sense — same car, properly maintained, at a fraction of the effective new price. The only scenario where new genuinely pencils out is an EV eligible for the FRT concession scheme. For everything else, used is where the value is."</PatrickTip>
       </div>
     </Layout>
   );
