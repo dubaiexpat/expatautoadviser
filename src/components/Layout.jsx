@@ -1,125 +1,206 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
-const NAV_LINKS = {
-  sg: [
-    { label: 'Overview', to: '/singapore' },
-    { label: 'Leasing Guide', to: '/singapore/leasing-guide' },
-    { label: 'Buying Guide', to: '/singapore/buying-guide' },
-    { label: 'Insurance', to: '/singapore/insurance-guide' },
-    { label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' },
-  ],
-  hk: [
-    { label: 'Overview', to: '/hongkong' },
-    { label: 'Buying Guide', to: '/hongkong/buying-guide' },
-    { label: 'Leasing Guide', to: '/hongkong/leasing-guide' },
-    { label: 'Insurance', to: '/hongkong/insurance-guide' },
-    { label: 'Should I Get a Car?', to: '/hongkong/should-i-get-a-car' },
-  ],
-};
+const SIDEBAR_BG = '#0f172a';
+const ACCENT = '#e8341c';
+const GOLD = '#f59e0b';
 
-const CITY_META = {
-  sg: { label: 'Singapore', color: '#e63946', bg: '#fff1f2' },
-  hk: { label: 'Hong Kong', color: '#2a9d8f', bg: '#f0fdfa' },
-};
+const SG_LINKS = [
+  { label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' },
+  { label: 'Buying Guide', to: '/singapore/buying-guide' },
+  { label: 'Leasing Guide', to: '/singapore/leasing-guide' },
+  { label: 'Insurance Guide', to: '/singapore/insurance-guide' },
+  { label: 'EV Guide', to: '/singapore/ev-guide' },
+  { label: 'Licence Conversion', to: '/singapore/licence-conversion' },
+  { label: 'Calculators', to: '/singapore/calculators' },
+];
 
-const mobileCSS = [
-  '.eaa-city-label { font-size: 13px; padding: 5px 12px; }',
-  '.eaa-city-pill { font-size: 13px; padding: 5px 10px; }',
-  '@media (max-width: 639px) {',
-  '  .eaa-city-label { font-size: 11px !important; padding: 4px 8px !important; }',
-  '  .eaa-city-pill { font-size: 11px !important; padding: 4px 8px !important; }',
-  '}',
-].join('\n');
+const HK_LINKS = [
+  { label: 'Should I Get a Car?', to: '/hongkong/should-i-get-a-car' },
+  { label: 'Buying Guide', to: '/hongkong/buying-guide' },
+  { label: 'Leasing Guide', to: '/hongkong/leasing-guide' },
+  { label: 'Insurance Guide', to: '/hongkong/insurance-guide' },
+  { label: 'EV Guide', to: '/hongkong/ev-guide' },
+  { label: 'Licence Conversion', to: '/hongkong/licence-conversion' },
+  { label: 'FRT Explained', to: '/hongkong/frt-explained' },
+  { label: 'Calculators', to: '/hongkong/calculators' },
+];
 
-export default function Layout({ city, active, children, relatedLinks }) {
-  const meta = CITY_META[city] || CITY_META.sg;
-  const links = NAV_LINKS[city] || NAV_LINKS.sg;
+function NavSection({ title, links, location, flagEmoji }) {
+  return (
+    <div style={{ marginBottom: 28 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 20px', marginBottom: 8 }}>
+        <span style={{ fontSize: 15 }}>{flagEmoji}</span>
+        <span style={{ fontSize: 11, fontWeight: 700, color: '#94a3b8', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{title}</span>
+      </div>
+      {links.map(link => {
+        const active = location.pathname === link.to;
+        return (
+          <Link
+            key={link.to}
+            to={link.to}
+            style={{
+              display: 'block',
+              padding: '7px 20px 7px 44px',
+              fontSize: 13.5,
+              color: active ? '#fff' : '#94a3b8',
+              background: active ? 'rgba(232,52,28,0.18)' : 'transparent',
+              borderLeft: active ? `3px solid ${ACCENT}` : '3px solid transparent',
+              textDecoration: 'none',
+              transition: 'all 0.15s',
+              marginLeft: 0,
+            }}
+            onMouseEnter={e => { if (!active) { e.currentTarget.style.color = '#e2e8f0'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}}
+            onMouseLeave={e => { if (!active) { e.currentTarget.style.color = '#94a3b8'; e.currentTarget.style.background = 'transparent'; }}}
+          >
+            {link.label}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function Layout({ city, title, description, relatedLinks = [], children }) {
+  const location = useLocation();
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const sidebar = (
+    <div style={{
+      width: 240,
+      minWidth: 240,
+      background: SIDEBAR_BG,
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      position: 'sticky',
+      top: 0,
+      height: '100vh',
+      overflowY: 'auto',
+      flexShrink: 0,
+    }}>
+      {/* Logo */}
+      <Link to="/" style={{ textDecoration: 'none', display: 'block', padding: '24px 20px 20px' }}>
+        <div style={{ fontSize: 13, fontWeight: 800, color: '#fff', letterSpacing: '0.08em', textTransform: 'uppercase', lineHeight: 1.2 }}>
+          Expat Auto Adviser
+        </div>
+        <div style={{ fontSize: 11, color: '#64748b', marginTop: 4 }}>Singapore &amp; Hong Kong</div>
+      </Link>
+
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', marginBottom: 20 }} />
+
+      {/* Home link */}
+      <Link
+        to="/"
+        style={{
+          display: 'block',
+          padding: '7px 20px',
+          fontSize: 13.5,
+          color: location.pathname === '/' ? '#fff' : '#94a3b8',
+          background: location.pathname === '/' ? 'rgba(232,52,28,0.18)' : 'transparent',
+          borderLeft: location.pathname === '/' ? `3px solid ${ACCENT}` : '3px solid transparent',
+          textDecoration: 'none',
+          marginBottom: 16,
+          fontWeight: 500,
+        }}
+      >
+        Home
+      </Link>
+
+      <NavSection title="Singapore" links={SG_LINKS} location={location} flagEmoji="🇸🇬" />
+      <NavSection title="Hong Kong" links={HK_LINKS} location={location} flagEmoji="🇭🇰" />
+
+      <div style={{ flex: 1 }} />
+      <div style={{ padding: '16px 20px', fontSize: 11, color: '#475569' }}>
+        © {new Date().getFullYear()} Expat Auto Adviser
+      </div>
+    </div>
+  );
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f9fafb', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-      <style>{mobileCSS}</style>
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#f8fafc' }}>
+      {/* Desktop sidebar */}
+      <div style={{ display: 'none' }} className="sidebar-desktop-hide" />
+      <div className="sidebar-desktop" style={{ display: 'flex' }}>
+        {sidebar}
+      </div>
 
-      {/* Top nav */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(255,255,255,0.97)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid #e5e7eb',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '0 20px', height: '56px', gap: 12,
+      {/* Mobile header */}
+      <div className="mobile-header" style={{
+        display: 'none',
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
+        background: SIDEBAR_BG, height: 52, alignItems: 'center',
+        justifyContent: 'space-between', padding: '0 16px',
       }}>
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', flexShrink: 0 }}>
-          <span style={{ fontSize: 20 }}>🚗</span>
+        <Link to="/" style={{ textDecoration: 'none', fontSize: 13, fontWeight: 800, color: '#fff', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+          Expat Auto Adviser
         </Link>
-
-        <span
-          className="eaa-city-label"
-          style={{
-            background: meta.bg, color: meta.color,
-            fontWeight: 700, borderRadius: 20,
-            border: '1px solid currentColor', whiteSpace: 'nowrap', flexShrink: 0,
-          }}
+        <button
+          onClick={() => setMobileOpen(o => !o)}
+          style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#fff', fontSize: 22, lineHeight: 1, padding: 4 }}
         >
-          {meta.label}
-        </span>
+          {mobileOpen ? '✕' : '☰'}
+        </button>
+      </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4, overflowX: 'auto', flexShrink: 1, minWidth: 0 }}>
-          {links.map(link => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="eaa-city-pill"
-              style={{
-                textDecoration: 'none', whiteSpace: 'nowrap', borderRadius: 20,
-                color: active === link.label ? meta.color : '#6b7280',
-                background: active === link.label ? meta.bg : 'transparent',
-                fontWeight: active === link.label ? 700 : 500,
-                border: active === link.label ? '1px solid currentColor' : '1px solid transparent',
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
-
-      {/* Page content */}
-      <main style={{ maxWidth: 780, margin: '0 auto', padding: '32px 20px 80px' }}>
-        {children}
-      {relatedLinks && relatedLinks.length > 0 && (
-        <div style={{ marginTop: '40px', borderTop: '2px solid #e5e7eb', paddingTop: '32px' }}>
-          <h2 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '16px', color: '#1a1a2e', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Related Guides</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-            {relatedLinks.map(link => (
-              <Link key={link.to} to={link.to} style={{
-                display: 'inline-block', padding: '10px 18px',
-                background: '#eef2ff', borderRadius: '8px',
-                color: '#3730a3', textDecoration: 'none', fontWeight: 600,
-                fontSize: '14px', border: '1px solid #c7d2fe'
-              }}>
-                {link.label} →
-              </Link>
-            ))}
+      {/* Mobile drawer */}
+      {mobileOpen && (
+        <div
+          style={{ position: 'fixed', inset: 0, zIndex: 150, background: 'rgba(0,0,0,0.5)' }}
+          onClick={() => setMobileOpen(false)}
+        >
+          <div
+            style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 260, background: SIDEBAR_BG, overflowY: 'auto' }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div style={{ height: 52 }} />
+            {sidebar}
           </div>
         </div>
       )}
+
+      {/* Main content */}
+      <main style={{ flex: 1, minWidth: 0, padding: '32px 28px 60px', maxWidth: '860px' }} className="main-content">
+        {title && (
+          <div style={{ marginBottom: 24 }}>
+            {city && (
+              <span style={{ display: 'inline-block', background: ACCENT, color: '#fff', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '3px 10px', borderRadius: 4, marginBottom: 10 }}>
+                {city === 'sg' ? 'Singapore' : 'Hong Kong'}
+              </span>
+            )}
+            <h1 style={{ fontSize: 30, fontWeight: 800, color: '#1e3a5f', margin: 0, lineHeight: 1.2 }}>{title}</h1>
+            {description && <p style={{ fontSize: 15, color: '#64748b', marginTop: 8, marginBottom: 0, lineHeight: 1.6 }}>{description}</p>}
+          </div>
+        )}
+
+        {children}
+
+        {relatedLinks.length > 0 && (
+          <div style={{ marginTop: 48, paddingTop: 28, borderTop: '1px solid #e5e7eb' }}>
+            <h2 style={{ fontSize: 15, fontWeight: 700, color: '#374151', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Related Guides</h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+              {relatedLinks.map(link => (
+                <Link key={link.to} to={link.to} style={{
+                  display: 'inline-block', padding: '9px 16px',
+                  background: '#fff', border: '1px solid #e5e7eb',
+                  borderRadius: 8, color: '#1e3a5f', fontWeight: 600, fontSize: 13,
+                  textDecoration: 'none', transition: 'all 0.15s',
+                }}>
+                  {link.label} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </main>
 
-      {/* Footer */}
-      <footer style={{
-        borderTop: '1px solid #e5e7eb', background: '#fff',
-        padding: '32px 20px', textAlign: 'center',
-      }}>
-        <Link to="/" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-          <span style={{ fontSize: 18 }}>🚗</span>
-          <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: 16, color: '#1a1a2e' }}>ExpatAutoAdviser</span>
-        </Link>
-        <p style={{ margin: '0 0 8px', fontSize: 13, color: '#9ca3af' }}>
-          Independent car advice for expats in Singapore and Hong Kong.
-        </p>
-        <p style={{ margin: 0, fontSize: 12, color: '#d1d5db' }}>
-          © 2025 ExpatAutoAdviser · Not financial advice · Partner links may earn commission
-        </p>
-      </footer>
+      <style>{`
+        @media (max-width: 768px) {
+          .sidebar-desktop { display: none !important; }
+          .mobile-header { display: flex !important; }
+          .main-content { padding: 76px 16px 48px !important; }
+        }
+      `}</style>
     </div>
   );
 }

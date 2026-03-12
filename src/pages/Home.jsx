@@ -1,163 +1,189 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const SG_MAP = "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1400&q=80";
-const HK_MAP = "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=1400&q=80";
-const PATRICK_IMG = "/Firefly_GeminiFlash_picture%20of%20a%20white%2040%20year%20old%20clean%20shaven%20man%20in%20smart%20casual%20clothes%20with%20dark%20hai%20966416%20(1).png";
+const ACCENT = '#e8341c';
 
-const styles = `
-  .eaa-home * { box-sizing: border-box; }
-  .city-panels {
-    display: flex;
-    height: calc(100vh - 220px);
-    min-height: 520px;
-  }
-  .city-panel {
-    flex: 0 0 50%;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    transition: flex 0.45s cubic-bezier(0.4,0,0.2,1);
-    text-decoration: none;
-  }
-  .city-panel:hover { flex: 0 0 58%; }
-  .city-panel-divider {
-    width: 2px;
-    background: rgba(255,255,255,0.15);
-    flex-shrink: 0;
-    z-index: 10;
-  }
-  .city-panel-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    filter: blur(1px) brightness(0.65);
-    transform: scale(1.03);
-    transition: filter 0.4s ease;
-  }
-  .city-panel:hover .city-panel-bg {
-    filter: blur(0px) brightness(0.55);
-  }
-  .city-btn {
-    padding: 13px 36px;
-    border-radius: 40px;
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border: 2px solid rgba(255,255,255,0.7);
-    transition: all 0.3s ease;
-  }
-  .city-panel:hover .city-btn { transform: translateY(-3px); }
-  .city-flag {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-60%) scale(1);
-    font-size: clamp(80px,10vw,130px);
-    line-height: 1;
-    filter: drop-shadow(0 6px 32px rgba(0,0,0,0.7));
-    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-    z-index: 2;
-  }
-  .city-panel:hover .city-flag { transform: translate(-50%,-60%) scale(1.15); }
-  .city-tagline { opacity: 0.75; transition: opacity 0.3s ease; }
-  .city-panel:hover .city-tagline { opacity: 1; }
-  .patrick-strip {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 36px;
-    text-align: left;
-  }
-  .newsletter-form { display: flex; width: 100%; max-width: 420px; }
-  .newsletter-form input {
-    flex: 1; padding: 13px 16px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-right: none; border-radius: 6px 0 0 6px;
-    color: #fff; font-size: 14px; outline: none;
-  }
-  .newsletter-form button {
-    padding: 13px 22px; background: #e63946; color: #fff;
-    border: none; border-radius: 0 6px 6px 0;
-    font-weight: 700; font-size: 13px; cursor: pointer; white-space: nowrap;
-  }
-  @media (max-width: 639px) {
-    .city-panels { flex-direction: column; height: auto; min-height: unset; }
-    .city-panel { flex: none !important; height: 260px; transition: none; }
-    .city-panel-divider { display: none; }
-    .city-flag { font-size: 48px; position: static; transform: none !important; filter: none; transition: none; }
-    .city-btn { padding: 10px 28px; font-size: 12px; }
-    .patrick-strip { flex-direction: column; gap: 20px; text-align: center; padding: 36px 24px !important; }
-    .newsletter-form { flex-direction: column; gap: 10px; }
-    .newsletter-form input { border-right: 1px solid rgba(255,255,255,0.12); border-radius: 6px; }
-    .newsletter-form button { border-radius: 6px; width: 100%; }
-  }
-`;
+const SG_GUIDES = [
+  {
+    n: '01', label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car',
+    desc: 'Weigh the true cost of owning a car in Singapore versus alternatives.',
+    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+  },
+  {
+    n: '02', label: 'Buying Guide', to: '/singapore/buying-guide',
+    desc: 'COE, ARF, and the full process of buying a car as an expat in Singapore.',
+    img: 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=800&q=80',
+  },
+  {
+    n: '03', label: 'Leasing Guide', to: '/singapore/leasing-guide',
+    desc: 'How leasing works, what to look for, and the best options for expats.',
+    img: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',
+  },
+  {
+    n: '04', label: 'Insurance Guide', to: '/singapore/insurance-guide',
+    desc: 'Understanding car insurance requirements and getting the best deal.',
+    img: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80',
+  },
+  {
+    n: '05', label: 'EV Guide', to: '/singapore/ev-guide',
+    desc: 'Electric vehicles in Singapore — incentives, charging, and what to buy.',
+    img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80',
+  },
+  {
+    n: '06', label: 'Licence Conversion', to: '/singapore/licence-conversion',
+    desc: 'How to convert your foreign driving licence and what tests are required.',
+    img: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80',
+  },
+];
 
-function CityPanel({ city, flag, mapUrl, tagline, accent, to }) {
+const HK_GUIDES = [
+  {
+    n: '01', label: 'Should I Get a Car?', to: '/hongkong/should-i-get-a-car',
+    desc: 'The real cost of car ownership in Hong Kong — is it worth it?',
+    img: 'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=800&q=80',
+  },
+  {
+    n: '02', label: 'Buying Guide', to: '/hongkong/buying-guide',
+    desc: 'FRT, registration tax, and the full process of buying a car in Hong Kong.',
+    img: 'https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80',
+  },
+  {
+    n: '03', label: 'Leasing Guide', to: '/hongkong/leasing-guide',
+    desc: 'Lease options, costs, and tips for expats in the SAR.',
+    img: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80',
+  },
+  {
+    n: '04', label: 'FRT Explained', to: '/hongkong/frt-explained',
+    desc: 'First Registration Tax rates, how it is calculated, and EV concessions.',
+    img: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80',
+  },
+  {
+    n: '05', label: 'EV Guide', to: '/hongkong/ev-guide',
+    desc: 'Electric vehicles in Hong Kong — FRT waivers, charging, and what to buy.',
+    img: 'https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&q=80',
+  },
+  {
+    n: '06', label: 'Licence Conversion', to: '/hongkong/licence-conversion',
+    desc: 'Convert your foreign licence in Hong Kong — approved countries and the process.',
+    img: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80',
+  },
+];
+
+function GuideCard({ n, label, to, desc, img }) {
   return (
-    <Link to={to} className="city-panel" style={{ textDecoration: "none" }}>
-      <div className="city-panel-bg" style={{ backgroundImage: "url(" + mapUrl + ")" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, " + accent + "cc 0%, " + accent + "22 50%, transparent 100%)" }} />
-      <div className="city-flag">{flag}</div>
-      <div style={{ position: "relative", zIndex: 3, display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", padding: "0 40px 52px", textAlign: "center", width: "100%" }}>
-        <h2 style={{ margin: 0, fontFamily: "'Playfair Display',Georgia,serif", fontSize: "clamp(32px,4vw,58px)", fontWeight: 700, color: "#fff", textShadow: "0 2px 24px rgba(0,0,0,0.8)" }}>{city}</h2>
-        <p className="city-tagline" style={{ margin: 0, fontSize: "clamp(13px,1.3vw,16px)", color: "rgba(255,255,255,0.9)", maxWidth: "280px", lineHeight: 1.6, textShadow: "0 1px 8px rgba(0,0,0,0.9)" }}>{tagline}</p>
-        <div className="city-btn">{"I'm in " + city + " \u2192"}</div>
+    <Link to={to} style={{ textDecoration: 'none', display: 'block' }}>
+      <div style={{
+        position: 'relative', borderRadius: 12, overflow: 'hidden',
+        height: 210, background: '#1e293b',
+        transition: 'transform 0.2s, box-shadow 0.2s',
+      }}
+        onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(0,0,0,0.25)'; }}
+        onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+      >
+        <img src={img} alt={label} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.3) 60%, transparent 100%)' }} />
+        <div style={{ position: 'absolute', top: 14, left: 14 }}>
+          <span style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)', color: '#fff', fontSize: 11, fontWeight: 700, padding: '3px 9px', borderRadius: 20, letterSpacing: '0.05em' }}>
+            {n}
+          </span>
+        </div>
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '0 18px 18px' }}>
+          <div style={{ fontSize: 16, fontWeight: 700, color: '#fff', marginBottom: 5 }}>{label}</div>
+          <div style={{ fontSize: 12.5, color: '#cbd5e1', lineHeight: 1.5 }}>{desc}</div>
+          <div style={{ marginTop: 10, fontSize: 12, color: ACCENT, fontWeight: 600 }}>Read the guide →</div>
+        </div>
       </div>
     </Link>
   );
 }
 
+function CitySection({ flag, city, cityLabel, guides, heroImg, overviewTo }) {
+  return (
+    <div style={{ marginBottom: 56 }}>
+      {/* City hero strip */}
+      <div style={{
+        borderRadius: 12, overflow: 'hidden', position: 'relative',
+        height: 140, marginBottom: 24, background: '#0f172a',
+      }}>
+        <img src={heroImg} alt={cityLabel} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(15,23,42,0.85) 40%, transparent 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', padding: '0 28px', gap: 16 }}>
+          <span style={{ fontSize: 36 }}>{flag}</span>
+          <div>
+            <div style={{ fontSize: 22, fontWeight: 800, color: '#fff' }}>{cityLabel}</div>
+            <div style={{ fontSize: 13, color: '#94a3b8', marginTop: 2 }}>Car guides for expats</div>
+          </div>
+          <Link
+            to={overviewTo}
+            style={{
+              marginLeft: 'auto', background: ACCENT, color: '#fff',
+              padding: '8px 18px', borderRadius: 8, fontSize: 13, fontWeight: 600,
+              textDecoration: 'none', whiteSpace: 'nowrap',
+            }}
+          >
+            Overview →
+          </Link>
+        </div>
+      </div>
+
+      {/* Guide cards grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
+        {guides.map(g => <GuideCard key={g.to} {...g} />)}
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <div className="eaa-home" style={{ minHeight: "100vh", background: "#0a0c12" }}>
-      <style>{styles}</style>
-      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: "56px", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(8,10,18,0.95)", backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <span style={{ fontSize: "20px" }}>🚗</span>
-          <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: "clamp(18px,2.5vw,26px)", color: "#fff" }}>ExpatAutoAdviser</span>
-        </div>
-      </nav>
-      <div style={{ textAlign: "center", padding: "100px 20px 40px", background: "#0a0c12" }}>
-        <h1 style={{ margin: "0 0 10px", fontFamily: "'Playfair Display',Georgia,serif", fontSize: "clamp(36px,7vw,96px)", fontWeight: 700, color: "#fff", lineHeight: 1.1 }}>ExpatAutoAdviser</h1>
-        <p style={{ margin: 0, fontFamily: "system-ui,sans-serif", fontSize: "clamp(12px,1.8vw,20px)", color: "rgba(255,255,255,0.5)", letterSpacing: "0.12em", textTransform: "uppercase" }}>Singapore · Hong Kong</p>
-      </div>
-      <div className="city-panels">
-        <CityPanel city="Singapore" flag="🇸🇬" mapUrl={SG_MAP} tagline="Leasing, insurance & everything you need to get moving in the Lion City." accent="#e63946" to="/singapore" />
-        <div className="city-panel-divider" />
-        <CityPanel city="Hong Kong" flag="🇭🇰" mapUrl={HK_MAP} tagline="Buying, FRT, MOT & everything you need to own a car in the SAR." accent="#2a9d8f" to="/hongkong" />
-      </div>
-      <div className="patrick-strip" style={{ background: "#0d1117", borderTop: "1px solid rgba(255,255,255,0.06)", padding: "52px 40px" }}>
-        <img src={PATRICK_IMG} alt="Patrick" style={{ width: "80px", height: "80px", borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: "3px solid rgba(255,255,255,0.15)", flexShrink: 0 }} />
-        <div style={{ maxWidth: "540px" }}>
-          <p style={{ margin: "0 0 10px", fontFamily: "'Playfair Display',Georgia,serif", fontSize: "clamp(16px,1.8vw,20px)", color: "#fff", lineHeight: 1.6, fontStyle: "italic" }}>
-            "Hi, I'm Patrick. I moved from London to Singapore in 2019, then on to Hong Kong. I spent way too long figuring out cars in both cities — this is what I wish had existed."
+    <div style={{ maxWidth: 820 }}>
+      {/* Hero */}
+      <div style={{
+        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+        borderRadius: 16, padding: '36px 36px', marginBottom: 44, position: 'relative', overflow: 'hidden',
+      }}>
+        <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, borderRadius: '50%', background: 'rgba(232,52,28,0.08)' }} />
+        <div style={{ position: 'absolute', bottom: -30, right: 60, width: 140, height: 140, borderRadius: '50%', background: 'rgba(245,158,11,0.06)' }} />
+        <div style={{ position: 'relative' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.08)', borderRadius: 20, padding: '5px 14px', marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#4ade80', display: 'inline-block' }} />
+            <span style={{ fontSize: 12, color: '#94a3b8' }}>Free, independent guides for expats</span>
+          </div>
+          <h1 style={{ fontSize: 34, fontWeight: 800, color: '#fff', margin: '0 0 14px', lineHeight: 1.2 }}>
+            Your guide to driving<br />in Singapore &amp; Hong Kong
+          </h1>
+          <p style={{ fontSize: 15, color: '#94a3b8', margin: '0 0 24px', lineHeight: 1.7, maxWidth: 480 }}>
+            Everything expats need to know about buying, leasing, insuring and registering a car in Asia's two most car-taxed cities.
           </p>
-          <p style={{ margin: 0, fontSize: "11px", color: "rgba(255,255,255,0.32)", letterSpacing: "0.06em", textTransform: "uppercase" }}>London → Singapore → Hong Kong · Expat since 2019</p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <Link to="/singapore" style={{ background: ACCENT, color: '#fff', padding: '10px 22px', borderRadius: 8, fontSize: 13.5, fontWeight: 700, textDecoration: 'none' }}>
+              🇸🇬 Singapore Guides
+            </Link>
+            <Link to="/hongkong" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.15)', padding: '10px 22px', borderRadius: 8, fontSize: 13.5, fontWeight: 700, textDecoration: 'none' }}>
+              🇭🇰 Hong Kong Guides
+            </Link>
+          </div>
         </div>
       </div>
-      <div style={{ background: "#080b11", borderTop: "1px solid rgba(255,255,255,0.04)", padding: "56px 40px", display: "flex", flexDirection: "column", alignItems: "center", gap: "20px", textAlign: "center" }}>
-        <div style={{ background: "rgba(232,52,28,0.08)", border: "1px solid rgba(232,52,28,0.2)", borderRadius: 10, padding: "14px 24px", maxWidth: 480 }}>
-          <p style={{ margin: 0, fontSize: "12px", fontWeight: 700, color: "#e63946", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Free download</p>
-          <p style={{ margin: 0, fontSize: "clamp(16px,2vw,18px)", fontWeight: 700, color: "#fff", lineHeight: 1.4 }}>Get the Expat Car Checklist</p>
-          <p style={{ margin: "8px 0 0", fontSize: "13px", color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>The 12 questions to ask before you sign any lease or buy any car in Singapore or HK.</p>
-        </div>
-        <div className="newsletter-form">
-          <input type="email" placeholder="your@email.com" />
-          <button>Send me the checklist →</button>
-        </div>
-        <p style={{ margin: 0, fontSize: "11px", color: "rgba(255,255,255,0.2)" }}>No spam · COE & FRT updates included · Unsubscribe anytime</p>
-      </div>
+
+      {/* Singapore guides */}
+      <CitySection
+        flag="🇸🇬"
+        city="sg"
+        cityLabel="Singapore"
+        guides={SG_GUIDES}
+        heroImg="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80"
+        overviewTo="/singapore"
+      />
+
+      {/* Hong Kong guides */}
+      <CitySection
+        flag="🇭🇰"
+        city="hk"
+        cityLabel="Hong Kong"
+        guides={HK_GUIDES}
+        heroImg="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=1200&q=80"
+        overviewTo="/hongkong"
+      />
     </div>
   );
 }
