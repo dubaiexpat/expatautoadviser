@@ -252,7 +252,7 @@ export default function HongKong() {
             <p>FRT, tunnel tolls, EV concessions and more — plain-English guides written by expats who've navigated it. Get the free PDF guide.</p>
           </div>
           {submitted ? (
-            <div style={{ color: '4ade80', fontSize: '0.85rem', fon.tWeight: 600 }}>✓ Guide on its way!</div>
+            <div style={{ color: '#4ade80', fontSize: '0.85rem', fontWeight: 600 }}>✓ Guide on its way!</div>
           ) : (
             <form className="hk-cta-form" onSubmit={e => { e.preventDefault(); setSubmitted(true); }}>
               <input
