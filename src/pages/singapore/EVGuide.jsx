@@ -44,7 +44,7 @@ export default function SGEVGuide() {
         <div style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, padding: 24, margin: "16px 0 28px" }}>
           {[
             ["2030 ICE phase-out", "Singapore has committed to phasing out new petrol and diesel car registrations by 2030. This is driving rapid EV adoption and ensuring a growing charging network."],
-            ["EEAI incentive", "The Enhanced EV Incentive for Accessibility provides rebates of up to SGD $25,000 on EV purchase (reducing ARF). Leasing companies benefit from related schemes that flow through to competitive lease pricing."],
+            ["EV Early Adoption Incentive (EEAI)", "The EV Early Adoption Incentive (EEAI) provides a 45% rebate on the Additional Registration Fee (ARF), capped at SGD $15,000 for 2025 registrations (cap reduces to $7,500 in 2026). The scheme has been extended to 31 December 2026 and will not be renewed thereafter. This significantly reduces upfront EV purchase costs. Leasing companies benefit from related schemes that flow through to competitive lease pricing."],
             ["VES (Vehicle Emissions Scheme)", "EVs attract the highest VES rebate tier (up to SGD $25,000 rebate on registration). Combined incentives make EV total costs of ownership increasingly competitive with petrol equivalents."],
             ["EV Early Adopter Initiative", "First-registered EVs benefit from preferential EV road tax. The annual road tax for an EV is typically SGD $700–$900 vs SGD $1,400–$3,000 for equivalent petrol cars."],
           ].map(([heading, detail]) => (
