@@ -1,9 +1,18 @@
 import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
 
+const HERO_IMG="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=80";
+
 export default function HKMOTMaintenance() {
   return (
     <Layout city="hk" title="MOT & Car Maintenance in Hong Kong for Expats" description="Everything expats need to know about Hong Kong car MOT: when it's required, approved inspection centres, what gets checked, and how to find a trustworthy mechanic." relatedLinks={[{ label: 'Buying Guide', to: '/hongkong/buying-guide' }, { label: 'Insurance Guide', to: '/hongkong/insurance-guide' }, { label: 'Garage Finder', to: '/hongkong/garage-finder' }]}>
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+        <img src={HERO_IMG} alt="Car maintenance HK" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
+        <div style={{ position: "absolute", bottom: 20, left: 24 }}>
+          <span style={{ background: "#2a9d8f", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 6 }}>Hong Kong</span>
+        </div>
+      </div>
       <div style={{maxWidth:760}}>
         <p style={{color:"#0d9488",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>MOT &amp; Car Maintenance in Hong Kong</h1>

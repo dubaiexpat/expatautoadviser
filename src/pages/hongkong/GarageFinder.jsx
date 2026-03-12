@@ -57,9 +57,18 @@ const SERVICES = [
   ["Minor bodywork (small dent, single panel)", "HKD $1,500–$4,000"],
 ];
 
+const HERO_IMG="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80";
+
 export default function HKGarageFinder() {
   return (
     <Layout city="hk" title="Finding a Garage in Hong Kong: Expat Guide to Car Workshops" description="How to find a good, English-speaking car workshop in Hong Kong. Workshop areas, types, price guide for common services, and what to avoid.">
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+        <img src={HERO_IMG} alt="Car workshop Hong Kong" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
+        <div style={{ position: "absolute", bottom: 20, left: 24 }}>
+          <span style={{ background: "#2a9d8f", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 6 }}>Hong Kong</span>
+        </div>
+      </div>
       <div style={{ maxWidth: 760 }}>
         <p style={{ color: "#0d9488", fontWeight: 600, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>Hong Kong</p>
         <h1 style={{ fontSize: 36, fontWeight: 800, color: "#1e3a5f", marginBottom: 16, lineHeight: 1.2 }}>Finding a Garage in Hong Kong</h1>

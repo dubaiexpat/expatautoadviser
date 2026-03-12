@@ -48,6 +48,8 @@ const leasingFAQ = [
   },
 ];
 
+const HERO_IMG="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&q=80";
+
 export default function SGLeasingGuide() {
   return (
     <Layout
@@ -55,6 +57,13 @@ export default function SGLeasingGuide() {
       title="Singapore Car Leasing Guide for Expats"
       description="Everything expats need to know about leasing a car in Singapore: costs, what's bundled, COE explained, how to choose a lease company, and what to watch out for."
      relatedLinks={[{ label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }, { label: 'EV Guide', to: '/singapore/ev-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }]}>
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+        <img src={HERO_IMG} alt="Car on Singapore expressway" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
+        <div style={{ position: "absolute", bottom: 20, left: 24 }}>
+          <span style={{ background: "#e63946", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 6 }}>Singapore</span>
+        </div>
+      </div>
       <div style={{ maxWidth: 760 }}>
         <p style={{ color: "#e8341c", fontWeight: 600, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>Singapore</p>
         <h1 style={{ fontSize: 36, fontWeight: 800, color: "#1e3a5f", marginBottom: 16, lineHeight: 1.2 }}>

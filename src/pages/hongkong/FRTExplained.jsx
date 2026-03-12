@@ -1,9 +1,18 @@
 import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
 
+const HERO_IMG="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80";
+
 export default function HKFRTExplained() {
   return (
     <Layout city="hk" title="Hong Kong First Registration Tax (FRT) Explained" description="FRT in Hong Kong explained for expats: what it is, how it's calculated, progressive bands with worked examples, EV exemptions, and annual licence fees." relatedLinks={[{ label: 'Buying Guide', to: '/hongkong/buying-guide' }, { label: 'Insurance Guide', to: '/hongkong/insurance-guide' }, { label: 'Cost Calculator', to: '/hongkong/calculators' }]}>
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+        <img src={HERO_IMG} alt="Premium car FRT" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
+        <div style={{ position: "absolute", bottom: 20, left: 24 }}>
+          <span style={{ background: "#2a9d8f", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 6 }}>Hong Kong</span>
+        </div>
+      </div>
       <div style={{maxWidth:760}}>
         <p style={{color:"#0d9488",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>Hong Kong FRT &amp; Tax Explained</h1>
