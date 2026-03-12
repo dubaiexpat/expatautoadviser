@@ -4,11 +4,10 @@ import PatrickTip from "../../components/PatrickTip";
 const HERO_IMG = "https://images.unsplash.com/photo-i3k4BZcHa7c?w=1200&q=80";
 
 export default function SGLicenceConversion() {
-  const countries = ["United Kingdom","United States","Australia","New Zealand","Canada","Germany","France","Japan","South Korea","Switzerland","Sweden","Norway","Denmark","Netherlands","Austria","Belgium","Finland","Ireland","Italy","Spain"];
   return (
-    <Layout city="sg" title="Driving Licence Conversion in Singapore for Expats" description="Step-by-step guide to converting your foreign driving licence in Singapore. Which nationalities qualify, costs, timing, and the Traffic Police process." relatedLinks={[{ label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' }, { label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }]}>
+    <Layout city="sg" title="Driving Licence Conversion in Singapore for Expats" description="Step-by-step guide to converting your foreign driving licence in Singapore. All foreign licence holders must pass the Basic Theory Test (BTT). Learn the process, costs and timing." relatedLinks={[{ label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' }, { label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
-        <img src={HERO_IMG} alt="Road trip Singapore" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
+        <img src={HERO_IMG} alt="Singapore roads and traffic" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>
           <span style={{ background: "#e63946", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 6 }}>Singapore</span>
@@ -17,24 +16,34 @@ export default function SGLicenceConversion() {
       <div style={{maxWidth:760}}>
         <p style={{color:"#e8341c",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Singapore</p>
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>Converting Your Driving Licence in Singapore</h1>
-        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Holders of licences from approved countries can convert directly to a Singapore licence — no theory test, no practical test required. If your country is not on the approved list, Singapore's full driving test process applies. Check eligibility below.</p>
+        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:28}}>All foreign driving licence holders — regardless of country — must pass Singapore's Basic Theory Test (BTT) before converting. There is no "direct conversion without a test" category in Singapore. After passing the BTT, Traffic Police will assess whether a practical driving test is also required.</p>
 
-        <h2 style={h2}>Which countries qualify for direct conversion?</h2>
-        <p style={body}>Singapore's Traffic Police allows holders of licences from the following countries to convert directly — no driving test required for these approved countries — just a paperwork process. Note: If your country is NOT on this list, you must sit Singapore’s Basic Theory Test (BTT), Final Theory Test (FTT) and a practical driving test before converting:</p>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:8,margin:"16px 0 28px"}}>
-          {countries.map(c => <div key={c} style={{background:"#f0fdf4",border:"1px solid #86efac",borderRadius:6,padding:"8px 12px",fontSize:13,color:"#166534",fontWeight:500}}>✓ {c}</div>)}
+        <div style={{background:"#fff7ed",border:"1px solid #fed7aa",borderRadius:8,padding:"14px 18px",margin:"0 0 32px",fontSize:14,color:"#9a3412",lineHeight:1.6}}>
+          <strong>Important:</strong> Singapore does not offer test-free licence conversion for any nationality. The Basic Theory Test (BTT) is mandatory for everyone — including holders of UK, Australian, US, and EU licences. Do not rely on outdated information suggesting otherwise.
         </div>
-        <div style={{background:"#fef2f2",border:"1px solid #fecaca",borderRadius:8,padding:"14px 18px",margin:"0 0 28px",fontSize:14,color:"#991b1b",lineHeight:1.6}}>
-          <strong>Not on the list?</strong> Licence holders from countries not listed above must pass Singapore's full driving test — this includes the Basic Theory Test (BTT), Final Theory Test (FTT), and practical driving test. Check the official list at <strong>onemotoring.com.sg</strong> or contact Traffic Police if you are unsure about your specific licence.
+
+        <h2 style={h2}>What tests are required?</h2>
+        <p style={body}>The Traffic Police uses a two-stage process for all foreign licence holders:</p>
+        <div style={{margin:"16px 0 28px"}}>
+          {[
+            {title:"Basic Theory Test (BTT) — mandatory for all",desc:"50 multiple-choice questions, 50 minutes, 90% pass mark required (45/50). Covers Singapore road rules, signs, and safe driving behaviour. You must pass this before you can submit a conversion application."},
+            {title:"Practical Driving Test (PDT) — assessed case-by-case",desc:"After your BTT, Traffic Police reviews your foreign licence and driving history. Depending on your licence origin and experience, you may or may not need a PDT. Note: from September 2025, holders of Work Permits or S Passes must complete the PDT for Class 3 (manual) vehicles regardless of their licence country."},
+          ].map(({title,desc}) => (
+            <div key={title} style={{display:"flex",gap:16,marginBottom:20}}>
+              <div style={{width:10,height:10,borderRadius:"50%",background:"#e8341c",marginTop:6,flexShrink:0}}></div>
+              <div><strong style={{fontSize:15,color:"#1e3a5f",display:"block",marginBottom:4}}>{title}</strong><p style={{margin:0,fontSize:14,color:"#374151",lineHeight:1.6}}>{desc}</p></div>
+            </div>
+          ))}
         </div>
 
         <h2 style={h2}>Step-by-step process</h2>
         <div style={{margin:"16px 0 28px"}}>
-          {[{n:"1",t:"Check your eligibility",d:"Confirm your nationality qualifies. Your foreign licence must be valid (not expired)."},
-            {n:"2",t:"Prepare your documents",d:"Valid foreign driving licence, passport (and Employment Pass / Long Term Visit Pass), recent passport-sized photo, and completed TP Form 17."},
-            {n:"3",t:"Book an appointment",d:"Visit the Traffic Police website (www.police.gov.sg/eLodgement) to book a slot at Traffic Police HQ in Ubi. Walk-ins are generally not accepted."},
-            {n:"4",t:"Attend your appointment",d:"Bring all originals (not just photocopies). The officer will verify your documents and process the application on the spot in most cases."},
-            {n:"5",t:"Collect your licence",d:"Your Singapore licence is typically issued at the appointment or mailed within 3–5 working days. The fee is approximately SGD $50."},
+          {[
+            {n:"1",t:"Book and pass the Basic Theory Test (BTT)",d:"Register via the Traffic Police e-Services portal at police.gov.sg. The BTT is held at approved driving centres such as Bukit Batok Driving Centre (BBDC) and ComfortDelGro Driving Centre (CDC). Fee is approximately SGD $6.50. You need 45 out of 50 (90%) to pass."},
+            {n:"2",t:"Prepare your documents",d:"Valid foreign driving licence (with certified English translation if the licence is not in English), valid passport, Singapore immigration pass (Employment Pass, Dependant's Pass, Long Term Visit Pass, etc.), and a recent passport-sized photo."},
+            {n:"3",t:"Submit your conversion application",d:"Apply online via the Traffic Police e-Services portal after passing the BTT. Traffic Police will review your foreign licence and driving history to determine whether a Practical Driving Test (PDT) is also required."},
+            {n:"4",t:"Complete Practical Driving Test if required",d:"If TP determines a PDT is needed, you will be directed to book this at an approved driving centre. The test assesses your competency on Singapore roads under local conditions."},
+            {n:"5",t:"Receive your Singapore driving licence",d:"Once all requirements are met, your Singapore driving licence will be issued. The conversion fee is approximately SGD $50. The licence is typically valid for 5 years."},
           ].map(({n,t,d}) => (
             <div key={n} style={{display:"flex",gap:16,marginBottom:20}}>
               <div style={{width:32,height:32,borderRadius:"50%",background:"#e8341c",color:"white",display:"flex",alignItems:"center",justifyContent:"center",fontSize:14,fontWeight:700,flexShrink:0}}>{n}</div>
@@ -46,16 +55,17 @@ export default function SGLicenceConversion() {
         <h2 style={h2}>Cost and timing</h2>
         <div style={{background:"white",border:"1px solid #e5e7eb",borderRadius:10,padding:24,margin:"16px 0 28px"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:20}}>
-            {[["Application fee","~SGD $50"],["Processing time","Same day (usually)"],["Licence validity","Typically 5 years"],["Appointment wait","1–3 weeks typically"]].map(([l,v]) => (
+            {[["BTT fee","~SGD $6.50"],["Conversion fee","~SGD $50"],["BTT pass mark","45/50 (90%)"],["Licence validity","Typically 5 years"]].map(([l,v]) => (
               <div key={l}><p style={{margin:0,fontSize:13,color:"#6b7280"}}>{l}</p><p style={{margin:"4px 0 0",fontSize:18,fontWeight:700,color:"#1e3a5f"}}>{v}</p></div>
             ))}
           </div>
         </div>
 
-        <PatrickTip city="sg">"Book the Traffic Police appointment as soon as you arrive — slots fill up. I waited three weeks, drove on my UK licence the whole time, and was absolutely fine. But it's one of those things you want ticked off early rather than remembering it at month 11."</PatrickTip>
+        <PatrickTip city="sg">"Book your Basic Theory Test as soon as you arrive — slots at the driving centres fill up quickly. I passed the BTT in my first month and had my Singapore licence sorted well before most colleagues who kept putting it off."</PatrickTip>
       </div>
     </Layout>
   );
 }
+
 const h2 = {fontSize:22,fontWeight:700,color:"#1e3a5f",margin:"36px 0 12px"};
 const body = {fontSize:16,color:"#374151",lineHeight:1.8,marginBottom:16};
