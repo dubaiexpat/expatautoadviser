@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Layout from '../components/Layout';
 
 const ACCENT = '#e8341c';
 
@@ -135,6 +136,7 @@ function CitySection({ flag, city, cityLabel, guides, heroImg, overviewTo }) {
 
 export default function Home() {
   return (
+    <Layout>
     <div style={{ maxWidth: 820 }}>
       {/* Hero */}
       <div style={{
@@ -185,5 +187,6 @@ export default function Home() {
         overviewTo="/hongkong"
       />
     </div>
+    </Layout>
   );
 }
