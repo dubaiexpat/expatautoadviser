@@ -19,7 +19,7 @@ const CHARGING_NETWORKS = [
   { name: "Building chargers", speed: "Level 1–2 (3–22 kW)", locations: "Condos and landed properties (if retrofitted)", note: "Most convenient if available at home. Check before committing to an EV lease." },
 ];
 
-const HERO_IMG="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-rVfmcxtJ8fw?w=1200&q=80";
 
 export default function SGEVGuide() {
   return (

@@ -2,7 +2,7 @@ import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
 import { Link } from "react-router-dom";
 
-const HERO_IMG="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-KEKrAE5VcIw?w=1200&q=80";
 
 export default function HKBuyingGuide() {
   return (

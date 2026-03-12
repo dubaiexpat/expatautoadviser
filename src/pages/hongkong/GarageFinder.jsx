@@ -57,7 +57,7 @@ const SERVICES = [
   ["Minor bodywork (small dent, single panel)", "HKD $1,500–$4,000"],
 ];
 
-const HERO_IMG="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-KEKrAE5VcIw?w=1200&q=80";
 
 export default function HKGarageFinder() {
   return (

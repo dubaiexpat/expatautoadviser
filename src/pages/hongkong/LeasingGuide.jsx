@@ -8,7 +8,7 @@ const body = { margin: "0 0 16px", fontSize: 15, color: "#374151", lineHeight: 1
 const note = { background: "#f0fdfa", border: "1px solid #99f6e4", borderRadius: 8, padding: "14px 18px", margin: "16px 0", fontSize: 14, color: "#134e4a", lineHeight: 1.6 };
 
 // Hong Kong street — Moke or similar car on HK roads
-const HERO_IMG = "https://images.unsplash.com/photo-1507941097613-9f2157b69235?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-KEKrAE5VcIw?w=1200&q=80";
 
 const faqItems = [
   { q: "Can you lease a car in Hong Kong?", a: "Yes, though it's less common than in Singapore. Operating leases (full-service) are offered by several providers, typically for 1–3 year terms. Monthly rates are generally higher than Singapore but you avoid the large upfront costs of buying." },

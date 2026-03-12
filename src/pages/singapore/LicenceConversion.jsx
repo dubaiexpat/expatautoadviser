@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
 
-const HERO_IMG="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-i3k4BZcHa7c?w=1200&q=80";
 
 export default function SGLicenceConversion() {
   const countries = ["United Kingdom","United States","Australia","New Zealand","Canada","Germany","France","Japan","South Korea","Switzerland","Sweden","Norway","Denmark","Netherlands","Austria","Belgium","Finland","Ireland","Italy","Spain"];
@@ -20,7 +20,7 @@ export default function SGLicenceConversion() {
         <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Holders of licences from approved countries can convert directly to a Singapore licence — no theory test, no practical test required. If your country is not on the approved list, Singapore's full driving test process applies. Check eligibility below.</p>
 
         <h2 style={h2}>Which countries qualify for direct conversion?</h2>
-        <p style={body}>Singapore's Traffic Police allows holders of licences from the following countries to convert directly — no test of any kind required, just a paperwork process:</p>
+        <p style={body}>Singapore's Traffic Police allows holders of licences from the following countries to convert directly — no driving test required for these approved countries — just a paperwork process. Note: If your country is NOT on this list, you must sit Singapore’s Basic Theory Test (BTT), Final Theory Test (FTT) and a practical driving test before converting:</p>
         <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:8,margin:"16px 0 28px"}}>
           {countries.map(c => <div key={c} style={{background:"#f0fdf4",border:"1px solid #86efac",borderRadius:6,padding:"8px 12px",fontSize:13,color:"#166534",fontWeight:500}}>✓ {c}</div>)}
         </div>

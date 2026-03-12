@@ -47,7 +47,7 @@ const insuranceFAQ = [
   },
 ];
 
-const HERO_IMG="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-krK4QkUoOPU?w=1200&q=80";
 
 export default function SGInsuranceGuide() {
   return (
