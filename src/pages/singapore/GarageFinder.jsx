@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const AREAS = [
   {
     name: "Ubi / Macpherson",
-    type: "Workshop Hub"
+    type: "Workshop Hub",
     desc: "Singapore's largest concentration of independent workshops and authorised service centres. If you're buying tyres, doing a major service, or getting bodywork done, this area has every type of workshop at competitive prices.",
     good_for: "Tyres, full servicing, bodywork, used parts",
   },
