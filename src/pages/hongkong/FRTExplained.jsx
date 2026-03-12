@@ -27,7 +27,7 @@ export default function HKFRTExplained() {
           <table style={{width:"100%",borderCollapse:"collapse",fontSize:14}}>
             <thead><tr style={{background:"#f9fafb"}}><th style={th}>Taxable Value (HKD)</th><th style={th}>FRT Rate</th></tr></thead>
             <tbody>
-              {[["First $150,000","40%"],["Next $150,000 ($150,001–$300,000)","75%"],["Next $200,000 ($300,001–$500,000)","100%"],["Remainder (above $500,000)","115%"]].map(([band,rate]) => (
+              {[["First $150,000", "46%"],["Next $150,000 ($150,001–$300,000)", "86%"],["Next $200,000 ($300,001–$500,000)", "115%"],["Remainder (above $500,000)", "132%"]].map(([band,rate]) => (
                 <tr key={band} style={{borderTop:"1px solid #f3f4f6"}}><td style={td}>{band}</td><td style={{...td,fontWeight:700,color:"#0d9488"}}>{rate}</td></tr>
               ))}
             </tbody>

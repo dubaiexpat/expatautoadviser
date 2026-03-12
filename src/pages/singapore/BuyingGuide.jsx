@@ -56,7 +56,7 @@ export default function SGBuyingGuide() {
             {[
               ["Car price (OMV)", "SGD $25k–$60k+", "Open Market Value set by Singapore Customs"],
               ["COE (Category B)", "SGD $95k–$125k", "Fluctuates every 2 weeks — check LTA"],
-              ["ARF (Additional Registration Fee)", "SGD $17k–$60k+", "100–220% of OMV depending on value"],
+              ["ARF (Additional Registration Fee)", "SGD $17k–$60k+", "100–320% of OMV depending on value"],
               ["Excise duty", "~20% of OMV", ""],
               ["GST (9%)", "On OMV + duties", ""],
               ["Dealer margin & fees", "SGD $5k–$15k", "Varies by brand and dealer"],
