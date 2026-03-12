@@ -4,7 +4,7 @@ import PatrickTip from "../../components/PatrickTip";
 const HERO_IMG = "https://images.unsplash.com/photo-tMQxeucwFFc?w=1200&q=80";
 
 export default function HKLicenceConversion() {
-  const countries = ["United Kingdom","United States","Australia","New Zealand","Canada","Germany","France","Japan","South Korea","Switzerland","Sweden","Norway","Denmark","Netherlands","Austria","Belgium","Finland","Ireland"];
+  const countries = ["Australia","Austria","Belgium","Canada","China (Mainland)","Denmark","Finland","France","Germany","Iceland","Ireland","Israel","Italy","Japan","Luxembourg","Macau","Malaysia","Netherlands","New Zealand","Norway","Portugal","Singapore","South Africa","South Korea","Spain","Sweden","Switzerland","Taiwan","United Kingdom","United States"];
   return (
     <Layout city="hk" title="Driving Licence Conversion in Hong Kong for Expats" description="How to convert your foreign driving licence in Hong Kong. Which nationalities qualify, the Transport Department process, costs, timing, and when you need an International Driving Permit." relatedLinks={[{ label: 'Should I Get a Car?', to: '/hongkong/should-i-get-a-car' }, { label: 'Leasing Guide', to: '/hongkong/leasing-guide' }, { label: 'Buying Guide', to: '/hongkong/buying-guide' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
