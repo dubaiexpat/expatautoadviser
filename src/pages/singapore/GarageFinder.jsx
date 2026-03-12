@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const AREAS = [
   {
     name: "Ubi / Macpherson",
-    type: "Workshop Hub",
+    type: "Workshop Hub"
     desc: "Singapore's largest concentration of independent workshops and authorised service centres. If you're buying tyres, doing a major service, or getting bodywork done, this area has every type of workshop at competitive prices.",
     good_for: "Tyres, full servicing, bodywork, used parts",
   },
@@ -182,7 +182,7 @@ export default function SGGarageFinder() {
         title="Need a car lease? Compare expat-friendly companies"
         partners={[
           { name: 'PHV Leasing SG', badge: 'Expat favourite', desc: 'Transparent pricing, English-speaking team, flexible lease terms from 6 months.', url: '#' },
-          { name: 'Goldbell Leasing', desc: 'One of Singapore's largest fleet operators. Comprehensive packages including maintenance.', url: '#' },
+          { name: 'Goldbell Leasing', desc: "One of Singapore's largest fleet operators. Comprehensive packages including maintenance.", url: '#' },
           { name: 'ComfortDelGro Rent-a-Car', desc: 'Wide vehicle choice, competitive pricing, island-wide service network.', url: '#' },
         ]}
       />
