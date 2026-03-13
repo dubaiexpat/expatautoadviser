@@ -247,13 +247,13 @@ export default function Singapore() {
       </nav>
 
       <div className="sg-main" style={{ display: "flex", alignItems: "flex-start", gap: 0 }}>
-        <aside style={{ width: "185px", minWidth: "175px", flexShrink: 0, borderRight: "1px solid rgba(74,222,128,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
-          <style>{`.sg-nav-link { display:block; padding:7px 14px; font-size:0.82rem; color:#9ca3af; text-decoration:none; margin-bottom:1px; border-left:3px solid transparent; transition:color 0.15s,border-color 0.15s,background 0.15s; } .sg-nav-link:hover { color:#e5e7eb; border-left-color:#4ade80; background:rgba(74,222,128,0.06); }`}</style>
-          <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#4ade80", padding:"20px 14px 12px" }}>🇸🇬 Singapore Guides</div>
+        <aside style={{ width: "185px", minWidth: "175px", flexShrink: 0, borderRight: "1px solid rgba(239,68,68,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
+          <style>{`.sg-nav-link { display:block; padding:7px 14px; font-size:0.82rem; color:#9ca3af; text-decoration:none; margin-bottom:1px; border-left:3px solid transparent; transition:color 0.15s,border-color 0.15s,background 0.15s; } .sg-nav-link:hover { color:#e5e7eb; border-left-color:#ef4444; background:rgba(239,68,68,0.06); }`}</style>
+          <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#ef4444", padding:"20px 14px 12px" }}>🇸🇬 Singapore Guides</div>
           {SG_GUIDES.map(g => (
             <Link key={g.to} to={g.to} className="sg-nav-link">{g.label}</Link>
           ))}
-          <div style={{ borderTop:"1px solid rgba(74,222,128,0.12)", margin:"12px 14px" }}></div>
+          <div style={{ borderTop:"1px solid rgba(239,68,68,0.12)", margin:"12px 14px" }}></div>
           <Link to="/hongkong" style={{ display:"block", padding:"7px 14px", fontSize:"0.75rem", color:"#6b7280", textDecoration:"none" }}>🇭🇰 HK Guides →</Link>
         </aside>
         <div style={{ flex: 1, minWidth: 0 }}>
