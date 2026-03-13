@@ -9,7 +9,7 @@ const note = { background: "#fff7ed", border: "1px solid #fed7aa", borderRadius:
 const warn = { background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 8, padding: "14px 18px", margin: "16px 0", fontSize: 14, color: "#991b1b", lineHeight: 1.6 };
 
 // Real car image — a BMW 3 Series parked in Singapore
-const HERO_IMG = "https://images.unsplash.com/photo-krK4QkUoOPU?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1200&q=80";
 
 const faqItems = [
   { q: "Can I buy a car in Singapore on a work pass?", a: "Yes. There is no citizenship or PR requirement to buy a car in Singapore. EP, SP, and DP holders can all purchase a vehicle. You will need a local bank account for financing." },

@@ -614,7 +614,7 @@ const relatedLinks = [
   { to: "/singapore/should-i-get-a-car", label: "Should I Get a Car?" },
 ];
 
-const HERO_IMG = "https://images.unsplash.com/photo-ZWHsqzdGnVQ?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80";
 
 export default function Calculators() {
   const [activeTab, setActiveTab] = useState("onroad");

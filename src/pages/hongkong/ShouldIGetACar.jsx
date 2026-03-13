@@ -9,7 +9,7 @@ const note = { background: "#f0fdfa", border: "1px solid #99f6e4", borderRadius:
 const warn = { background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 8, padding: "14px 18px", margin: "16px 0", fontSize: 14, color: "#991b1b", lineHeight: 1.6 };
 const good = { background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: 8, padding: "14px 18px", margin: "16px 0", fontSize: 14, color: "#166534", lineHeight: 1.6 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-tMQxeucwFFc?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1200&q=80";
 
 const faqItems = [
   { q: "Is Hong Kong's public transport good enough to go car-free?", a: "For most urban areas — absolutely yes. The MTR is one of the best metro systems in the world: fast, punctual, and cheap. Add the Star Ferry, trams, and minibuses, and central HK is genuinely easier without a car." },

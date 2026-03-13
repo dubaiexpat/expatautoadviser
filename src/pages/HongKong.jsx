@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const PATRICK_IMG =
-  "/Firefly_GeminiFlash_picture%20of%20a%20white%2040%20year%20old%20man%20in%20a%20suit%20standing%20in%20front%20of%20a%20busy%20city%20intersection%20with%20cars%20around%20him%20(1).jpg";
+const PATRICK_IMG = '/patrick.png';
 
 // FRT data — First Registration Tax rates (effective Feb 2024)
 const FRT_DATA = {
