@@ -107,8 +107,16 @@ export default function Layout({ city, title, description, relatedLinks = [], ch
         Home
       </Link>
 
-      <NavSection title="Singapore" links={SG_LINKS} location={location} flagEmoji="🇸🇬" />
-      <NavSection title="Hong Kong" links={HK_LINKS} location={location} flagEmoji="🇭🇰" />
+      {city === 'sg' ? (
+        <NavSection title="Singapore" links={SG_LINKS} location={location} flagEmoji="🇸🇬" />
+      ) : (
+        <NavSection title="Hong Kong" links={HK_LINKS} location={location} flagEmoji="🇭🇰" />
+      )}
+      <div style={{ marginTop: 16, paddingTop: 12, borderTop: '1px solid #e5e7eb' }}>
+        <Link to={city === 'sg' ? '/hongkong' : '/singapore'} style={{ fontSize: 13, color: '#6b7280', display: 'flex', alignItems: 'center', gap: 6, textDecoration: 'none' }}>
+          {city === 'sg' ? '🇭🇰' : '🇸🇬'} Switch to {city === 'sg' ? 'Hong Kong' : 'Singapore'} guides
+        </Link>
+      </div>
 
       <div style={{ flex: 1 }} />
       <div style={{ padding: '16px 20px', fontSize: 11, color: '#475569' }}>

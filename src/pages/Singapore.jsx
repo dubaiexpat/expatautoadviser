@@ -246,7 +246,17 @@ export default function Singapore() {
         </Link>
       </nav>
 
-      <div className="sg-main">
+      <div className="sg-main" style={{ display: "flex", alignItems: "flex-start", gap: 0 }}>
+        <aside style={{ width: "220px", minWidth: "200px", flexShrink: 0, padding: "24px 16px", borderRight: "1px solid #e5e7eb", background: "#f9fafb", alignSelf: "flex-start" }}>
+          <div style={{ fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#6b7280", marginBottom: 14 }}>🇸🇬 Singapore Guides</div>
+          {SG_GUIDES.map(g => (
+            <Link key={g.to} to={g.to} style={{ display: "block", padding: "7px 10px", borderRadius: 5, color: "#374151", fontSize: "0.875rem", textDecoration: "none", marginBottom: 2 }}>{g.label}</Link>
+          ))}
+          <div style={{ borderTop: "1px solid #e5e7eb", marginTop: 14, paddingTop: 10 }}>
+            <Link to="/hongkong" style={{ display: "block", padding: "7px 10px", borderRadius: 5, color: "#6b7280", fontSize: "0.82rem", textDecoration: "none" }}>🇭🇰 HK Guides →</Link>
+          </div>
+        </aside>
+        <div style={{ flex: 1, minWidth: 0 }}>
 
         {/* Hero CTA */}
         <div className="sg-hero">
@@ -312,6 +322,7 @@ export default function Singapore() {
           </div>
         </div>
 
+        </div>
       </div>
     </div>
   );
