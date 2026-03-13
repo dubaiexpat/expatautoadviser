@@ -193,15 +193,6 @@ export default function Home() {
     <div className="eaa-home" style={{ minHeight: "100vh", background: "#0a0c12" }}>
       <style>{styles}</style>
 
-      {/* Nav */}
-      <nav className="eaa-nav">
-        <a href="/" className="eaa-logo">
-          Expat<span>Auto</span>Adviser
-        </a>
-        <span style={{ fontSize: "0.75rem", color: "#4a5568" }}>
-          Singapore · Hong Kong
-        </span>
-      </nav>
 
       {/* Tagline */}
       <div className="eaa-tagline-wrap">

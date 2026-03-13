@@ -309,8 +309,7 @@ export default function Singapore() {
           <div style={{ flex: 1 }}>
             <div className="sg-patrick-name">Patrick — Expat Car Adviser, Singapore</div>
             <p className="sg-patrick-bio">
-              Moved to Singapore from London in 2018. Has bought, leased and sold three cars here — including one catastrophic COE miscalculation that cost him dearly. Now writes the guides he wished had existed. All advice is based on personal experience, not sponsored content.
-            </p>
+              Patrick is the voice of the expat experience in Singapore — COE auctions, leasing decisions, insurance surprises and everything in between. His guides capture what expats wish they’d known before signing anything.</p>
             <div className="sg-tips-title">Patrick's Top Tips for Singapore</div>
             {PATRICK_TIPS.map((tip, i) => (
               <div key={i} className="sg-tip">

@@ -7,23 +7,23 @@ const GOLD = '#f59e0b';
 
 const SG_LINKS = [
   { label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' },
-  { label: 'Buying Guide', to: '/singapore/buying-guide' },
+  { label: 'Calculators', to: '/singapore/calculators' },
   { label: 'Leasing Guide', to: '/singapore/leasing-guide' },
+  { label: 'Buying Guide', to: '/singapore/buying-guide' },
   { label: 'Insurance Guide', to: '/singapore/insurance-guide' },
   { label: 'EV Guide', to: '/singapore/ev-guide' },
   { label: 'Licence Conversion', to: '/singapore/licence-conversion' },
-  { label: 'Calculators', to: '/singapore/calculators' },
 ];
 
 const HK_LINKS = [
   { label: 'Should I Get a Car?', to: '/hongkong/should-i-get-a-car' },
+  { label: 'Calculators', to: '/hongkong/calculators' },
   { label: 'Buying Guide', to: '/hongkong/buying-guide' },
   { label: 'Leasing Guide', to: '/hongkong/leasing-guide' },
   { label: 'Insurance Guide', to: '/hongkong/insurance-guide' },
   { label: 'EV Guide', to: '/hongkong/ev-guide' },
   { label: 'Licence Conversion', to: '/hongkong/licence-conversion' },
   { label: 'FRT Explained', to: '/hong-kong/frt-tax-explained' },
-  { label: 'Calculators', to: '/hongkong/calculators' },
 ];
 
 function NavSection({ title, links, location, flagEmoji }) {

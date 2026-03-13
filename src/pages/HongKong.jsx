@@ -308,7 +308,7 @@ export default function HongKong() {
           <div style={{ flex: 1 }}>
             <div className="hk-patrick-name">Patrick — Expat Car Adviser, Hong Kong</div>
             <p className="hk-patrick-bio">
-              Based in Hong Kong since 2016, Patrick has owned three cars here — including a Tesla Model 3 under the EV concession scheme. Previously worked in finance in London and Shanghai. Writes these guides because the official resources are almost deliberately confusing, and expats deserve better.
+              Patrick is the voice of the expat experience in Hong Kong — navigating FRT, buying, leasing and everything the official resources never explain clearly. His guides capture what expats wish they’d known from day one.
             </p>
             <div className="hk-tips-title">Patrick's Top Tips for Hong Kong</div>
             {PATRICK_TIPS.map((tip, i) => (
