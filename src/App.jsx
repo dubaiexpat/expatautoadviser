@@ -26,7 +26,6 @@ import HKLeaseChecker from './pages/hongkong/LeaseChecker';
 import SGNewArrival from './pages/singapore/NewArrival';
 import HKNewArrival from './pages/hongkong/NewArrival';
 import ScrollToTop from './components/ScrollToTop';
-import AskPatrick from './components/AskPatrick';
 
 function ExitIntent() {
   const [show, setShow] = useState(false);
@@ -144,7 +143,6 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <ExitIntent />
-      <AskPatrick />
       <AppRoutes />
     </BrowserRouter>
   );
