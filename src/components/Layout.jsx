@@ -261,7 +261,7 @@ export default function Layout({ city, children, relatedLinks }) {
                       border: '1px solid #c7d2fe',
                     }}
                   >
-                    {link.label} \u2192
+                    {link.label}{' →'}
                   </Link>
                 ))}
               </div>
@@ -290,7 +290,7 @@ export default function Layout({ city, children, relatedLinks }) {
           Independent car advice for expats in Singapore and Hong Kong.
         </p>
         <p style={{ margin: 0, fontSize: 12, color: '#d1d5db' }}>
-          \u00a9 2025 ExpatAutoAdviser \u00b7 Not financial advice \u00b7 Partner links may earn commission
+          © 2025 ExpatAutoAdviser · Not financial advice · Partner links may earn commission
         </p>
       </footer>
     </div>

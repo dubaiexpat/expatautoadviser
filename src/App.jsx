@@ -80,7 +80,7 @@ function ExitIntent() {
         <span style={{ fontSize: 14, fontWeight: 600 }}>\u2713 You're on the list! I'll be in touch monthly.</span>
       ) : (
         <>
-          <span style={{ fontSize: 14, flexShrink: 0 }}>Before you go \u2014 get Patrick's free monthly COE &amp; FRT update</span>
+          <span style={{ fontSize: 14, flexShrink: 0 }}>Get Patrick's free monthly car market briefing for expats</span>
           <form onSubmit={subscribe} style={{ display: 'flex', gap: 8, flex: 1, maxWidth: 340 }}>
             <input type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="your@email.com" style={{ flex: 1, padding: '8px 12px', borderRadius: 6, border: 'none', fontSize: 14, minWidth: 0 }} />
             <button type="submit" style={{ background: '#e63946', color: '#fff', border: 'none', borderRadius: 6, padding: '8px 14px', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>
