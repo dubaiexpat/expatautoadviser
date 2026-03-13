@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import PatrickTip from "../../components/PatrickTip";
 
 const HERO_IMG = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80";
 
@@ -60,8 +59,6 @@ export default function SGLicenceConversion() {
             ))}
           </div>
         </div>
-
-        <PatrickTip city="sg">"Book your Basic Theory Test as soon as you arrive — slots at the driving centres fill up quickly. I passed the BTT in my first month and had my Singapore licence sorted well before most colleagues who kept putting it off."</PatrickTip>
       </div>
     </Layout>
   );

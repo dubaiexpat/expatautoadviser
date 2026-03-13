@@ -1,7 +1,6 @@
 import Layout from "../../components/Layout";
 import AffiliateBox from "../../components/AffiliateBox";
 import EmailCapture from "../../components/EmailCapture";
-import PatrickTip from "../../components/PatrickTip";
 import { Link } from "react-router-dom";
 
 const AREAS = [
@@ -186,8 +185,6 @@ export default function HKGarageFinder() {
             </div>
           ))}
         </div>
-
-        <PatrickTip city="hk">"A mechanic who knows your car over time is worth more than any brand name above the door. In HK, the best workshops are found through recommendations — ask neighbours, colleagues, or local community groups online. When you find a good one, stay with them. A mechanic who knows your service history will notice things a first-time look never would."</PatrickTip>
 
         <div style={{ marginTop: 40, padding: 24, background: "#f9fafb", borderRadius: 10 }}>
           <p style={{ margin: "0 0 12px", fontWeight: 700, fontSize: 15, color: "#1e3a5f" }}>Related guides</p>

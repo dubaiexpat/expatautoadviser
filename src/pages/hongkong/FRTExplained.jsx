@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import PatrickTip from "../../components/PatrickTip";
 
 const HERO_IMG = "https://images.unsplash.com/photo-1518599807935-37015b9cefcb?w=1200&q=80";
 
@@ -58,8 +57,6 @@ export default function HKFRTExplained() {
             </tbody>
           </table>
         </div>
-
-        <PatrickTip city="hk">"FRT is the single biggest shock for expats buying new in HK. Run the numbers once and the used market makes overwhelming sense — same car, properly maintained, at a fraction of the effective new price. The only scenario where new genuinely pencils out is an EV eligible for the FRT concession scheme. For everything else, used is where the value is."</PatrickTip>
       </div>
     </Layout>
   );

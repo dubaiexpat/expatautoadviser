@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import PatrickTip from "../../components/PatrickTip";
 import { Link } from "react-router-dom";
 
 const HERO_IMG = "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200&q=80";
@@ -58,8 +57,6 @@ export default function HKEVGuide() {
             <div key={label} style={{marginBottom:16}}><strong style={{fontSize:14,color:"#1e3a5f"}}>{label}</strong><p style={{margin:"4px 0 0",fontSize:14,color:"#374151",lineHeight:1.6}}>{detail}</p></div>
           ))}
         </div>
-
-        <PatrickTip city="hk">"EV makes strong economic sense in HK given fuel prices, and the FRT concession scheme makes new EVs more accessible than new petrol cars. The one thing to confirm first is home charging — if your building has EV charging available, it's straightforward. If you're in a flat without charging sorted, that's the real question to resolve before choosing a car. Sort the infrastructure first."</PatrickTip>
       </div>
     </Layout>
   );

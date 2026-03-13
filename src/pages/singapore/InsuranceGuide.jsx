@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import PatrickTip from "../../components/PatrickTip";
 import AffiliateBox from "../../components/AffiliateBox";
 import FAQ from "../../components/FAQ";
 
@@ -127,8 +126,6 @@ export default function SGInsuranceGuide() {
             </div>
           ))}
         </div>
-
-        <PatrickTip city="sg">"Before you accept any lease, ask specifically what the insurance excess is — not just whether the car is insured. Excess amounts in Singapore can be substantial, and it's a question that often gets glossed over in the paperwork. Know the number before you drive off the lot, and see if it's negotiable."</PatrickTip>
 
         <FAQ city="sg" items={insuranceFAQ} />
       </div>

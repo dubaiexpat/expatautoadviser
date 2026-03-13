@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import PatrickTip from "../../components/PatrickTip";
 
 const HERO_IMG = "https://images.unsplash.com/photo-1509715761508-dc1acb1cb944?w=1200&q=80";
 
@@ -51,8 +50,6 @@ export default function HKLicenceConversion() {
             <div key={l}><p style={{margin:0,fontSize:13,color:"#6b7280"}}>{l}</p><p style={{margin:"4px 0 0",fontSize:18,fontWeight:700,color:"#1e3a5f"}}>{v}</p></div>
           ))}
         </div>
-
-        <PatrickTip city="hk">"The HK Transport Department is genuinely one of the more efficient government offices I've dealt with. Go in person, have your documents ready, and you're typically done in under an hour. The queue is rarely as long as it looks."</PatrickTip>
       </div>
     </Layout>
   );

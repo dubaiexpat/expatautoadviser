@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import PatrickTip from "../../components/PatrickTip";
 
 const HERO_IMG = "https://images.unsplash.com/photo-1517449905587-f80695d63356?w=1200&q=80";
 
@@ -58,8 +57,6 @@ export default function HKInsuranceGuide() {
 
         <h2 style={h2}>Getting quotes</h2>
         <p style={body}>Major HK insurers include AXA, MSIG, QBE, and Zurich. Using an independent broker (rather than going direct) is often worthwhile for expats — brokers understand NCB transfers and can shop multiple insurers. Ask other expats in your building or community for broker recommendations.</p>
-
-        <PatrickTip city="hk">"If you're coming from the UK, Australia, or another country with a No Claims Bonus system, ask specifically whether your HK insurer will recognise your overseas NCB. Many do. It typically requires a letter from your previous insurer confirming your claims history — straightforward to get — but it can meaningfully reduce your first-year premium. Most expats don't ask because they assume it won't apply."</PatrickTip>
       </div>
     </Layout>
   );

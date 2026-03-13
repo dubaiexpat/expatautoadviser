@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import PatrickTip from "../../components/PatrickTip";
 
 const HERO_IMG = "https://images.unsplash.com/photo-1731960389121-bc833c0b4f24?w=1200&q=80";
 
@@ -51,8 +50,6 @@ export default function HKMOTMaintenance() {
             <div key={heading} style={{marginBottom:16}}><strong style={{fontSize:14,color:"#0d9488"}}>{heading}</strong><p style={{margin:"4px 0 0",fontSize:14,color:"#374151",lineHeight:1.6}}>{detail}</p></div>
           ))}
         </div>
-
-        <PatrickTip city="hk">"Finding a trustworthy mechanic in HK is genuinely valuable — and word of mouth is by far the most reliable way to find one. Ask other expats in your area, your building WhatsApp group, or local community pages online. When two or three people independently recommend the same workshop, that's your answer. The good ones know their reputation matters and they work to keep it."</PatrickTip>
       </div>
     </Layout>
   );
