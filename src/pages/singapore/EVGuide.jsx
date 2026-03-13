@@ -22,7 +22,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w
 
 export default function SGEVGuide() {
   return (
-    <Layout city="sg" title="Electric Vehicles in Singapore: Complete Expat Guide (2025–26)" description="Should you lease an EV in Singapore? EEAI incentives, charging infrastructure, model comparison, real costs, and practical advice for expats." relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }]}>
+    <Layout city="sg" title="Electric Vehicles in Singapore: Complete Expat Guide (2025–26)" description="Should you lease an EV in Singapore? EV incentives, charging infrastructure, model comparison, real costs, and practical advice for expats." relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="EV Singapore" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
@@ -45,7 +45,7 @@ export default function SGEVGuide() {
             ["2030 ICE phase-out", "Singapore has committed to phasing out new petrol and diesel car registrations by 2030. This is driving rapid EV adoption and ensuring a growing charging network."],
             ["EV Early Adoption Incentive (EEAI)", "The EV Early Adoption Incentive (EEAI) provides a 45% rebate on the Additional Registration Fee (ARF), capped at SGD $15,000 for 2025 registrations (cap reduces to $7,500 in 2026). The scheme has been extended to 31 December 2026 and will not be renewed thereafter. This significantly reduces upfront EV purchase costs. Leasing companies benefit from related schemes that flow through to competitive lease pricing."],
             ["VES (Vehicle Emissions Scheme)", "EVs attract the highest VES rebate tier (up to SGD $25,000 rebate on registration). Combined incentives make EV total costs of ownership increasingly competitive with petrol equivalents."],
-            ["EV Early Adopter Initiative", "First-registered EVs benefit from preferential EV road tax. The annual road tax for an EV is typically SGD $700–$900 vs SGD $1,400–$3,000 for equivalent petrol cars."],
+            ["EV road tax", "EV road tax in Singapore is calculated on the car's peak motor power output (kW). A typical mid-range EV (e.g. BYD Atto 3 at ~150 kW) pays roughly SGD $400–$500/year; a more powerful model (e.g. Tesla Model 3 Long Range at ~325 kW) around SGD $1,000–$1,300/year. Use the LTA road tax calculator for your specific model. Leases bundle road tax, so the rate is less relevant for lessees."],
           ].map(([heading, detail]) => (
             <div key={heading} style={{ marginBottom: 18, paddingBottom: 18, borderBottom: "1px solid #f3f4f6" }}>
               <strong style={{ fontSize: 14, color: "#1e3a5f" }}>{heading}</strong>
