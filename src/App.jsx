@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Singapore from './pages/Singapore';
 import HongKong from './pages/HongKong';
@@ -22,7 +23,75 @@ import HKCalculators from './pages/hongkong/Calculators';
 import HKGarageFinder from './pages/hongkong/GarageFinder';
 import SGLeaseChecker from './pages/singapore/LeaseChecker';
 import HKLeaseChecker from './pages/hongkong/LeaseChecker';
+import SGNewArrival from './pages/singapore/NewArrival';
+import HKNewArrival from './pages/hongkong/NewArrival';
 import ScrollToTop from './components/ScrollToTop';
+import AskPatrick from './components/AskPatrick';
+
+function ExitIntent() {
+  const [show, setShow] = useState(false);
+  const [email, setEmail] = useState('');
+  const [done, setDone] = useState(false);
+  const { pathname } = useLocation();
+  const shownRef = useRef(false);
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    shownRef.current = false;
+    timerRef.current = setTimeout(() => {
+      const handler = (e) => {
+        if (e.clientY <= window.innerHeight * 0.1 && !shownRef.current && !pathname.includes('newsletter')) {
+          shownRef.current = true;
+          setShow(true);
+        }
+      };
+      document.addEventListener('mousemove', handler);
+      timerRef.current = handler;
+    }, 45000);
+    return () => {
+      clearTimeout(timerRef.current);
+      if (typeof timerRef.current === 'function') document.removeEventListener('mousemove', timerRef.current);
+    };
+  }, [pathname]);
+
+  async function subscribe(e) {
+    e.preventDefault();
+    if (!email) return;
+    const apiKey = import.meta.env.VITE_BREVO_API_KEY;
+    if (apiKey) {
+      try {
+        await fetch('https://api.brevo.com/v3/contacts', {
+          method: 'POST',
+          headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, listIds: [3], updateEnabled: true, attributes: { SOURCE: 'exit_intent' } }),
+        });
+      } catch {}
+    }
+    setDone(true);
+    setTimeout(() => setShow(false), 2000);
+  }
+
+  if (!show) return null;
+  const PATRICK_IMG = "/Firefly_GeminiFlash_picture%20of%20a%20white%2040%20year%20old%20clean%20shaven%20man%20in%20smart%20casual%20clothes%20with%20dark%20hai%20966416%20(1).png";
+
+  return (
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99999, background: '#1a1a2e', color: '#fff', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, boxShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
+      <img src={PATRICK_IMG} alt="Patrick" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+      {done ? (
+        <span style={{ fontSize: 14, fontWeight: 600 }}>\u2713 You're on the list! I'll be in touch monthly.</span>
+      ) : (
+        <>
+          <span style={{ fontSize: 14, flexShrink: 0 }}>Before you go \u2014 get Patrick's free monthly COE &amp; FRT update</span>
+          <form onSubmit={subscribe} style={{ display: 'flex', gap: 8, flex: 1, maxWidth: 340 }}>
+            <input type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="your@email.com" style={{ flex: 1, padding: '8px 12px', borderRadius: 6, border: 'none', fontSize: 14, minWidth: 0 }} />
+            <button type="submit" style={{ background: '#e63946', color: '#fff', border: 'none', borderRadius: 6, padding: '8px 14px', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>
+          </form>
+        </>
+      )}
+      <button onClick={() => setShow(false)} style={{ background: 'none', border: 'none', color: '#fff', fontSize: 18, cursor: 'pointer', opacity: 0.7, marginLeft: 'auto', flexShrink: 0 }}>\u00d7</button>
+    </div>
+  );
+}
 
 export function AppRoutes() {
   return (
@@ -38,18 +107,34 @@ export function AppRoutes() {
       <Route path="/singapore/calculators" element={<SGCalculators />} />
       <Route path="/singapore/garage-finder" element={<SGGarageFinder />} />
       <Route path="/singapore/lease-checker" element={<SGLeaseChecker />} />
-      <Route path="/hongkong" element={<HongKong />} />
-      <Route path="/hongkong/should-i-get-a-car" element={<HKShouldIGetACar />} />
-      <Route path="/hongkong/buying-guide" element={<HKBuyingGuide />} />
-      <Route path="/hongkong/leasing-guide" element={<HKLeasingGuide />} />
-      <Route path="/hongkong/frt-tax-explained" element={<HKFRTExplained />} />
-      <Route path="/hongkong/insurance-guide" element={<HKInsuranceGuide />} />
-      <Route path="/hongkong/mot-maintenance" element={<HKMOTMaintenance />} />
-      <Route path="/hongkong/licence-conversion" element={<HKLicenceConversion />} />
-      <Route path="/hongkong/ev-guide" element={<HKEVGuide />} />
-      <Route path="/hongkong/calculators" element={<HKCalculators />} />
-      <Route path="/hongkong/garage-finder" element={<HKGarageFinder />} />
-      <Route path="/hongkong/lease-checker" element={<HKLeaseChecker />} />
+      <Route path="/singapore/new-arrival" element={<SGNewArrival />} />
+      <Route path="/hong-kong" element={<HongKong />} />
+      <Route path="/hong-kong/should-i-get-a-car" element={<HKShouldIGetACar />} />
+      <Route path="/hong-kong/buying-guide" element={<HKBuyingGuide />} />
+      <Route path="/hong-kong/leasing-guide" element={<HKLeasingGuide />} />
+      <Route path="/hong-kong/frt-tax-explained" element={<HKFRTExplained />} />
+      <Route path="/hong-kong/insurance-guide" element={<HKInsuranceGuide />} />
+      <Route path="/hong-kong/mot-maintenance" element={<HKMOTMaintenance />} />
+      <Route path="/hong-kong/licence-conversion" element={<HKLicenceConversion />} />
+      <Route path="/hong-kong/ev-guide" element={<HKEVGuide />} />
+      <Route path="/hong-kong/calculators" element={<HKCalculators />} />
+      <Route path="/hong-kong/garage-finder" element={<HKGarageFinder />} />
+      <Route path="/hong-kong/lease-checker" element={<HKLeaseChecker />} />
+      <Route path="/hong-kong/new-arrival" element={<HKNewArrival />} />
+
+      {/* Redirects from old /hongkong paths to /hong-kong */}
+      <Route path="/hongkong" element={<Navigate to="/hong-kong" replace />} />
+      <Route path="/hongkong/should-i-get-a-car" element={<Navigate to="/hong-kong/should-i-get-a-car" replace />} />
+      <Route path="/hongkong/buying-guide" element={<Navigate to="/hong-kong/buying-guide" replace />} />
+      <Route path="/hongkong/leasing-guide" element={<Navigate to="/hong-kong/leasing-guide" replace />} />
+      <Route path="/hongkong/frt-tax-explained" element={<Navigate to="/hong-kong/frt-tax-explained" replace />} />
+      <Route path="/hongkong/insurance-guide" element={<Navigate to="/hong-kong/insurance-guide" replace />} />
+      <Route path="/hongkong/mot-maintenance" element={<Navigate to="/hong-kong/mot-maintenance" replace />} />
+      <Route path="/hongkong/licence-conversion" element={<Navigate to="/hong-kong/licence-conversion" replace />} />
+      <Route path="/hongkong/ev-guide" element={<Navigate to="/hong-kong/ev-guide" replace />} />
+      <Route path="/hongkong/calculators" element={<Navigate to="/hong-kong/calculators" replace />} />
+      <Route path="/hongkong/garage-finder" element={<Navigate to="/hong-kong/garage-finder" replace />} />
+      <Route path="/hongkong/lease-checker" element={<Navigate to="/hong-kong/lease-checker" replace />} />
     </Routes>
   );
 }
@@ -58,6 +143,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ExitIntent />
+      <AskPatrick />
       <AppRoutes />
     </BrowserRouter>
   );
