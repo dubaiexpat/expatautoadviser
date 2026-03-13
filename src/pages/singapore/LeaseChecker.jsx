@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import AffiliateBox from '../../components/AffiliateBox';
 import EmailCapture from '../../components/EmailCapture';
 
+const HERO_IMG = "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=1200&q=80";
+
 const SUPABASE_URL = 'https://lywjdihnnajvhfcpmxnw.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5d2pkaWhubmFqdmhmY3BteG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyMzA4MjEsImV4cCI6MjA4ODgwNjgyMX0.x6A081ICya-DOqW6eeyZnDICltJTroEFSoYONH4WZAk';
 
@@ -143,7 +145,7 @@ export default function SGLeaseChecker() {
         </div>
       </nav>
 
-      <div style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #2d5282 100%)', padding: '48px 32px 40px', textAlign: 'center' }}>
+      <div style={{ backgroundImage: "linear-gradient(rgba(10,20,40,0.82),rgba(10,20,40,0.82)),url("+HERO_IMG+")", backgroundSize: "cover", backgroundPosition: "center", padding: '48px 32px 40px', textAlign: 'center' }}>
         <p style={{ color: '#f87171', fontWeight: 700, fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.12em', margin: '0 0 12px' }}>Singapore â¢ Free Tool</p>
         <h1 style={{ color: 'white', fontSize: 38, fontWeight: 800, margin: '0 0 14px', lineHeight: 1.1 }}>Is your lease a fair deal?</h1>
         <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 16, maxWidth: 520, margin: '0 auto', lineHeight: 1.65 }}>Enter your lease terms and weâll compare them against current Singapore market rates.</p>

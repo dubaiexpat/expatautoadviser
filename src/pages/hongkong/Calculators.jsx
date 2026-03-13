@@ -636,7 +636,7 @@ const relatedLinks = [
   { to: "/hongkong/should-i-get-a-car", label: "Should I Get a Car?" },
 ];
 
-const HERO_IMG = "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=1200&q=80";
 
 export default function Calculators() {
   const [activeTab, setActiveTab] = useState("frt");
