@@ -118,7 +118,7 @@ export default function Layout({ city, children, relatedLinks }) {
   const accentHex = isSG ? '#e63946' : '#2a9d8f';
   const accentRgb = isSG ? '232,52,28' : '42,157,143';
   const landingPath = isSG ? '/singapore' : '/hong-kong';
-  const flagEmoji = isSG ? '\u{1F1F8}\u{1F1EC}' : '\u{1F1ED}\u{1F1F0}';
+  const flagEmoji = isSG ? '🇸🇬' : '🇭🇰';
   const cityLabel = isSG ? 'Singapore' : 'Hong Kong';
 
   const sidebarContent = (
@@ -139,7 +139,7 @@ export default function Layout({ city, children, relatedLinks }) {
           onMouseEnter={e => { e.currentTarget.style.color = '#94a3b8'; }}
           onMouseLeave={e => { e.currentTarget.style.color = '#6b7280'; }}
         >
-          {isSG ? '\u{1F1ED}\u{1F1F0}' : '\u{1F1F8}\u{1F1EC}'}{' '}
+          {isSG ? '🇭🇰' : '🇸🇬'}{' '}
           Switch to {isSG ? 'Hong Kong' : 'Singapore'} guides
         </Link>
       </div>
@@ -279,7 +279,7 @@ export default function Layout({ city, children, relatedLinks }) {
           to="/"
           style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 12 }}
         >
-          <span style={{ fontSize: 18 }}>\u{1F697}</span>
+          <span style={{ fontSize: 18 }}>🚗</span>
           <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: 16 }}>
             <span style={{ color: '#1a1a2e' }}>Expat</span>
             <span style={{ fontSize: 12, color: '#e63946' }}>Auto</span>
