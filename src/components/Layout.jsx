@@ -22,7 +22,7 @@ const HK_LINKS = [
   { label: 'Insurance Guide', to: '/hongkong/insurance-guide' },
   { label: 'EV Guide', to: '/hongkong/ev-guide' },
   { label: 'Licence Conversion', to: '/hongkong/licence-conversion' },
-  { label: 'FRT Explained', to: '/hongkong/frt-explained' },
+  { label: 'FRT Explained', to: '/hong-kong/frt-tax-explained' },
   { label: 'Calculators', to: '/hongkong/calculators' },
 ];
 
