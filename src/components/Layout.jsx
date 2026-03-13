@@ -26,12 +26,14 @@ const HK_LINKS = [
   { label: 'FRT Explained', to: '/hong-kong/frt-tax-explained' },
 ];
 
-function NavSection({ title, links, location, flagEmoji }) {
+function NavSection({ title, links, location, flagEmoji, landingPath }) {
   return (
     <div style={{ marginBottom: 28 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 20px', marginBottom: 8 }}>
         <span style={{ fontSize: 15 }}>{flagEmoji}</span>
+        <Link to={landingPath} style={{ textDecoration: 'none' }}>
         <span style={{ fontSize: 11, fontWeight: 700, color: '#94a3b8', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{title}</span>
+      </Link>
       </div>
       {links.map(link => {
         const active = location.pathname === link.to;
@@ -108,9 +110,9 @@ export default function Layout({ city, title, description, relatedLinks = [], ch
       </Link>
 
       {city === 'sg' ? (
-        <NavSection title="Singapore" links={SG_LINKS} location={location} flagEmoji="🇸🇬" />
+        <NavSection title="Singapore" links={SG_LINKS} location={location} landingPath="/singapore" flagEmoji="🇸🇬" />
       ) : (
-        <NavSection title="Hong Kong" links={HK_LINKS} location={location} flagEmoji="🇭🇰" />
+        <NavSection title="Hong Kong" links={HK_LINKS} location={location} landingPath="/hong-kong" flagEmoji="🇭🇰" />
       )}
       <div style={{ marginTop: 16, paddingTop: 12, borderTop: '1px solid #e5e7eb' }}>
         <Link to={city === 'sg' ? '/hongkong' : '/singapore'} style={{ fontSize: 13, color: '#6b7280', display: 'flex', alignItems: 'center', gap: 6, textDecoration: 'none' }}>
