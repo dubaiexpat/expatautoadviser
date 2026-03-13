@@ -250,7 +250,7 @@ function COECalculator() {
       </div>
 
       {/* Results */}
-      {results ? (
+      {results && (
         <div style={{ background: "#f9fafb", borderRadius: 12, padding: 24, border: "1px solid #e5e7eb" }}>
           <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1a1a2e", marginBottom: 16 }}>
             Cost Breakdown
@@ -299,11 +299,6 @@ function COECalculator() {
               Not sure whether to buy or lease? → Leasing Guide
             </Link>
           </div>
-        </div>
-      ) : (
-        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
-          <div style={{ fontSize: 32, marginBottom: 12 }}>🧮</div>
-          <p style={{ color: "#6b7280", fontSize: 14 }}>Enter the car's OMV above to see the full on-road price breakdown.</p>
         </div>
       )}
     </div>
@@ -455,7 +450,7 @@ function COEBuyVsLease() {
         </div>
       </div>
 
-      {results ? (
+      {results && (
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
           <div style={{ background: "#f9fafb", borderRadius: 12, padding: 20, border: "1px solid #e5e7eb" }}>
             <h3 style={{ fontSize: 15, fontWeight: 700, color: "#374151", marginBottom: 16 }}>🚗 Buying</h3>
@@ -510,10 +505,6 @@ function COEBuyVsLease() {
               </div>
             )}
           </div>
-        </div>
-      ) : (
-        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
-          <p style={{ color: "#6b7280", fontSize: 14 }}>Enter the car's OMV above to compare buying vs leasing costs.</p>
         </div>
       )}
       <p style={{ fontSize: 11, color: "#9ca3af", marginTop: 12, lineHeight: 1.6 }}>
@@ -575,20 +566,21 @@ function LicenceChecker() {
         <div style={{ background: selected.result === "direct" ? "#f0fdf4" : "#fef2f2", borderRadius: 12, padding: 24, border: `1px solid ${selected.result === "direct" ? "#86efac" : "#fca5a5"}` }}>
           <div style={{ fontSize: 24, marginBottom: 8 }}>{selected.result === "direct" ? "✅" : "⚠️"}</div>
           <h3 style={{ fontSize: 17, fontWeight: 700, color: selected.result === "direct" ? "#15803d" : "#dc2626", marginBottom: 8 }}>
-            {selected.result === "direct" ? "Direct conversion — no test required" : "Driving test required"}
+            {selected.result === "direct" ? "Direct licence exchange — no driving test required" : "Driving test required"}
           </h3>
           <p style={{ fontSize: 14, color: "#374151", marginBottom: 0 }}>{selected.note}</p>
           {selected.result === "direct" && (
-            <div style={{ marginTop: 16, fontSize: 13, color: "#374151" }}>
-              <strong>What to bring:</strong> Passport, valid work/dependent pass, original foreign licence, 2 passport photos, ~S$50 fee. Book at <a href="https://onemotoring.lta.gov.sg" target="_blank" rel="noopener noreferrer" style={{ color: "#15803d" }}>OneMotoring</a>.
+            <div>
+              <div style={{ marginTop: 16, fontSize: 13, color: "#374151" }}>
+                <strong>What to bring:</strong> Passport, valid work/dependent pass, original foreign licence, 2 passport photos, ~S$50 fee. Book at <a href="https://onemotoring.lta.gov.sg" target="_blank" rel="noopener noreferrer" style={{ color: "#15803d" }}>OneMotoring</a>.
+              </div>
+              <div style={{ marginTop: 10, fontSize: 13, color: "#92400e", background: "#fffbeb", borderRadius: 6, padding: "8px 12px" }}>
+                <strong>Note:</strong> A basic vision test is conducted at the Traffic Police counter during conversion. Bring glasses or contacts if you wear them.
+              </div>
             </div>
           )}
         </div>
-      ) : (
-        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
-          <p style={{ color: "#6b7280", fontSize: 14 }}>Select your licence country above to check eligibility.</p>
-        </div>
-      )}
+      ) : null}
 
       <div style={{ marginTop: 16 }}>
         <Link to="/singapore/licence-conversion" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>

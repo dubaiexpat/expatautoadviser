@@ -207,7 +207,7 @@ function FRTCalculator() {
       </div>
 
       {/* Results */}
-      {results ? (
+      {results && (
         results.isEV ? (
           <div style={{ background: "#f0fdf4", borderRadius: 12, padding: 24, border: "1px solid #86efac" }}>
             <div style={{ fontSize: 24, marginBottom: 8 }}>⚡</div>
@@ -311,11 +311,6 @@ function FRTCalculator() {
             </div>
           </div>
         )
-      ) : (
-        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
-          <div style={{ fontSize: 32, marginBottom: 12 }}>🧮</div>
-          <p style={{ color: "#6b7280", fontSize: 14 }}>Enter the vehicle's taxable value above to see the full FRT breakdown.</p>
-        </div>
       )}
     </div>
   );
@@ -422,8 +417,8 @@ const HK_LICENCE_DATA = {
   JP: { country: "Japan", result: "direct", note: "Convert directly. Bring official English translation if your licence is not in English." },
   SG: { country: "Singapore", result: "direct", note: "Singapore driving licence converts directly to HK licence." },
   IN: { country: "India", result: "test", note: "Must pass Hong Kong driving test. Theory and practical required at a TD licensing office." },
-  CN: { country: "China (Mainland)", result: "test", note: "Mainland China driving licence does not convert directly — must sit HK driving test." },
-  PH: { country: "Philippines", result: "test", note: "Must pass HK driving test." },
+  CN: { country: "China (Mainland)", result: "test", note: "Mainland China driving licence does not convert directly — must sit HK driving test. Theory and practical tests required." },
+  PH: { country: "Philippines", result: "test", note: "Must pass HK driving test. Theory and practical tests required." },
 };
 
 function HKLicenceChecker() {
@@ -436,7 +431,7 @@ function HKLicenceChecker() {
         Licence Eligibility Checker
       </h2>
       <p style={{ color: "#6b7280", fontSize: 14, marginBottom: 24 }}>
-        Most Western nationalities convert directly — no test. Check your licence country below.
+        Most Western nationalities can convert directly — no driving test required. A vision test is required at the Transport Department for all conversions. Check your country below.
       </p>
 
       <div style={{ marginBottom: 24 }}>
@@ -461,20 +456,21 @@ function HKLicenceChecker() {
         <div style={{ background: selected.result === "direct" ? "#f0fdf4" : "#fef2f2", borderRadius: 12, padding: 24, border: `1px solid ${selected.result === "direct" ? "#86efac" : "#fca5a5"}` }}>
           <div style={{ fontSize: 24, marginBottom: 8 }}>{selected.result === "direct" ? "✅" : "⚠️"}</div>
           <h3 style={{ fontSize: 17, fontWeight: 700, color: selected.result === "direct" ? "#15803d" : "#dc2626", marginBottom: 8 }}>
-            {selected.result === "direct" ? "Direct conversion — no test required" : "Driving test required"}
+            {selected.result === "direct" ? "Direct licence exchange — no driving test required" : "Driving test required"}
           </h3>
           <p style={{ fontSize: 14, color: "#374151", marginBottom: 0 }}>{selected.note}</p>
           {selected.result === "direct" && (
-            <div style={{ marginTop: 16, fontSize: 13, color: "#374151" }}>
-              <strong>What to bring:</strong> HKID card, original foreign licence (valid), proof of HK address, 2 passport photos. Visit a TD licensing office — no appointment needed for conversion.
+            <div>
+              <div style={{ marginTop: 16, fontSize: 13, color: "#374151" }}>
+                <strong>What to bring:</strong> HKID card, original foreign licence (valid), proof of HK address, 2 passport photos. Visit a TD licensing office — no appointment needed for conversion.
+              </div>
+              <div style={{ marginTop: 10, fontSize: 13, color: "#92400e", background: "#fffbeb", borderRadius: 6, padding: "8px 12px" }}>
+                <strong>Note:</strong> A vision test is required at the Transport Department licensing office for all licence conversions — bring glasses or contacts if you wear them.
+              </div>
             </div>
           )}
         </div>
-      ) : (
-        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
-          <p style={{ color: "#6b7280", fontSize: 14 }}>Select your licence country above to check eligibility.</p>
-        </div>
-      )}
+      ) : null}
 
       <div style={{ marginTop: 16 }}>
         <Link to="/hongkong/licence-conversion" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
@@ -555,7 +551,7 @@ function HKBuyVsLease() {
         </div>
       </div>
 
-      {results ? (
+      {results && (
         <div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
             <div style={{ background: "#f9fafb", borderRadius: 12, padding: 20, border: "1px solid #e5e7eb" }}>
@@ -608,10 +604,6 @@ function HKBuyVsLease() {
               </div>
             )}
           </div>
-        </div>
-      ) : (
-        <div style={{ background: "#f9fafb", borderRadius: 12, padding: 40, textAlign: "center", border: "1px solid #e5e7eb" }}>
-          <p style={{ color: "#6b7280", fontSize: 14 }}>Enter the car's taxable value above to compare costs.</p>
         </div>
       )}
       <p style={{ fontSize: 11, color: "#9ca3af", marginTop: 12, lineHeight: 1.6 }}>
