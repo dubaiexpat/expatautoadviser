@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1731960389121-bc833c0b4f24?w=1200&q=80";
 
 export default function HKMOTMaintenance() {
   return (

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AffiliateBox from '../../components/AffiliateBox';
 import EmailCapture from '../../components/EmailCapture';
 
-const HERO_IMG = "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=1200&q=80";
 
 const SUPABASE_URL = 'https://lywjdihnnajvhfcpmxnw.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5d2pkaWhubmFqdmhmY3BteG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyMzA4MjEsImV4cCI6MjA4ODgwNjgyMX0.x6A081ICya-DOqW6eeyZnDICltJTroEFSoYONH4WZAk';

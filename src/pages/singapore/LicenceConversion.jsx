@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80";
 
 export default function SGLicenceConversion() {
   return (

@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1517449905587-f80695d63356?w=1200&q=80";
 
 export default function HKInsuranceGuide() {
   return (

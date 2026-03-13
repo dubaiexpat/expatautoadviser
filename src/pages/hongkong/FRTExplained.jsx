@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import PatrickTip from "../../components/PatrickTip";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1518599807935-37015b9cefcb?w=1200&q=80";
 
 export default function HKFRTExplained() {
   return (

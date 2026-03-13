@@ -48,7 +48,7 @@ const leasingFAQ = [
   },
 ];
 
-const HERO_IMG = "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1722607508544-3810372171fc?w=1200&q=80";
 
 export default function SGLeasingGuide() {
   return (
