@@ -19,6 +19,17 @@ const styles = `
   }
   .eaa-logo { font-size: 1rem; font-weight: 700; letter-spacing: 0.04em; color: #f0f2f8; text-decoration: none; }
   .eaa-logo span { color: #e8341c; }
+    .home-brand-hero {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #f0f2f8;
+      text-align: center;
+      display: block;
+      margin-bottom: 0.25rem;
+      line-height: 1.1;
+    }
+    .home-brand-hero span { color: #e8341c; }
   .eaa-tagline-wrap {
     padding-top: 56px;
     text-align: center;
@@ -194,6 +205,7 @@ export default function Home() {
 
       {/* Tagline */}
       <div className="eaa-tagline-wrap">
+          <div className="home-brand-hero">expat<span>auto</span>adviser</div>
         <h1>Your Car Guide for Expat Life</h1>
         <p>Singapore · Hong Kong</p>
       </div>
