@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Layout.css';
 import { Link, useLocation } from 'react-router-dom';
 
 const SG_LINKS = [
@@ -93,21 +94,6 @@ function NavSection({ title, links, location, flagEmoji, landingPath, accentHex,
   );
 }
 
-const mobileCSS = [
-  '@media (min-width: 768px) {',
-  '  .sidebar-desktop { display: flex; flex-direction: column; }',
-  '  .mobile-header { display: none; }',
-  '  .main-content { padding: 40px 40px 80px; }',
-  '  .sidebar-spacer { display: block; }',
-  '  .mobile-drawer { display: none; }',
-  '}',
-  '@media (max-width: 767px) {',
-  '  .sidebar-desktop { display: none; }',
-  '  .mobile-header { display: flex; }',
-  '  .main-content { padding: 72px 16px 48px; }',
-  '  .sidebar-spacer { display: none; }',
-  '}',
-].join('\n');
 
 export default function Layout({ city, children, relatedLinks }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -148,7 +134,6 @@ export default function Layout({ city, children, relatedLinks }) {
 
   return (
     <div style={{ minHeight: '100vh', background: '#f9fafb', fontFamily: 'system-ui,-apple-system,sans-serif' }}>
-      <style>{mobileCSS}</style>
 
       {/* Desktop sidebar — fixed, full height */}
       <div
