@@ -13,8 +13,7 @@ export default function HKFRTExplained() {
         </div>
       </div>
       <div style={{maxWidth:760}}>
-        <p style={{color:"#0d9488",fontWeig
-          ht:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
+        <p style={{color:"#0d9488",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>Hong Kong FRT &amp; Tax Explained</h1>
         <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>The First Registration Tax is why new cars in Hong Kong cost roughly double what you'd pay elsewhere. Here's exactly how it works.</p>
 
