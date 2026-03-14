@@ -202,9 +202,37 @@ const styles = `
   .sg-tip-icon { color: #e8341c; font-size: 0.85rem; flex-shrink: 0; margin-top: 0.05rem; }
   .sg-tip-text { font-size: 0.78rem; color: #8892a4; line-height: 1.5; }
 
+
+  /* MOBILE NAV DRAWER */
+  .sg-aside-desktop { display: block; }
+  .sg-guides-toggle { display: none; }
+  .sg-mobile-drawer {
+    display: none; position: fixed; top: 52px; left: 0; bottom: 0;
+    width: 260px; background: #0a0c12;
+    border-right: 1px solid rgba(232,52,28,0.18);
+    z-index: 150; overflow-y: auto;
+    transform: translateX(-110%);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .sg-mobile-drawer.open {
+    transform: translateX(0);
+    box-shadow: 4px 0 24px rgba(0,0,0,0.5);
+  }
+  .sg-mobile-backdrop {
+    display: none; position: fixed; inset: 0; z-index: 140;
+    background: rgba(0,0,0,0.5); opacity: 0;
+    pointer-events: none; transition: opacity 0.3s ease;
+  }
+  .sg-mobile-backdrop.open { opacity: 1; pointer-events: auto; }
+
   @media (max-width: 640px) {
     .sg-guides-grid { grid-template-columns: 1fr; }
     .sg-coe-grid { grid-template-columns: repeat(2, 1fr); }
+    .sg-aside-desktop { display: none !important; }
+    .sg-switch-btn { display: none !important; }
+    .sg-guides-toggle { display: flex !important; }
+    .sg-mobile-drawer { display: block; }
+    .sg-mobile-backdrop { display: block; }
     .sg-cta-form { width: 100%; }
     .sg-cta-input { flex: 1; width: auto; }
     .sg-hero { padding: 1.2rem; }
@@ -229,6 +257,7 @@ function GuideCard({ n, label, to, desc, img }) {
 export default function Singapore() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="sg-page">
@@ -243,10 +272,43 @@ export default function Singapore() {
         <Link to="/hongkong" className="sg-switch-btn">
           🇭🇰 Switch to Hong Kong →
         </Link>
+        <button
+          className="sg-guides-toggle"
+          onClick={() => setMobileOpen(o => !o)}
+          style={{
+            background: 'rgba(232,52,28,0.15)',
+            border: '1px solid rgba(232,52,28,0.3)',
+            borderRadius: 6, color: '#e8341c',
+            padding: '0.28rem 0.7rem', fontSize: '0.78rem',
+            fontWeight: 700, cursor: 'pointer',
+            alignItems: 'center', gap: 6, letterSpacing: '0.04em',
+          }}
+        >
+          {mobileOpen ? '\u2715 Close' : '\u2630 Guides'}
+        </button>
       </nav>
 
+      {/* Mobile backdrop */}
+      <div
+        className={`sg-mobile-backdrop ${mobileOpen ? 'open' : ''}`}
+        onClick={() => setMobileOpen(false)}
+      />
+      {/* Mobile drawer */}
+      <div className={`sg-mobile-drawer ${mobileOpen ? 'open' : ''}`}>
+        <div style={{ fontWeight: 700, fontSize: '0.62rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ef4444', padding: '20px 14px 12px' }}>
+          {'\ud83c\uddf8\ud83c\uddec'} Singapore Guides
+        </div>
+        {SG_GUIDES.map(g => (
+          <Link key={g.to} to={g.to} className="sg-nav-link" onClick={() => setMobileOpen(false)}>{g.label}</Link>
+        ))}
+        <div style={{ borderTop: '1px solid rgba(239,68,68,0.12)', margin: '12px 14px' }}></div>
+        <Link to="/hongkong" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '7px 14px', fontSize: '0.75rem', color: '#6b7280', textDecoration: 'none' }}>
+          {'\ud83c\udded\ud83c\uddf0'} HK Guides {'\u2192'}
+        </Link>
+      </div>
+
       <div className="sg-main" style={{ display: "flex", alignItems: "flex-start", gap: 0 }}>
-        <aside style={{ width: "185px", minWidth: "175px", flexShrink: 0, borderRight: "1px solid rgba(239,68,68,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
+        <aside className="sg-aside-desktop" style={{ width: "185px", minWidth: "175px", flexShrink: 0, borderRight: "1px solid rgba(239,68,68,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
           <style>{`.sg-nav-link { display:block; padding:7px 14px; font-size:0.82rem; color:#9ca3af; text-decoration:none; margin-bottom:1px; border-left:3px solid transparent; transition:color 0.15s,border-color 0.15s,background 0.15s; } .sg-nav-link:hover { color:#e5e7eb; border-left-color:#ef4444; background:rgba(239,68,68,0.06); }`}</style>
           <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#ef4444", padding:"20px 14px 12px" }}>🇸🇬 Singapore Guides</div>
           {SG_GUIDES.map(g => (
