@@ -95,17 +95,17 @@ function NavSection({ title, links, location, flagEmoji, landingPath, accentHex,
 
 const mobileCSS = [
   '@media (min-width: 768px) {',
-  '  .sidebar-desktop { display: flex !important; flex-direction: column; }',
-  '  .mobile-header { display: none !important; }',
-  '  .main-content { padding: 40px 40px 80px !important; }',
-  '  .sidebar-spacer { display: block !important; }',
-  '  .mobile-drawer { display: none !important; }',
+  '  .sidebar-desktop { display: flex; flex-direction: column; }',
+  '  .mobile-header { display: none; }',
+  '  .main-content { padding: 40px 40px 80px; }',
+  '  .sidebar-spacer { display: block; }',
+  '  .mobile-drawer { display: none; }',
   '}',
   '@media (max-width: 767px) {',
-  '  .sidebar-desktop { display: none !important; }',
-  '  .mobile-header { display: flex !important; }',
-  '  .main-content { padding: 72px 16px 48px !important; }',
-  '  .sidebar-spacer { display: none !important; }',
+  '  .sidebar-desktop { display: none; }',
+  '  .mobile-header { display: flex; }',
+  '  .main-content { padding: 72px 16px 48px; }',
+  '  .sidebar-spacer { display: none; }',
   '}',
 ].join('\n');
 
@@ -154,7 +154,6 @@ export default function Layout({ city, children, relatedLinks }) {
       <div
         className="sidebar-desktop"
         style={{
-          display: 'none',
           position: 'fixed', top: 0, left: 0,
           width: SIDEBAR_W, height: '100vh', overflowY: 'auto',
           background: SIDEBAR_BG,
@@ -173,7 +172,6 @@ export default function Layout({ city, children, relatedLinks }) {
       <div
         className="mobile-header"
         style={{
-          display: 'none',
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
           height: 56, background: SIDEBAR_BG,
           alignItems: 'center', justifyContent: 'space-between',
@@ -231,7 +229,7 @@ export default function Layout({ city, children, relatedLinks }) {
       {/* Page layout: spacer + content */}
       <div style={{ display: 'flex' }}>
         {/* Desktop spacer to offset fixed sidebar */}
-        <div className="sidebar-spacer" style={{ display: 'none', width: SIDEBAR_W, flexShrink: 0 }} />
+        <div className="sidebar-spacer" style={{ width: SIDEBAR_W, flexShrink: 0 }} />
 
         {/* Main content */}
         <main
