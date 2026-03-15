@@ -58,7 +58,7 @@ const styles = `
     flex: 1;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
+    cursor: default;
     transition: flex 0.4s ease;
   }
   .city-panel:hover { flex: 1.18; }

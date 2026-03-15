@@ -33,7 +33,7 @@ const ROUTES = [
 
 const META = {
   '/': {
-    title: `Expat Auto Adviser — Singapore & Hong Kong Car Guides`,
+    title: `ExpatAutoAdviser — Singapore & Hong Kong Car Guides`,
     desc: `Free guides for expats on leasing or buying a car in Singapore and Hong Kong. Compare costs, understand rules, and make the right choice.`,
     type: `website`,
   },
@@ -383,7 +383,7 @@ const { render } = await import('./.ssr/entry-server.js');
 
 for (const route of ROUTES) {
   const meta = META[route] || {
-    title: 'Expat Auto Adviser',
+    title: 'ExpatAutoAdviser',
     desc: 'Free car guides for expats in Singapore and Hong Kong.',
     type: 'website',
   };
