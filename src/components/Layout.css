@@ -11,5 +11,5 @@
 
 @media (max-width: 767px) {
   .mobile-header { display: flex; }
-  .main-content  { padding: 72px 16px 48px; }
+  .main-content  { padding: 80px 16px 48px; }
 }

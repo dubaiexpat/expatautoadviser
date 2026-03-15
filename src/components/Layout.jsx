@@ -219,7 +219,7 @@ export default function Layout({ city, children, relatedLinks }) {
         {/* Main content */}
         <main
           className="main-content"
-          style={{ flex: 1, minWidth: 0, padding: '40px 40px 80px' }}
+          style={{ flex: 1, minWidth: 0 }}
         >
           {children}
 
