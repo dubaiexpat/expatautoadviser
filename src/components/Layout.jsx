@@ -20,7 +20,7 @@ const HK_LINKS = [
   { label: 'Insurance', to: '/hong-kong/insurance-guide' },
   { label: 'EV Guide', to: '/hong-kong/ev-guide' },
   { label: 'Licence Conversion', to: '/hong-kong/licence-conversion' },
-  { label: 'FRT Explained', to: '/hong-kong/frt-explained' },
+  { label: 'FRT Explained', to: '/hong-kong/frt-tax-explained' },
 ];
 
 const SIDEBAR_BG = '#0d1117';

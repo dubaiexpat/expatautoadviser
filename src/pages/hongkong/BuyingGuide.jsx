@@ -19,7 +19,7 @@ export default function HKBuyingGuide() {
         <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Most expats who get a car in HK buy used. Here's the full process — from understanding FRT to picking up your keys.</p>
 
         <h2 style={h2}>New vs used: why almost everyone buys used</h2>
-        <p style={body}>New cars in Hong Kong attract the <strong>First Registration Tax (FRT)</strong>, a progressive tax that can add 46–132% to a car's taxable value. A car with a taxable value of HKD $300,000 could end up costing over HKD $500,000 after FRT. See the <Link to="/hong-kong/frt-explained" style={{color:"#0d9488"}}>FRT Explainer</Link> for the full breakdown.</p>
+        <p style={body}>New cars in Hong Kong attract the <strong>First Registration Tax (FRT)</strong>, a progressive tax that can add 46–132% to a car's taxable value. A car with a taxable value of HKD $300,000 could end up costing over HKD $500,000 after FRT. See the <Link to="/hong-kong/frt-tax-explained" style={{color:"#0d9488"}}>FRT Explainer</Link> for the full breakdown.</p>
         <p style={body}>When you buy a used car, FRT has already been paid. You're simply buying the asset — the car — at market value. For expats on 2–4 year stints, buying a used car and selling it before leaving is typically the most cost-effective approach.</p>
 
         <h2 style={h2}>What to look for in a used car</h2>
