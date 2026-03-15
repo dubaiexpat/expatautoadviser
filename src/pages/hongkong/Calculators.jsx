@@ -135,7 +135,7 @@ function FRTCalculator() {
     }
     if (tvNum > 300000) {
       const t3 = Math.min(tvNum - 300000, 200000);
-      bands.push({ range: "Next HK$200,000", rate: "132%", tax: Math.round(t3 * 1.15), applicable: true });
+      bands.push({ range: "Next HK$200,000", rate: "115%", tax: Math.round(t3 * 1.15), applicable: true });
     }
     if (tvNum > 500000) {
       bands.push({ range: "Remainder", rate: "132%", tax: Math.round((tvNum - 500000) * 1.32), applicable: true });

@@ -77,7 +77,7 @@ export default function SGBuyingGuide() {
       <p style={body}>Key things to understand: COE is not transferable between buyers. When you sell a car, the buyer is buying the car plus the remaining COE. PARF (Preferential Additional Registration Fee) rebate is a partial refund you get when you scrap a car before the COE expires — it reduces the effective cost of ownership if you leave Singapore before the 10 years is up.</p>
 
       <div style={note}>
-        <strong>PARF rebate tip:</strong> If you scrap a car within the first 5 years, you get a 30% PARF rebate on the ARF paid. Between 5–9 years it steps down. This is why many expats who buy deliberately plan their ownership period around the rebate schedule.
+        <strong>PARF rebate — updated Feb 2026:</strong> If you scrap a car within the first 5 years, you get a 30% PARF rebate on the ARF paid. Between 5–9 years it steps down. This is why many expats who buy deliberately plan their ownership period around the rebate schedule.
       </div>
 
       <h2 style={h2}>What expats actually buy</h2>

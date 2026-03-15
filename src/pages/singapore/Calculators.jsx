@@ -88,12 +88,12 @@ function ResultRow({ label, value, tooltip, highlight }) {
 function COECalculator() {
   const [omv, setOmv] = useState("");
   const [coeCategory, setCoeCategory] = useState("A");
-  const [coePremium, setCoePremium] = useState(95000);
+  const [coePremium, setCoePremium] = useState(108000);
   const [loanTenure, setLoanTenure] = useState(5);
   const [interestRate, setInterestRate] = useState(2.5);
   const [downPctInput, setDownPctInput] = useState(30);
 
-  const COE_DEFAULTS = { A: 95000, B: 105000, E: 110000 };
+  const COE_DEFAULTS = { A: 108000, B: 114000, E: 112000 };
 
   const handleCategoryChange = (cat) => {
     setCoeCategory(cat);
@@ -390,7 +390,7 @@ function LeaseCostEstimator() {
 // ── COE Buy vs Lease Comparison ──────────────────────────────────────────
 function COEBuyVsLease() {
   const [omv, setOmv] = useState("");
-  const [coePremium, setCoePremium] = useState(95000);
+  const [coePremium, setCoePremium] = useState(108000);
   const [leaseMonthly, setLeaseMonthly] = useState(2500);
   const [years, setYears] = useState(3);
 
