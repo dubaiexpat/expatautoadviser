@@ -140,7 +140,7 @@ export default function HKLeaseChecker() {
         <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: 18 }}>ExpatAutoAdviser</Link>
         <div style={{ display: 'flex', gap: 10 }}>
           <Link to="/singapore" style={{ background: 'rgba(255,255,255,0.12)', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>ð¸ð¬ Singapore</Link>
-          <Link to="/hongkong" style={{ background: '#0d9488', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>ð­ð° Hong Kong</Link>
+          <Link to="/hong-kong" style={{ background: '#0d9488', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>ð­ð° Hong Kong</Link>
         </div>
       </nav>
 
@@ -337,8 +337,8 @@ export default function HKLeaseChecker() {
             />
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginTop: 8 }}>
-              <Link to="/hongkong/leasing-guide" style={{ background: '#1e3a5f', color: 'white', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Read our leasing guide →</Link>
-              <Link to="/hongkong/insurance-guide" style={{ background: 'white', color: '#1e3a5f', border: '1.5px solid #1e3a5f', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Insurance guide →</Link>
+              <Link to="/hong-kong/leasing-guide" style={{ background: '#1e3a5f', color: 'white', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Read our leasing guide →</Link>
+              <Link to="/hong-kong/insurance-guide" style={{ background: 'white', color: '#1e3a5f', border: '1.5px solid #1e3a5f', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>Insurance guide →</Link>
               <button onClick={() => { setReport(null); setForm(f => ({ ...f, cost: '', segment: '', insurance: false, roadTax: false, servicing: false, tyres: false, breakdown: false })); }} style={{ background: '#f3f4f6', color: '#374151', border: 'none', padding: '12px 22px', borderRadius: 8, fontWeight: 600, fontSize: 14, cursor: 'pointer', fontFamily: 'Inter, sans-serif' }}>Check another lease</button>
             </div>
           </>

@@ -4,7 +4,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1518599807935-37015b9cefcb?w
 
 export default function HKFRTExplained() {
   return (
-    <Layout city="hk" title="Hong Kong First Registration Tax (FRT) Explained" description="FRT in Hong Kong explained for expats: what it is, how it's calculated, progressive bands with worked examples, EV exemptions, and annual licence fees." relatedLinks={[{ label: 'Buying Guide', to: '/hongkong/buying-guide' }, { label: 'Insurance Guide', to: '/hongkong/insurance-guide' }, { label: 'Cost Calculator', to: '/hongkong/calculators' }]}>
+    <Layout city="hk" title="Hong Kong First Registration Tax (FRT) Explained" description="FRT in Hong Kong explained for expats: what it is, how it's calculated, progressive bands with worked examples, EV exemptions, and annual licence fees." relatedLinks={[{ label: 'Buying Guide', to: '/hong-kong/buying-guide' }, { label: 'Insurance Guide', to: '/hong-kong/insurance-guide' }, { label: 'Cost Calculator', to: '/hong-kong/calculators' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Premium car FRT" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />

@@ -5,7 +5,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1522962172216-3cffc9debf30?w
 
 export default function HKBuyingGuide() {
   return (
-    <Layout city="hk" title="Hong Kong Car Buying Guide for Expats" description="How to buy a car in Hong Kong as an expat: new vs used, avoiding FRT, step-by-step process, Transport Department registration, documents needed, and where to find good used cars." relatedLinks={[{ label: 'FRT Tax Explained', to: '/hongkong/frt-tax-explained' }, { label: 'Insurance Guide', to: '/hongkong/insurance-guide' }, { label: 'MOT & Maintenance', to: '/hongkong/mot-maintenance' }, { label: 'Licence Conversion', to: '/hongkong/licence-conversion' }]}>
+    <Layout city="hk" title="Hong Kong Car Buying Guide for Expats" description="How to buy a car in Hong Kong as an expat: new vs used, avoiding FRT, step-by-step process, Transport Department registration, documents needed, and where to find good used cars." relatedLinks={[{ label: 'FRT Tax Explained', to: '/hong-kong/frt-tax-explained' }, { label: 'Insurance Guide', to: '/hong-kong/insurance-guide' }, { label: 'MOT & Maintenance', to: '/hong-kong/mot-maintenance' }, { label: 'Licence Conversion', to: '/hong-kong/licence-conversion' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Sports car Hong Kong" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
@@ -19,7 +19,7 @@ export default function HKBuyingGuide() {
         <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Most expats who get a car in HK buy used. Here's the full process — from understanding FRT to picking up your keys.</p>
 
         <h2 style={h2}>New vs used: why almost everyone buys used</h2>
-        <p style={body}>New cars in Hong Kong attract the <strong>First Registration Tax (FRT)</strong>, a progressive tax that can add 46–132% to a car's taxable value. A car with a taxable value of HKD $300,000 could end up costing over HKD $500,000 after FRT. See the <Link to="/hongkong/frt-explained" style={{color:"#0d9488"}}>FRT Explainer</Link> for the full breakdown.</p>
+        <p style={body}>New cars in Hong Kong attract the <strong>First Registration Tax (FRT)</strong>, a progressive tax that can add 46–132% to a car's taxable value. A car with a taxable value of HKD $300,000 could end up costing over HKD $500,000 after FRT. See the <Link to="/hong-kong/frt-explained" style={{color:"#0d9488"}}>FRT Explainer</Link> for the full breakdown.</p>
         <p style={body}>When you buy a used car, FRT has already been paid. You're simply buying the asset — the car — at market value. For expats on 2–4 year stints, buying a used car and selling it before leaving is typically the most cost-effective approach.</p>
 
         <h2 style={h2}>What to look for in a used car</h2>

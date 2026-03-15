@@ -271,7 +271,7 @@ export default function Singapore() {
           <Link to="/" className="sg-logo">Expat<span>Auto</span>Adviser</Link>
           <span className="sg-city-badge">SINGAPORE</span>
         </div>
-        <Link to="/hongkong" className="sg-switch-btn">
+        <Link to="/hong-kong" className="sg-switch-btn">
           🇭🇰 Switch to Hong Kong →
         </Link>
         <button
@@ -304,7 +304,7 @@ export default function Singapore() {
           <Link key={g.to} to={g.to} className="sg-nav-link" onClick={() => setMobileOpen(false)}>{g.label}</Link>
         ))}
         <div style={{ borderTop: '1px solid rgba(239,68,68,0.12)', margin: '12px 14px' }}></div>
-        <Link to="/hongkong" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '7px 14px', fontSize: '0.75rem', color: '#6b7280', textDecoration: 'none' }}>
+        <Link to="/hong-kong" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '7px 14px', fontSize: '0.75rem', color: '#6b7280', textDecoration: 'none' }}>
           {'\ud83c\udded\ud83c\uddf0'} HK Guides {'\u2192'}
         </Link>
       </div>
@@ -317,7 +317,7 @@ export default function Singapore() {
             <Link key={g.to} to={g.to} className="sg-nav-link">{g.label}</Link>
           ))}
           <div style={{ borderTop:"1px solid rgba(239,68,68,0.12)", margin:"12px 14px" }}></div>
-          <Link to="/hongkong" style={{ display:"block", padding:"7px 14px", fontSize:"0.75rem", color:"#6b7280", textDecoration:"none" }}>🇭🇰 HK Guides →</Link>
+          <Link to="/hong-kong" style={{ display:"block", padding:"7px 14px", fontSize:"0.75rem", color:"#6b7280", textDecoration:"none" }}>🇭🇰 HK Guides →</Link>
         </aside>
         <div style={{ flex: 1, minWidth: 0 }}>
 

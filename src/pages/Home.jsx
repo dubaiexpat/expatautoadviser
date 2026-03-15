@@ -236,7 +236,7 @@ export default function Home() {
           mapUrl={HK_MAP}
           tagline="FRT, tunnel tolls, licence conversion — no fluff, just clarity."
           accent="#2a9d8f"
-          to="/hongkong"
+          to="/hong-kong"
         />
       </div>
 

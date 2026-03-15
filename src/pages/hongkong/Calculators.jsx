@@ -236,7 +236,7 @@ function FRTCalculator() {
               <a href="https://www.emsd.gov.hk" target="_blank" rel="noopener noreferrer" style={{ color: "#92400e" }}>EMSD website</a> before purchasing.
             </div>
             <div style={{ marginTop: 16 }}>
-              <Link to="/hongkong/ev-guide" style={{ fontSize: 13, color: "#15803d", textDecoration: "none", fontWeight: 600 }}>
+              <Link to="/hong-kong/ev-guide" style={{ fontSize: 13, color: "#15803d", textDecoration: "none", fontWeight: 600 }}>
                 Full EV guide for Hong Kong — One-for-One explained →
               </Link>
             </div>
@@ -302,10 +302,10 @@ function FRTCalculator() {
             </div>
 
             <div style={{ marginTop: 16, display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <Link to="/hongkong/frt-tax-explained" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
+              <Link to="/hong-kong/frt-tax-explained" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
                 How does FRT work in detail? →
               </Link>
-              <Link to="/hongkong/buying-guide" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
+              <Link to="/hong-kong/buying-guide" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
                 Buying guide for HK expats →
               </Link>
             </div>
@@ -394,7 +394,7 @@ function HKLeaseCostEstimator() {
       </div>
 
       <div style={{ marginTop: 16 }}>
-        <Link to="/hongkong/leasing-guide" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
+        <Link to="/hong-kong/leasing-guide" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
           Read the full HK leasing guide →
         </Link>
       </div>
@@ -473,7 +473,7 @@ function HKLicenceChecker() {
       ) : null}
 
       <div style={{ marginTop: 16 }}>
-        <Link to="/hongkong/licence-conversion" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
+        <Link to="/hong-kong/licence-conversion" style={{ fontSize: 13, color: "#dc2626", textDecoration: "none", fontWeight: 600 }}>
           Full licence conversion guide for Hong Kong →
         </Link>
       </div>
@@ -622,10 +622,10 @@ const TABS = [
 ];
 
 const relatedLinks = [
-  { to: "/hongkong/frt-tax-explained", label: "FRT Explained" },
-  { to: "/hongkong/leasing-guide", label: "Leasing Guide" },
-  { to: "/hongkong/buying-guide", label: "Buying Guide" },
-  { to: "/hongkong/should-i-get-a-car", label: "Should I Get a Car?" },
+  { to: "/hong-kong/frt-tax-explained", label: "FRT Explained" },
+  { to: "/hong-kong/leasing-guide", label: "Leasing Guide" },
+  { to: "/hong-kong/buying-guide", label: "Buying Guide" },
+  { to: "/hong-kong/should-i-get-a-car", label: "Should I Get a Car?" },
 ];
 
 const HERO_IMG = "https://images.unsplash.com/photo-1542189412744-bfabf27522ee?w=1200&q=80";

@@ -169,7 +169,7 @@ export default function HKGarageFinder() {
             </div>
           ))}
         </div>
-        <p style={body}>See the <Link to="/hongkong/mot-maintenance" style={{ color: "#0d9488" }}>HK MOT & Maintenance guide</Link> for the full inspection process, approved centre list, and what to expect.</p>
+        <p style={body}>See the <Link to="/hong-kong/mot-maintenance" style={{ color: "#0d9488" }}>HK MOT & Maintenance guide</Link> for the full inspection process, approved centre list, and what to expect.</p>
 
         <h2 style={h2}>Watch-outs</h2>
         <div style={{ background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 10, padding: 24, margin: "16px 0 36px" }}>
@@ -190,9 +190,9 @@ export default function HKGarageFinder() {
           <p style={{ margin: "0 0 12px", fontWeight: 700, fontSize: 15, color: "#1e3a5f" }}>Related guides</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {[
-              ["/hongkong/mot-maintenance", "MOT & Maintenance — full TD inspection guide"],
-              ["/hongkong/buying-guide", "Hong Kong Buying Guide — how to buy a used car"],
-              ["/hongkong/insurance-guide", "Hong Kong Insurance Guide — getting covered"],
+              ["/hong-kong/mot-maintenance", "MOT & Maintenance — full TD inspection guide"],
+              ["/hong-kong/buying-guide", "Hong Kong Buying Guide — how to buy a used car"],
+              ["/hong-kong/insurance-guide", "Hong Kong Insurance Guide — getting covered"],
             ].map(([to, label]) => (
               <Link key={to} to={to} style={{ color: "#0d9488", fontSize: 14, textDecoration: "none" }}>→ {label}</Link>
             ))}

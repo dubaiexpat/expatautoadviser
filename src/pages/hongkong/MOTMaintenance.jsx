@@ -4,7 +4,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1731960389121-bc833c0b4f24?w
 
 export default function HKMOTMaintenance() {
   return (
-    <Layout city="hk" title="MOT & Car Maintenance in Hong Kong for Expats" description="Everything expats need to know about Hong Kong car MOT: when it's required, approved inspection centres, what gets checked, and how to find a trustworthy mechanic." relatedLinks={[{ label: 'Buying Guide', to: '/hongkong/buying-guide' }, { label: 'Insurance Guide', to: '/hongkong/insurance-guide' }, { label: 'Garage Finder', to: '/hongkong/garage-finder' }]}>
+    <Layout city="hk" title="MOT & Car Maintenance in Hong Kong for Expats" description="Everything expats need to know about Hong Kong car MOT: when it's required, approved inspection centres, what gets checked, and how to find a trustworthy mechanic." relatedLinks={[{ label: 'Buying Guide', to: '/hong-kong/buying-guide' }, { label: 'Insurance Guide', to: '/hong-kong/insurance-guide' }, { label: 'Garage Finder', to: '/hong-kong/garage-finder' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Car maintenance HK" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />

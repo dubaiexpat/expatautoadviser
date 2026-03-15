@@ -141,7 +141,7 @@ export default function SGLeaseChecker() {
         <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: 18 }}>ExpatAutoAdviser</Link>
         <div style={{ display: 'flex', gap: 10 }}>
           <Link to="/singapore" style={{ background: '#e8341c', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>ð¸ð¬ Singapore</Link>
-          <Link to="/hongkong" style={{ background: 'rgba(255,255,255,0.12)', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>ð­ð° Hong Kong</Link>
+          <Link to="/hong-kong" style={{ background: 'rgba(255,255,255,0.12)', color: 'white', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}>ð­ð° Hong Kong</Link>
         </div>
       </nav>
 

@@ -21,7 +21,7 @@ const faqItems = [
 
 export default function HKShouldIGetACar() {
   return (
-    <Layout city="hk" active="Should I Get a Car?" relatedLinks={[{ label: 'Leasing Guide', to: '/hongkong/leasing-guide' }, { label: 'Buying Guide', to: '/hongkong/buying-guide' }, { label: 'FRT Tax Explained', to: '/hongkong/frt-tax-explained' }, { label: 'Cost Calculator', to: '/hongkong/calculators' }]}>
+    <Layout city="hk" active="Should I Get a Car?" relatedLinks={[{ label: 'Leasing Guide', to: '/hong-kong/leasing-guide' }, { label: 'Buying Guide', to: '/hong-kong/buying-guide' }, { label: 'FRT Tax Explained', to: '/hong-kong/frt-tax-explained' }, { label: 'Cost Calculator', to: '/hong-kong/calculators' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Hong Kong streets" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />

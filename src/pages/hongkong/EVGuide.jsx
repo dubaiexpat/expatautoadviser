@@ -5,7 +5,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w
 
 export default function HKEVGuide() {
   return (
-    <Layout city="hk" title="Electric Vehicles in Hong Kong: Expat Guide" description="EV buying and ownership in Hong Kong for expats: FRT concessions, One-for-One Replacement Scheme, charging infrastructure, popular EV models, and whether an EV makes sense for you." relatedLinks={[{ label: 'Buying Guide', to: '/hongkong/buying-guide' }, { label: 'Leasing Guide', to: '/hongkong/leasing-guide' }, { label: 'FRT Tax Explained', to: '/hongkong/frt-tax-explained' }]}>
+    <Layout city="hk" title="Electric Vehicles in Hong Kong: Expat Guide" description="EV buying and ownership in Hong Kong for expats: FRT concessions, One-for-One Replacement Scheme, charging infrastructure, popular EV models, and whether an EV makes sense for you." relatedLinks={[{ label: 'Buying Guide', to: '/hong-kong/buying-guide' }, { label: 'Leasing Guide', to: '/hong-kong/leasing-guide' }, { label: 'FRT Tax Explained', to: '/hong-kong/frt-tax-explained' }]}>
       <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="EV Hong Kong" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
@@ -23,7 +23,7 @@ export default function HKEVGuide() {
 
         <h2 style={h2}>FRT concessions for EVs</h2>
         <p style={body}>Battery electric vehicles receive a First Registration Tax (FRT) concession under the government's EV promotion policy. Historically, EVs have benefited from a full FRT waiver, though the scheme has evolved. The current arrangement (extended to 31 March 2026) provides two tiers: under the <strong>One-for-One Replacement Scheme</strong> (scrapping an old petrol car), eligible buyers receive an FRT concession of up to <strong>HKD $172,500</strong> on EVs priced at or below HK$500,000. For general new EV purchases without a trade-in, the concession is up to <strong>HKD $58,500</strong>. EVs priced above HK$500,000 do not qualify.</p>
-        <p style={body}>Verify the latest concession amount at the <strong>Environment Bureau (enb.gov.hk)</strong> or Transport Department before purchasing, as policy details change periodically. See the <Link to="/hongkong/frt-explained" style={{color:"#0d9488"}}>FRT Explainer</Link> for background on how FRT is calculated.</p>
+        <p style={body}>Verify the latest concession amount at the <strong>Environment Bureau (enb.gov.hk)</strong> or Transport Department before purchasing, as policy details change periodically. See the <Link to="/hong-kong/frt-explained" style={{color:"#0d9488"}}>FRT Explainer</Link> for background on how FRT is calculated.</p>
 
         <h2 style={h2}>One-for-One Replacement Scheme</h2>
         <p style={body}>The scheme allows buyers of new EVs to receive an enhanced FRT concession, provided they simultaneously cancel (de-register) an older petrol or diesel vehicle. For expats buying new rather than used, this scheme can make the purchase economics significantly more attractive — but requires you to already own a scrappable vehicle.</p>
