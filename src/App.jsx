@@ -74,7 +74,9 @@ function ExitIntent() {
   const PATRICK_IMG = "/Firefly_GeminiFlash_picture%20of%20a%20white%2040%20year%20old%20clean%20shaven%20man%20in%20smart%20casual%20clothes%20with%20dark%20hai%20966416%20(1).png";
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99999, background: '#1a1a2e', color: '#fff', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, boxShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
+    <>
+      <style>{`@media (max-width: 768px) { .exit-intent-banner { display: none !important; } }`}</style>
+      <div className="exit-intent-banner" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99999, background: '#1a1a2e', color: '#fff', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, boxShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
       <img src={PATRICK_IMG} alt="Patrick" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
       {done ? (
         <span style={{ fontSize: 14, fontWeight: 600 }}>\u2713 You're on the list! I'll be in touch monthly.</span>
@@ -88,7 +90,8 @@ function ExitIntent() {
         </>
       )}
       <button onClick={() => setShow(false)} style={{ background: 'none', border: 'none', color: '#fff', fontSize: 18, cursor: 'pointer', opacity: 0.7, marginLeft: 'auto', flexShrink: 0 }}>\u00d7</button>
-    </div>
+      </div>
+    </>
   );
 }
 
