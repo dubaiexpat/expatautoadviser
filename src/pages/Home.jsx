@@ -111,7 +111,16 @@ const styles = `
     flex-shrink: 0;
     align-self: stretch;
   }
-  .patrick-strip {
+  
+      .seo-about{max-width:900px;margin:0 auto;padding:48px 24px;color:#ccc;text-align:center}
+      .seo-about h2{color:#fff;font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;margin-bottom:16px}
+      .seo-about p{font-size:1rem;line-height:1.7;margin-bottom:14px;color:#aaa}
+      .seo-about a{color:#e8341c;text-decoration:none}
+      .seo-about a:hover{text-decoration:underline}
+      .guide-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+      .guide-links a{background:rgba(255,255,255,0.07);padding:8px 18px;border-radius:20px;font-size:0.9rem;color:#ddd;text-decoration:none;transition:background 0.2s}
+      .guide-links a:hover{background:rgba(232,52,28,0.25);color:#fff}
+      .patrick-strip {
     background: #10131d;
     border-top: 1px solid rgba(255,255,255,0.07);
     display: flex;
@@ -158,7 +167,16 @@ const styles = `
     .city-panels { flex-direction: column; height: auto; min-height: 420px; }
     .city-panel { min-height: 200px; }
     .city-panel-divider { width: 100%; height: 2px; }
-    .patrick-strip { flex-wrap: wrap; }
+    
+      .seo-about{max-width:900px;margin:0 auto;padding:48px 24px;color:#ccc;text-align:center}
+      .seo-about h2{color:#fff;font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;margin-bottom:16px}
+      .seo-about p{font-size:1rem;line-height:1.7;margin-bottom:14px;color:#aaa}
+      .seo-about a{color:#e8341c;text-decoration:none}
+      .seo-about a:hover{text-decoration:underline}
+      .guide-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+      .guide-links a{background:rgba(255,255,255,0.07);padding:8px 18px;border-radius:20px;font-size:0.9rem;color:#ddd;text-decoration:none;transition:background 0.2s}
+      .guide-links a:hover{background:rgba(232,52,28,0.25);color:#fff}
+      .patrick-strip { flex-wrap: wrap; }
     .nl-form { width: 100%; }
     .nl-input { flex: 1; width: auto; }
   }
@@ -222,7 +240,24 @@ export default function Home() {
         />
       </div>
 
-      {/* Patrick strip */}
+      
+        {/* SEO content section */}
+        <div className="seo-about">
+          <h2>Free Car Guides for Expats in Singapore and Hong Kong</h2>
+          <p>Moving to a new country is complicated enough without trying to figure out whether to lease or buy a car, what insurance you actually need, or how the local tax system works. ExpatAutoAdviser was built by expats who have been through it, and every guide is written to give you clear, practical answers without the jargon.</p>
+          <p>In Singapore, we cover everything from the COE bidding system and leasing costs to EV incentives and licence conversion. In Hong Kong, our guides walk you through first registration tax, tunnel tolls, maintenance requirements, and how to find an expat-friendly garage. Whether you are weighing up the cost of car ownership or just need to know if you can drive on your current licence, there is a guide for that.</p>
+          <div className="guide-links">
+            <Link to="/singapore/leasing-guide">SG Leasing Guide</Link>
+            <Link to="/singapore/buying-guide">SG Buying Guide</Link>
+            <Link to="/singapore/insurance-guide">SG Insurance</Link>
+            <Link to="/singapore/should-i-get-a-car">Do I Need a Car in SG?</Link>
+            <Link to="/hong-kong/buying-guide">HK Buying Guide</Link>
+            <Link to="/hong-kong/leasing-guide">HK Leasing Guide</Link>
+            <Link to="/hong-kong/frt-tax-explained">HK First Reg Tax</Link>
+            <Link to="/hong-kong/should-i-get-a-car">Do I Need a Car in HK?</Link>
+          </div>
+        </div>
+        {/* Patrick strip */}
       <div className="patrick-strip">
         <img src={PATRICK_IMG} alt="Patrick" className="patrick-img" />
         <div className="patrick-text">

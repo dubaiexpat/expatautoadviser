@@ -269,7 +269,7 @@ export default function Singapore() {
       <nav className="sg-nav">
         <div className="sg-nav-left">
           <Link to="/" className="sg-logo">Expat<span>Auto</span>Adviser</Link>
-          <span className="sg-city-badge">🇸🇬 SINGAPORE</span>
+          <span className="sg-city-badge">SINGAPORE</span>
         </div>
         <Link to="/hongkong" className="sg-switch-btn">
           🇭🇰 Switch to Hong Kong →
@@ -312,7 +312,7 @@ export default function Singapore() {
       <div className="sg-main" style={{ display: "flex", alignItems: "flex-start", gap: 0 }}>
         <aside className="sg-aside-desktop" style={{ width: "185px", minWidth: "175px", flexShrink: 0, borderRight: "1px solid rgba(239,68,68,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
           <style>{`.sg-nav-link { display:block; padding:7px 14px; font-size:0.82rem; color:#9ca3af; text-decoration:none; margin-bottom:1px; border-left:3px solid transparent; transition:color 0.15s,border-color 0.15s,background 0.15s; } .sg-nav-link:hover { color:#e5e7eb; border-left-color:#ef4444; background:rgba(239,68,68,0.06); }`}</style>
-          <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#ef4444", padding:"20px 14px 12px" }}>🇸🇬 Singapore Guides</div>
+          <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#ef4444", padding:"20px 14px 12px" }}>Singapore Guides</div>
           {SG_GUIDES.map(g => (
             <Link key={g.to} to={g.to} className="sg-nav-link">{g.label}</Link>
           ))}
@@ -324,7 +324,7 @@ export default function Singapore() {
         {/* Hero CTA */}
         <div className="sg-hero">
           <div className="sg-hero-text">
-            <h1>🇸🇬 Singapore Car Guides for Expats</h1>
+            <h1>Singapore Car Guides for Expats</h1>
             <p>Plain-English guides to COE, leasing, insurance and more — written by expats who've done it. Get the free PDF guide sent to your inbox.</p>
           </div>
           {submitted ? (
