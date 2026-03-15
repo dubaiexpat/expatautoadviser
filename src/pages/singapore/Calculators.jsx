@@ -93,7 +93,7 @@ function COECalculator() {
   const [interestRate, setInterestRate] = useState(2.5);
   const [downPctInput, setDownPctInput] = useState(30);
 
-  const COE_DEFAULTS = { A: 108000, B: 114000, E: 112000 };
+  const COE_DEFAULTS = { A: 108000, B: 114000, E: 115000 };
 
   const handleCategoryChange = (cat) => {
     setCoeCategory(cat);

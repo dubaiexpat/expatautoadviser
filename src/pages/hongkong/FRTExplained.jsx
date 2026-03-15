@@ -44,7 +44,7 @@ export default function HKFRTExplained() {
         </div>
 
         <h2 style={h2}>EV concessions</h2>
-        <p style={body}>Battery electric vehicles benefit from FRT concessions under the One-for-One Replacement Scheme, providing a concession of up to <strong>HKD $58,500</strong> per vehicle. <strong style={{color:"#CC0000"}}>Note: this scheme expires on 31 March 2026.</strong> After that date, no FRT concessions will apply to EVs unless a replacement is announced. Verify the latest status at td.gov.hk.</p>
+        <p style={body}>Battery electric vehicles benefit from FRT concessions. There are two tiers: under the <strong>One-for-One Replacement Scheme</strong> (where you scrap an existing vehicle when buying a new EV), the concession is up to <strong>HKD $172,500</strong>. Without a trade-in, the <strong>general EV concession</strong> is up to <strong>HKD $58,500</strong>. <strong style={{color:"#CC0000"}}>Note: this scheme expires on 31 March 2026.</strong> After that date, no FRT concessions will apply to EVs unless a replacement is announced. Verify the latest status at td.gov.hk.</p>
 
         <h2 style={h2}>Annual vehicle licence fees</h2>
         <div style={{background:"white",border:"1px solid #e5e7eb",borderRadius:10,overflow:"hidden",margin:"16px 0 28px"}}>

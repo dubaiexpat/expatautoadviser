@@ -55,7 +55,7 @@ export default function SGBuyingGuide() {
           <tbody>
             {[
               ["Car price (OMV)", "SGD $25k–$60k+", "Open Market Value set by Singapore Customs"],
-              ["COE (Category B)", "SGD $95k–$125k", "Fluctuates every 2 weeks — check LTA"],
+              ["COE (Category B)", "SGD $100k–$130k", "Fluctuates every 2 weeks — check LTA"],
               ["ARF (Additional Registration Fee)", "SGD $17k–$60k+", "100–320% of OMV depending on value"],
               ["Excise duty", "~20% of OMV", ""],
               ["GST (9%)", "On OMV + duties", ""],
