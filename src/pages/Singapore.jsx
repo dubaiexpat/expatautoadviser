@@ -5,13 +5,13 @@ const PATRICK_IMG = '/patrick.png';
 
 // COE data — update after each bidding exercise (held twice monthly)
 const COE_DATA = {
-  updatedAt: 'Mar 2025',
+  updatedAt: 'Mar 2026',
   categories: [
-    { cat: 'Cat A', label: 'Cars ≤1600cc & ≤130bhp', price: '$97,801', change: '+2.1%', up: true },
-    { cat: 'Cat B', label: 'Cars >1600cc or >130bhp', price: '$113,001', change: '-1.4%', up: false },
-    { cat: 'Cat C', label: 'Goods vehicles & buses', price: '$72,003', change: '+0.8%', up: true },
-    { cat: 'Cat D', label: 'Motorcycles', price: '$13,001', change: '-3.2%', up: false },
-    { cat: 'Cat E', label: 'Open (any vehicle)', price: '$121,001', change: '+1.6%', up: true },
+    { cat: 'Cat A', label: 'Cars ≤1600cc & ≤130bhp', price: '$108,220', change: '+1.6%', up: true },
+    { cat: 'Cat B', label: 'Cars >1600cc or >130bhp', price: '$114,002', change: '+8.6%', up: true },
+    { cat: 'Cat C', label: 'Goods vehicles & buses', price: '$76,000', change: '+1.3%', up: true },
+    { cat: 'Cat D', label: 'Motorcycles', price: '$8,602', change: '+7.7%', up: true },
+    { cat: 'Cat E', label: 'Open (any vehicle)', price: '$114,890', change: '+1.8%', up: true },
   ],
 };
 
