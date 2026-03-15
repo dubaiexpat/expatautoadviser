@@ -33,7 +33,7 @@ const styles = `
   .eaa-tagline-wrap {
     padding-top: 56px;
     text-align: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
     background: #0a0c12;
   }
   .eaa-tagline-wrap h1 {
@@ -41,7 +41,7 @@ const styles = `
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.15;
-    padding: 1.5rem 1rem 0.4rem;
+    padding: 0.8rem 1rem 0.2rem;
     color: #f0f2f8;
   }
   .eaa-tagline-wrap p {
@@ -51,8 +51,8 @@ const styles = `
   }
   .city-panels {
     display: flex;
-    height: calc(100vh - 56px - 88px);
-    min-height: 340px;
+    height: 300px;
+    min-height: 240px;
   }
   .city-panel {
     flex: 1;
@@ -112,7 +112,7 @@ const styles = `
     align-self: stretch;
   }
   
-      .seo-about{max-width:900px;margin:0 auto;padding:48px 24px;color:#ccc;text-align:center}
+      .seo-about{max-width:900px;margin:0 auto;padding:24px 24px;color:#ccc;text-align:center}
       .seo-about h2{color:#fff;font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;margin-bottom:16px}
       .seo-about p{font-size:1rem;line-height:1.7;margin-bottom:14px;color:#aaa}
       .seo-about a{color:#e8341c;text-decoration:none}
@@ -164,11 +164,11 @@ const styles = `
   }
   .nl-btn:hover { background: #c42a16; }
   @media (max-width: 640px) {
-    .city-panels { flex-direction: column; height: auto; min-height: 420px; }
-    .city-panel { min-height: 200px; }
+    .city-panels { flex-direction: column; height: auto; min-height: 280px; }
+    .city-panel { min-height: 140px; }
     .city-panel-divider { width: 100%; height: 2px; }
     
-      .seo-about{max-width:900px;margin:0 auto;padding:48px 24px;color:#ccc;text-align:center}
+      .seo-about{max-width:900px;margin:0 auto;padding:24px 24px;color:#ccc;text-align:center}
       .seo-about h2{color:#fff;font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;margin-bottom:16px}
       .seo-about p{font-size:1rem;line-height:1.7;margin-bottom:14px;color:#aaa}
       .seo-about a{color:#e8341c;text-decoration:none}
@@ -208,7 +208,7 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, to }) {
 
 export default function Home() {
   return (
-    <div className="eaa-home" style={{ minHeight: "100vh", background: "#0a0c12" }}>
+    <div className="eaa-home" style={{ minHeight: "auto", background: "#0a0c12" }}>
       <style>{styles}</style>
 
 

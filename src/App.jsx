@@ -130,6 +130,8 @@ export function AppRoutes() {
       <Route path="/hongkong/buying-guide" element={<Navigate to="/hong-kong/buying-guide" replace />} />
       <Route path="/hongkong/leasing-guide" element={<Navigate to="/hong-kong/leasing-guide" replace />} />
       <Route path="/hongkong/frt-tax-explained" element={<Navigate to="/hong-kong/frt-tax-explained" replace />} />
+          <Route path="/hong-kong/frt-explained" element={<Navigate to="/hong-kong/frt-tax-explained" replace />} />
+          <Route path="/hongkong/frt-explained" element={<Navigate to="/hong-kong/frt-tax-explained" replace />} />
       <Route path="/hongkong/insurance-guide" element={<Navigate to="/hong-kong/insurance-guide" replace />} />
       <Route path="/hongkong/mot-maintenance" element={<Navigate to="/hong-kong/mot-maintenance" replace />} />
       <Route path="/hongkong/licence-conversion" element={<Navigate to="/hong-kong/licence-conversion" replace />} />
