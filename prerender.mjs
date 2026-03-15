@@ -17,18 +17,18 @@ const ROUTES = [
   '/singapore/calculators',
   '/singapore/garage-finder',
     '/singapore/lease-checker',
-  '/hongkong',
-  '/hongkong/should-i-get-a-car',
-  '/hongkong/buying-guide',
-  '/hongkong/leasing-guide',
-  '/hongkong/frt-tax-explained',
-  '/hongkong/insurance-guide',
-  '/hongkong/mot-maintenance',
-  '/hongkong/licence-conversion',
-  '/hongkong/ev-guide',
-  '/hongkong/calculators',
-  '/hongkong/garage-finder',
-    '/hongkong/lease-checker',
+  '/hong-kong',
+  '/hong-kong/should-i-get-a-car',
+  '/hong-kong/buying-guide',
+  '/hong-kong/leasing-guide',
+  '/hong-kong/frt-tax-explained',
+  '/hong-kong/insurance-guide',
+  '/hong-kong/mot-maintenance',
+  '/hong-kong/licence-conversion',
+  '/hong-kong/ev-guide',
+  '/hong-kong/calculators',
+  '/hong-kong/garage-finder',
+    '/hong-kong/lease-checker',
 ];
 
 const META = {
@@ -150,12 +150,12 @@ const META = {
     desc: `Find reliable, English-speaking garages and service centres in Singapore. Recommended by expats for fair pricing and quality work.`,
     type: `website`,
   },
-  '/hongkong': {
+  '/hong-kong': {
     title: `Hong Kong Expat Car Guide — Lease, Buy or Skip?`,
     desc: `Everything expats need to know about getting a car in Hong Kong. FRT tax, leasing vs buying, insurance, and practical advice for expatriates.`,
     type: `website`,
   },
-  '/hongkong/should-i-get-a-car': {
+  '/hong-kong/should-i-get-a-car': {
     title: `Should I Get a Car in Hong Kong? Honest Expat Advice`,
     desc: `Is a car worth it in Hong Kong? This guide covers real costs, the MTR vs driving trade-off, and who actually benefits from owning a car as an expat in HK.`,
     type: `article`,
@@ -174,7 +174,7 @@ const META = {
       },
     ],
   },
-  '/hongkong/buying-guide': {
+  '/hong-kong/buying-guide': {
     title: `Buying a Car in Hong Kong as an Expat — Full Guide`,
     desc: `Everything you need to know about buying a car in Hong Kong. First Registration Tax explained, dealers, financing, and whether buying makes sense for expats.`,
     type: `article`,
@@ -189,7 +189,7 @@ const META = {
       },
     ],
   },
-  '/hongkong/leasing-guide': {
+  '/hong-kong/leasing-guide': {
     title: `How to Lease a Car in Hong Kong — Expat Guide`,
     desc: `A practical guide to leasing a car in Hong Kong as an expat. Typical costs, what to look for in a lease agreement, and expat-friendly leasing companies.`,
     type: `article`,
@@ -204,7 +204,7 @@ const META = {
       },
     ],
   },
-  '/hongkong/frt-tax-explained': {
+  '/hong-kong/frt-tax-explained': {
     title: `Hong Kong First Registration Tax (FRT) Explained`,
     desc: `A clear explanation of Hong Kong First Registration Tax for expats. How FRT is calculated, current rates, EV exemptions, and how it affects the cost of buying a car.`,
     type: `article`,
@@ -219,7 +219,7 @@ const META = {
       },
     ],
   },
-  '/hongkong/insurance-guide': {
+  '/hong-kong/insurance-guide': {
     title: `Car Insurance in Hong Kong — Expat Guide`,
     desc: `Compare car insurance options in Hong Kong as an expat. Third-party vs comprehensive coverage, NCD, and tips for getting a fair quote.`,
     type: `article`,
@@ -234,7 +234,7 @@ const META = {
       },
     ],
   },
-  '/hongkong/mot-maintenance': {
+  '/hong-kong/mot-maintenance': {
     title: `Car Maintenance and Inspection in Hong Kong — Expat Guide`,
     desc: `What expats need to know about car maintenance, roadworthiness testing, and finding reliable garages in Hong Kong.`,
     type: `article`,
@@ -249,7 +249,7 @@ const META = {
       },
     ],
   },
-  '/hongkong/licence-conversion': {
+  '/hong-kong/licence-conversion': {
     title: `Converting Your Driving Licence in Hong Kong — Expat Guide`,
     desc: `How to convert a foreign driving licence to a Hong Kong licence. Which licences qualify, the process, costs, and how long it takes.`,
     type: `article`,
@@ -264,7 +264,7 @@ const META = {
       },
     ],
   },
-  '/hongkong/ev-guide': {
+  '/hong-kong/ev-guide': {
     title: `Electric Cars in Hong Kong — Expat EV Guide`,
     desc: `Thinking about an electric car in Hong Kong? This guide covers FRT concessions, charging infrastructure, and which EVs suit expat life in HK.`,
     type: `article`,
@@ -279,12 +279,12 @@ const META = {
       },
     ],
   },
-  '/hongkong/calculators': {
+  '/hong-kong/calculators': {
     title: `Hong Kong Car Cost Calculator — Lease vs Buy`,
     desc: `Use our free calculator to compare the true cost of leasing vs buying a car in Hong Kong. Includes FRT, insurance, and running costs.`,
     type: `website`,
   },
-  '/hongkong/garage-finder': {
+  '/hong-kong/garage-finder': {
     title: `Expat-Friendly Garages in Hong Kong`,
     desc: `Find reliable, English-speaking garages and service centres in Hong Kong. Recommended by expats for fair pricing and quality work.`,
     type: `website`,
@@ -308,7 +308,7 @@ const META = {
       },
     ],
   },
-  '/hongkong/lease-checker': {
+  '/hong-kong/lease-checker': {
     title: `Hong Kong Lease Checker — Is Your Car Lease a Fair Deal?`,
     desc: `Check if your Hong Kong car lease is fairly priced. Compare your lease terms against current HK market rates from real expat data.`,
     type: `website`,
