@@ -196,7 +196,7 @@ export default function Home() {
 
       {/* Tagline */}
       <div className="eaa-tagline-wrap">
-          <div className="home-brand-hero">expat<span>auto</span>adviser</div>
+          <div className="home-brand-hero">Expat<span>Auto</span>Adviser</div>
         <h1>Your Car Guide for Expat Life</h1>
         <p>Singapore · Hong Kong</p>
       </div>
