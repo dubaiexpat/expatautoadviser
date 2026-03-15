@@ -230,6 +230,8 @@ const styles = `
     .sg-coe-grid { grid-template-columns: repeat(2, 1fr); }
     .sg-aside-desktop { display: none !important; }
     .sg-switch-btn { display: none !important; }
+      .sg-city-badge { display: none !important; }
+      .sg-logo { font-size: 1.1rem !important; }
     .sg-guides-toggle { display: flex !important; }
     .sg-mobile-drawer { display: block; }
     .sg-mobile-backdrop { display: block; }

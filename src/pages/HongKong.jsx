@@ -227,6 +227,8 @@ const styles = `
     .hk-frt-grid { grid-template-columns: repeat(2, 1fr); }
     .hk-aside-desktop { display: none !important; }
     .hk-switch-btn { display: none !important; }
+      .hk-city-badge { display: none !important; }
+      .hk-logo { font-size: 1.1rem !important; }
     .hk-guides-toggle { display: flex !important; }
     .hk-mobile-drawer { display: block; }
     .hk-mobile-backdrop { display: block; }

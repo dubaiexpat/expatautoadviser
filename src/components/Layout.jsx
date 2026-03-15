@@ -165,7 +165,7 @@ export default function Layout({ city, children, relatedLinks }) {
         }}
       >
         <Link to="/" style={{ textDecoration: 'none' }}>
-          <BrandName size={16} />
+          <BrandName size={20} />
         </Link>
         <button
           onClick={() => setMobileOpen(o => !o)}
