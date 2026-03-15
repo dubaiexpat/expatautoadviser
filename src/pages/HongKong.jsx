@@ -225,6 +225,11 @@ const styles = `
   @media (max-width: 640px) {
     .hk-guides-grid { grid-template-columns: 1fr; }
     .hk-frt-grid { grid-template-columns: repeat(2, 1fr); }
+    .hk-aside-desktop { display: none !important; }
+    .hk-switch-btn { display: none !important; }
+    .hk-guides-toggle { display: flex !important; }
+    .hk-mobile-drawer { display: block; }
+    .hk-mobile-backdrop { display: block; }
     .hk-cta-form { width: 100%; }
     .hk-cta-input { flex: 1; width: auto; }
     .hk-hero { padding: 1.2rem; }
