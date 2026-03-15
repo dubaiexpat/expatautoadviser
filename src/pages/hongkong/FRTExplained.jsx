@@ -14,7 +14,6 @@ export default function HKFRTExplained() {
       </div>
       <div style={{maxWidth:760}}>
         <p style={{color:"#0d9488",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
-git log --oneline -3
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>Hong Kong FRT &amp; Tax Explained</h1>
         <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>The First Registration Tax is why new cars in Hong Kong cost roughly double what you'd pay elsewhere. Here's exactly how it works.</p>
 
@@ -41,7 +40,7 @@ git log --oneline -3
               <span style={{color:"#374151"}}>{c}</span><span style={{fontWeight:600,color:"#134e4a"}}>{r}</span>
             </div>
           ))}
-          <p style={{margin:"16px 0 0",fontSize:14,color:"#134e4a"}}><strong>Total cost of car = HKD $320,000 + $192,500 = HKD $512,500</strong></p>
+          <p style={{margin:"16px 0 0",fontSize:14,color:"#134e4a"}}><strong>Total cost of car = HKD $320,000 + $221,000 = HKD $541,000</strong></p>
         </div>
 
         <h2 style={h2}>EV concessions</h2>
