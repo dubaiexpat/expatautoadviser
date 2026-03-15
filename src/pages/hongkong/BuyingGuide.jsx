@@ -6,7 +6,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1522962172216-3cffc9debf30?w
 export default function HKBuyingGuide() {
   return (
     <Layout city="hk" title="Hong Kong Car Buying Guide for Expats" description="How to buy a car in Hong Kong as an expat: new vs used, avoiding FRT, step-by-step process, Transport Department registration, documents needed, and where to find good used cars." relatedLinks={[{ label: 'FRT Tax Explained', to: '/hongkong/frt-tax-explained' }, { label: 'Insurance Guide', to: '/hongkong/insurance-guide' }, { label: 'MOT & Maintenance', to: '/hongkong/mot-maintenance' }, { label: 'Licence Conversion', to: '/hongkong/licence-conversion' }]}>
-      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Sports car Hong Kong" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>

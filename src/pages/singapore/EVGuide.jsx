@@ -23,7 +23,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w
 export default function SGEVGuide() {
   return (
     <Layout city="sg" title="Electric Vehicles in Singapore: Complete Expat Guide (2025–26)" description="Should you lease an EV in Singapore? EV incentives, charging infrastructure, model comparison, real costs, and practical advice for expats." relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }]}>
-      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="EV Singapore" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>

@@ -5,7 +5,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1517449905587-f80695d63356?w
 export default function HKInsuranceGuide() {
   return (
     <Layout city="hk" title="Car Insurance in Hong Kong for Expats" description="Car insurance in Hong Kong explained for expats: third-party vs comprehensive, transferring your No Claims Bonus from overseas, typical premiums, and recommended brokers." relatedLinks={[{ label: 'Leasing Guide', to: '/hongkong/leasing-guide' }, { label: 'Buying Guide', to: '/hongkong/buying-guide' }, { label: 'MOT & Maintenance', to: '/hongkong/mot-maintenance' }]}>
-      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Car interior Hong Kong" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>

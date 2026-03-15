@@ -23,7 +23,7 @@ export default function HKNewArrival() {
       <SEOMeta title="Moving to Hong Kong: Your Expat Car Guide | ExpatAutoAdviser" description="New to Hong Kong? Your complete car guide. Do you need a car? FRT, leasing vs buying, first steps for new arrivals." />
       <FAQSchema faqs={faqItems} />
 
-      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Hong Kong harbour and skyline" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 50%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>

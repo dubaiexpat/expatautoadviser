@@ -5,7 +5,7 @@ const HERO_IMG = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w
 export default function SGLicenceConversion() {
   return (
     <Layout city="sg" title="Driving Licence Conversion in Singapore for Expats" description="Step-by-step guide to converting your foreign driving licence in Singapore. All foreign licence holders must pass the Basic Theory Test (BTT). Learn the process, costs and timing." relatedLinks={[{ label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' }, { label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }]}>
-      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: "0 0 12px 12px", marginBottom: 32, position: "relative" }}>
+      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Singapore roads and traffic" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>
