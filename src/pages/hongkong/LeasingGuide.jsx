@@ -121,7 +121,7 @@ export default function HKLeasingGuide() {
       <p style={body}>Parking is expensive and scarce in urban areas. Monthly parking in Central or Wan Chai can cost HKD $4,000–$8,000 per month. If you live in a building with allocated parking this is less of an issue, but it's worth checking before you commit to a car.</p>
 
       <h2 style={h2}>Fuel costs</h2>
-      <p style={body}>Petrol in Hong Kong is among the most expensive in the world — typically HKD $21–$24 per litre. A typical 2,000 km/month driver will spend HKD $2,500–$4,000/month on fuel. Electric vehicles are gaining traction; home charger installation is possible in most private buildings with management approval.</p>
+      <p style={body}>Petrol in Hong Kong is among the most expensive in the world — typically HKD $29–$31 per litre. A typical 2,000 km/month driver will spend HKD $3,500–$5,000/month on fuel. Electric vehicles are gaining traction; home charger installation is possible in most private buildings with management approval.</p>
 
       <AffiliateBox
         city="hk"

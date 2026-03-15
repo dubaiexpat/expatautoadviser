@@ -11,7 +11,7 @@ const EV_MODELS = [
 ];
 
 const CHARGING_NETWORKS = [
-  { name: "SP Group (BlueSG / SP Charge)", speed: "Level 2 (7–22 kW)", locations: "4,000+ points across Singapore — HDBs, condos, commercial buildings", note: "Largest network. Integrated with SP Utilities app." },
+  { name: "SP Group (BlueSG / SP Charge)", speed: "Level 2 (7–22 kW)", locations: "6,500+ points across Singapore — HDBs, condos, commercial buildings", note: "Largest network. Integrated with SP Utilities app." },
   { name: "Tesla Supercharger", speed: "V3: up to 250 kW", locations: "30+ Supercharger stations; major malls, Changi, Marina Bay", note: "Tesla owners only. By far the most reliable and fastest for compatible vehicles." },
   { name: "ChargeEV", speed: "Level 2 to DC Fast (50 kW)", locations: "Commercial buildings, hotels, selected carparks", note: "Subscription or pay-per-use." },
   { name: "Greenlots / Shell Recharge", speed: "DC Fast (50–150 kW)", locations: "Shell stations and selected sites", note: "Good for top-ups on longer journeys. Pay-per-use via app." },
@@ -36,7 +36,7 @@ export default function SGEVGuide() {
         <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 40 }}>EVs are increasingly common in Singapore lease fleets and the infrastructure has improved dramatically since 2022. Here's whether an EV makes sense for your situation — including the real costs, charging realities, and which models to consider.</p>
 
         <h2 style={h2}>Why EVs make particular sense in Singapore</h2>
-        <p style={body}>Singapore is one of the most EV-friendly countries in the world for practical use. The island is small (roughly 50km end-to-end), so range anxiety is almost non-existent — even a 300 km EV will handle a full week of driving comfortably. Petrol costs around <strong>SGD $3.00–$3.30/litre</strong>, making charging significantly cheaper per kilometre.</p>
+        <p style={body}>Singapore is one of the most EV-friendly countries in the world for practical use. The island is small (roughly 50km end-to-end), so range anxiety is almost non-existent — even a 300 km EV will handle a full week of driving comfortably. Petrol costs around <strong>SGD $3.20–$3.50/litre</strong>, making charging significantly cheaper per kilometre.</p>
         <p style={body}>For expats on a lease, the economics are increasingly compelling: EV leases are priced more competitively than you'd expect given the underlying car cost, partly because leasing companies benefit from government incentives. Insurance and road tax are also bundled in most leases, removing the usual EV cost premium from your monthly calculation.</p>
 
         <h2 style={h2}>Singapore's EV policy and incentives</h2>
@@ -44,7 +44,7 @@ export default function SGEVGuide() {
           {[
             ["2030 ICE phase-out", "Singapore has committed to phasing out new petrol and diesel car registrations by 2030. This is driving rapid EV adoption and ensuring a growing charging network."],
             ["EV Early Adoption Incentive (EEAI)", "The EV Early Adoption Incentive (EEAI) provides a 45% rebate on the Additional Registration Fee (ARF), capped at SGD $15,000 for 2025 registrations (cap reduces to $7,500 in 2026). The scheme has been extended to 31 December 2026 and will not be renewed thereafter. This significantly reduces upfront EV purchase costs. Leasing companies benefit from related schemes that flow through to competitive lease pricing."],
-            ["VES (Vehicle Emissions Scheme)", "EVs attract the highest VES rebate tier (up to SGD $25,000 rebate on registration). Combined incentives make EV total costs of ownership increasingly competitive with petrol equivalents."],
+            ["VES (Vehicle Emissions Scheme)", "EVs attract the highest VES rebate tier (up to SGD $22,500 rebate on registration (2026)). Combined incentives make EV total costs of ownership increasingly competitive with petrol equivalents."],
             ["EV road tax", "EV road tax in Singapore is calculated on the car's peak motor power output (kW). A typical mid-range EV (e.g. BYD Atto 3 at ~150 kW) pays roughly SGD $400–$500/year; a more powerful model (e.g. Tesla Model 3 Long Range at ~325 kW) around SGD $1,000–$1,300/year. Use the LTA road tax calculator for your specific model. Leases bundle road tax, so the rate is less relevant for lessees."],
           ].map(([heading, detail]) => (
             <div key={heading} style={{ marginBottom: 18, paddingBottom: 18, borderBottom: "1px solid #f3f4f6" }}>

@@ -47,7 +47,7 @@ export default function HKNewArrival() {
       <p style={body}><strong>You probably don't need a car if:</strong> You're in Central, Wan Chai, Causeway Bay, Admiralty, or any dense urban MTR-connected area.</p>
 
       <h2 style={h2}>The FRT trap: why leasing beats buying</h2>
-      <p style={body}>Hong Kong's First Registration Tax (FRT) adds 100&ndash;115% to the cost of any new car. A HKD $200,000 car costs HKD $400,000&ndash;$430,000 all-in. This is why almost no expats buy new cars &mdash; they lease.</p>
+      <p style={body}>Hong Kong's First Registration Tax (FRT) adds 46&ndash;132% to the cost of any new car. A HKD $200,000 car costs HKD $400,000&ndash;$430,000 all-in. This is why almost no expats buy new cars &mdash; they lease.</p>
 
       <h2 style={h2}>Quick reading order for new arrivals</h2>
       <div style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 10, padding: "20px 24px", margin: "24px 0" }}>

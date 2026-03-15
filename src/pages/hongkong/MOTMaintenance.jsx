@@ -15,10 +15,10 @@ export default function HKMOTMaintenance() {
       <div style={{maxWidth:760}}>
         <p style={{color:"#0d9488",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>MOT &amp; Car Maintenance in Hong Kong</h1>
-        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Cars aged 7 years or older need an annual inspection in Hong Kong. Here's what's involved — and how to find a mechanic you can actually trust.</p>
+        <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Cars aged 6 years or older need an annual inspection in Hong Kong. Here's what's involved — and how to find a mechanic you can actually trust.</p>
 
         <h2 style={h2}>When is an MOT (Annual Inspection) required?</h2>
-        <p style={body}>In Hong Kong, private cars that are <strong>6 years old or older</strong> must pass an Annual Vehicle Inspection before their Vehicle Licence can be renewed. The inspection is typically due annually from the 7th year of registration. This is roughly equivalent to the UK MOT.</p>
+        <p style={body}>In Hong Kong, private cars that are <strong>6 years old or older</strong> must pass an Annual Vehicle Inspection before their Vehicle Licence can be renewed. The inspection is typically due annually from the 6th year of registration. This is roughly equivalent to the UK MOT.</p>
         <div style={{background:"#f0fdfa",border:"1px solid #99f6e4",borderRadius:10,padding:20,margin:"16px 0 28px"}}>
           <p style={{margin:0,fontSize:14,color:"#134e4a"}}><strong>Practical tip:</strong> When buying a used car aged 6+, always check when the inspection is next due. If it's overdue or about to expire, factor the cost of a pass — or potential remediation work — into your purchase price negotiation.</p>
         </div>

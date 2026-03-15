@@ -14,6 +14,7 @@ export default function HKFRTExplained() {
       </div>
       <div style={{maxWidth:760}}>
         <p style={{color:"#0d9488",fontWeight:600,fontSize:13,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:8}}>Hong Kong</p>
+git log --oneline -3
         <h1 style={{fontSize:36,fontWeight:800,color:"#1e3a5f",marginBottom:16,lineHeight:1.2}}>Hong Kong FRT &amp; Tax Explained</h1>
         <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>The First Registration Tax is why new cars in Hong Kong cost roughly double what you'd pay elsewhere. Here's exactly how it works.</p>
 
@@ -35,7 +36,7 @@ export default function HKFRTExplained() {
 
         <h2 style={h2}>Worked example: Toyota RAV4 (taxable value HKD $320,000)</h2>
         <div style={{background:"#f0fdfa",border:"1px solid #99f6e4",borderRadius:10,padding:24,margin:"16px 0 28px"}}>
-          {[["First $150,000 @ 40%","= HKD $60,000"],["Next $150,000 @ 75%","= HKD $112,500"],["Remaining $20,000 @ 100%","= HKD $20,000"],["Total FRT","= HKD $192,500"]].map(([c,r]) => (
+          {[["First $150,000 @ 46%","= HKD $69,000"],["Next $150,000 @ 86%","= HKD $129,000"],["Remaining $20,000 @ 115%","= HKD $23,000"],["Total FRT","= HKD $221,000"]].map(([c,r]) => (
             <div key={c} style={{display:"flex",justifyContent:"space-between",padding:"6px 0",borderBottom:"1px solid #ccfbf1",fontSize:14}}>
               <span style={{color:"#374151"}}>{c}</span><span style={{fontWeight:600,color:"#134e4a"}}>{r}</span>
             </div>
@@ -44,7 +45,7 @@ export default function HKFRTExplained() {
         </div>
 
         <h2 style={h2}>EV concessions</h2>
-        <p style={body}>Battery electric vehicles benefit from FRT concessions under the One-for-One Replacement Scheme, providing a concession of up to <strong>HKD $97,500</strong> per vehicle. Verify the current scheme details with the Transport Department (td.gov.hk) before purchasing as policy evolves.</p>
+        <p style={body}>Battery electric vehicles benefit from FRT concessions under the One-for-One Replacement Scheme, providing a concession of up to <strong>HKD $58,500</strong> per vehicle. Verify the current scheme details with the Transport Department (td.gov.hk) before purchasing as policy evolves.</p>
 
         <h2 style={h2}>Annual vehicle licence fees</h2>
         <div style={{background:"white",border:"1px solid #e5e7eb",borderRadius:10,overflow:"hidden",margin:"16px 0 28px"}}>

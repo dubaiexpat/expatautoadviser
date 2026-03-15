@@ -14,7 +14,7 @@ const faqItems = [
   { q: "Do I really need a car when I first arrive in Singapore?", a: "No \u2014 not immediately. Most new arrivals find that MRT, Grab, and taxis work fine for the first few months while you settle in and figure out where you'll live long-term." },
   { q: "When should a new expat buy or lease a car in Singapore?", a: "Once you've settled on a home location (usually after 1\u20133 months), you can assess whether a car helps your specific situation. If you're in the East, North, or West far from MRT lines, or if you have school-age kids, leasing becomes worth considering." },
   { q: "Is leasing better than buying when I first arrive?", a: "Absolutely. As a new arrival, you don't know if you'll stay 2 years or 5 years. Leasing lets you get a car without the COE risk and gives you the option to walk away when your contract ends." },
-  { q: "What costs should I expect beyond the monthly lease or purchase payment?", a: "Insurance (bundled in most leases, SGD $200\u2013400/month if separate), road tax (SGD $60\u2013100/year), fuel (SGD $200\u2013400/month), ERP tolls (SGD $0\u2013200/month), and parking (SGD $200\u2013800/month)." },
+  { q: "What costs should I expect beyond the monthly lease or purchase payment?", a: "Insurance (bundled in most leases, SGD $200\u2013400/month if separate), road tax (SGD $600\u20131,200/year), fuel (SGD $200\u2013400/month), ERP tolls (SGD $0\u2013200/month), and parking (SGD $200\u2013800/month)." },
 ];
 
 export default function SGNewArrival() {

@@ -9,24 +9,24 @@ import EmailCapture from "../../components/EmailCapture";
 // ── FRT calculation helpers ──────────────────────────────────────────────
 function calcFRT(taxableValue) {
   // FRT bands (HKD):
-  // First $150,000 @ 40%
-  // Next $150,000 @ 75%
-  // Next $200,000 @ 100%
-  // Remainder @ 115%
+  // First $150,000 @ 46%
+  // Next $150,000 @ 86%
+  // Next $200,000 @ 115%
+  // Remainder @ 132%
   if (taxableValue <= 0) return 0;
   let frt = 0;
   const t1 = Math.min(taxableValue, 150000);
-  frt += t1 * 0.40;
+  frt += t1 * 0.46;
   if (taxableValue > 150000) {
     const t2 = Math.min(taxableValue - 150000, 150000);
-    frt += t2 * 0.75;
+    frt += t2 * 0.86;
   }
   if (taxableValue > 300000) {
     const t3 = Math.min(taxableValue - 300000, 200000);
-    frt += t3 * 1.00;
+    frt += t3 * 1.15;
   }
   if (taxableValue > 500000) {
-    frt += (taxableValue - 500000) * 1.15;
+    frt += (taxableValue - 500000) * 1.32;
   }
   return Math.round(frt);
 }
@@ -128,17 +128,17 @@ function FRTCalculator() {
     if (tvNum <= 0) return [];
     const bands = [];
     const t1 = Math.min(tvNum, 150000);
-    bands.push({ range: "First HK$150,000", rate: "40%", tax: Math.round(t1 * 0.40), applicable: tvNum > 0 });
+    bands.push({ range: "First HK$150,000", rate: "46%", tax: Math.round(t1 * 0.46), applicable: tvNum > 0 });
     if (tvNum > 150000) {
       const t2 = Math.min(tvNum - 150000, 150000);
-      bands.push({ range: "Next HK$150,000", rate: "75%", tax: Math.round(t2 * 0.75), applicable: true });
+      bands.push({ range: "Next HK$150,000", rate: "86%", tax: Math.round(t2 * 0.86), applicable: true });
     }
     if (tvNum > 300000) {
       const t3 = Math.min(tvNum - 300000, 200000);
-      bands.push({ range: "Next HK$200,000", rate: "100%", tax: Math.round(t3 * 1.00), applicable: true });
+      bands.push({ range: "Next HK$200,000", rate: "132%", tax: Math.round(t3 * 1.15), applicable: true });
     }
     if (tvNum > 500000) {
-      bands.push({ range: "Remainder", rate: "115%", tax: Math.round((tvNum - 500000) * 1.15), applicable: true });
+      bands.push({ range: "Remainder", rate: "132%", tax: Math.round((tvNum - 500000) * 1.32), applicable: true });
     }
     return bands;
   }, [tvNum]);

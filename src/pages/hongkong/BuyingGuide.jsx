@@ -19,7 +19,7 @@ export default function HKBuyingGuide() {
         <p style={{fontSize:17,color:"#6b7280",lineHeight:1.7,marginBottom:40}}>Most expats who get a car in HK buy used. Here's the full process — from understanding FRT to picking up your keys.</p>
 
         <h2 style={h2}>New vs used: why almost everyone buys used</h2>
-        <p style={body}>New cars in Hong Kong attract the <strong>First Registration Tax (FRT)</strong>, a progressive tax that can add 40–115% to a car's taxable value. A car with a taxable value of HKD $300,000 could end up costing over HKD $500,000 after FRT. See the <Link to="/hongkong/frt-explained" style={{color:"#0d9488"}}>FRT Explainer</Link> for the full breakdown.</p>
+        <p style={body}>New cars in Hong Kong attract the <strong>First Registration Tax (FRT)</strong>, a progressive tax that can add 46–132% to a car's taxable value. A car with a taxable value of HKD $300,000 could end up costing over HKD $500,000 after FRT. See the <Link to="/hongkong/frt-explained" style={{color:"#0d9488"}}>FRT Explainer</Link> for the full breakdown.</p>
         <p style={body}>When you buy a used car, FRT has already been paid. You're simply buying the asset — the car — at market value. For expats on 2–4 year stints, buying a used car and selling it before leaving is typically the most cost-effective approach.</p>
 
         <h2 style={h2}>What to look for in a used car</h2>
@@ -27,7 +27,7 @@ export default function HKBuyingGuide() {
           <li style={{marginBottom:8}}><strong>Service history</strong> — look for stamped logbooks or records from a main dealer or known independent garage</li>
           <li style={{marginBottom:8}}><strong>Number of previous owners</strong> — fewer is better; 1–2 owners is typical for a well-maintained car</li>
           <li style={{marginBottom:8}}><strong>Mileage context</strong> — HK cars are typically low mileage due to traffic, tolls, and parking costs. Under 10,000 km/year is common. High mileage (20,000+ km/year) warrants investigation</li>
-          <li style={{marginBottom:8}}><strong>MOT status</strong> — cars 7+ years old need an annual inspection. Check when it's next due</li>
+          <li style={{marginBottom:8}}><strong>MOT status</strong> — cars 6+ years old need an annual inspection. Check when it's next due</li>
           <li style={{marginBottom:8}}><strong>Rust and accident damage</strong> — HK's humidity and tight parking means minor scrapes are common; structural damage is the red flag</li>
         </ul>
 
