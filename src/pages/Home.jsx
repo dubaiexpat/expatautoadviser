@@ -164,9 +164,12 @@ const styles = `
   }
   .nl-btn:hover { background: #c42a16; }
   @media (max-width: 640px) {
-    .city-panels { flex-direction: column; height: auto; min-height: 280px; }
-    .city-panel { min-height: 140px; }
+    .city-panels { flex-direction: column; height: auto; min-height: unset; }
+    .city-panel { min-height: 200px; height: 200px; }
     .city-panel-divider { width: 100%; height: 2px; }
+    .city-name { font-size: 1.6rem; }
+    .city-tagline { font-size: 0.8rem; max-width: 100%; }
+    .city-panel-content { padding: 1.2rem 1.4rem 1.4rem; }
     
       .seo-about{max-width:900px;margin:0 auto;padding:24px 24px;color:#ccc;text-align:center}
       .seo-about h2{color:#fff;font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;margin-bottom:16px}
