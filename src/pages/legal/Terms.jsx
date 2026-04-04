@@ -172,7 +172,6 @@ export default function Terms() {
         <p style={s.p}>If you have any questions about these Terms of Use, please contact us at:</p>
         <p style={s.p}>
           NewDigitalWorld Pte. Ltd.<br />
-          7a Chancery Hill Walk, Singapore<br />
           Email: <a href="mailto:partnerships@expatautoadviser.com" style={{ color: '#e63946' }}>partnerships@expatautoadviser.com</a>
         </p>
       </div>

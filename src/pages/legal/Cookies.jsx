@@ -33,9 +33,6 @@ export default function Cookies() {
         <p style={s.p}>
           ExpatAutoAdviser (<a href="https://www.expatautoadviser.com" style={{ color: '#e63946' }}>www.expatautoadviser.com</a>) is operated by NewDigitalWorld Pte. Ltd., a company incorporated in Singapore.
         </p>
-        <p style={s.p}>
-          Registered address: 7a Chancery Hill Walk, Singapore.
-        </p>
 
         <h2 style={s.h2}>3. How We Use Cookies</h2>
         <p style={s.p}>We use cookies for the following purposes:</p>
@@ -122,7 +119,6 @@ export default function Cookies() {
         </p>
         <p style={s.p}>
           NewDigitalWorld Pte. Ltd.<br />
-          7a Chancery Hill Walk, Singapore<br />
           Email: <a href="mailto:partnerships@expatautoadviser.com" style={{ color: '#e63946' }}>partnerships@expatautoadviser.com</a>
         </p>
         <p style={s.p}>

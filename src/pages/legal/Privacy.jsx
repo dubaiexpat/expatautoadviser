@@ -32,7 +32,6 @@ export default function Privacy() {
         </p>
         <table style={s.table}>
           <tbody>
-            <tr><td style={s.td}><strong>Registered address</strong></td><td style={s.td}>7a Chancery Hill Walk, Singapore</td></tr>
             <tr><td style={s.td}><strong>Privacy contact</strong></td><td style={s.td}>partnerships@expatautoadviser.com</td></tr>
           </tbody>
         </table>
