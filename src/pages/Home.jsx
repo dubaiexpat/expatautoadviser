@@ -284,6 +284,25 @@ export default function Home() {
           </button>
         </form>
       </div>
+      {/* Footer */}
+      <footer style={{ borderTop: '1px solid #e5e7eb', background: '#fff', padding: '32px 20px', textAlign: 'center' }}>
+        <Link to="/" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+          <span style={{ fontSize: 18 }}>🚗</span>
+          <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontWeight: 700, fontSize: 16 }}>
+            <span style={{ color: '#1a1a2e' }}>Expat</span>
+            <span style={{ fontSize: 12, color: '#e63946' }}>Auto</span>
+            <span style={{ color: '#1a1a2e' }}>Adviser</span>
+          </span>
+        </Link>
+        <p style={{ margin: '0 0 8px', fontSize: 13, color: '#9ca3af' }}>Independent car advice for expats in Singapore and Hong Kong.</p>
+        <p style={{ margin: '0 0 8px', fontSize: 12, color: '#d1d5db' }}>© 2026 ExpatAutoAdviser · Not financial advice · Partner links may earn commission</p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 16, fontSize: 12 }}>
+          <Link to="/privacy" style={{ color: '#9ca3af', textDecoration: 'none' }}>Privacy</Link>
+          <Link to="/terms" style={{ color: '#9ca3af', textDecoration: 'none' }}>Terms</Link>
+          <Link to="/cookies" style={{ color: '#9ca3af', textDecoration: 'none' }}>Cookies</Link>
+          <Link to="/affiliate-disclosure" style={{ color: '#9ca3af', textDecoration: 'none' }}>Disclosure</Link>
+        </div>
+      </footer>
     </div>
   );
 }
