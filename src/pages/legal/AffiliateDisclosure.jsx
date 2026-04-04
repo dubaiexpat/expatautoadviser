@@ -19,32 +19,49 @@ export default function AffiliateDisclosure() {
 
         <h2 style={s.h2}>How We Earn Revenue</h2>
         <p style={s.p}>
-          ExpatAutoAdviser is a free resource for Western expats navigating car ownership in Singapore and Hong Kong. To keep the site running and continue producing free guides, we participate in affiliate programmes with companies we believe are genuinely useful for expat car owners.
+          ExpatAutoAdviser is a free resource for expats navigating car ownership in Singapore and Hong Kong. To help support the cost of running the site and producing free guides, we may participate in affiliate programmes with companies and services that we believe may be useful to our readers.
         </p>
 
-        <h2 style={s.h2}>What This Means for You</h2>
+        <h2 style={s.h2}>Affiliate Links</h2>
         <p style={s.p}>
-          Some links on this site are affiliate links. When you click through and sign up for a service, request a quote, or complete a qualifying action, we may earn a commission at no extra cost to you. The price you pay is the same whether you use our link or go directly.
+          Some links on this site are affiliate links. This means that if you click a link and sign up for a service, request a quote, make a purchase, or complete another qualifying action, we may earn a commission at no extra cost to you.
         </p>
-
-        <h2 style={s.h2}>Our Editorial Independence</h2>
         <p style={s.p}>
-          Affiliate partnerships do not influence our editorial recommendations. We recommend services based on our own research and assessment of what is most useful for expats. We will never recommend a product solely because it offers a higher commission.
+          The price you pay is the same whether you use our affiliate link or visit the provider directly.
+        </p>
+        <p style={s.p}>
+          Affiliate links may appear in articles, comparison tables, banners, buttons, or other content formats across the site. Not every affiliate link is individually labelled in every case.
         </p>
 
-        <h2 style={s.h2}>Categories of Partners</h2>
-        <p style={s.p}>We currently work with or intend to work with partners in these categories:</p>
+        <h2 style={s.h2}>Editorial Independence</h2>
+        <p style={s.p}>
+          Our affiliate relationships do not influence our editorial opinions, rankings, or recommendations. We aim to recommend products and services based on our own research and assessment of what may be most useful to our audience.
+        </p>
+        <p style={s.p}>
+          We do not recommend a product or service solely because it pays a commission.
+        </p>
+
+        <h2 style={s.h2}>Current or Potential Affiliate Partners</h2>
+        <p style={s.p}>We may work with affiliate programmes and partners including:</p>
         <ul style={s.ul}>
           <li style={s.li}><strong>Car leasing companies</strong> — Singapore and Hong Kong lease providers</li>
           <li style={s.li}><strong>Insurance providers</strong> — expat motor insurance</li>
           <li style={s.li}><strong>Workshops and garages</strong> — recommended service centres</li>
-          <li style={s.li}><strong>Financial services</strong> — Wise (international transfers)</li>
+          <li style={s.li}><strong>Wise</strong> — international money transfers</li>
+          <li style={s.li}>Other automotive, finance, or expat-related services</li>
         </ul>
-        <p style={s.p}>This list is updated as partnerships change.</p>
-
-        <h2 style={s.h2}>Questions</h2>
         <p style={s.p}>
-          Contact us at partnerships@expatautoadviser.com.
+          This list may change from time to time as partnerships are added, removed, or updated. Not every affiliate relationship may be listed individually.
+        </p>
+
+        <h2 style={s.h2}>Contact Us</h2>
+        <p style={s.p}>
+          If you have any questions about this disclosure or our affiliate relationships, please contact us at:
+        </p>
+        <p style={s.p}>
+          NewDigitalWorld Pte. Ltd.<br />
+          7a Chancery Hill Walk, Singapore<br />
+          Email: <a href="mailto:partnerships@expatautoadviser.com" style={{ color: '#e63946' }}>partnerships@expatautoadviser.com</a>
         </p>
       </div>
     </Layout>
