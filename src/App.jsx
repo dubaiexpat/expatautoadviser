@@ -29,6 +29,7 @@ import Privacy from './pages/legal/Privacy';
 import Terms from './pages/legal/Terms';
 import Cookies from './pages/legal/Cookies';
 import AffiliateDisclosure from './pages/legal/AffiliateDisclosure';
+import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
 
 function ExitIntent() {
@@ -159,6 +160,7 @@ export default function App() {
       <ScrollToTop />
       <ExitIntent />
       <AppRoutes />
+      <CookieConsent />
     </BrowserRouter>
   );
 }
