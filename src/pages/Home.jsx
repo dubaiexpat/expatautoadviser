@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SG_MAP =
@@ -210,6 +211,27 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, to }) {
 }
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [nlSubmitted, setNlSubmitted] = useState(false);
+
+  async function handleNewsletterSubmit(e) {
+    e.preventDefault();
+    if (!email) return;
+    const apiKey = import.meta.env.VITE_BREVO_API_KEY;
+    if (apiKey) {
+      try {
+        await fetch("https://api.brevo.com/v3/contacts", {
+          method: "POST",
+          headers: { "api-key": apiKey, "Content-Type": "application/json" },
+          body: JSON.stringify({ email, listIds: [3], updateEnabled: true, attributes: { SOURCE: "homepage_newsletter" } }),
+        });
+      } catch {}
+    }
+    setNlSubmitted(true);
+    setTimeout(() => setNlSubmitted(false), 3000);
+    setEmail("");
+  }
+
   return (
     <div className="eaa-home" style={{ minHeight: "auto", background: "#0a0c12" }}>
       <style>{styles}</style>
@@ -272,15 +294,18 @@ export default function Home() {
         </div>
         <form
           className="nl-form"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleNewsletterSubmit}
         >
           <input
             type="email"
             placeholder="your@email.com"
             className="nl-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <button type="submit" className="nl-btn">
-            SUBSCRIBE
+            {nlSubmitted ? "✓ SUBSCRIBED" : "SUBSCRIBE"}
           </button>
         </form>
       </div>
