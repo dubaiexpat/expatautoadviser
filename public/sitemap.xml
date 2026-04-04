@@ -19,4 +19,8 @@
   <url><loc>https://www.expatautoadviser.com/hongkong/ev-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.expatautoadviser.com/hongkong/calculators</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.expatautoadviser.com/hongkong/garage-finder</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.expatautoadviser.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.expatautoadviser.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.expatautoadviser.com/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.expatautoadviser.com/affiliate-disclosure</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

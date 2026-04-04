@@ -25,6 +25,10 @@ import SGLeaseChecker from './pages/singapore/LeaseChecker';
 import HKLeaseChecker from './pages/hongkong/LeaseChecker';
 import SGNewArrival from './pages/singapore/NewArrival';
 import HKNewArrival from './pages/hongkong/NewArrival';
+import Privacy from './pages/legal/Privacy';
+import Terms from './pages/legal/Terms';
+import Cookies from './pages/legal/Cookies';
+import AffiliateDisclosure from './pages/legal/AffiliateDisclosure';
 import ScrollToTop from './components/ScrollToTop';
 
 function ExitIntent() {
@@ -123,6 +127,12 @@ export function AppRoutes() {
       <Route path="/hong-kong/garage-finder" element={<HKGarageFinder />} />
       <Route path="/hong-kong/lease-checker" element={<HKLeaseChecker />} />
       <Route path="/hong-kong/new-arrival" element={<HKNewArrival />} />
+
+      {/* Legal pages */}
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/cookies" element={<Cookies />} />
+      <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
 
       {/* Redirects from old /hongkong paths to /hong-kong */}
       <Route path="/hongkong" element={<Navigate to="/hong-kong" replace />} />

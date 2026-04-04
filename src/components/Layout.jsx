@@ -272,9 +272,15 @@ export default function Layout({ city, children, relatedLinks }) {
         <p style={{ margin: '0 0 8px', fontSize: 13, color: '#9ca3af' }}>
           Independent car advice for expats in Singapore and Hong Kong.
         </p>
-        <p style={{ margin: 0, fontSize: 12, color: '#d1d5db' }}>
-          © 2025 ExpatAutoAdviser · Not financial advice · Partner links may earn commission
+        <p style={{ margin: '0 0 8px', fontSize: 12, color: '#d1d5db' }}>
+          © 2026 ExpatAutoAdviser · Not financial advice · Partner links may earn commission
         </p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 16, fontSize: 12 }}>
+          <a href="/privacy" style={{ color: '#9ca3af', textDecoration: 'none' }}>Privacy</a>
+          <a href="/terms" style={{ color: '#9ca3af', textDecoration: 'none' }}>Terms</a>
+          <a href="/cookies" style={{ color: '#9ca3af', textDecoration: 'none' }}>Cookies</a>
+          <a href="/affiliate-disclosure" style={{ color: '#9ca3af', textDecoration: 'none' }}>Disclosure</a>
+        </div>
       </footer>
     </div>
   );
