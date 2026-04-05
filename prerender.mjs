@@ -17,6 +17,10 @@ const ROUTES = [
   '/singapore/calculators',
   '/singapore/garage-finder',
     '/singapore/lease-checker',
+  '/singapore/cost-of-driving',
+  '/singapore/car-loans',
+  '/singapore/child-car-seats',
+  '/singapore/subscription-vs-ownership',
   '/hong-kong',
   '/hong-kong/should-i-get-a-car',
   '/hong-kong/buying-guide',
@@ -29,6 +33,7 @@ const ROUTES = [
   '/hong-kong/calculators',
   '/hong-kong/garage-finder',
     '/hong-kong/lease-checker',
+  '/hong-kong/selling-guide',
 ];
 
 const META = {
@@ -322,6 +327,31 @@ const META = {
         a: `Leasing is generally better for expats on 1 to 3 year assignments. Buying involves First Registration Tax of 40 to 115 percent on top of the vehicle price, making it only worthwhile for longer stays.`,
       },
     ],
+  },
+  '/singapore/cost-of-driving': {
+    title: `ERP 2.0 and the Real Cost of Driving in Singapore`,
+    desc: `How Singapore's ERP 2.0 system works in 2026: OBU rollout, distance-based charging intent, typical gantry rates, and what daily driving really costs an expat.`,
+    type: `article`,
+  },
+  '/singapore/car-loans': {
+    title: `Car Loans for Expats in Singapore: MAS LTV Rules Explained`,
+    desc: `How car loans work for expats in Singapore: MAS LTV caps (70%/60%), typical lender practice, TDSR considerations, EP requirements, and indicative 2026 rate ranges.`,
+    type: `article`,
+  },
+  '/singapore/child-car-seats': {
+    title: `Child Car Seats and ISOFIX Laws in Singapore`,
+    desc: `Singapore's child restraint rules for expat families: the 1.35m height threshold, approved standards, the S$150 fine, and the taxi vs private-hire vehicle exemption.`,
+    type: `article`,
+  },
+  '/singapore/subscription-vs-ownership': {
+    title: `Car Subscription vs Ownership in Singapore: What Expats Should Know`,
+    desc: `Car subscription vs ownership in Singapore: how Carro Leap and Drive Lah work, what's typically bundled, illustrative cost comparison, and when each option suits expats.`,
+    type: `article`,
+  },
+  '/hong-kong/selling-guide': {
+    title: `Selling Your Car When Leaving Hong Kong: A Six-Week Checklist`,
+    desc: `How to sell your car before leaving Hong Kong: timing the sale, dealer vs private, TD forms, export rules, insurance gaps, and a six-week countdown for departing expats.`,
+    type: `article`,
   },
 };
 

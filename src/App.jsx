@@ -25,6 +25,11 @@ import SGLeaseChecker from './pages/singapore/LeaseChecker';
 import HKLeaseChecker from './pages/hongkong/LeaseChecker';
 import SGNewArrival from './pages/singapore/NewArrival';
 import HKNewArrival from './pages/hongkong/NewArrival';
+import HKSellingGuide from './pages/hongkong/SellingGuide';
+import SGCostOfDriving from './pages/singapore/CostOfDriving';
+import SGCarLoans from './pages/singapore/CarLoans';
+import SGChildCarSeats from './pages/singapore/ChildCarSeats';
+import SGSubscriptionVsOwnership from './pages/singapore/SubscriptionVsOwnership';
 import Privacy from './pages/legal/Privacy';
 import Terms from './pages/legal/Terms';
 import Cookies from './pages/legal/Cookies';
@@ -115,6 +120,10 @@ export function AppRoutes() {
       <Route path="/singapore/garage-finder" element={<SGGarageFinder />} />
       <Route path="/singapore/lease-checker" element={<SGLeaseChecker />} />
       <Route path="/singapore/new-arrival" element={<SGNewArrival />} />
+      <Route path="/singapore/cost-of-driving" element={<SGCostOfDriving />} />
+      <Route path="/singapore/car-loans" element={<SGCarLoans />} />
+      <Route path="/singapore/child-car-seats" element={<SGChildCarSeats />} />
+      <Route path="/singapore/subscription-vs-ownership" element={<SGSubscriptionVsOwnership />} />
       <Route path="/hong-kong" element={<HongKong />} />
       <Route path="/hong-kong/should-i-get-a-car" element={<HKShouldIGetACar />} />
       <Route path="/hong-kong/buying-guide" element={<HKBuyingGuide />} />
@@ -128,6 +137,7 @@ export function AppRoutes() {
       <Route path="/hong-kong/garage-finder" element={<HKGarageFinder />} />
       <Route path="/hong-kong/lease-checker" element={<HKLeaseChecker />} />
       <Route path="/hong-kong/new-arrival" element={<HKNewArrival />} />
+      <Route path="/hong-kong/selling-guide" element={<HKSellingGuide />} />
 
       {/* Legal pages */}
       <Route path="/privacy" element={<Privacy />} />
