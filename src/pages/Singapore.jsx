@@ -23,6 +23,16 @@ const SG_SIDEBAR_SECTIONS = [
   { heading: 'Tools & Services', keys: ['calculators', 'garage-finder'] },
 ];
 
+/* Albert's long-form articles — shown separately with full titles */
+const SG_ARTICLES = [
+  { label: 'Buying a Used Car: COE, PARF & Paperwork', to: '/singapore/buying-guide' },
+  { label: 'How the COE System Works for Expats', to: '/singapore/coe-guide' },
+  { label: 'ERP 2.0: The Real Cost of Driving', to: '/singapore/cost-of-driving' },
+  { label: 'Car Loans: MAS LTV Rules Explained', to: '/singapore/car-loans' },
+  { label: 'Child Car Seats & ISOFIX Laws', to: '/singapore/child-car-seats' },
+  { label: 'Subscription vs Ownership Compared', to: '/singapore/subscription-vs-ownership' },
+];
+
 const SG_GUIDES = [
   /* — Getting Started — */
   {
@@ -358,6 +368,10 @@ export default function Singapore() {
             </div>
           );
         })}
+        <div className="sg-sidebar-heading" style={{ color: '#e8341c' }}>Articles</div>
+        {SG_ARTICLES.map(a => (
+          <Link key={a.to} to={a.to} className="sg-nav-link" onClick={() => setMobileOpen(false)} style={{ fontSize: '0.72rem', lineHeight: 1.3, padding: '4px 14px' }}>{a.label}</Link>
+        ))}
         <div style={{ borderTop: '1px solid rgba(239,68,68,0.12)', margin: '12px 14px' }}></div>
         <Link to="/hong-kong" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '7px 14px', fontSize: '0.75rem', color: '#6b7280', textDecoration: 'none' }}>
           {'\ud83c\udded\ud83c\uddf0'} HK Guides {'\u2192'}
@@ -379,6 +393,10 @@ export default function Singapore() {
               </div>
             );
           })}
+          <div className="sg-sidebar-heading" style={{ color: '#e8341c' }}>Articles</div>
+          {SG_ARTICLES.map(a => (
+            <Link key={a.to} to={a.to} className="sg-nav-link" style={{ fontSize: '0.72rem', lineHeight: 1.3, padding: '4px 14px' }}>{a.label}</Link>
+          ))}
           <div style={{ borderTop:"1px solid rgba(239,68,68,0.12)", margin:"12px 14px" }}></div>
           <Link to="/hong-kong" style={{ display:"block", padding:"7px 14px", fontSize:"0.75rem", color:"#6b7280", textDecoration:"none" }}>🇭🇰 HK Guides →</Link>
         </aside>
@@ -435,6 +453,29 @@ export default function Singapore() {
             </div>
           );
         })}
+
+        {/* Articles Section */}
+        <div className="sg-section-title">In-Depth Articles</div>
+        <div style={{ display: 'grid', gap: 10, marginBottom: '2rem' }}>
+          {SG_ARTICLES.map(a => (
+            <Link
+              key={a.to}
+              to={a.to}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 12,
+                background: '#10131d', border: '1px solid rgba(255,255,255,0.07)',
+                borderRadius: 8, padding: '0.75rem 1rem',
+                textDecoration: 'none', transition: 'border-color 0.2s, background 0.2s',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(232,52,28,0.4)'; e.currentTarget.style.background = '#151820'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = '#10131d'; }}
+            >
+              <span style={{ color: '#e8341c', fontSize: '0.85rem', flexShrink: 0 }}>&#9656;</span>
+              <span style={{ color: '#e5e7eb', fontSize: '0.85rem', fontWeight: 600, lineHeight: 1.3 }}>{a.label}</span>
+              <span style={{ marginLeft: 'auto', color: '#4a5568', fontSize: '0.7rem', flexShrink: 0 }}>Read &rarr;</span>
+            </Link>
+          ))}
+        </div>
 
         {/* Patrick Section */}
         <div className="sg-section-title">Your Guide</div>

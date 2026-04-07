@@ -18,6 +18,15 @@ const SG_LINKS = [
   { label: 'Garage Finder', to: '/singapore/garage-finder' },
 ];
 
+const SG_ARTICLES = [
+  { label: 'Buying a Used Car: COE, PARF & Paperwork', to: '/singapore/buying-guide' },
+  { label: 'How the COE System Works for Expats', to: '/singapore/coe-guide' },
+  { label: 'ERP 2.0: The Real Cost of Driving', to: '/singapore/cost-of-driving' },
+  { label: 'Car Loans: MAS LTV Rules Explained', to: '/singapore/car-loans' },
+  { label: 'Child Car Seats & ISOFIX Laws', to: '/singapore/child-car-seats' },
+  { label: 'Subscription vs Ownership Compared', to: '/singapore/subscription-vs-ownership' },
+];
+
 const HK_LINKS = [
   { label: 'Should I Get a Car?', to: '/hong-kong/should-i-get-a-car' },
   { label: 'Buying Guide', to: '/hong-kong/buying-guide' },
@@ -30,6 +39,14 @@ const HK_LINKS = [
   { label: 'Selling Your Car', to: '/hong-kong/selling-guide' },
   { label: 'Calculators & Tools', to: '/hong-kong/calculators' },
   { label: 'Garage Finder', to: '/hong-kong/garage-finder' },
+];
+
+const HK_ARTICLES = [
+  { label: 'Buying a Car in HK: The Parking Reality', to: '/hong-kong/buying-guide' },
+  { label: 'First Registration Tax Explained', to: '/hong-kong/frt-tax-explained' },
+  { label: 'Car Insurance for HK Expats', to: '/hong-kong/insurance-guide' },
+  { label: 'Converting Your Driving Licence', to: '/hong-kong/licence-conversion' },
+  { label: 'Selling Your Car When Leaving HK', to: '/hong-kong/selling-guide' },
 ];
 
 const SIDEBAR_BG = '#0d1117';
@@ -116,6 +133,8 @@ export default function Layout({ city, children, relatedLinks }) {
   const flagEmoji = isSG ? '🇸🇬' : '🇭🇰';
   const cityLabel = isSG ? 'Singapore' : 'Hong Kong';
 
+  const articles = isSG ? SG_ARTICLES : HK_ARTICLES;
+
   const sidebarContent = (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
       <NavSection
@@ -127,6 +146,40 @@ export default function Layout({ city, children, relatedLinks }) {
         accentHex={accentHex}
         accentRgb={accentRgb}
       />
+      {/* Articles section */}
+      <div style={{ padding: '8px 0', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{
+          fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
+          color: accentHex, padding: '10px 20px 6px',
+        }}>
+          Articles
+        </div>
+        {articles.map(a => {
+          const active = location.pathname === a.to;
+          return (
+            <Link
+              key={a.to}
+              to={a.to}
+              style={{
+                display: 'block',
+                padding: '5px 20px 5px 44px',
+                fontSize: 12,
+                lineHeight: 1.3,
+                color: active ? '#fff' : '#94a3b8',
+                background: active ? ('rgba(' + accentRgb + ',0.18)') : 'transparent',
+                fontWeight: active ? 600 : 400,
+                borderLeft: active ? ('3px solid ' + accentHex) : '3px solid transparent',
+                textDecoration: 'none',
+                transition: 'all 0.15s',
+              }}
+              onMouseEnter={e => { if (!active) { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; } }}
+              onMouseLeave={e => { if (!active) { e.currentTarget.style.color = '#94a3b8'; e.currentTarget.style.background = 'transparent'; } }}
+            >
+              {a.label}
+            </Link>
+          );
+        })}
+      </div>
       <div style={{ marginTop: 'auto', padding: '16px 20px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <Link
           to={isSG ? '/hong-kong' : '/singapore'}

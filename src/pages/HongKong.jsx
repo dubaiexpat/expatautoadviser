@@ -23,6 +23,15 @@ const HK_SIDEBAR_SECTIONS = [
   { heading: 'Tools & Services', keys: ['calculators', 'garage-finder'] },
 ];
 
+/* Albert's long-form articles — shown separately with full titles */
+const HK_ARTICLES = [
+  { label: 'Buying a Car in HK: The Parking Reality', to: '/hong-kong/buying-guide' },
+  { label: 'First Registration Tax Explained for Expats', to: '/hong-kong/frt-tax-explained' },
+  { label: 'Car Insurance for Hong Kong Expats', to: '/hong-kong/insurance-guide' },
+  { label: 'Converting Your Driving Licence in HK', to: '/hong-kong/licence-conversion' },
+  { label: 'Selling Your Car When Leaving Hong Kong', to: '/hong-kong/selling-guide' },
+];
+
 const HK_GUIDES = [
   /* — Getting Started — */
   {
@@ -341,6 +350,10 @@ export default function HongKong() {
             </div>
           );
         })}
+        <div className="hk-sidebar-heading" style={{ color: '#2a9d8f' }}>Articles</div>
+        {HK_ARTICLES.map(a => (
+          <Link key={a.to} to={a.to} className="hk-nav-link" onClick={() => setMobileOpen(false)} style={{ fontSize: '0.72rem', lineHeight: 1.3, padding: '4px 14px' }}>{a.label}</Link>
+        ))}
         <div style={{ borderTop: '1px solid rgba(20,184,166,0.12)', margin: '12px 14px' }}></div>
         <Link to="/singapore" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '7px 14px', fontSize: '0.75rem', color: '#6b7280', textDecoration: 'none' }}>
           {'\ud83c\uddf8\ud83c\uddec'} SG Guides {'\u2192'}
@@ -362,6 +375,10 @@ export default function HongKong() {
               </div>
             );
           })}
+          <div className="hk-sidebar-heading" style={{ color: '#2a9d8f' }}>Articles</div>
+          {HK_ARTICLES.map(a => (
+            <Link key={a.to} to={a.to} className="hk-nav-link" style={{ fontSize: '0.72rem', lineHeight: 1.3, padding: '4px 14px' }}>{a.label}</Link>
+          ))}
           <div style={{ borderTop:"1px solid rgba(20,184,166,0.12)", margin:"12px 14px" }}></div>
           <Link to="/singapore" style={{ display:"block", padding:"7px 14px", fontSize:"0.75rem", color:"#6b7280", textDecoration:"none" }}>🇸🇬 SG Guides →</Link>
         </aside>
@@ -420,6 +437,29 @@ export default function HongKong() {
             </div>
           );
         })}
+
+        {/* Articles Section */}
+        <div className="hk-section-title">In-Depth Articles</div>
+        <div style={{ display: 'grid', gap: 10, marginBottom: '2rem' }}>
+          {HK_ARTICLES.map(a => (
+            <Link
+              key={a.to}
+              to={a.to}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 12,
+                background: '#10131d', border: '1px solid rgba(255,255,255,0.07)',
+                borderRadius: 8, padding: '0.75rem 1rem',
+                textDecoration: 'none', transition: 'border-color 0.2s, background 0.2s',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(42,157,143,0.4)'; e.currentTarget.style.background = '#151820'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = '#10131d'; }}
+            >
+              <span style={{ color: '#2a9d8f', fontSize: '0.85rem', flexShrink: 0 }}>&#9656;</span>
+              <span style={{ color: '#e5e7eb', fontSize: '0.85rem', fontWeight: 600, lineHeight: 1.3 }}>{a.label}</span>
+              <span style={{ marginLeft: 'auto', color: '#4a5568', fontSize: '0.7rem', flexShrink: 0 }}>Read &rarr;</span>
+            </Link>
+          ))}
+        </div>
 
         {/* Patrick Section */}
         <div className="hk-section-title">Your Guide</div>
