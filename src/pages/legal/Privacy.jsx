@@ -28,7 +28,7 @@ export default function Privacy() {
 
         <h2 style={s.h2}>1. Who We Are</h2>
         <p style={s.p}>
-          ExpatAutoAdviser is operated by <strong>NewDigitalWorld Pte. Ltd.</strong>, a company incorporated in Singapore.
+          ExpatAutoAdviser is operated by <strong>NewMediaWorld Pte. Ltd.</strong>, a company incorporated in Singapore.
         </p>
         <table style={s.table}>
           <tbody>
@@ -36,7 +36,7 @@ export default function Privacy() {
           </tbody>
         </table>
         <p style={s.p}>
-          For the purposes of the PDPA and PDPO, NewDigitalWorld Pte. Ltd. is the organisation responsible for the collection, use, and disclosure of your personal data through this site.
+          For the purposes of the PDPA and PDPO, NewMediaWorld Pte. Ltd. is the organisation responsible for the collection, use, and disclosure of your personal data through this site.
         </p>
 
         <h2 style={s.h2}>2. What Personal Data We Collect</h2>

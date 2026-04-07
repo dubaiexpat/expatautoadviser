@@ -31,7 +31,7 @@ export default function Cookies() {
 
         <h2 style={s.h2}>2. Who We Are</h2>
         <p style={s.p}>
-          ExpatAutoAdviser (<a href="https://www.expatautoadviser.com" style={{ color: '#e63946' }}>www.expatautoadviser.com</a>) is operated by NewDigitalWorld Pte. Ltd., a company incorporated in Singapore.
+          ExpatAutoAdviser (<a href="https://www.expatautoadviser.com" style={{ color: '#e63946' }}>www.expatautoadviser.com</a>) is operated by NewMediaWorld Pte. Ltd., a company incorporated in Singapore.
         </p>
 
         <h2 style={s.h2}>3. How We Use Cookies</h2>
@@ -118,7 +118,7 @@ export default function Cookies() {
           If you have questions about this Cookie Policy or wish to exercise your data rights, please contact us at:
         </p>
         <p style={s.p}>
-          NewDigitalWorld Pte. Ltd.<br />
+          NewMediaWorld Pte. Ltd.<br />
           Email: <a href="mailto:partnerships@expatautoadviser.com" style={{ color: '#e63946' }}>partnerships@expatautoadviser.com</a>
         </p>
         <p style={s.p}>
