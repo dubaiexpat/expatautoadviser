@@ -4,23 +4,32 @@ import { Link, useLocation } from 'react-router-dom';
 
 const SG_LINKS = [
   { label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' },
-  { label: 'Calculators', to: '/singapore/calculators' },
-  { label: 'Leasing Guide', to: '/singapore/leasing-guide' },
   { label: 'Buying Guide', to: '/singapore/buying-guide' },
-  { label: 'Insurance', to: '/singapore/insurance-guide' },
+  { label: 'Leasing Guide', to: '/singapore/leasing-guide' },
+  { label: 'COE Explained', to: '/singapore/coe-guide' },
+  { label: 'Cost of Driving (ERP)', to: '/singapore/cost-of-driving' },
+  { label: 'Car Loans', to: '/singapore/car-loans' },
+  { label: 'Insurance Guide', to: '/singapore/insurance-guide' },
   { label: 'EV Guide', to: '/singapore/ev-guide' },
   { label: 'Licence Conversion', to: '/singapore/licence-conversion' },
+  { label: 'Child Car Seats', to: '/singapore/child-car-seats' },
+  { label: 'Subscription vs Ownership', to: '/singapore/subscription-vs-ownership' },
+  { label: 'Calculators & Tools', to: '/singapore/calculators' },
+  { label: 'Garage Finder', to: '/singapore/garage-finder' },
 ];
 
 const HK_LINKS = [
   { label: 'Should I Get a Car?', to: '/hong-kong/should-i-get-a-car' },
-  { label: 'Calculators', to: '/hong-kong/calculators' },
   { label: 'Buying Guide', to: '/hong-kong/buying-guide' },
   { label: 'Leasing Guide', to: '/hong-kong/leasing-guide' },
-  { label: 'Insurance', to: '/hong-kong/insurance-guide' },
+  { label: 'FRT Explained', to: '/hong-kong/frt-tax-explained' },
+  { label: 'Insurance Guide', to: '/hong-kong/insurance-guide' },
   { label: 'EV Guide', to: '/hong-kong/ev-guide' },
   { label: 'Licence Conversion', to: '/hong-kong/licence-conversion' },
-  { label: 'FRT Explained', to: '/hong-kong/frt-tax-explained' },
+  { label: 'MOT & Maintenance', to: '/hong-kong/mot-maintenance' },
+  { label: 'Selling Your Car', to: '/hong-kong/selling-guide' },
+  { label: 'Calculators & Tools', to: '/hong-kong/calculators' },
+  { label: 'Garage Finder', to: '/hong-kong/garage-finder' },
 ];
 
 const SIDEBAR_BG = '#0d1117';
