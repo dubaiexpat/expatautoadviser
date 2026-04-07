@@ -72,6 +72,41 @@ const SG_GUIDES = [
     desc: 'Find trusted workshops and service centres near you.',
     img: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80',
   },
+  {
+    n: '09',
+    label: 'COE Explained',
+    to: '/singapore/coe-guide',
+    desc: 'How the Certificate of Entitlement system works — bidding, categories, and what it costs.',
+    img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?w=800&q=80',
+  },
+  {
+    n: '10',
+    label: 'Cost of Driving (ERP)',
+    to: '/singapore/cost-of-driving',
+    desc: 'ERP 2.0, parking, petrol — the real monthly cost of driving in Singapore.',
+    img: 'https://images.unsplash.com/photo-1542189412744-bfabf27522ee?w=800&q=80',
+  },
+  {
+    n: '11',
+    label: 'Car Loans',
+    to: '/singapore/car-loans',
+    desc: 'MAS LTV caps, TDSR rules, and what banks actually offer expat borrowers.',
+    img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80',
+  },
+  {
+    n: '12',
+    label: 'Child Car Seats',
+    to: '/singapore/child-car-seats',
+    desc: 'ISOFIX, the 1.35m rule, approved standards, and the taxi exemption.',
+    img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80',
+  },
+  {
+    n: '13',
+    label: 'Subscription vs Ownership',
+    to: '/singapore/subscription-vs-ownership',
+    desc: 'Car subscriptions like Carro Leap vs buying — which makes sense for expats?',
+    img: 'https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&q=80',
+  },
 ];
 
 const PATRICK_TIPS = [

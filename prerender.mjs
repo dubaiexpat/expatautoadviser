@@ -21,6 +21,7 @@ const ROUTES = [
   '/singapore/car-loans',
   '/singapore/child-car-seats',
   '/singapore/subscription-vs-ownership',
+  '/singapore/coe-guide',
   '/hong-kong',
   '/hong-kong/should-i-get-a-car',
   '/hong-kong/buying-guide',
@@ -352,6 +353,25 @@ const META = {
     title: `Selling Your Car When Leaving Hong Kong: A Six-Week Checklist`,
     desc: `How to sell your car before leaving Hong Kong: timing the sale, dealer vs private, TD forms, export rules, insurance gaps, and a six-week countdown for departing expats.`,
     type: `article`,
+  },
+  '/singapore/coe-guide': {
+    title: `How the COE System Works for Expats in Singapore`,
+    desc: `Everything expats need to know about Singapore's Certificate of Entitlement system: how bidding works, current COE prices, categories, renewal rules, and strategies to manage the cost.`,
+    type: `article`,
+    faq: [
+      {
+        q: `What is COE in Singapore?`,
+        a: `COE (Certificate of Entitlement) is a government quota licence that gives you the right to own and use a vehicle in Singapore for 10 years. Without one, you cannot register a car. COE prices are set by open bidding and currently run between S$80,000 and S$100,000 for a standard family car.`,
+      },
+      {
+        q: `How does COE bidding work?`,
+        a: `COE is awarded through a sealed-bid, uniform-price auction held twice a month by the Land Transport Authority. You submit the maximum price you are willing to pay. All successful bidders pay the same price — the lowest winning bid, known as the Quota Premium.`,
+      },
+      {
+        q: `Can expats bid for COE in Singapore?`,
+        a: `Yes. Any individual with a valid Singapore driving licence or converted foreign licence can bid for COE. Most expats let their car dealer handle the bidding process as part of the purchase.`,
+      },
+    ],
   },
 };
 

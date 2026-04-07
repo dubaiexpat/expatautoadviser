@@ -30,6 +30,7 @@ import SGCostOfDriving from './pages/singapore/CostOfDriving';
 import SGCarLoans from './pages/singapore/CarLoans';
 import SGChildCarSeats from './pages/singapore/ChildCarSeats';
 import SGSubscriptionVsOwnership from './pages/singapore/SubscriptionVsOwnership';
+import SGCOEGuide from './pages/singapore/COEGuide';
 import Privacy from './pages/legal/Privacy';
 import Terms from './pages/legal/Terms';
 import Cookies from './pages/legal/Cookies';
@@ -124,6 +125,7 @@ export function AppRoutes() {
       <Route path="/singapore/car-loans" element={<SGCarLoans />} />
       <Route path="/singapore/child-car-seats" element={<SGChildCarSeats />} />
       <Route path="/singapore/subscription-vs-ownership" element={<SGSubscriptionVsOwnership />} />
+      <Route path="/singapore/coe-guide" element={<SGCOEGuide />} />
       <Route path="/hong-kong" element={<HongKong />} />
       <Route path="/hong-kong/should-i-get-a-car" element={<HKShouldIGetACar />} />
       <Route path="/hong-kong/buying-guide" element={<HKBuyingGuide />} />

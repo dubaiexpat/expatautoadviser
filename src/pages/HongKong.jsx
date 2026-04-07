@@ -72,6 +72,27 @@ const HK_GUIDES = [
     desc: 'FRT calculator, true-cost-of-ownership, tunnel toll guide and more.',
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   },
+  {
+    n: '09',
+    label: 'Garage Finder',
+    to: '/hong-kong/garage-finder',
+    desc: 'Find trusted workshops and service centres near you in Hong Kong.',
+    img: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80',
+  },
+  {
+    n: '10',
+    label: 'Insurance Guide',
+    to: '/hong-kong/insurance-guide',
+    desc: 'Third-party vs comprehensive, NCD transfers, and getting a fair quote as an expat.',
+    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+  },
+  {
+    n: '11',
+    label: 'Selling Your Car',
+    to: '/hong-kong/selling-guide',
+    desc: 'Leaving HK? A six-week countdown for selling your car — dealer vs private, TD forms, and timing.',
+    img: 'https://images.unsplash.com/photo-1449280429541-0214e229317b?w=800&q=80',
+  },
 ];
 
 const PATRICK_TIPS = [
