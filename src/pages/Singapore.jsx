@@ -222,6 +222,7 @@ const styles = `
   .sg-guides-grid {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 2rem;
   }
+  .sg-guides-grid > *:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .sg-guide-card {
     display: block; text-decoration: none; border-radius: 10px;
     overflow: hidden; position: relative; height: 200px;

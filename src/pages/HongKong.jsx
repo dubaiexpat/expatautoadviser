@@ -204,6 +204,7 @@ const styles = `
 
   /* GUIDES */
   .hk-guides-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 2rem; }
+  .hk-guides-grid > *:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .hk-guide-card {
     display: block; text-decoration: none; border-radius: 10px;
     overflow: hidden; position: relative; height: 200px;
