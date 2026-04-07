@@ -1,7 +1,7 @@
 import MarkdownArticlePage from '../../components/MarkdownArticlePage';
 import markdown from '../../content/how-the-coe-system-works-for-expats-in-singapore.md?raw';
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?w=1200&q=80';
+const HERO_IMG = 'https://images.unsplash.com/photo-1594028411108-96a5b0302a4a?w=1200&q=80';
 
 export default function SGCOEGuide() {
   return (
