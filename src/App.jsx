@@ -90,7 +90,7 @@ function ExitIntent() {
       <div className="exit-intent-banner" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99999, background: '#1a1a2e', color: '#fff', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, boxShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
       <img src={PATRICK_IMG} alt="Patrick" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
       {done ? (
-        <span style={{ fontSize: 14, fontWeight: 600 }}>\u2713 You're on the list! I'll be in touch monthly.</span>
+        <span style={{ fontSize: 14, fontWeight: 600 }}>{'✓'} You're on the list! I'll be in touch monthly.</span>
       ) : (
         <>
           <span style={{ fontSize: 14, flexShrink: 0 }}>Get Patrick's free monthly car market briefing for expats</span>
@@ -100,7 +100,7 @@ function ExitIntent() {
           </form>
         </>
       )}
-      <button onClick={() => setShow(false)} style={{ background: 'none', border: 'none', color: '#fff', fontSize: 18, cursor: 'pointer', opacity: 0.7, marginLeft: 'auto', flexShrink: 0 }}>\u00d7</button>
+      <button onClick={() => setShow(false)} style={{ background: 'none', border: 'none', color: '#fff', fontSize: 18, cursor: 'pointer', opacity: 0.7, marginLeft: 'auto', flexShrink: 0 }}>{'×'}</button>
       </div>
     </>
   );
