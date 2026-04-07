@@ -1,5 +1,7 @@
+# Child Car Seats and ISOFIX Laws in Singapore: What Expat Parents Must Know
 
 
+---
 
 **Quick answer:** Singapore law requires every child **below 1.35m in height** (not defined by age) to be properly restrained in an approved child seat or booster suitable for their size. This applies in private cars and in **ride-hailing / private-hire vehicles (Grab, Gojek, TADA, Ryde etc.) — which are not exempt**. **Licensed taxis are the exception** and are exempt from the child-restraint requirement. Penalty for non-compliance in a light vehicle is a **S$150 composition fine** and 3 demerit points (raised from S$120 with effect from 1 April 2019). ISOFIX is a fitting system, not a legal requirement, but it's widely used by i-Size seats and reduces installation error.
 

@@ -1,5 +1,7 @@
+# Car Subscription vs Ownership in Singapore: What Expats Should Know
 
 
+---
 
 **Quick answer:** Car subscription in Singapore packages a vehicle, insurance, road tax, and servicing into one monthly fee on a short-to-medium term, typically starting from around S$1,500 per month and ranging higher depending on car and term length. Pricing, inclusions, and eligibility vary materially between providers, so the right comparison against ownership depends on your mileage, tenure, and how much ownership admin (COE, resale, loan settlement) you want to avoid. For short expat postings, subscription often makes sense; for longer stays, ownership typically looks better on raw numbers. Figures below are illustrative planning ranges, not quotes.
 
