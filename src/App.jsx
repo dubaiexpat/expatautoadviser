@@ -67,16 +67,16 @@ function ExitIntent() {
   return (
     <>
       <style>{`@media (max-width: 768px) { .exit-intent-banner { display: none !important; } }`}</style>
-      <div className="exit-intent-banner" style={{ position: 'fixed', top: 56, left: '50%', transform: 'translateX(-50%)', zIndex: 99999, background: '#1a1a2e', color: '#fff', padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 12, boxShadow: '0 2px 16px rgba(0,0,0,0.4)', borderRadius: 10, maxWidth: 720, width: 'calc(100% - 40px)' }}>
-      <img src={PATRICK_IMG} alt="Patrick" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+      <div className="exit-intent-banner" style={{ position: 'fixed', top: 0, left: '50%', transform: 'translateX(-50%)', zIndex: 99999, background: 'rgba(10,12,18,0.92)', backdropFilter: 'blur(8px)', color: '#fff', height: 52, padding: '0 20px', display: 'flex', alignItems: 'center', gap: 10, maxWidth: 640 }}>
+      <img src={PATRICK_IMG} alt="Patrick" style={{ width: 30, height: 30, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
       {done ? (
         <span style={{ fontSize: 14, fontWeight: 600 }}>{'✓'} You're on the list! I'll be in touch monthly.</span>
       ) : (
         <>
-          <span style={{ fontSize: 14, flexShrink: 0 }}>Get Patrick's free monthly car market briefing for expats</span>
-          <form onSubmit={subscribe} style={{ display: 'flex', gap: 8, flex: 1, maxWidth: 340 }}>
-            <input type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="your@email.com" style={{ flex: 1, padding: '8px 12px', borderRadius: 6, border: 'none', fontSize: 14, minWidth: 0 }} />
-            <button type="submit" style={{ background: '#e63946', color: '#fff', border: 'none', borderRadius: 6, padding: '8px 14px', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>
+          <span style={{ fontSize: 13, flexShrink: 0 }}>Get Patrick's free monthly car market briefing for expats</span>
+          <form onSubmit={subscribe} style={{ display: 'flex', gap: 6, flex: 1, maxWidth: 300 }}>
+            <input type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="your@email.com" style={{ flex: 1, padding: '6px 10px', borderRadius: 6, border: 'none', fontSize: 13, minWidth: 0 }} />
+            <button type="submit" style={{ background: '#e63946', color: '#fff', border: 'none', borderRadius: 6, padding: '6px 12px', fontSize: 12, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>
           </form>
         </>
       )}
