@@ -54,7 +54,7 @@ const SG_GUIDES = [
     label: 'Leasing Guide',
     to: '/singapore/leasing-guide',
     desc: 'For most expats, leasing beats buying. Here\'s how to find a deal that won\'t sting.',
-    img: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80',
   },
   /* — Costs & Finance — */
   {
@@ -69,7 +69,7 @@ const SG_GUIDES = [
     label: 'Cost of Driving (ERP)',
     to: '/singapore/cost-of-driving',
     desc: 'ERP 2.0, parking, petrol — the real monthly cost of driving in Singapore.',
-    img: 'https://images.unsplash.com/photo-1542189412744-bfabf27522ee?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1583475020836-8048d7c92cc3?w=800&q=80',
   },
   {
     n: '06',

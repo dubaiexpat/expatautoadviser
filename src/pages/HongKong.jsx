@@ -53,7 +53,7 @@ const HK_GUIDES = [
     label: 'Leasing Guide',
     to: '/hong-kong/leasing-guide',
     desc: 'Corporate leasing vs personal lease — pros, cons, and what actually works for expats.',
-    img: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=800&q=80',
   },
   /* — Costs & Finance — */
   {
