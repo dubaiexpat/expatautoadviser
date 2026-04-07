@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Singapore from './pages/Singapore';
@@ -39,30 +39,10 @@ import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
 
 function ExitIntent() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [email, setEmail] = useState('');
   const [done, setDone] = useState(false);
   const { pathname } = useLocation();
-  const shownRef = useRef(false);
-  const timerRef = useRef(null);
-
-  useEffect(() => {
-    shownRef.current = false;
-    timerRef.current = setTimeout(() => {
-      const handler = (e) => {
-        if (e.clientY <= window.innerHeight * 0.1 && !shownRef.current && !pathname.includes('newsletter')) {
-          shownRef.current = true;
-          setShow(true);
-        }
-      };
-      document.addEventListener('mousemove', handler);
-      timerRef.current = handler;
-    }, 45000);
-    return () => {
-      clearTimeout(timerRef.current);
-      if (typeof timerRef.current === 'function') document.removeEventListener('mousemove', timerRef.current);
-    };
-  }, [pathname]);
 
   async function subscribe(e) {
     e.preventDefault();
@@ -87,7 +67,7 @@ function ExitIntent() {
   return (
     <>
       <style>{`@media (max-width: 768px) { .exit-intent-banner { display: none !important; } }`}</style>
-      <div className="exit-intent-banner" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99999, background: '#1a1a2e', color: '#fff', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, boxShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
+      <div className="exit-intent-banner" style={{ position: 'fixed', top: 56, left: '50%', transform: 'translateX(-50%)', zIndex: 99999, background: '#1a1a2e', color: '#fff', padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 12, boxShadow: '0 2px 16px rgba(0,0,0,0.4)', borderRadius: 10, maxWidth: 720, width: 'calc(100% - 40px)' }}>
       <img src={PATRICK_IMG} alt="Patrick" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
       {done ? (
         <span style={{ fontSize: 14, fontWeight: 600 }}>{'✓'} You're on the list! I'll be in touch monthly.</span>
