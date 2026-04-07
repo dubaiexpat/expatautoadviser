@@ -15,7 +15,16 @@ const FRT_DATA = {
   evNote: 'Full EV concession: First HK$97,500 exempt; 46% on next HK$97,500; standard rates above.',
 };
 
+/* Sidebar section definitions — controls heading labels and ordering */
+const HK_SIDEBAR_SECTIONS = [
+  { heading: 'Getting Started', keys: ['should-i-get-a-car', 'buying-guide', 'leasing-guide'] },
+  { heading: 'Costs & Finance', keys: ['frt-tax-explained', 'insurance-guide'] },
+  { heading: 'Ownership & Lifestyle', keys: ['ev-guide', 'licence-conversion', 'mot-maintenance', 'selling-guide'] },
+  { heading: 'Tools & Services', keys: ['calculators', 'garage-finder'] },
+];
+
 const HK_GUIDES = [
+  /* — Getting Started — */
   {
     n: '01',
     label: 'Should I Get a Car?',
@@ -32,66 +41,69 @@ const HK_GUIDES = [
   },
   {
     n: '03',
+    label: 'Leasing Guide',
+    to: '/hong-kong/leasing-guide',
+    desc: 'Corporate leasing vs personal lease — pros, cons, and what actually works for expats.',
+    img: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+  },
+  /* — Costs & Finance — */
+  {
+    n: '04',
     label: 'FRT Explained',
     to: '/hong-kong/frt-tax-explained',
     desc: 'First Registration Tax is the biggest cost on any new car. Here\'s exactly how it\'s calculated.',
     img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
   },
   {
-    n: '04',
-    label: 'Leasing Guide',
-    to: '/hong-kong/leasing-guide',
-    desc: 'Corporate leasing vs personal lease — pros, cons, and what actually works for expats.',
-    img: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
-  },
-  {
     n: '05',
+    label: 'Insurance Guide',
+    to: '/hong-kong/insurance-guide',
+    desc: 'Third-party vs comprehensive, NCD transfers, and getting a fair quote as an expat.',
+    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+  },
+  /* — Ownership & Lifestyle — */
+  {
+    n: '06',
     label: 'EV Guide',
     to: '/hong-kong/ev-guide',
     desc: 'EV incentives, charging infrastructure, and the best EV choices in Hong Kong.',
     img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80',
   },
   {
-    n: '06',
+    n: '07',
     label: 'Licence Conversion',
     to: '/hong-kong/licence-conversion',
     desc: 'Convert your foreign driving licence to a Hong Kong one — who qualifies and how.',
     img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80',
   },
   {
-    n: '07',
+    n: '08',
     label: 'MOT & Maintenance',
     to: '/hong-kong/mot-maintenance',
     desc: 'Statutory inspection schedule, trusted workshops, and keeping maintenance costs down.',
     img: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80',
   },
   {
-    n: '08',
+    n: '09',
+    label: 'Selling Your Car',
+    to: '/hong-kong/selling-guide',
+    desc: 'Leaving HK? A six-week countdown for selling your car — dealer vs private, TD forms, and timing.',
+    img: 'https://images.unsplash.com/photo-1449280429541-0214e229317b?w=800&q=80',
+  },
+  /* — Tools & Services — */
+  {
+    n: '10',
     label: 'Calculators & Tools',
     to: '/hong-kong/calculators',
     desc: 'FRT calculator, true-cost-of-ownership, tunnel toll guide and more.',
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   },
   {
-    n: '09',
+    n: '11',
     label: 'Garage Finder',
     to: '/hong-kong/garage-finder',
     desc: 'Find trusted workshops and service centres near you in Hong Kong.',
     img: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80',
-  },
-  {
-    n: '10',
-    label: 'Insurance Guide',
-    to: '/hong-kong/insurance-guide',
-    desc: 'Third-party vs comprehensive, NCD transfers, and getting a fair quote as an expat.',
-    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
-  },
-  {
-    n: '11',
-    label: 'Selling Your Car',
-    to: '/hong-kong/selling-guide',
-    desc: 'Leaving HK? A six-week countdown for selling your car — dealer vs private, TD forms, and timing.',
-    img: 'https://images.unsplash.com/photo-1449280429541-0214e229317b?w=800&q=80',
   },
 ];
 
@@ -315,12 +327,20 @@ export default function HongKong() {
       />
       {/* Mobile drawer */}
       <div className={`hk-mobile-drawer ${mobileOpen ? 'open' : ''}`}>
-        <div style={{ fontWeight: 700, fontSize: '0.62rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#14b8a6', padding: '20px 14px 12px' }}>
+        <div style={{ fontWeight: 700, fontSize: '0.62rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#14b8a6', padding: '20px 14px 6px' }}>
           {'\ud83c\udded\ud83c\uddf0'} Hong Kong Guides
         </div>
-        {HK_GUIDES.map(g => (
-          <Link key={g.to} to={g.to} className="hk-nav-link" onClick={() => setMobileOpen(false)}>{g.label}</Link>
-        ))}
+        {HK_SIDEBAR_SECTIONS.map(section => {
+          const guides = section.keys.map(k => HK_GUIDES.find(g => g.to.endsWith('/' + k))).filter(Boolean);
+          return (
+            <div key={section.heading}>
+              <div className="hk-sidebar-heading">{section.heading}</div>
+              {guides.map(g => (
+                <Link key={g.to} to={g.to} className="hk-nav-link" onClick={() => setMobileOpen(false)}>{g.label}</Link>
+              ))}
+            </div>
+          );
+        })}
         <div style={{ borderTop: '1px solid rgba(20,184,166,0.12)', margin: '12px 14px' }}></div>
         <Link to="/singapore" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '7px 14px', fontSize: '0.75rem', color: '#6b7280', textDecoration: 'none' }}>
           {'\ud83c\uddf8\ud83c\uddec'} SG Guides {'\u2192'}
@@ -328,12 +348,20 @@ export default function HongKong() {
       </div>
 
       <div className="hk-main" style={{ display: "flex", alignItems: "flex-start", gap: 0 }}>
-        <aside className="hk-aside-desktop" style={{ width: "185px", minWidth: "175px", flexShrink: 0, borderRight: "1px solid rgba(20,184,166,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
-          <style>{`.hk-nav-link { display:block; padding:7px 14px; font-size:0.82rem; color:#9ca3af; text-decoration:none; margin-bottom:1px; border-left:3px solid transparent; transition:color 0.15s,border-color 0.15s,background 0.15s; } .hk-nav-link:hover { color:#e5e7eb; border-left-color:#14b8a6; background:rgba(20,184,166,0.06); }`}</style>
-          <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#14b8a6", padding:"20px 14px 12px" }}>Hong Kong Guides</div>
-          {HK_GUIDES.map(g => (
-            <Link key={g.to} to={g.to} className="hk-nav-link">{g.label}</Link>
-          ))}
+        <aside className="hk-aside-desktop" style={{ width: "195px", minWidth: "185px", flexShrink: 0, borderRight: "1px solid rgba(20,184,166,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
+          <style>{`.hk-nav-link { display:block; padding:5px 14px; font-size:0.8rem; color:#9ca3af; text-decoration:none; margin-bottom:1px; border-left:3px solid transparent; transition:color 0.15s,border-color 0.15s,background 0.15s; } .hk-nav-link:hover { color:#e5e7eb; border-left-color:#14b8a6; background:rgba(20,184,166,0.06); } .hk-sidebar-heading { font-size:0.6rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#4a5568; padding:14px 14px 5px; }`}</style>
+          <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#14b8a6", padding:"20px 14px 6px" }}>Hong Kong Guides</div>
+          {HK_SIDEBAR_SECTIONS.map(section => {
+            const guides = section.keys.map(k => HK_GUIDES.find(g => g.to.endsWith('/' + k))).filter(Boolean);
+            return (
+              <div key={section.heading}>
+                <div className="hk-sidebar-heading">{section.heading}</div>
+                {guides.map(g => (
+                  <Link key={g.to} to={g.to} className="hk-nav-link">{g.label}</Link>
+                ))}
+              </div>
+            );
+          })}
           <div style={{ borderTop:"1px solid rgba(20,184,166,0.12)", margin:"12px 14px" }}></div>
           <Link to="/singapore" style={{ display:"block", padding:"7px 14px", fontSize:"0.75rem", color:"#6b7280", textDecoration:"none" }}>🇸🇬 SG Guides →</Link>
         </aside>
@@ -380,11 +408,18 @@ export default function HongKong() {
           <div className="hk-frt-footer">Source: HKSAR Transport Department. See full FRT guide for worked examples.</div>
         </div>
 
-        {/* Guide Cards */}
-        <div className="hk-section-title">The Guides</div>
-        <div className="hk-guides-grid">
-          {HK_GUIDES.map(g => <GuideCard key={g.to} {...g} />)}
-        </div>
+        {/* Guide Cards — grouped by section */}
+        {HK_SIDEBAR_SECTIONS.map(section => {
+          const guides = section.keys.map(k => HK_GUIDES.find(g => g.to.endsWith('/' + k))).filter(Boolean);
+          return (
+            <div key={section.heading}>
+              <div className="hk-section-title">{section.heading}</div>
+              <div className="hk-guides-grid">
+                {guides.map(g => <GuideCard key={g.to} {...g} />)}
+              </div>
+            </div>
+          );
+        })}
 
         {/* Patrick Section */}
         <div className="hk-section-title">Your Guide</div>

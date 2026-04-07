@@ -15,7 +15,16 @@ const COE_DATA = {
   ],
 };
 
+/* Sidebar section definitions — controls heading labels and ordering */
+const SG_SIDEBAR_SECTIONS = [
+  { heading: 'Getting Started', keys: ['should-i-get-a-car', 'buying-guide', 'leasing-guide'] },
+  { heading: 'Costs & Finance', keys: ['coe-guide', 'cost-of-driving', 'car-loans', 'insurance-guide'] },
+  { heading: 'Ownership & Lifestyle', keys: ['ev-guide', 'licence-conversion', 'child-car-seats', 'subscription-vs-ownership'] },
+  { heading: 'Tools & Services', keys: ['calculators', 'garage-finder'] },
+];
+
 const SG_GUIDES = [
+  /* — Getting Started — */
   {
     n: '01',
     label: 'Should I Get a Car?',
@@ -25,87 +34,90 @@ const SG_GUIDES = [
   },
   {
     n: '02',
-    label: 'Leasing Guide',
-    to: '/singapore/leasing-guide',
-    desc: 'For most expats, leasing beats buying. Here\'s how to find a deal that won\'t sting.',
-    img: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
-  },
-  {
-    n: '03',
     label: 'Buying Guide',
     to: '/singapore/buying-guide',
     desc: 'COE, OMV, ARF — a plain-English walkthrough of buying a car in Singapore.',
     img: 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=800&q=80',
   },
   {
+    n: '03',
+    label: 'Leasing Guide',
+    to: '/singapore/leasing-guide',
+    desc: 'For most expats, leasing beats buying. Here\'s how to find a deal that won\'t sting.',
+    img: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+  },
+  /* — Costs & Finance — */
+  {
     n: '04',
-    label: 'Insurance Guide',
-    to: '/singapore/insurance-guide',
-    desc: 'What cover you actually need and how to stop overpaying on premiums.',
-    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
-  },
-  {
-    n: '05',
-    label: 'EV Guide',
-    to: '/singapore/ev-guide',
-    desc: 'Electric vehicles in Singapore — incentives, charging, and hidden costs.',
-    img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80',
-  },
-  {
-    n: '06',
-    label: 'Licence Conversion',
-    to: '/singapore/licence-conversion',
-    desc: 'Convert your foreign driving licence to a Singapore one — step by step.',
-    img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80',
-  },
-  {
-    n: '07',
-    label: 'Calculators & Tools',
-    to: '/singapore/calculators',
-    desc: 'COE budget calculator, true-cost-of-ownership tool, and more.',
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-  },
-  {
-    n: '08',
-    label: 'Garage Finder',
-    to: '/singapore/garage-finder',
-    desc: 'Find trusted workshops and service centres near you.',
-    img: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80',
-  },
-  {
-    n: '09',
     label: 'COE Explained',
     to: '/singapore/coe-guide',
     desc: 'How the Certificate of Entitlement system works — bidding, categories, and what it costs.',
-    img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1594028411108-96a5b0302a4a?w=800&q=80',
   },
   {
-    n: '10',
+    n: '05',
     label: 'Cost of Driving (ERP)',
     to: '/singapore/cost-of-driving',
     desc: 'ERP 2.0, parking, petrol — the real monthly cost of driving in Singapore.',
     img: 'https://images.unsplash.com/photo-1542189412744-bfabf27522ee?w=800&q=80',
   },
   {
-    n: '11',
+    n: '06',
     label: 'Car Loans',
     to: '/singapore/car-loans',
     desc: 'MAS LTV caps, TDSR rules, and what banks actually offer expat borrowers.',
     img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80',
   },
   {
-    n: '12',
+    n: '07',
+    label: 'Insurance Guide',
+    to: '/singapore/insurance-guide',
+    desc: 'What cover you actually need and how to stop overpaying on premiums.',
+    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+  },
+  /* — Ownership & Lifestyle — */
+  {
+    n: '08',
+    label: 'EV Guide',
+    to: '/singapore/ev-guide',
+    desc: 'Electric vehicles in Singapore — incentives, charging, and hidden costs.',
+    img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80',
+  },
+  {
+    n: '09',
+    label: 'Licence Conversion',
+    to: '/singapore/licence-conversion',
+    desc: 'Convert your foreign driving licence to a Singapore one — step by step.',
+    img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80',
+  },
+  {
+    n: '10',
     label: 'Child Car Seats',
     to: '/singapore/child-car-seats',
     desc: 'ISOFIX, the 1.35m rule, approved standards, and the taxi exemption.',
     img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80',
   },
   {
-    n: '13',
+    n: '11',
     label: 'Subscription vs Ownership',
     to: '/singapore/subscription-vs-ownership',
     desc: 'Car subscriptions like Carro Leap vs buying — which makes sense for expats?',
     img: 'https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&q=80',
+  },
+  /* — Tools & Services — */
+  {
+    n: '12',
+    label: 'Calculators & Tools',
+    to: '/singapore/calculators',
+    desc: 'COE budget calculator, true-cost-of-ownership tool, and more.',
+    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+  },
+  {
+    n: '13',
+    label: 'Garage Finder',
+    to: '/singapore/garage-finder',
+    desc: 'Find trusted workshops and service centres near you.',
+    img: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80',
   },
 ];
 
@@ -332,12 +344,20 @@ export default function Singapore() {
       />
       {/* Mobile drawer */}
       <div className={`sg-mobile-drawer ${mobileOpen ? 'open' : ''}`}>
-        <div style={{ fontWeight: 700, fontSize: '0.62rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ef4444', padding: '20px 14px 12px' }}>
+        <div style={{ fontWeight: 700, fontSize: '0.62rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ef4444', padding: '20px 14px 6px' }}>
           {'\ud83c\uddf8\ud83c\uddec'} Singapore Guides
         </div>
-        {SG_GUIDES.map(g => (
-          <Link key={g.to} to={g.to} className="sg-nav-link" onClick={() => setMobileOpen(false)}>{g.label}</Link>
-        ))}
+        {SG_SIDEBAR_SECTIONS.map(section => {
+          const guides = section.keys.map(k => SG_GUIDES.find(g => g.to.endsWith('/' + k))).filter(Boolean);
+          return (
+            <div key={section.heading}>
+              <div className="sg-sidebar-heading">{section.heading}</div>
+              {guides.map(g => (
+                <Link key={g.to} to={g.to} className="sg-nav-link" onClick={() => setMobileOpen(false)}>{g.label}</Link>
+              ))}
+            </div>
+          );
+        })}
         <div style={{ borderTop: '1px solid rgba(239,68,68,0.12)', margin: '12px 14px' }}></div>
         <Link to="/hong-kong" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '7px 14px', fontSize: '0.75rem', color: '#6b7280', textDecoration: 'none' }}>
           {'\ud83c\udded\ud83c\uddf0'} HK Guides {'\u2192'}
@@ -345,12 +365,20 @@ export default function Singapore() {
       </div>
 
       <div className="sg-main" style={{ display: "flex", alignItems: "flex-start", gap: 0 }}>
-        <aside className="sg-aside-desktop" style={{ width: "185px", minWidth: "175px", flexShrink: 0, borderRight: "1px solid rgba(239,68,68,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
-          <style>{`.sg-nav-link { display:block; padding:7px 14px; font-size:0.82rem; color:#9ca3af; text-decoration:none; margin-bottom:1px; border-left:3px solid transparent; transition:color 0.15s,border-color 0.15s,background 0.15s; } .sg-nav-link:hover { color:#e5e7eb; border-left-color:#ef4444; background:rgba(239,68,68,0.06); }`}</style>
-          <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#ef4444", padding:"20px 14px 12px" }}>Singapore Guides</div>
-          {SG_GUIDES.map(g => (
-            <Link key={g.to} to={g.to} className="sg-nav-link">{g.label}</Link>
-          ))}
+        <aside className="sg-aside-desktop" style={{ width: "195px", minWidth: "185px", flexShrink: 0, borderRight: "1px solid rgba(239,68,68,0.18)", background: "transparent", alignSelf: "flex-start", position: "sticky", top: "72px" }}>
+          <style>{`.sg-nav-link { display:block; padding:5px 14px; font-size:0.8rem; color:#9ca3af; text-decoration:none; margin-bottom:1px; border-left:3px solid transparent; transition:color 0.15s,border-color 0.15s,background 0.15s; } .sg-nav-link:hover { color:#e5e7eb; border-left-color:#ef4444; background:rgba(239,68,68,0.06); } .sg-sidebar-heading { font-size:0.6rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#4a5568; padding:14px 14px 5px; }`}</style>
+          <div style={{ fontWeight:700, fontSize:"0.62rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"#ef4444", padding:"20px 14px 6px" }}>Singapore Guides</div>
+          {SG_SIDEBAR_SECTIONS.map(section => {
+            const guides = section.keys.map(k => SG_GUIDES.find(g => g.to.endsWith('/' + k))).filter(Boolean);
+            return (
+              <div key={section.heading}>
+                <div className="sg-sidebar-heading">{section.heading}</div>
+                {guides.map(g => (
+                  <Link key={g.to} to={g.to} className="sg-nav-link">{g.label}</Link>
+                ))}
+              </div>
+            );
+          })}
           <div style={{ borderTop:"1px solid rgba(239,68,68,0.12)", margin:"12px 14px" }}></div>
           <Link to="/hong-kong" style={{ display:"block", padding:"7px 14px", fontSize:"0.75rem", color:"#6b7280", textDecoration:"none" }}>🇭🇰 HK Guides →</Link>
         </aside>
@@ -395,11 +423,18 @@ export default function Singapore() {
           <div className="sg-coe-footer">Source: LTA bidding results. Updated after each exercise (1st &amp; 3rd Wed of month).</div>
         </div>
 
-        {/* Guide Cards */}
-        <div className="sg-section-title">The Guides</div>
-        <div className="sg-guides-grid">
-          {SG_GUIDES.map(g => <GuideCard key={g.to} {...g} />)}
-        </div>
+        {/* Guide Cards — grouped by section */}
+        {SG_SIDEBAR_SECTIONS.map(section => {
+          const guides = section.keys.map(k => SG_GUIDES.find(g => g.to.endsWith('/' + k))).filter(Boolean);
+          return (
+            <div key={section.heading}>
+              <div className="sg-section-title">{section.heading}</div>
+              <div className="sg-guides-grid">
+                {guides.map(g => <GuideCard key={g.to} {...g} />)}
+              </div>
+            </div>
+          );
+        })}
 
         {/* Patrick Section */}
         <div className="sg-section-title">Your Guide</div>
