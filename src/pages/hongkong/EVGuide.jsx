@@ -6,9 +6,9 @@ const HERO_IMG = "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w
 export default function HKEVGuide() {
   return (
     <Layout city="hk" title="Electric Vehicles in Hong Kong: Expat Guide" description="EV buying and ownership in Hong Kong for expats: FRT concessions, One-for-One Replacement Scheme, charging infrastructure, popular EV models, and whether an EV makes sense for you." relatedLinks={[{ label: 'Buying Guide', to: '/hong-kong/buying-guide' }, { label: 'Leasing Guide', to: '/hong-kong/leasing-guide' }, { label: 'FRT Tax Explained', to: '/hong-kong/frt-tax-explained' }]}>
-      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
-        <img src={HERO_IMG} alt="EV Hong Kong" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
+      <div style={{ width: "100%", height: "clamp(220px,35vw,520px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
+        <img src={HERO_IMG} alt="EV Hong Kong" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.35) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>
           <span style={{ background: "#2a9d8f", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 6 }}>Hong Kong</span>
         </div>

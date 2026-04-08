@@ -56,9 +56,9 @@ export default function SGLeasingGuide() {
       title="Singapore Car Leasing Guide for Expats"
       description="Everything expats need to know about leasing a car in Singapore: costs, what's bundled, COE explained, how to choose a lease company, and what to watch out for."
      relatedLinks={[{ label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }, { label: 'EV Guide', to: '/singapore/ev-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }]}>
-      <div style={{ width: "100%", height: "clamp(180px,30vw,340px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
-        <img src={HERO_IMG} alt="Car on Singapore expressway" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.55) 0%, transparent 60%)" }} />
+      <div style={{ width: "100%", height: "clamp(220px,35vw,520px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
+        <img src={HERO_IMG} alt="Car on Singapore expressway" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.35) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>
           <span style={{ background: "#e63946", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 6 }}>Singapore</span>
         </div>
