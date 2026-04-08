@@ -56,7 +56,7 @@ export default function SGGarageFinder() {
   return (
     <Layout city="sg" title="Finding a Garage in Singapore: Expat Guide to Workshops" description="How to find a good, English-speaking car workshop in Singapore. Workshop areas, types, price guide for common services, and how to avoid the bad ones.">
       <div style={{ width: "100%", height: "clamp(220px,35vw,520px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
-        <img src={HERO_IMG} alt="Car workshop Singapore" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+        <img src={HERO_IMG} alt="Car workshop Singapore" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.35) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", bottom: 20, left: 24 }}>
           <span style={{ background: "#e63946", color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 6 }}>Singapore</span>
