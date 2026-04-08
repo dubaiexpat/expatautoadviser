@@ -1,7 +1,7 @@
 import MarkdownArticlePage from '../../components/MarkdownArticlePage';
 import markdown from '../../content/buying-a-car-hong-kong-parking-reality.md?raw';
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1483389127117-b6a2102724ae?w=1200&q=80';
+const HERO_IMG = 'https://images.unsplash.com/photo-1678443409766-c65816066673?w=1200&q=80';
 
 export default function HKBuyingGuide() {
   return (

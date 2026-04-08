@@ -1,7 +1,7 @@
 import MarkdownArticlePage from '../../components/MarkdownArticlePage';
 import markdown from '../../content/buying-a-used-car-in-singapore-coe-parf-paperwork.md?raw';
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=1200&q=80';
+const HERO_IMG = 'https://images.unsplash.com/photo-1595696389610-2d339d4573c7?w=1200&q=80';
 
 export default function SGBuyingGuide() {
   return (

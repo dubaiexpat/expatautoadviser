@@ -1,7 +1,7 @@
 import MarkdownArticlePage from '../../components/MarkdownArticlePage';
 import markdown from '../../content/car-loans-for-expats-in-singapore-mas-ltv-rules.md?raw';
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200&q=80';
+const HERO_IMG = 'https://images.unsplash.com/photo-1600191763437-4262cefe23ab?w=1200&q=80';
 
 export default function SGCarLoans() {
   return (

@@ -1,7 +1,7 @@
 import MarkdownArticlePage from '../../components/MarkdownArticlePage';
 import markdown from '../../content/child-car-seats-isofix-laws-singapore.md?raw';
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1600664356348-10686526af4f?w=1200&q=80';
+const HERO_IMG = 'https://images.unsplash.com/photo-1619719287848-883c8f26efbc?w=1200&q=80';
 
 export default function SGChildCarSeats() {
   return (
