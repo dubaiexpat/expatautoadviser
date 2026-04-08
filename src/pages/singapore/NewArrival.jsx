@@ -8,7 +8,7 @@ const h2 = { margin: "36px 0 12px", fontSize: "clamp(18px,2.5vw,24px)", fontWeig
 const body = { margin: "0 0 16px", fontSize: 15, color: "#374151", lineHeight: 1.75 };
 const good = { background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: 8, padding: "14px 18px", margin: "16px 0", fontSize: 14, color: "#166534", lineHeight: 1.6 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1489207147564-08288482ec6e?w=1200&q=80";
+const HERO_IMG = "https://images.unsplash.com/photo-1628072380638-21b16e95c562?w=1200&q=80";
 
 const faqItems = [
   { q: "Do I really need a car when I first arrive in Singapore?", a: "No \u2014 not immediately. Most new arrivals find that MRT, Grab, and taxis work fine for the first few months while you settle in and figure out where you'll live long-term." },

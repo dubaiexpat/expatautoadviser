@@ -10,6 +10,7 @@ export default function SGCOEGuide() {
       title="How the COE System Works for Expats in Singapore"
       description="Everything expats need to know about Singapore's Certificate of Entitlement system: how bidding works, current COE prices, categories, renewal rules, and strategies to manage the cost."
       heroImage={HERO_IMG}
+      heroPosition="center 40%"
       relatedLinks={[
         { label: 'Buying Guide', to: '/singapore/buying-guide' },
         { label: 'Cost of Driving (ERP)', to: '/singapore/cost-of-driving' },

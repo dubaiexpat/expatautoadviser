@@ -14,11 +14,14 @@ const CITY_LABELS = {
   hk: 'Hong Kong',
 };
 
-export default function MarkdownArticlePage({ city, title, description, heroImage, relatedLinks, markdown }) {
+export default function MarkdownArticlePage({ city, title, description, heroImage, heroPosition, relatedLinks, markdown }) {
+  const imgStyle = heroPosition
+    ? { ...HERO_STYLES.img, objectPosition: heroPosition }
+    : HERO_STYLES.img;
   return (
     <Layout city={city} title={title} description={description} relatedLinks={relatedLinks}>
       <div style={HERO_STYLES.wrap}>
-        <img src={heroImage} alt={title} style={HERO_STYLES.img} />
+        <img src={heroImage} alt={title} style={imgStyle} />
         <div style={HERO_STYLES.overlay} />
         <div style={HERO_STYLES.badge}>
           <span style={HERO_STYLES.badgeText}>{CITY_LABELS[city]}</span>

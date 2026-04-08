@@ -10,6 +10,7 @@ export default function HKBuyingGuide() {
       title="Buying a Car in Hong Kong as an Expat: Costs, Parking, and Whether It's Worth It"
       description="The real cost of buying a car in Hong Kong: FRT, parking reality, illustrative budgets, chauffeur vs taxi trade-offs, EV concessions, and whether owning actually makes sense."
       heroImage={HERO_IMG}
+      heroPosition="center 35%"
       relatedLinks={[
         { label: 'FRT Explained', to: '/hong-kong/frt-tax-explained' },
         { label: 'Insurance Guide', to: '/hong-kong/insurance-guide' },

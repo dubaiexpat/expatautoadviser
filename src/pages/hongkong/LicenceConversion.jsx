@@ -1,7 +1,7 @@
 import MarkdownArticlePage from '../../components/MarkdownArticlePage';
 import markdown from '../../content/converting-overseas-driving-licence-hong-kong.md?raw';
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1509715761508-dc1acb1cb944?w=1200&q=80';
+const HERO_IMG = 'https://images.unsplash.com/photo-1545033425-4e71fc54a759?w=1200&q=80';
 
 export default function HKLicenceConversion() {
   return (
