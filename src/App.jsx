@@ -47,16 +47,22 @@ function ExitIntent() {
   async function subscribe(e) {
     e.preventDefault();
     if (!email) return;
-    const apiKey = import.meta.env.VITE_BREVO_API_KEY;
-    if (apiKey) {
-      try {
-        await fetch('https://api.brevo.com/v3/contacts', {
-          method: 'POST',
-          headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, listIds: [3], updateEnabled: true, attributes: { SOURCE: 'exit_intent' } }),
-        });
-      } catch {}
-    }
+    const path = pathname || '';
+    const city = path.startsWith('/hong-kong') || path.startsWith('/hongkong') ? 'hk' : 'sg';
+    try {
+      await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          sourcePage: path || '/',
+          sourceType: 'exit-intent',
+          firstMagnet: '',
+          city,
+          source: 'exit_intent',
+        }),
+      });
+    } catch {}
     setDone(true);
     setTimeout(() => setShow(false), 2000);
   }

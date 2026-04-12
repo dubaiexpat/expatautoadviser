@@ -217,16 +217,20 @@ export default function Home() {
   async function handleNewsletterSubmit(e) {
     e.preventDefault();
     if (!email) return;
-    const apiKey = import.meta.env.VITE_BREVO_API_KEY;
-    if (apiKey) {
-      try {
-        await fetch("https://api.brevo.com/v3/contacts", {
-          method: "POST",
-          headers: { "api-key": apiKey, "Content-Type": "application/json" },
-          body: JSON.stringify({ email, listIds: [3], updateEnabled: true, attributes: { SOURCE: "homepage_newsletter" } }),
-        });
-      } catch {}
-    }
+    try {
+      await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          sourcePage: "/",
+          sourceType: "homepage-newsletter",
+          firstMagnet: "",
+          city: "sg",
+          source: "homepage_newsletter",
+        }),
+      });
+    } catch {}
     setNlSubmitted(true);
     setTimeout(() => setNlSubmitted(false), 3000);
     setEmail("");
