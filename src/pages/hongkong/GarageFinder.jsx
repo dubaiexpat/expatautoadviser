@@ -213,6 +213,7 @@ export default function HKGarageFinder() {
       <EmailCapture
         city="hk"
         source="hk-garage-finder"
+        guideTopic="garage"
         title="📋 Get the free Hong Kong Car Buyer Guide"
         subtitle="Includes our vetted garage list, FRT calculator walkthrough, and the HK expat car checklist. Free."
       />

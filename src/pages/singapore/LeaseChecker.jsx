@@ -334,6 +334,7 @@ export default function SGLeaseChecker() {
             <EmailCapture
               city="sg"
               source="sg-lease-checker-result"
+              guideTopic="leasing"
               title="📋 Get your free Singapore Car Buyer Checklist"
               subtitle="Step-by-step from COE bidding to insurance to your first drive. Plus monthly COE price updates when results drop."
             />

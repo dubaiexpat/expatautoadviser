@@ -332,6 +332,7 @@ export default function HKLeaseChecker() {
             <EmailCapture
               city="hk"
               source="hk-lease-checker-result"
+              guideTopic="leasing"
               title="📋 Get your free Hong Kong Car Buyer Guide"
               subtitle="First Registration Tax explained, how to negotiate a lease, insurance tips, and everything else the HK expat car market throws at you."
             />

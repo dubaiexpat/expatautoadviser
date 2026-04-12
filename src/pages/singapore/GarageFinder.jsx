@@ -195,6 +195,7 @@ export default function SGGarageFinder() {
       <EmailCapture
         city="sg"
         source="sg-garage-finder"
+        guideTopic="garage"
         title="📋 Get the free Singapore Car Buyer Checklist"
         subtitle="Includes our vetted garage list, servicing price benchmarks, and what to watch out for at lease return. Free."
       />

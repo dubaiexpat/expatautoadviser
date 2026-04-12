@@ -20,6 +20,7 @@ export default function EmailCapture({
   source = 'general',
   sourceType = 'inline-cta',
   firstMagnet,
+  guideTopic = 'buying',
   title,
   subtitle,
   buttonText,
@@ -61,6 +62,7 @@ export default function EmailCapture({
           firstMagnet: resolvedMagnet,
           city,
           source, // legacy label for attribution
+          guideTopic,
         }),
       });
     } catch (err) {

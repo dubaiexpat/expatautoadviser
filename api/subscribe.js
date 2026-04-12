@@ -4,7 +4,8 @@
  * Unified Brevo ingress for ExpatAutoAdviser (SG + HK).
  *
  * Flow:
- *  - Client posts { email, sourcePage, sourceType, firstMagnet, city, source }
+ *  - Client posts { email, sourcePage, sourceType, firstMagnet, city,
+ *    source, guideTopic }
  *  - We add the contact to the EAA PENDING list with full attributes.
  *  - We immediately send the magnet delivery email via Brevo's
  *    transactional /v3/smtp/email endpoint, with inline HTML looked up
@@ -13,12 +14,52 @@
  * Note: we skip double-opt-in. The lead magnet IS the consent — the
  * user typed their email to get the PDF.
  *
+ * Contact attributes stored:
+ *   SOURCE_PAGE   — e.g. "/singapore/buying-guide"
+ *   SOURCE_TYPE   — "inline-cta" | "exit-intent" | "homepage-newsletter"
+ *   SITE          — "expatautoadviser"
+ *   CITY          — "singapore" | "hong-kong"
+ *   FIRST_MAGNET  — magnet slug or ""
+ *   GUIDE_TOPIC   — e.g. "buying", "leasing", "garage", "calculator",
+ *                   "general" (enables topic-based email segmentation)
+ *   SUBSCRIBED_AT — ISO timestamp
+ *
  * Env vars required (set in Vercel):
  *   BREVO_API_KEY              — Brevo master API key
  *   BREVO_EAA_PENDING_LIST_ID  — numeric list ID of EAA pending list
  */
 
 import { MAGNETS, buildMagnetEmailHtml } from './magnets.js';
+
+/* ── Brevo attribute pre-declaration ──────────────────────
+ * Brevo silently drops attributes that haven't been pre-declared in the
+ * contact schema. We ensure GUIDE_TOPIC exists on every cold start.
+ * The call is idempotent — Brevo returns 400 if it already exists.
+ */
+let _attrsDeclared = false;
+async function ensureBrevoAttributes(apiKey) {
+  if (_attrsDeclared) return;
+  const attrs = ['GUIDE_TOPIC'];
+  for (const name of attrs) {
+    try {
+      await fetch(
+        `https://api.brevo.com/v3/contacts/attributes/normal/${name}`,
+        {
+          method: 'POST',
+          headers: {
+            'api-key': apiKey,
+            'Content-Type': 'application/json',
+            accept: 'application/json',
+          },
+          body: JSON.stringify({ type: 'text' }),
+        }
+      );
+    } catch (_) {
+      // Non-critical — if this fails the attribute may already exist
+    }
+  }
+  _attrsDeclared = true;
+}
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -35,6 +76,7 @@ export default async function handler(req, res) {
       firstMagnet,
       city,
       source,
+      guideTopic,
     } = body;
 
     if (!email || typeof email !== 'string' || !email.includes('@')) {
@@ -51,6 +93,9 @@ export default async function handler(req, res) {
       );
       return res.status(200).json({ ok: true });
     }
+
+    // Ensure new attributes exist in Brevo schema (idempotent, cached).
+    await ensureBrevoAttributes(apiKey);
 
     const normalisedCity = city === 'hk' ? 'hong-kong' : 'singapore';
 
@@ -71,6 +116,7 @@ export default async function handler(req, res) {
           SITE: 'expatautoadviser',
           CITY: normalisedCity,
           FIRST_MAGNET: firstMagnet || '',
+          GUIDE_TOPIC: guideTopic || 'general',
           SUBSCRIBED_AT: new Date().toISOString(),
         },
       }),

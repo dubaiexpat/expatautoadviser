@@ -60,6 +60,7 @@ function ExitIntent() {
           firstMagnet: '',
           city,
           source: 'exit_intent',
+          guideTopic: 'general',
         }),
       });
     } catch {}

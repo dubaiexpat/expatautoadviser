@@ -680,6 +680,7 @@ export default function Calculators() {
         <EmailCapture
           city="sg"
           source="sg-calculators"
+          guideTopic="calculator"
           title="📋 Get the free Singapore Car Buyer Checklist"
           subtitle="COE bidding explained, the 10-year ownership cost framework, insurance must-haves, and a 10-item pre-purchase checklist — everything in one PDF."
           buttonText="Send me the checklist →"

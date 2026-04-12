@@ -229,6 +229,7 @@ export default function Home() {
           firstMagnet: "",
           city: nlCity,
           source: "homepage_newsletter",
+          guideTopic: "newsletter",
         }),
       });
     } catch {}

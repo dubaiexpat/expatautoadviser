@@ -702,6 +702,7 @@ export default function Calculators() {
         <EmailCapture
           city="hk"
           source="hk-calculators"
+          guideTopic="calculator"
           title="📋 Get the free Hong Kong Car Buyer Guide"
           subtitle="First Registration Tax explained, the post-concession EV reality, parking truths, and a 10-item pre-purchase checklist — everything in one PDF."
           buttonText="Send me the guide →"
