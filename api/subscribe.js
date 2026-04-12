@@ -81,15 +81,11 @@ export default async function handler(req, res) {
       console.error('Brevo subscribe failed:', brevoRes.status, errText);
     }
 
-    // Magnet delivery — look up the magnet by slug and send the email
-    // inline via Brevo's transactional endpoint. Falls back to the SG or
-    // HK default based on city when firstMagnet isn't explicitly set.
-    const defaultMagnet =
-      normalisedCity === 'hong-kong'
-        ? 'eaa-hk-car-buyer-guide'
-        : 'eaa-sg-car-buyer-checklist';
-    const magnetKey = firstMagnet || defaultMagnet;
-    const magnet = MAGNETS[magnetKey];
+    // Magnet delivery — only send a PDF if the client explicitly requested
+    // one via firstMagnet. Pure newsletter subscribes (firstMagnet === '')
+    // should NOT receive a random PDF.
+    const magnetKey = firstMagnet || '';
+    const magnet = magnetKey ? MAGNETS[magnetKey] : null;
     if (magnet) {
       try {
         const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {

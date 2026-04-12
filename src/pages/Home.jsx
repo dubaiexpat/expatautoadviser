@@ -212,6 +212,7 @@ function CityPanel({ city, flag, mapUrl, tagline, accent, to }) {
 
 export default function Home() {
   const [email, setEmail] = useState("");
+  const [nlCity, setNlCity] = useState("sg");
   const [nlSubmitted, setNlSubmitted] = useState(false);
 
   async function handleNewsletterSubmit(e) {
@@ -226,7 +227,7 @@ export default function Home() {
           sourcePage: "/",
           sourceType: "homepage-newsletter",
           firstMagnet: "",
-          city: "sg",
+          city: nlCity,
           source: "homepage_newsletter",
         }),
       });
@@ -290,16 +291,20 @@ export default function Home() {
       <div className="patrick-strip">
         <img src={PATRICK_IMG} alt="Patrick" className="patrick-img" />
         <div className="patrick-text">
-          <strong>Written by expats, for expats</strong>
+          <strong>Stay in the loop</strong>
           <span>
-            Practical, no-nonsense guides from people who've navigated these
-            markets themselves.
+            New guides, market updates and expat car tips — pick your city and we'll keep you posted.
           </span>
         </div>
         <form
           className="nl-form"
           onSubmit={handleNewsletterSubmit}
+          style={{ alignItems: 'center' }}
         >
+          <div style={{ display: 'flex', gap: 2, background: 'rgba(255,255,255,0.07)', borderRadius: 6, overflow: 'hidden', flexShrink: 0 }}>
+            <button type="button" onClick={() => setNlCity('sg')} style={{ padding: '0.4rem 0.6rem', fontSize: '0.75rem', fontWeight: 700, border: 'none', cursor: 'pointer', background: nlCity === 'sg' ? '#e8341c' : 'transparent', color: nlCity === 'sg' ? '#fff' : '#8892a4', transition: 'background 0.2s' }}>SG</button>
+            <button type="button" onClick={() => setNlCity('hk')} style={{ padding: '0.4rem 0.6rem', fontSize: '0.75rem', fontWeight: 700, border: 'none', cursor: 'pointer', background: nlCity === 'hk' ? '#2a9d8f' : 'transparent', color: nlCity === 'hk' ? '#fff' : '#8892a4', transition: 'background 0.2s' }}>HK</button>
+          </div>
           <input
             type="email"
             placeholder="your@email.com"

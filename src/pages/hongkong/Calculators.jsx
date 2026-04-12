@@ -702,9 +702,9 @@ export default function Calculators() {
         <EmailCapture
           city="hk"
           source="hk-calculators"
-          title="📊 Get the monthly HK car market update"
-          subtitle="FRT policy, EV incentives, and HK car market news — one email per month. Free, unsubscribe any time."
-          buttonText="Send me updates →"
+          title="📋 Get the free Hong Kong Car Buyer Guide"
+          subtitle="First Registration Tax explained, the post-concession EV reality, parking truths, and a 10-item pre-purchase checklist — everything in one PDF."
+          buttonText="Send me the guide →"
         />
       </div>
     </Layout>

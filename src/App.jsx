@@ -77,10 +77,10 @@ function ExitIntent() {
       <div className="exit-intent-banner" style={{ position: 'fixed', top: 0, left: '50%', transform: 'translateX(-50%)', zIndex: 99999, background: 'rgba(10,12,18,0.92)', backdropFilter: 'blur(8px)', color: '#fff', height: 52, padding: '0 20px', display: 'flex', alignItems: 'center', gap: 10, maxWidth: 640 }}>
       <img src={PATRICK_IMG} alt="Patrick" style={{ width: 30, height: 30, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
       {done ? (
-        <span style={{ fontSize: 14, fontWeight: 600 }}>{'✓'} You're on the list! I'll be in touch monthly.</span>
+        <span style={{ fontSize: 14, fontWeight: 600 }}>{'✓'} You're subscribed — we'll send new guides and updates your way.</span>
       ) : (
         <>
-          <span style={{ fontSize: 13, flexShrink: 0 }}>Get Patrick's free monthly car market briefing for expats</span>
+          <span style={{ fontSize: 13, flexShrink: 0 }}>New expat car guides and market updates — straight to your inbox</span>
           <form onSubmit={subscribe} style={{ display: 'flex', gap: 6, flex: 1, maxWidth: 300 }}>
             <input type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="your@email.com" style={{ flex: 1, padding: '6px 10px', borderRadius: 6, border: 'none', fontSize: 13, minWidth: 0 }} />
             <button type="submit" style={{ background: '#e63946', color: '#fff', border: 'none', borderRadius: 6, padding: '6px 12px', fontSize: 12, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>

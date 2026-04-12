@@ -680,9 +680,9 @@ export default function Calculators() {
         <EmailCapture
           city="sg"
           source="sg-calculators"
-          title="📊 Get the monthly COE price update"
-          subtitle="COE premiums change every fortnight. We send one email per month with the latest figures and what they mean for expats deciding whether to buy or lease."
-          buttonText="Send me updates →"
+          title="📋 Get the free Singapore Car Buyer Checklist"
+          subtitle="COE bidding explained, the 10-year ownership cost framework, insurance must-haves, and a 10-item pre-purchase checklist — everything in one PDF."
+          buttonText="Send me the checklist →"
         />
       </div>
     </Layout>
