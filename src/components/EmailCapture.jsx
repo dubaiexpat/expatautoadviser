@@ -85,10 +85,10 @@ export default function EmailCapture({
         }}
       >
         <div style={{ fontSize: 32, marginBottom: 8 }}>✅</div>
-        <p style={{ fontSize: 16, fontWeight: 700, color: ‘#166534’, margin: ‘0 0 4px’ }}>
-          You’re in!
+        <p style={{ fontSize: 16, fontWeight: 700, color: '#166534', margin: '0 0 4px' }}>
+          {"You're in!"}
         </p>
-        <p style={{ fontSize: 13, color: ‘#166534’, margin: 0 }}>
+        <p style={{ fontSize: 13, color: '#166534', margin: 0 }}>
           Check your inbox — your guide is on its way.
         </p>
       </div>
