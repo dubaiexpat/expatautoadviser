@@ -314,7 +314,7 @@ export default function Home() {
             required
           />
           <button type="submit" className="nl-btn">
-            {nlSubmitted ? "✓ SUBSCRIBED" : "SUBSCRIBE"}
+            {nlSubmitted ? "✓ CHECK YOUR INBOX" : "SUBSCRIBE"}
           </button>
         </form>
       </div>

@@ -77,7 +77,7 @@ function ExitIntent() {
       <div className="exit-intent-banner" style={{ position: 'fixed', top: 0, left: '50%', transform: 'translateX(-50%)', zIndex: 99999, background: 'rgba(10,12,18,0.92)', backdropFilter: 'blur(8px)', color: '#fff', height: 52, padding: '0 20px', display: 'flex', alignItems: 'center', gap: 10, maxWidth: 640 }}>
       <img src={PATRICK_IMG} alt="Patrick" style={{ width: 30, height: 30, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
       {done ? (
-        <span style={{ fontSize: 14, fontWeight: 600 }}>{'✓'} You're subscribed — we'll send new guides and updates your way.</span>
+        <span style={{ fontSize: 14, fontWeight: 600 }}>{"✓ You're in! Check your inbox for your starter guide."}</span>
       ) : (
         <>
           <span style={{ fontSize: 13, flexShrink: 0 }}>New expat car guides and market updates — straight to your inbox</span>

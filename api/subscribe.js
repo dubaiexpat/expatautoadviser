@@ -81,11 +81,26 @@ export default async function handler(req, res) {
       console.error('Brevo subscribe failed:', brevoRes.status, errText);
     }
 
-    // Magnet delivery — only send a PDF if the client explicitly requested
-    // one via firstMagnet. Pure newsletter subscribes (firstMagnet === '')
-    // should NOT receive a random PDF.
+    // Decide which email to send:
+    //  - If the client requested a specific magnet (firstMagnet is set),
+    //    send that magnet's delivery email.
+    //  - If this is a pure newsletter subscribe (firstMagnet is empty),
+    //    send the city-appropriate welcome guide instead.
     const magnetKey = firstMagnet || '';
-    const magnet = magnetKey ? MAGNETS[magnetKey] : null;
+    let emailMagnetKey = magnetKey;
+    let emailTags = [];
+
+    if (magnetKey && MAGNETS[magnetKey]) {
+      // Explicit magnet request — send that PDF
+      emailTags = ['magnet-delivery', magnetKey];
+    } else {
+      // Pure subscribe — send the welcome guide for their chosen city
+      emailMagnetKey =
+        city === 'hk' ? 'eaa-hk-welcome-guide' : 'eaa-sg-welcome-guide';
+      emailTags = ['welcome-email', emailMagnetKey];
+    }
+
+    const magnet = MAGNETS[emailMagnetKey];
     if (magnet) {
       try {
         const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
@@ -103,19 +118,19 @@ export default async function handler(req, res) {
             to: [{ email }],
             subject: magnet.subject,
             htmlContent: buildMagnetEmailHtml(magnet),
-            tags: ['magnet-delivery', magnetKey],
+            tags: emailTags,
           }),
         });
         if (!emailRes.ok) {
           const errText = await emailRes.text().catch(() => '');
-          console.error('Brevo magnet email failed:', emailRes.status, errText);
+          console.error('Brevo email failed:', emailRes.status, errText);
         }
       } catch (emailErr) {
-        console.error('Brevo magnet email exception:', emailErr);
+        console.error('Brevo email exception:', emailErr);
       }
     } else {
       console.warn(
-        `No magnet config found for slug: ${magnetKey}. Email not sent.`
+        `No magnet config found for key: ${emailMagnetKey}. Email not sent.`
       );
     }
 

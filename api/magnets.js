@@ -29,6 +29,24 @@ export const MAGNETS = {
       "Thanks for signing up. Here's your Hong Kong Car Buyer Guide — covering first registration tax, driving licences for expats, parking reality, insurance, and whether owning a car in HK actually makes sense for you.",
     brandColor: '#e63946',
   },
+
+  /* ── Welcome guides (sent to pure newsletter subscribers) ───────── */
+  'eaa-sg-welcome-guide': {
+    subject: 'Welcome to ExpatAutoAdviser — your Singapore starter guide',
+    pdfPath: '/magnets/eaa-sg-welcome-guide.pdf',
+    displayName: '5 Things Every Expat Should Know Before Getting a Car in Singapore',
+    intro:
+      "Welcome aboard! We've put together a quick one-pager with the five things every expat should know before getting a car in Singapore — from COE costs to insurance tips. Have a read, and keep an eye on your inbox for new guides and market updates.",
+    brandColor: '#e63946',
+  },
+  'eaa-hk-welcome-guide': {
+    subject: 'Welcome to ExpatAutoAdviser — your Hong Kong starter guide',
+    pdfPath: '/magnets/eaa-hk-welcome-guide.pdf',
+    displayName: '5 Things Every Expat Should Know Before Getting a Car in Hong Kong',
+    intro:
+      "Welcome aboard! We've put together a quick one-pager with the five things every expat should know before getting a car in Hong Kong — from first registration tax to parking costs. Have a read, and keep an eye on your inbox for new guides and market updates.",
+    brandColor: '#2a9d8f',
+  },
 };
 
 /**
