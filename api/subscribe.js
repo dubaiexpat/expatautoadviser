@@ -6,16 +6,19 @@
  * Flow:
  *  - Client posts { email, sourcePage, sourceType, firstMagnet, city, source }
  *  - We add the contact to the EAA PENDING list with full attributes.
- *  - Brevo's "Confirmation Opt-In" automation (configured in the Brevo
- *    dashboard) sends the DOI email, and on click moves the contact into
- *    the final EAA_SG or EAA_HK list and triggers magnet delivery.
+ *  - We immediately send the magnet delivery email via Brevo's
+ *    transactional /v3/smtp/email endpoint, with inline HTML looked up
+ *    from MAGNETS in ./magnets.js. No Brevo Automations or templates.
+ *
+ * Note: we skip double-opt-in. The lead magnet IS the consent — the
+ * user typed their email to get the PDF.
  *
  * Env vars required (set in Vercel):
  *   BREVO_API_KEY              — Brevo master API key
  *   BREVO_EAA_PENDING_LIST_ID  — numeric list ID of EAA pending list
- *
- * No Supabase. The previous hardcoded anon key is removed.
  */
+
+import { MAGNETS, buildMagnetEmailHtml } from './magnets.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -76,6 +79,48 @@ export default async function handler(req, res) {
     if (!brevoRes.ok) {
       const errText = await brevoRes.text().catch(() => '');
       console.error('Brevo subscribe failed:', brevoRes.status, errText);
+    }
+
+    // Magnet delivery — look up the magnet by slug and send the email
+    // inline via Brevo's transactional endpoint. Falls back to the SG or
+    // HK default based on city when firstMagnet isn't explicitly set.
+    const defaultMagnet =
+      normalisedCity === 'hong-kong'
+        ? 'eaa-hk-car-buyer-guide'
+        : 'eaa-sg-car-buyer-checklist';
+    const magnetKey = firstMagnet || defaultMagnet;
+    const magnet = MAGNETS[magnetKey];
+    if (magnet) {
+      try {
+        const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
+          method: 'POST',
+          headers: {
+            'api-key': apiKey,
+            'Content-Type': 'application/json',
+            accept: 'application/json',
+          },
+          body: JSON.stringify({
+            sender: {
+              name: 'ExpatAutoAdviser',
+              email: 'partnerships@expatautoadviser.com',
+            },
+            to: [{ email }],
+            subject: magnet.subject,
+            htmlContent: buildMagnetEmailHtml(magnet),
+            tags: ['magnet-delivery', magnetKey],
+          }),
+        });
+        if (!emailRes.ok) {
+          const errText = await emailRes.text().catch(() => '');
+          console.error('Brevo magnet email failed:', emailRes.status, errText);
+        }
+      } catch (emailErr) {
+        console.error('Brevo magnet email exception:', emailErr);
+      }
+    } else {
+      console.warn(
+        `No magnet config found for slug: ${magnetKey}. Email not sent.`
+      );
     }
 
     return res.status(200).json({ ok: true });
