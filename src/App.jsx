@@ -35,6 +35,7 @@ import Privacy from './pages/legal/Privacy';
 import Terms from './pages/legal/Terms';
 import Cookies from './pages/legal/Cookies';
 import AffiliateDisclosure from './pages/legal/AffiliateDisclosure';
+import Contact from './pages/legal/Contact';
 import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -134,6 +135,7 @@ export function AppRoutes() {
       <Route path="/terms" element={<Terms />} />
       <Route path="/cookies" element={<Cookies />} />
       <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
+      <Route path="/contact" element={<Contact />} />
 
       {/* Redirects from old /hongkong paths to /hong-kong */}
       <Route path="/hongkong" element={<Navigate to="/hong-kong" replace />} />

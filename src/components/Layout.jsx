@@ -342,6 +342,7 @@ export default function Layout({ city, children, relatedLinks }) {
           <a href="/terms" style={{ color: '#9ca3af', textDecoration: 'none' }}>Terms</a>
           <a href="/cookies" style={{ color: '#9ca3af', textDecoration: 'none' }}>Cookies</a>
           <a href="/affiliate-disclosure" style={{ color: '#9ca3af', textDecoration: 'none' }}>Disclosure</a>
+          <a href="/contact" style={{ color: '#9ca3af', textDecoration: 'none' }}>Contact</a>
         </div>
       </footer>
     </div>
