@@ -96,9 +96,15 @@ Singapore has a few child seat safety check services. Some car dealerships (Volv
 
 If you installed the seat yourself, get it checked. The rate of incorrect installation is genuinely alarming.
 
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
+**On the insurance side:** a properly fitted seat reduces serious-injury risk, but doesn't change premium. What *does* affect premiums for families is declared drivers, parking location, and mileage. If you've just registered a family car and are shopping cover, our [Singapore car insurance comparison]([INSURANCE_SG_LEAD]) will quote the main expat-friendly insurers in parallel.
+
 ## Private Hire and Chauffeur Services for School Runs
 
 Many expat families use a regular chauffeur (Toyota Alphard/Vellfire services, Mercedes V-Class operators) for school runs. These services typically provide child seats on request — specify the age and weight of each child at booking. Top-tier chauffeur services have Cybex or Maxi-Cosi seats as standard.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

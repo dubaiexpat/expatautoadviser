@@ -21,11 +21,15 @@ This guide focuses on subscription and long-term rental as alternatives to owner
 
 The Singapore market groups into three categories. Confirm current terms directly with each operator before committing — pricing, minimum terms, mileage caps, and fleet composition all change frequently.
 
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
 **Subscription / long-term rental**
 
 - **Carro Leap.** Monthly subscriptions across a broad Japanese, Korean, Chinese, and European fleet including EVs (BYD, Ora) and hybrids. Term lengths and inclusions vary by plan.
 - **Drive Lah Direct.** Direct subscription-style arrangements on Drive Lah's own fleet, alongside its peer-to-peer rental marketplace. Offers optional insurance and mileage packages, including an unlimited-mileage tier on some plans.
 - **Flux by MotorWay.** Smaller, European-and-EV-focused fleet at a higher price point.
+
+For a direct quote across the subscription operators that work with expats — with the insurance, road tax, and servicing bundled line-items transparent — you can skip the comparison legwork and get a [personalised subscription quote from our Singapore partner]([CAR_LEASE_SG_LEAD]).
 
 **Car-sharing (not subscription)**
 
@@ -154,6 +158,8 @@ The 12-month rule matters — residents generally need to convert to a Singapore
 **Early termination fees.** Typically 1 month's fee if you cancel within the minimum term.
 
 **Auto-renewal clauses.** Some subscriptions auto-renew monthly unless cancelled in writing — set a calendar reminder.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

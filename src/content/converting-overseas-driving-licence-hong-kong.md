@@ -129,6 +129,10 @@ The specific permits and requirements vary depending on your border crossing poi
 
 **Letting the 12 months slip.** Expats get busy, intend to sort the licence, don't get round to it until month 14. At that point you're uninsured and driving illegally.
 
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
+_Insurance interaction_: converting your licence before month 12 also matters for insurance — several HK insurers apply a "new-to-HK" loading during the overseas-licence window. If you're approaching 12 months, it's worth re-quoting with the new HK licence in hand. Our [HK car insurance comparison]([INSURANCE_HK_LEAD]) quotes the main expat-friendly insurers in parallel._
+
 **Assuming US = approved.** It depends on the state. Check the current list.
 
 **Bringing an expired overseas licence.** Expired licences cannot be converted, full stop. Renew with your home country first if necessary.
@@ -136,6 +140,8 @@ The specific permits and requirements vary depending on your border crossing poi
 **Missing the address proof.** A bank statement printed at a branch, or a HKT/3 mobile phone bill, typically works. A printout of online banking often doesn't.
 
 **Not bringing the original licence.** Photocopies or photos are not acceptable. Bring the physical card.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

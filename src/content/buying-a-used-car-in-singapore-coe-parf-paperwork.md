@@ -59,7 +59,9 @@ The "Depreciation" figure is what Singapore buyers actually negotiate on. A car 
 
 ## Dealer vs Private Sale
 
-**Dealer purchase.** You typically pay a higher price but get the full wrap: some warranty (terms vary by dealer — not guaranteed by law), verified history, handling of loan settlement from the previous owner, LTA transfer paperwork done for you, and in many cases a return window if a major fault appears. Look specifically for **CaseTrust-SVTA accredited dealers** — the accreditation signals a higher baseline of consumer protection and paperwork discipline. For expats new to Singapore, going via an accredited dealer is usually the simpler route.
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
+**Dealer purchase.** You typically pay a higher price but get the full wrap: some warranty (terms vary by dealer — not guaranteed by law), verified history, handling of loan settlement from the previous owner, LTA transfer paperwork done for you, and in many cases a return window if a major fault appears. Look specifically for **CaseTrust-SVTA accredited dealers** — the accreditation signals a higher baseline of consumer protection and paperwork discipline. For expats new to Singapore, going via an accredited dealer is usually the simpler route — or consider using a [Singapore expat car-buying service]([CAR_BUYING_SERVICE_SG_LEAD]) that sources, inspects, and handles the LTA transfer on your behalf.
 
 **Private sale.** Typically 10–15% cheaper, but the buyer is responsible for verifying the vehicle, handling LTA transfer, and ensuring no encumbrances (outstanding loans) remain. Private sales aren't inherently unsafe, but they do demand that you do your own due diligence: LTA OneMotoring check, independent inspection, and written contract. CASE recommends professional evaluation regardless of whether you buy from a dealer or privately.
 
@@ -104,7 +106,7 @@ Effective financing windows:
 - COE remaining 3–5 years: available but tenure often limited to remaining COE
 - COE remaining < 3 years: cash purchase most likely
 
-Interest rates on used car loans are typically 0.5%–1.0% higher than new car loans.
+Interest rates on used car loans are typically 0.5%–1.0% higher than new car loans. If you're funding the purchase with cash moved from the UK/AU/US, don't send it on a high-street SWIFT wire — [Wise]([WISE_LINK_PLACEHOLDER]) can move S$40,000–S$80,000 at near mid-market rates with a transparent flat fee, rather than the 2–3% spread most retail banks take. For the insurance side, a broker can quote all the main SG insurers quickly via our [Singapore car insurance comparison]([INSURANCE_SG_LEAD]).
 
 ## Common Used Car Scams and Traps
 
@@ -126,6 +128,8 @@ Interest rates on used car loans are typically 0.5%–1.0% higher than new car l
 - Warranty terms in writing
 - Depreciation figure calculated for your own records
 - All service history provided
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

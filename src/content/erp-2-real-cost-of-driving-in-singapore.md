@@ -61,6 +61,10 @@ This is the part that surprises people. Let me walk through three realistic scen
 
 If you work in the CBD and live east or north, assume S$180–S$250 per month in ERP alone. Over a 3-year posting, that's S$7,000–S$9,000 — before fuel, parking, or insurance.
 
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
+Speaking of insurance — it's another S$2,000–S$4,000 a year for most expat profiles, and premiums vary materially between insurers for the same risk. A broker can quote the main SG insurers (AXA, NTUC Income, FWD) in parallel via our [Singapore car insurance comparison]([INSURANCE_SG_LEAD]). For expats who'd rather avoid the ERP-plus-insurance-plus-COE combo entirely, a [monthly subscription from a Singapore operator]([CAR_LEASE_SG_LEAD]) bundles insurance and road tax into one fee.
+
 ## How to Reduce Your ERP Bill
 
 A few things help.
@@ -88,6 +92,8 @@ If you're in Singapore short-term and renting a car from Hertz, Avis, or a local
 - Bills ERP charges back via the rental agreement
 
 Always confirm the ERP arrangement before you take the keys. A weekend in central Singapore in a rental can rack up S$30–S$60 of ERP you didn't expect.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

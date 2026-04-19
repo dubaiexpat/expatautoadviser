@@ -136,12 +136,14 @@ At-fault claims reduce your NCD — the exact drop (full reset to 0%, a stepped 
 
 Most expats in Hong Kong buy motor insurance through a broker rather than direct from the insurer. Why?
 
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
 - Brokers know the market and can shop 4–6 insurers quickly
 - They handle claims paperwork and can escalate disputes
 - Fees are typically built into the premium, so direct isn't actually cheaper in most cases
 - English-language broker support is broadly available
 
-Large HK insurance brokers include AON, Marsh, Willis Towers Watson, Gaston Schul, and numerous smaller expat-focused brokers.
+Large HK insurance brokers include AON, Marsh, Willis Towers Watson, Gaston Schul, and numerous smaller expat-focused brokers. For a direct expat-focused motor insurance quote in Hong Kong, [get a comparison quote through our partner broker]([INSURANCE_HK_LEAD]) — they handle the AXA, Zurich, and MSIG relationships that most expats end up with anyway, and will email a side-by-side in 48 hours.
 
 ## What to Ask Before You Buy
 
@@ -168,6 +170,8 @@ When you have two or three quotes in front of you, work through these seven line
 - China / cross-border extension terms and cost
 
 A policy that looks HK$1,000 cheaper on premium can easily cost more over a single small accident once excess and exclusions bite.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

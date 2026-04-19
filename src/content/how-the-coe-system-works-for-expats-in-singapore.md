@@ -47,6 +47,10 @@ These prices fluctuate significantly based on supply and quota allocations. In 2
 
 You don't bid for COEs yourself in most cases. When you buy through a dealer, the dealer bids on your behalf and includes the COE cost in the total vehicle price. That said, you should always ask your dealer to show you the COE component separately — it affects the depreciation calculation significantly.
 
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
+If you're not yet sold on the idea of dropping S$130,000+ on a 10-year COE, it's worth pricing a **car subscription** as an alternative — for short postings it often wins on total cost. We walk through the maths in [car subscription vs ownership in Singapore](/singapore/subscription-vs-ownership), or you can skip straight to a [subscription quote from our Singapore partner]([CAR_LEASE_SG_LEAD]).
+
 ## The Full Cost of a Car in Singapore: What Expats Actually Pay
 
 The COE is one piece of a bigger cost puzzle. Here's a rough breakdown for a mid-range family sedan (e.g., Honda Civic):
@@ -76,11 +80,12 @@ That said, if you have young children, live in areas with less MRT coverage (par
 
 ## How to Buy a Car as an Expat in Singapore
 
-1. **Check your employment pass validity** — Lenders typically want at least 1 year remaining on your pass to approve a car loan
-2. **Choose your car and category** — Test drive at dealerships; Category A for most expats
-3. **Arrange financing** — Singapore banks (DBS, OCBC, UOB) offer car loans up to 60% of purchase price; loan tenure up to 7 years; interest rates approximately 2.5–3% per annum
-4. **Dealer submits COE bid** — You'll pay a deposit; the dealer bids on your behalf at the next fortnightly exercise
-5. **COE confirmed** — Collection of vehicle typically within a few weeks of successful bid
+1. **Check your employment pass validity** — Lenders typically want at least 1 year remaining on your pass to approve a car loan. More detail on expat-specific loan rules in our [Singapore car loans + MAS LTV guide](/singapore/car-loans).
+2. **Move your cash into SGD properly** — transfers via UK/US high-street banks often strip S$500–S$1,500 on a typical deposit due to poor FX rates. [Wise]([WISE_LINK_PLACEHOLDER]) is the standard fix for expats funding an SGD deposit or COE bid.
+3. **Choose your car and category** — Test drive at dealerships; Category A for most expats
+4. **Arrange financing** — Singapore banks (DBS, OCBC, UOB) offer car loans up to 60% of purchase price; loan tenure up to 7 years; interest rates approximately 2.5–3% per annum
+5. **Dealer submits COE bid** — You'll pay a deposit; the dealer bids on your behalf at the next fortnightly exercise
+6. **COE confirmed** — Collection of vehicle typically within a few weeks of successful bid
 
 ## What to Watch Out For
 
@@ -91,6 +96,8 @@ That said, if you have young children, live in areas with less MRT coverage (par
 **Depreciation is steep.** New cars in Singapore depreciate heavily in the early years. A car bought for S$150,000 today might be worth S$70,000 in five years. Budget for this from day one.
 
 **Loan limits are strict.** As of 2023, LTA regulations cap car loans at 60% of purchase price for cars with OMV below S$20,000, and 40% for higher OMV vehicles. You'll need a significant cash deposit.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

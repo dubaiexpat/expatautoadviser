@@ -93,14 +93,17 @@ Hong Kong's social and commercial geography allows for genuinely car-free living
 
 ## What If You Decide to Buy
 
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
 If you've done the maths, have the right lifestyle, and are committed to ownership:
 
 1. **Clarify parking** — ideally secure a monthly space before you buy the car
-2. **Apply for HK driving licence** if you're past the 12-month mark
-3. **Shop both new and used markets** — FRT is paid once at first registration, so subsequent owners of a used HK-registered car do not pay it again, which is why used often represents better value
-4. **Arrange financing** — HK banks (HSBC, Hang Seng, Standard Chartered, BOCHK) offer auto loans up to 70% LTV
-5. **Insurance in place before delivery**
-6. **Register through Transport Department** — typically dealer handles this
+2. **Move your cash into HKD properly** — UK/US bank SWIFT wires can strip HK$8,000–HK$15,000 on a HK$700,000 purchase through poor FX rates. [Wise]([WISE_LINK_PLACEHOLDER]) moves these sums at near mid-market rates with a transparent flat fee.
+3. **Apply for HK driving licence** if you're past the 12-month mark
+4. **Shop both new and used markets** — FRT is paid once at first registration, so subsequent owners of a used HK-registered car do not pay it again, which is why used often represents better value. More on this in our [FRT guide](/hongkong/first-registration-tax).
+5. **Arrange financing** — HK banks (HSBC, Hang Seng, Standard Chartered, BOCHK) offer auto loans up to 70% LTV
+6. **Insurance in place before delivery** — a broker can quote AXA, Zurich, MSIG and Blue in parallel via our [Hong Kong car insurance comparison]([INSURANCE_HK_LEAD]).
+7. **Register through Transport Department** — typically dealer handles this
 
 ## The Five-Year Mental Model
 
@@ -112,6 +115,8 @@ Imagine fast-forwarding 5 years. You've paid HK$1.2 million out-of-pocket to own
 - The avoided cost of the taxis/car services you didn't need
 
 Is it worth HK$1.2 million to you? For some expats: clearly yes. For many: clearly no. The maths only works if you drive it often and you value the specific trips it unlocks.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

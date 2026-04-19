@@ -66,6 +66,8 @@ Main platforms:
 
 ## Option 3: Export the Car
 
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
+
 A few expats ship the car back to their next posting. Whether this makes sense depends on:
 
 - The destination market's import rules (the UK accepts most HK cars; Australia has strict age and compliance rules; the US is mostly a no)
@@ -73,6 +75,8 @@ A few expats ship the car back to their next posting. Whether this makes sense d
 - Whether RHD is acceptable at destination
 - Shipping costs (HK$25,000–HK$60,000 depending on container and destination)
 - Import duty and tax at destination
+
+If you're seriously pricing export, our [international car shipping partner]([INTERNATIONAL_CAR_SHIPPING_LEAD]) will quote door-to-door (HK to UK, Singapore, Australia, EU) with customs paperwork handled. Get 2–3 quotes before committing — rates swing 20–30% between operators.
 
 Export rarely makes financial sense for ordinary cars. It makes sense for rare, sentimental, or highly specified vehicles that would be expensive to replace.
 
@@ -103,6 +107,8 @@ If your car has an outstanding loan, settlement must precede title transfer. Two
 **You settle first.** If you have cash, settle the loan yourself, obtain the release letter, then sell the unencumbered car. Simpler paperwork but ties up cash for a few weeks.
 
 Early-repayment fees apply — typically 1–3% of outstanding principal, plus a HK$300–HK$500 admin fee. Ask your bank for a precise settlement figure 3 weeks before sale.
+
+**Repatriating the sale proceeds.** Once the car sells and funds are in your HKD account, you'll need to move them to GBP/USD/SGD. Don't convert via your HK bank's wire — the FX spread on HK$400,000–HK$800,000 of proceeds can quietly cost HK$8,000–HK$20,000. [Wise]([WISE_LINK_PLACEHOLDER]) handles cross-border transfers at near mid-market rates with a transparent flat fee.
 
 ## Timing: Seasonal and Year-End Effects
 
@@ -147,6 +153,8 @@ When you meet the buyer at the Transport Department, have these ready:
 **Forgetting Autotoll account transfer.** Your cross-harbour tunnel / toll tag is linked to the car — transfer it to the buyer or cancel it, otherwise charges continue.
 
 **Not cancelling direct debits.** Parking space rental, insurance, road licence — cancel them on transfer completion.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 

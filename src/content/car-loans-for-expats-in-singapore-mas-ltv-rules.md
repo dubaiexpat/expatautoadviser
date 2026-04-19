@@ -7,7 +7,9 @@
 
 *Typical lender practice:* Individual banks add their own requirements on top — commonly proof of income, bank statements, a healthy Total Debt Servicing Ratio (TDSR), and a reasonable run of Employment Pass validity. Some lenders expect around 12 months of EP remaining, but this is a bank heuristic, not a MAS rule. A guarantor is sometimes required for newcomer expats with thin Singapore credit history.
 
-Cash needed at the dealership is also more than just the loan deposit — you'll fund COE, ARF, GST, registration fees, and first-year insurance from your own pocket too.
+Cash needed at the dealership is also more than just the loan deposit — you'll fund COE, ARF, GST, registration fees, and first-year insurance from your own pocket too. For the insurance side, most expats end up with AXA, NTUC Income, or FWD — a broker can quote all three quickly via our [partner car insurance comparison for Singapore]([INSURANCE_SG_LEAD]).
+
+_This article contains affiliate links. If you click through and buy or sign up, we may earn a small commission at no extra cost to you. We only recommend tools and services we'd suggest to a friend._
 
 ---
 
@@ -44,6 +46,8 @@ Let me walk through a few loan-side scenarios. **Note:** the purchase prices bel
 | BMW 3 Series | S$260,000 | > S$20k | 60% = S$156,000 | S$104,000 |
 
 Expats arriving with UK or US expectations of 10–20% deposit get a shock. The minimum cash outlay for a mid-range family car is comfortably north of S$40,000.
+
+**Moving that cash from a UK/US/AU account to SGD:** don't send it via your UK high-street bank's SWIFT wire — the combined spread and fees on a S$45,000 transfer can easily eat S$1,000+. [Wise]([WISE_LINK_PLACEHOLDER]) handles these sums at near mid-market rates with a flat, transparent fee. Worth getting this step right before COE day — a bad FX rate on deposit day is an expensive way to start.
 
 ## Why Expats Often Get Rejected
 
@@ -114,6 +118,8 @@ Before you walk into a dealership or call your bank, have these ready:
 - IC or FIN number
 
 Missing paperwork is the single biggest reason expat loan applications stall.
+
+_**Affiliate disclosure:** We work with a small number of vetted partners whose products we'd genuinely recommend to a friend in the same situation. Commissions help us keep this site free to read and independent of advertiser pressure. We never recommend a product we wouldn't use ourselves, and we update pricing and terms as soon as we find them changed._
 
 ## Frequently Asked Questions
 
