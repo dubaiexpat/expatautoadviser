@@ -5,40 +5,51 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE = 'https://www.expatautoadviser.com';
 
-const ROUTES = [
-  '/',
-  '/singapore',
-  '/singapore/should-i-get-a-car',
-  '/singapore/leasing-guide',
-  '/singapore/buying-guide',
-  '/singapore/insurance-guide',
-  '/singapore/licence-conversion',
-  '/singapore/ev-guide',
-  '/singapore/calculators',
-  '/singapore/garage-finder',
-  '/singapore/lease-checker',
-  '/singapore/new-arrival',
-  '/singapore/cost-of-driving',
-  '/singapore/car-loans',
-  '/singapore/child-car-seats',
-  '/singapore/subscription-vs-ownership',
-  '/singapore/coe-guide',
-  '/hong-kong',
-  '/hong-kong/should-i-get-a-car',
-  '/hong-kong/buying-guide',
-  '/hong-kong/leasing-guide',
-  '/hong-kong/frt-tax-explained',
-  '/hong-kong/insurance-guide',
-  '/hong-kong/mot-maintenance',
-  '/hong-kong/licence-conversion',
-  '/hong-kong/ev-guide',
-  '/hong-kong/calculators',
-  '/hong-kong/garage-finder',
-  '/hong-kong/lease-checker',
-  '/hong-kong/new-arrival',
-  '/hong-kong/selling-guide',
-  '/contact',
-];
+/**
+ * ROUTES is auto-derived from src/App.jsx at build time so the prerender
+ * list cannot drift from the actual route table.
+ *
+ * Pattern: any <Route path="..." element={<X />} /> where the element is NOT
+ * a <Navigate ...> redirect. Redirect routes are filtered because they 301
+ * to a canonical URL and shouldn't be prerendered or sitemapped separately.
+ *
+ * If you add a new <Route> in App.jsx, also add a META entry below for the
+ * page's title/description/schema. The validation step at the top of this
+ * script will fail the build if a route exists without a META entry.
+ *
+ * (See SHARED/proposals/2026-04-26_seo_postmortem.md for context.)
+ */
+function deriveRoutesFromApp() {
+  const appPath = path.join(__dirname, 'src', 'App.jsx');
+  const src = fs.readFileSync(appPath, 'utf-8');
+
+  // Match every <Route path="..." element={<X .../>} />
+  // We need to capture both the path AND the element to filter out Navigate redirects.
+  const routeRegex = /<Route\s+path="([^"]+)"\s+element=\{(<[^/>]+\/?>)/g;
+  const routes = [];
+  const seen = new Set();
+
+  let m;
+  while ((m = routeRegex.exec(src)) !== null) {
+    const [, routePath, element] = m;
+
+    // Skip dynamic segments (no /:slug routes here, but be defensive)
+    if (routePath.includes(':')) continue;
+
+    // Skip <Navigate ...> redirect routes
+    if (/^<Navigate\b/.test(element)) continue;
+
+    // De-dupe (paranoid)
+    if (seen.has(routePath)) continue;
+    seen.add(routePath);
+
+    routes.push(routePath);
+  }
+
+  return routes;
+}
+
+const ROUTES = deriveRoutesFromApp();
 
 const META = {
   '/': {
@@ -419,7 +430,40 @@ const META = {
     desc: `Get in touch with ExpatAutoAdviser. Questions about expat car ownership in Singapore or Hong Kong, content corrections, or partnership enquiries — we read every message.`,
     type: `website`,
   },
+  '/privacy': {
+    title: `Privacy Policy — ExpatAutoAdviser`,
+    desc: `Privacy policy for ExpatAutoAdviser: what data we collect, how we use it, third-party services (Vercel, Brevo, Google Analytics), and your rights as a user.`,
+    type: `website`,
+  },
+  '/terms': {
+    title: `Terms of Use — ExpatAutoAdviser`,
+    desc: `Terms of use for ExpatAutoAdviser. Editorial independence, affiliate disclosure, accuracy, limitations of liability, and the legal basis for using our content.`,
+    type: `website`,
+  },
+  '/cookies': {
+    title: `Cookies Policy — ExpatAutoAdviser`,
+    desc: `Cookies policy for ExpatAutoAdviser: which cookies we set, third-party cookies, and how to control them in your browser.`,
+    type: `website`,
+  },
+  '/affiliate-disclosure': {
+    title: `Affiliate Disclosure — ExpatAutoAdviser`,
+    desc: `ExpatAutoAdviser's affiliate disclosure: which articles contain affiliate links, how we choose partners, and our editorial independence policy.`,
+    type: `website`,
+  },
 };
+
+// ---- Build-time validation: every ROUTE must have a META entry ----
+// Catches the drift bug from 2026-04-26 (new-arrival pages were in App.jsx but
+// missing from META, which meant they prerendered with default placeholder
+// titles). Now: missing META = build fails immediately, surfaced in CI logs.
+const missingMeta = ROUTES.filter((route) => !META[route]);
+if (missingMeta.length > 0) {
+  console.error(`\n❌ prerender.mjs: ${missingMeta.length} route(s) in App.jsx have no META entry:`);
+  missingMeta.forEach((r) => console.error(`   - ${r}`));
+  console.error(`\nAdd a META entry for each, then re-run the build.\n`);
+  process.exit(1);
+}
+console.log(`✅ prerender.mjs: ${ROUTES.length} routes, all have META entries`);
 
 function buildSchema(route, meta) {
   const schemas = [];
