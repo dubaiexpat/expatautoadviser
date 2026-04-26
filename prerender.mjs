@@ -16,7 +16,8 @@ const ROUTES = [
   '/singapore/ev-guide',
   '/singapore/calculators',
   '/singapore/garage-finder',
-    '/singapore/lease-checker',
+  '/singapore/lease-checker',
+  '/singapore/new-arrival',
   '/singapore/cost-of-driving',
   '/singapore/car-loans',
   '/singapore/child-car-seats',
@@ -33,8 +34,10 @@ const ROUTES = [
   '/hong-kong/ev-guide',
   '/hong-kong/calculators',
   '/hong-kong/garage-finder',
-    '/hong-kong/lease-checker',
+  '/hong-kong/lease-checker',
+  '/hong-kong/new-arrival',
   '/hong-kong/selling-guide',
+  '/contact',
 ];
 
 const META = {
@@ -68,8 +71,8 @@ const META = {
     ],
   },
   '/singapore/leasing-guide': {
-    title: `How to Lease a Car in Singapore — Expat Guide`,
-    desc: `A step-by-step guide to leasing a car in Singapore as an expat. What to look for in a lease, typical costs, and which companies are expat-friendly.`,
+    title: `Singapore Car Leasing Guide for Expats (2026): Costs, Companies & Terms`,
+    desc: `Complete guide to leasing a car in Singapore as an expat in 2026 — typical lease costs (SGD 1,200-1,800/mo), expat-friendly leasing companies, what to check in a lease, and 6-month vs 36-month options.`,
     type: `article`,
     faq: [
       {
@@ -196,8 +199,8 @@ const META = {
     ],
   },
   '/hong-kong/leasing-guide': {
-    title: `How to Lease a Car in Hong Kong — Expat Guide`,
-    desc: `A practical guide to leasing a car in Hong Kong as an expat. Typical costs, what to look for in a lease agreement, and expat-friendly leasing companies.`,
+    title: `Hong Kong Car Leasing Guide for Expats (2026): Costs, Companies & Terms`,
+    desc: `Complete guide to leasing a car in Hong Kong as an expat in 2026 — typical costs (HKD 10,000-16,000/mo), expat-friendly leasing companies, lease vs buy maths, and short-term options.`,
     type: `article`,
     faq: [
       {
@@ -211,8 +214,8 @@ const META = {
     ],
   },
   '/hong-kong/frt-tax-explained': {
-    title: `Hong Kong First Registration Tax (FRT) Explained`,
-    desc: `A clear explanation of Hong Kong First Registration Tax for expats. How FRT is calculated, current rates, EV exemptions, and how it affects the cost of buying a car.`,
+    title: `Hong Kong First Registration Tax 2026: Private Car Rates & Bands Explained`,
+    desc: `Hong Kong First Registration Tax (FRT) rates for private cars in 2026: progressive bands (46/86/115/132%), how taxable value is calculated, EV concession rules, and worked examples for expats.`,
     type: `article`,
     faq: [
       {
@@ -372,6 +375,49 @@ const META = {
         a: `Yes. Any individual with a valid Singapore driving licence or converted foreign licence can bid for COE. Most expats let their car dealer handle the bidding process as part of the purchase.`,
       },
     ],
+  },
+  '/singapore/new-arrival': {
+    title: `New Arrival in Singapore? Your First-90-Days Car Checklist`,
+    desc: `What expats need to sort in their first 90 days in Singapore — driving licence, vehicle options, MRT vs car economics, and how to avoid expensive early mistakes.`,
+    type: `article`,
+    faq: [
+      {
+        q: `When should new arrivals decide whether to get a car in Singapore?`,
+        a: `Most relocation experts recommend living in Singapore for at least 60-90 days before deciding on a car. Use that time to test your daily commute on MRT and bus, see whether your home is in a walkable area, and understand whether the cost-versus-convenience math actually works for your family.`,
+      },
+      {
+        q: `Can I drive in Singapore on a foreign licence as a new arrival?`,
+        a: `Yes — for the first 12 months. After that you must convert to a Singapore licence. Most UK, Australian, NZ, and EU licences qualify for direct conversion without sitting a test, but you do need to apply within 12 months of becoming a resident.`,
+      },
+      {
+        q: `What's the cheapest way to get on the road as a new expat in Singapore?`,
+        a: `Short-term leasing (1-3 months) gives you flexibility while you settle. Expect SGD 2,000-3,000 per month for a sedan. Once you've decided whether you actually need a car long-term, switch to a 12-36 month lease for SGD 1,200-1,800 per month or commit to a purchase.`,
+      },
+    ],
+  },
+  '/hong-kong/new-arrival': {
+    title: `New Arrival in Hong Kong? Your First-90-Days Car Checklist`,
+    desc: `What expats need to sort in their first 90 days in Hong Kong — driving licence, MTR vs car decision, Octopus card vs car economics, and the realities of HK parking.`,
+    type: `article`,
+    faq: [
+      {
+        q: `Do I need a car when I first arrive in Hong Kong?`,
+        a: `Most newly arrived expats in Hong Kong Island or Kowloon don't need a car. The MTR, buses, trams, and taxis cover almost everything. A car becomes more useful if you're settling in the New Territories or have school-age kids.`,
+      },
+      {
+        q: `Can I drive on a UK or Australian licence in Hong Kong?`,
+        a: `Yes — for the first 12 months. The UK, Australia, and many other jurisdictions are on Hong Kong's Direct Issue List, so you can convert without sitting a test. Apply early — Transport Department processing takes 5-10 working days, longer if your documents need verification.`,
+      },
+      {
+        q: `How quickly can I get a car in Hong Kong as a new arrival?`,
+        a: `Short-term lease companies can put you in a car within a week. Buying takes longer — 2-4 weeks if you're buying used from a dealer, longer for a new car needing First Registration Tax processing. Most new expats lease for the first 6-12 months while they decide.`,
+      },
+    ],
+  },
+  '/contact': {
+    title: `Contact ExpatAutoAdviser`,
+    desc: `Get in touch with ExpatAutoAdviser. Questions about expat car ownership in Singapore or Hong Kong, content corrections, or partnership enquiries — we read every message.`,
+    type: `website`,
   },
 };
 
