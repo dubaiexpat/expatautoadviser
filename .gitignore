@@ -1,4 +1,11 @@
 node_modules/
 dist/
+.vite/
 .ssr/
-content/_archive/
+.env*
+.DS_Store
+
+# OS / editor artifacts
+.idea/
+.vscode/
+*.log
