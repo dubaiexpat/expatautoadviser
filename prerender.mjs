@@ -513,6 +513,38 @@ function buildSchema(route, meta) {
     }));
   }
 
+  // BreadcrumbList — derived from the route path. Helps Google show breadcrumb-trail
+  // SERP rich results instead of bare URLs. Added 2026-04-26 for parity with DX schema.
+  if (route !== '/') {
+    const segments = route.split('/').filter(Boolean);
+    const items = [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE + '/' },
+    ];
+    let cumulativePath = '';
+    segments.forEach((seg, i) => {
+      cumulativePath += '/' + seg;
+      const name = seg
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, (c) => c.toUpperCase())
+        .replace(/Hong Kong/gi, 'Hong Kong')
+        .replace(/^Frt /, 'FRT ')
+        .replace(/Coe /, 'COE ')
+        .replace(/Ev /, 'EV ')
+        .replace(/Mot /, 'MOT ');
+      items.push({
+        '@type': 'ListItem',
+        position: i + 2,
+        name,
+        item: BASE + cumulativePath,
+      });
+    });
+    schemas.push(JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: items,
+    }));
+  }
+
   return schemas
     .map(s => `  <script type="application/ld+json">${s}</script>`)
     .join('\n');
