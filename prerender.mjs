@@ -368,6 +368,25 @@ const META = {
     desc: `How to sell your car before leaving Hong Kong: timing the sale, dealer vs private, TD forms, export rules, insurance gaps, and a six-week countdown for departing expats.`,
     type: `article`,
   },
+  '/singapore/funding-car-purchase': {
+    title: `Funding a Car Purchase in Singapore: UK Expat Money-Transfer Guide (2026)`,
+    desc: `The full Singapore car cost stack for UK expats — COE S$123k, ARF tiers, GST, excise — plus how to move £35-80k from a UK bank to Singapore without losing thousands to FX margins.`,
+    type: `article`,
+    faq: [
+      {
+        q: `What's the cheapest way to send GBP to Singapore for a car purchase?`,
+        a: `For amounts above £5,000, Wise typically beats UK high-street banks by £600-1,400 per transfer thanks to the mid-market exchange rate. UK banks bake a 2-4% margin into the rate they quote, which is invisible as a fee but real cash. Wise charges a transparent fee on top of the true mid-market rate.`,
+      },
+      {
+        q: `How long does a UK to Singapore transfer take?`,
+        a: `Wise: typically same-day for amounts under £100k, often within an hour. UK bank SWIFT transfers: 1-3 working days. Plan to initiate transfers at least 2-3 working days before the dealer's payment deadline to absorb any delays.`,
+      },
+      {
+        q: `Should I take a Singapore car loan instead of transferring all the cash?`,
+        a: `Often yes for cash-flow reasons. UK expats with valid Employment Pass and a few months of Singapore salary history can typically borrow 50-60% LTV against the OMV + ARF + COE total via Singapore banks. Reduces upfront GBP transfer; you service the SGD loan from your Singapore salary going forward.`,
+      },
+    ],
+  },
   '/singapore/coe-guide': {
     title: `How the COE System Works for Expats in Singapore`,
     desc: `Everything expats need to know about Singapore's Certificate of Entitlement system: how bidding works, current COE prices, categories, renewal rules, and strategies to manage the cost.`,
