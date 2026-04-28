@@ -387,6 +387,25 @@ const META = {
     desc: `Departing expats: how to sell a car in Hong Kong with maximum HK$ recovery. The 6-week countdown, dealer vs private vs auction, TD forms, export route, insurance gap, and the deductions you can sometimes claim.`,
     type: `article`,
   },
+  '/singapore/wise-vs-bank-transfer-car-deposits': {
+    title: `Wise vs Bank Transfer for Car Deposits: UK Expats to Singapore & HK (2026)`,
+    desc: `What UK high-street banks actually charge on £25-80k transfers to Singapore or Hong Kong (mostly hidden in 2-4% FX margins) vs what Wise charges (transparent 0.4-0.6% + small fee). Worked examples and the timing playbook.`,
+    type: `article`,
+    faq: [
+      {
+        q: `What's the cheapest way to send GBP to Singapore for a car deposit?`,
+        a: `For amounts above £5,000, Wise typically beats UK high-street banks by £600-£1,400+ per transfer thanks to the mid-market exchange rate. UK banks bake a 2-4% margin into the rate they quote, which is invisible as a fee but real cash. Wise charges a transparent fee on top of the true mid-market rate.`,
+      },
+      {
+        q: `How long does a UK to Singapore or Hong Kong transfer take via Wise?`,
+        a: `Most large GBP-to-SGD or GBP-to-HKD transfers via Wise complete same-day, often within an hour for amounts under £100k initiated before mid-afternoon UK time. UK bank SWIFT transfers: 1-3 working days. Plan to initiate transfers at least 2-3 working days before the dealer's payment deadline to absorb any delays.`,
+      },
+      {
+        q: `Will my UK bank flag a £40,000 outbound transfer?`,
+        a: `Possibly. UK banks' AML monitoring routinely flags individual transfers above £25,000 for source-of-funds verification. This is paperwork not a blocker — provide payslip and a one-line explanation ('vehicle purchase deposit, dealer X in Singapore/Hong Kong'). The transfer proceeds normally once verified.`,
+      },
+    ],
+  },
   '/singapore/parallel-import-cars': {
     title: `Parallel Import Cars in Singapore: AD vs PI for UK Expats (2026)`,
     desc: `When parallel imports save UK expats real money in Singapore (7-12% on small cars, 8-12% on Continental marques) — and when the saving disappears once you account for warranty, financing, resale value, service network, and spec differences.`,
