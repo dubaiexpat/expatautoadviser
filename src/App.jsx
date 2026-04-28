@@ -34,6 +34,7 @@ import SGCOEGuide from './pages/singapore/COEGuide';
 import SGFundingCarPurchase from './pages/singapore/FundingCarPurchase';
 import SGParallelImport from './pages/singapore/ParallelImport';
 import SGWiseVsBank from './pages/singapore/WiseVsBank';
+import SGCOEBiddingStrategy from './pages/singapore/COEBiddingStrategy';
 import HKParkingCosts from './pages/hongkong/ParkingCosts';
 import Privacy from './pages/legal/Privacy';
 import Terms from './pages/legal/Terms';
@@ -122,6 +123,7 @@ export function AppRoutes() {
       <Route path="/singapore/funding-car-purchase" element={<SGFundingCarPurchase />} />
       <Route path="/singapore/parallel-import-cars" element={<SGParallelImport />} />
       <Route path="/singapore/wise-vs-bank-transfer-car-deposits" element={<SGWiseVsBank />} />
+      <Route path="/singapore/coe-bidding-strategy" element={<SGCOEBiddingStrategy />} />
       <Route path="/hong-kong" element={<HongKong />} />
       <Route path="/hong-kong/should-i-get-a-car" element={<HKShouldIGetACar />} />
       <Route path="/hong-kong/buying-guide" element={<HKBuyingGuide />} />

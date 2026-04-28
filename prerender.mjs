@@ -387,6 +387,25 @@ const META = {
     desc: `Departing expats: how to sell a car in Hong Kong with maximum HK$ recovery. The 6-week countdown, dealer vs private vs auction, TD forms, export route, insurance gap, and the deductions you can sometimes claim.`,
     type: `article`,
   },
+  '/singapore/coe-bidding-strategy': {
+    title: `COE Bidding Strategy for UK Expats in Singapore: 3 Approaches (2026)`,
+    desc: `How Singapore's twice-monthly COE auction actually works, the 3 bidding strategies UK expats use (Top of Market / Recent Cut-off / Patient Below), worked outcomes, when to bid vs wait, and the most common S$10-15k mistakes.`,
+    type: `article`,
+    faq: [
+      {
+        q: `How does COE bidding work in Singapore?`,
+        a: `LTA runs a sealed-bid uniform-price auction twice a month (first and third Wednesday). Your dealer bids on your behalf. The lowest successful bid sets the cut-off price; everyone who won pays that price (not their actual bid). Bidding closes Wednesday 4pm; results published the same evening.`,
+      },
+      {
+        q: `What's the difference between Cat A and Cat B COE in Singapore?`,
+        a: `Cat A is for cars with engine ≤ 1,600cc AND power ≤ 130bhp (Corolla, Mazda 3, Vezel, Atto 3). Cat B is for everything else (BMW 3-Series, Mercedes C-Class, Tesla Model 3 Long Range). Historically Cat B traded at a S$10-25k premium over Cat A; in 2026 the categories have converged, occasionally with Cat A above Cat B.`,
+      },
+      {
+        q: `Is 'guaranteed COE' worth paying extra for?`,
+        a: `Sometimes. Dealers charging S$3-8k for 'guaranteed COE' are absorbing the bidding-cycle risk for you. If you have a hard timeline (e.g. car needed for school start in 2 weeks), the premium can be worth it for the certainty. If you have flexibility, it's pure dealer margin you don't need to pay.`,
+      },
+    ],
+  },
   '/singapore/wise-vs-bank-transfer-car-deposits': {
     title: `Wise vs Bank Transfer for Car Deposits: UK Expats to Singapore & HK (2026)`,
     desc: `What UK high-street banks actually charge on £25-80k transfers to Singapore or Hong Kong (mostly hidden in 2-4% FX margins) vs what Wise charges (transparent 0.4-0.6% + small fee). Worked examples and the timing playbook.`,
