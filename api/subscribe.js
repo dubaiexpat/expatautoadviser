@@ -164,6 +164,16 @@ export default async function handler(req, res) {
             htmlContent: buildMagnetEmailHtml(magnet, emailMagnetKey),
             textContent: buildMagnetEmailText(magnet, emailMagnetKey),
             tags: emailTags,
+            // Attach the PDF directly — Brevo's click-tracking wrapper
+            // breaks Download links on spam-flagged or link-stripped
+            // emails. Attachments bypass that entirely. See DX
+            // route.ts for full reasoning.
+            attachment: [
+              {
+                url: `https://www.expatautoadviser.com${magnet.pdfPath}`,
+                name: magnet.pdfPath.split('/').pop(),
+              },
+            ],
           }),
         });
         if (!emailRes.ok) {
