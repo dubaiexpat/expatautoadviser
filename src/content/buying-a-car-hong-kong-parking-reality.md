@@ -11,6 +11,27 @@ They often don't. And they pay a lot to find out.
 
 Let me walk you through the real maths and the actual decision framework.
 
+## The Real Cost: How First Registration Tax Multiplies the Sticker Price
+
+Before parking, before insurance, before depreciation, the first thing that determines whether buying a new car in Hong Kong makes sense is **First Registration Tax (FRT)**. The bands stack progressively on the taxable value of the car:
+
+- **46%** on the first HK$150,000
+- **86%** on the next HK$150,000 (HK$150k → HK$300k)
+- **115%** on the next HK$200,000 (HK$300k → HK$500k)
+- **132%** on everything above HK$500,000
+
+Worked through, that means the FRT alone roughly equals or exceeds the pre-tax car price as the value climbs:
+
+| Pre-FRT taxable value | FRT payable | All-in (taxable value + FRT) |
+|---|---|---|
+| **HK$200,000** (small family hatchback) | HK$112,000 | **HK$312,000** |
+| **HK$500,000** (mid-size SUV) | HK$428,000 | **HK$928,000** |
+| **HK$800,000** (premium SUV / executive) | HK$824,000 | **HK$1,624,000** |
+
+So a HK$200k taxable value lands around 1.6× sticker once FRT is added. An HK$800k car effectively doubles. This is before parking, before insurance, before depreciation, and before the annual licence fee. It is the single biggest reason most expats lease rather than buy, and why **used HK-registered cars** — where FRT was paid by a previous owner and is already baked into the resale price — often represent materially better value than buying new.
+
+For the full FRT mechanism, including how taxable value is calculated and the EV concession that expired in March 2026, see our [First Registration Tax guide](/hong-kong/frt-tax-explained).
+
 ## The Parking Problem
 
 In any honest discussion of Hong Kong car ownership, parking comes first. It's the cost most newcomers underestimate dramatically.
