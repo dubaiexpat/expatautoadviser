@@ -164,10 +164,15 @@ export default async function handler(req, res) {
             htmlContent: buildMagnetEmailHtml(magnet, emailMagnetKey),
             textContent: buildMagnetEmailText(magnet, emailMagnetKey),
             tags: emailTags,
-            // Attach the PDF directly — Brevo's click-tracking wrapper
-            // breaks Download links on spam-flagged or link-stripped
-            // emails. Attachments bypass that entirely. See DX
-            // route.ts for full reasoning.
+            // List-Unsubscribe header: Yahoo's strongest signal for
+            // "legitimate transactional, do not spam-route". RFC 2369
+            // mailto: form works across all major receivers.
+            headers: {
+              'List-Unsubscribe': `<mailto:unsubscribe@expatautoadviser.com?subject=unsubscribe%20${encodeURIComponent(email)}>`,
+            },
+            // Attach the PDF — confirmed working on Gmail.
+            // Yahoo strips attachments from spam-folder emails;
+            // List-Unsubscribe (above) handles Yahoo placement.
             attachment: [
               {
                 url: `https://www.expatautoadviser.com${magnet.pdfPath}`,
