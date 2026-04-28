@@ -225,8 +225,8 @@ const META = {
     ],
   },
   '/hong-kong/frt-tax-explained': {
-    title: `Hong Kong FRT 2026: 46–132% Bands + Worked Examples`,
-    desc: `Hong Kong's FRT adds 46-132% to a new car in 2026. The progressive bands, how taxable value is set, EV concession rules, and HKD 200k vs HKD 800k worked examples.`,
+    title: `Hong Kong First Registration Tax Rates 2026: 46–132% Bands + Worked Examples`,
+    desc: `Hong Kong's First Registration Tax adds 46% to 132% to the cost of a new private car in 2026. See the progressive bands, how taxable value is set, EV concession rules, and worked examples for a HKD 200k vs HKD 800k car.`,
     type: `article`,
     faq: [
       {

@@ -29,7 +29,10 @@ export default function MarkdownArticlePage({ city, title, description, heroImag
       </div>
       <div style={{ maxWidth: 760 }}>
         <p style={{ color: '#0d9488', fontWeight: 600, fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 8 }}>{CITY_LABELS[city]}</p>
-        <h1 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', lineHeight: 1.2, fontWeight: 700, color: '#1a1a2e', marginTop: 0, marginBottom: 16 }}>{title}</h1>
+        {/* Only inject an h1 when the markdown body doesn't already start with one — avoids the h1_multiple SEO warning. */}
+        {!/^\s*#\s+/.test(markdown) && (
+          <h1 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', lineHeight: 1.2, fontWeight: 700, color: '#1a1a2e', marginTop: 0, marginBottom: 16 }}>{title}</h1>
+        )}
         <ArticleRenderer markdown={markdown} />
       </div>
     </Layout>
