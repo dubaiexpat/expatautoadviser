@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir .ssr && node prerender.mjs",
     "preview": "vite preview",
-    "verify-deploy": "bash scripts/verify-deploy.sh"
+    "verify-deploy": "bash scripts/verify-deploy.sh",
+    "seo:audit": "node ../../SHARED/scripts/seo-page-audit.mjs --site=eaa",
+    "seo:audit:strict": "node ../../SHARED/scripts/seo-page-audit.mjs --site=eaa --strict"
   },
   "dependencies": {
     "react": "^18.2.0",

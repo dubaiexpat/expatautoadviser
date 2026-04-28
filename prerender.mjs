@@ -82,8 +82,8 @@ const META = {
     ],
   },
   '/singapore/leasing-guide': {
-    title: `Singapore Car Leasing Guide for Expats (2026): Costs, Companies & Terms`,
-    desc: `Complete guide to leasing a car in Singapore as an expat in 2026 — typical lease costs (SGD 1,200-1,800/mo), expat-friendly leasing companies, what to check in a lease, and 6-month vs 36-month options.`,
+    title: `Singapore Car Leasing for Expats 2026: Costs & Terms`,
+    desc: `Leasing a car in Singapore as an expat 2026 — costs (SGD 1,200-1,800/mo), expat-friendly companies, what to check, 6-month vs 36-month options.`,
     type: `article`,
     faq: [
       {
@@ -210,8 +210,8 @@ const META = {
     ],
   },
   '/hong-kong/leasing-guide': {
-    title: `Hong Kong Car Leasing Guide for Expats (2026): Costs, Companies & Terms`,
-    desc: `Complete guide to leasing a car in Hong Kong as an expat in 2026 — typical costs (HKD 10,000-16,000/mo), expat-friendly leasing companies, lease vs buy maths, and short-term options.`,
+    title: `Hong Kong Car Leasing for Expats 2026: Costs & Terms`,
+    desc: `Leasing a car in Hong Kong as an expat 2026 — costs (HKD 10,000-16,000/mo), expat-friendly companies, lease vs buy maths, and short-term options.`,
     type: `article`,
     faq: [
       {
@@ -225,8 +225,8 @@ const META = {
     ],
   },
   '/hong-kong/frt-tax-explained': {
-    title: `Hong Kong First Registration Tax Rates 2026: 46–132% Bands + Worked Examples`,
-    desc: `Hong Kong's First Registration Tax adds 46% to 132% to the cost of a new private car in 2026. See the progressive bands, how taxable value is set, EV concession rules, and worked examples for a HKD 200k vs HKD 800k car.`,
+    title: `Hong Kong FRT 2026: 46–132% Bands + Worked Examples`,
+    desc: `Hong Kong's FRT adds 46-132% to a new car in 2026. The progressive bands, how taxable value is set, EV concession rules, and HKD 200k vs HKD 800k worked examples.`,
     type: `article`,
     faq: [
       {
@@ -359,7 +359,7 @@ const META = {
     type: `article`,
   },
   '/singapore/subscription-vs-ownership': {
-    title: `Car Subscription vs Ownership in Singapore: What Expats Should Know`,
+    title: `Car Subscription vs Ownership in Singapore for Expats`,
     desc: `Car subscription vs ownership in Singapore: how Carro Leap and Drive Lah work, what's typically bundled, illustrative cost comparison, and when each option suits expats.`,
     type: `article`,
   },
@@ -369,8 +369,8 @@ const META = {
     type: `article`,
   },
   '/singapore/funding-car-purchase': {
-    title: `Funding a Car Purchase in Singapore: UK Expat Money-Transfer Guide (2026)`,
-    desc: `The full Singapore car cost stack for UK expats — COE S$123k, ARF tiers, GST, excise — plus how to move £35-80k from a UK bank to Singapore without losing thousands to FX margins.`,
+    title: `Funding a Car in Singapore: UK Expat Transfer Guide 2026`,
+    desc: `Singapore car cost stack for UK expats — COE, ARF tiers, GST, excise — plus how to move £35-80k from UK to SG without losing thousands to FX margins.`,
     type: `article`,
     faq: [
       {
@@ -389,7 +389,7 @@ const META = {
   },
   '/singapore/coe-guide': {
     title: `How the COE System Works for Expats in Singapore`,
-    desc: `Everything expats need to know about Singapore's Certificate of Entitlement system: how bidding works, current COE prices, categories, renewal rules, and strategies to manage the cost.`,
+    desc: `Singapore's Certificate of Entitlement system for expats: how bidding works, current COE prices, categories, renewal rules, and cost-management strategies.`,
     type: `article`,
     faq: [
       {
@@ -445,7 +445,7 @@ const META = {
     ],
   },
   '/contact': {
-    title: `Contact ExpatAutoAdviser`,
+    title: `Contact ExpatAutoAdviser — Singapore & Hong Kong Car Help`,
     desc: `Get in touch with ExpatAutoAdviser. Questions about expat car ownership in Singapore or Hong Kong, content corrections, or partnership enquiries — we read every message.`,
     type: `website`,
   },
