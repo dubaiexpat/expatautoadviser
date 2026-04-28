@@ -164,13 +164,6 @@ export default async function handler(req, res) {
             htmlContent: buildMagnetEmailHtml(magnet, emailMagnetKey),
             textContent: buildMagnetEmailText(magnet, emailMagnetKey),
             tags: emailTags,
-            // Disable Brevo click + open tracking — sendibt2.com link
-            // wrapping breaks Download PDF button on spam-filtered
-            // recipients. See DX route.ts for full reasoning.
-            headers: {
-              'X-Mailin-track-click': '0',
-              'X-Mailin-track-open': '0',
-            },
           }),
         });
         if (!emailRes.ok) {
