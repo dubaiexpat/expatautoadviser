@@ -195,8 +195,8 @@ const META = {
     ],
   },
   '/hong-kong/buying-guide': {
-    title: `Buying a Car in Hong Kong as an Expat — Full Guide`,
-    desc: `Everything you need to know about buying a car in Hong Kong. First Registration Tax explained, dealers, financing, and whether buying makes sense for expats.`,
+    title: `Buying a Car in Hong Kong: Real Cost with FRT 46–132% Bands (2026)`,
+    desc: `Hong Kong car prices nearly double once First Registration Tax bites (46-132%). Full price stack on HKD 200k vs HKD 800k cars, dealer vs private vs auction, and whether buying makes sense over a 2-year expat assignment.`,
     type: `article`,
     faq: [
       {
@@ -270,8 +270,8 @@ const META = {
     ],
   },
   '/hong-kong/licence-conversion': {
-    title: `Converting Your Driving Licence in Hong Kong — Expat Guide`,
-    desc: `How to convert a foreign driving licence to a Hong Kong licence. Which licences qualify, the process, costs, and how long it takes.`,
+    title: `Convert UK Driving Licence to Hong Kong: Direct vs Test (2026)`,
+    desc: `Hong Kong recognises UK and 30+ foreign driving licences for direct conversion — no test required. Full list of eligible countries, the application steps, fees, and what to do if yours isn't on it.`,
     type: `article`,
     faq: [
       {
@@ -364,8 +364,8 @@ const META = {
     type: `article`,
   },
   '/hong-kong/selling-guide': {
-    title: `Selling Your Car When Leaving Hong Kong: A Six-Week Checklist`,
-    desc: `How to sell your car before leaving Hong Kong: timing the sale, dealer vs private, TD forms, export rules, insurance gaps, and a six-week countdown for departing expats.`,
+    title: `Selling a Car in Hong Kong Before You Leave: 6-Week Countdown`,
+    desc: `Departing expats: how to sell a car in Hong Kong with maximum HK$ recovery. The 6-week countdown, dealer vs private vs auction, TD forms, export route, insurance gap, and the deductions you can sometimes claim.`,
     type: `article`,
   },
   '/singapore/funding-car-purchase': {
