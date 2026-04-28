@@ -363,10 +363,48 @@ const META = {
     desc: `Car subscription vs ownership in Singapore: how Carro Leap and Drive Lah work, what's typically bundled, illustrative cost comparison, and when each option suits expats.`,
     type: `article`,
   },
+  '/hong-kong/parking-costs': {
+    title: `Hong Kong Parking Costs for Expats 2026: HK$1,500–HK$12,000/Month`,
+    desc: `What parking actually costs in different parts of Hong Kong in 2026 — the three layers (residential, office, discretionary), district-by-district anchor rates, and how parking dominates the buy-vs-lease calculation for expat car ownership.`,
+    type: `article`,
+    faq: [
+      {
+        q: `How much does residential parking cost in Mid-Levels Hong Kong?`,
+        a: `Typically HK$4,500-HK$7,500/month in 2026, depending on building class and whether the space is government-managed or private commercial. Some premium new developments include parking with the flat lease at no separate charge; older Mid-Levels buildings more often charge separately.`,
+      },
+      {
+        q: `What's the cheapest way to keep a car in Hong Kong as an expat?`,
+        a: `Location is the biggest lever. Moving from Mid-Levels (HK$5,500/month parking) to Sai Kung or Clearwater Bay (HK$1,800/month) saves about HK$45,000/year on parking alone before commute trade-offs. Second-biggest lever: secure parking via tenancy negotiation rather than separate monthly contract. Third: avoid office-parking by MTR-ing to work and using the car only at evenings and weekends.`,
+      },
+      {
+        q: `Are there any free parking options in Hong Kong?`,
+        a: `Free public parking in Hong Kong is rare and almost always restricted (60-90 minute limits with strict enforcement). Some shopping malls (Pacific Place, IFC, Festival Walk) offer 1-2 hours free with minimum spend at participating retailers. Free overnight street parking exists in a handful of less central districts but is not reliable for daily use.`,
+      },
+    ],
+  },
   '/hong-kong/selling-guide': {
     title: `Selling a Car in Hong Kong Before You Leave: 6-Week Countdown`,
     desc: `Departing expats: how to sell a car in Hong Kong with maximum HK$ recovery. The 6-week countdown, dealer vs private vs auction, TD forms, export route, insurance gap, and the deductions you can sometimes claim.`,
     type: `article`,
+  },
+  '/singapore/parallel-import-cars': {
+    title: `Parallel Import Cars in Singapore: AD vs PI for UK Expats (2026)`,
+    desc: `When parallel imports save UK expats real money in Singapore (7-12% on small cars, 8-12% on Continental marques) — and when the saving disappears once you account for warranty, financing, resale value, service network, and spec differences.`,
+    type: `article`,
+    faq: [
+      {
+        q: `Are parallel imports legal in Singapore?`,
+        a: `Yes. Parallel imports are fully legal and regulated by LTA. PIs must be CASE-Trust accredited to operate transparently. Most major parallel importers (Vincar, Republic Auto, Cars & Stars) have been in business for 15+ years.`,
+      },
+      {
+        q: `What's the typical price saving on a parallel-imported car in Singapore?`,
+        a: `7-12% on small cars (Corolla, Mazda 3, Vezel) and 8-12% on premium marques (BMW, Mercedes). On a S$160,000 Corolla that's roughly S$12,000-S$18,000; on a BMW 3-Series it's S$20,000-S$35,000. Resale-value erosion typically eats 25-40% of that saving over 5 years.`,
+      },
+      {
+        q: `Will my Singapore bank finance a parallel-imported car?`,
+        a: `Generally yes for new cars from major brands through major PIs. DBS, OCBC, UOB and Standard Chartered all finance PI cars at the same MAS LTV rates as AD cars (50-60% maximum loan-to-value). Niche brands or very small PIs may face stricter scrutiny.`,
+      },
+    ],
   },
   '/singapore/funding-car-purchase': {
     title: `Funding a Car in Singapore: UK Expat Transfer Guide 2026`,
