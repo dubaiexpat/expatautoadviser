@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 /**
  * Unified Brevo email capture for ExpatAutoAdviser.
@@ -46,9 +46,17 @@ export default function EmailCapture({
     firstMagnet ||
     (city === 'sg' ? 'eaa-sg-car-buyer-checklist' : 'eaa-hk-car-buyer-guide');
 
+  // Re-entry guard: useRef sets synchronously, so a fast double-click or
+  // mobile double-tap can't race past the button-disabled state before
+  // React commits it. Without this, the same /api/subscribe call fires
+  // twice → two identical magnet emails delivered. (28 Apr 2026.)
+  const submittingRef = useRef(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (submittingRef.current) return;
     if (!email || !email.includes('@')) return;
+    submittingRef.current = true;
     setStatus('loading');
 
     try {

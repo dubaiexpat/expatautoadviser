@@ -29,7 +29,7 @@
  *   BREVO_EAA_PENDING_LIST_ID  — numeric list ID of EAA pending list
  */
 
-import { MAGNETS, buildMagnetEmailHtml, buildMagnetEmailText, EMAIL_SENDER } from './magnets.js';
+import { MAGNETS, buildMagnetEmailHtml, buildMagnetEmailText, EMAIL_SENDER, EMAIL_REPLY_TO } from './magnets.js';
 
 /* ── Brevo attribute pre-declaration ──────────────────────
  * Brevo silently drops attributes that haven't been pre-declared in the
@@ -158,6 +158,7 @@ export default async function handler(req, res) {
           },
           body: JSON.stringify({
             sender: EMAIL_SENDER,
+            replyTo: EMAIL_REPLY_TO,
             to: [{ email }],
             subject: magnet.subject,
             htmlContent: buildMagnetEmailHtml(magnet, emailMagnetKey),

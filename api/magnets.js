@@ -16,7 +16,8 @@
 
 export const SITE_BASE_URL = 'https://www.expatautoadviser.com';
 const SENDER_NAME = 'Patrick at ExpatAutoAdviser';
-const SENDER_EMAIL = 'partnerships@expatautoadviser.com';
+const SENDER_EMAIL = 'patrick@expatautoadviser.com';
+const REPLY_TO_EMAIL = 'newmediaworldpte@gmail.com';
 
 // Affiliate URL helper (NordVPN — useful for keeping UK banking apps working
 // from SG/HK during the first 90 days). Tracking suffixes unique per placement.
@@ -96,6 +97,7 @@ function siteLinkUrl(magnetSlug, path) {
 
 /** Sender details exported so the subscribe route stays in sync with the template. */
 export const EMAIL_SENDER = { name: SENDER_NAME, email: SENDER_EMAIL };
+export const EMAIL_REPLY_TO = { email: REPLY_TO_EMAIL, name: SENDER_NAME };
 
 /**
  * Build the HTML body for a magnet delivery email.
