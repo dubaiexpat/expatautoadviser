@@ -195,8 +195,8 @@ const META = {
     ],
   },
   '/hong-kong/buying-guide': {
-    title: `Buying a Car in Hong Kong: Real Cost with FRT 46–132% Bands (2026)`,
-    desc: `Hong Kong car prices nearly double once First Registration Tax bites (46-132%). Full price stack on HKD 200k vs HKD 800k cars, dealer vs private vs auction, and whether buying makes sense over a 2-year expat assignment.`,
+    title: `Buying a Car in Hong Kong 2026: FRT 46–132% Real Cost`,
+    desc: `Hong Kong car prices nearly double once FRT (46-132%) bites. Worked HKD 200k vs 800k stacks, dealer vs private, and the buy-vs-lease calc for a 2-year posting.`,
     type: `article`,
     faq: [
       {
@@ -225,8 +225,8 @@ const META = {
     ],
   },
   '/hong-kong/frt-tax-explained': {
-    title: `Hong Kong First Registration Tax Rates 2026: 46–132% Bands + Worked Examples`,
-    desc: `Hong Kong's First Registration Tax adds 46% to 132% to the cost of a new private car in 2026. See the progressive bands, how taxable value is set, EV concession rules, and worked examples for a HKD 200k vs HKD 800k car.`,
+    title: `Hong Kong First Registration Tax 2026: 46–132% Bands`,
+    desc: `Hong Kong's FRT adds 46-132% to a new private car in 2026. Progressive bands, how taxable value is set, EV concessions, and worked HKD 200k vs 800k examples.`,
     type: `article`,
     faq: [
       {
@@ -270,8 +270,8 @@ const META = {
     ],
   },
   '/hong-kong/licence-conversion': {
-    title: `Convert UK Driving Licence to Hong Kong: Direct vs Test (2026)`,
-    desc: `Hong Kong recognises UK and 30+ foreign driving licences for direct conversion — no test required. Full list of eligible countries, the application steps, fees, and what to do if yours isn't on it.`,
+    title: `Convert UK Licence to Hong Kong: Direct vs Test 2026`,
+    desc: `Hong Kong accepts UK + 30 foreign licences for direct conversion (no test). Full list, application steps, fees, and what to do if yours is not eligible.`,
     type: `article`,
     faq: [
       {
@@ -360,12 +360,12 @@ const META = {
   },
   '/singapore/subscription-vs-ownership': {
     title: `Car Subscription vs Ownership in Singapore for Expats`,
-    desc: `Car subscription vs ownership in Singapore: how Carro Leap and Drive Lah work, what's typically bundled, illustrative cost comparison, and when each option suits expats.`,
+    desc: `Car subscription vs ownership in Singapore: how Carro Leap and Drive Lah work, what's bundled, cost comparison, and when each suits expats.`,
     type: `article`,
   },
   '/hong-kong/parking-costs': {
-    title: `Hong Kong Parking Costs for Expats 2026: HK$1,500–HK$12,000/Month`,
-    desc: `What parking actually costs in different parts of Hong Kong in 2026 — the three layers (residential, office, discretionary), district-by-district anchor rates, and how parking dominates the buy-vs-lease calculation for expat car ownership.`,
+    title: `Hong Kong Parking Costs 2026: HK$1,500–12,000/mo`,
+    desc: `What parking actually costs across Hong Kong in 2026 — three layers (residential, office, discretionary), district anchor rates, and the buy-vs-lease impact.`,
     type: `article`,
     faq: [
       {
@@ -383,13 +383,13 @@ const META = {
     ],
   },
   '/hong-kong/selling-guide': {
-    title: `Selling a Car in Hong Kong Before You Leave: 6-Week Countdown`,
-    desc: `Departing expats: how to sell a car in Hong Kong with maximum HK$ recovery. The 6-week countdown, dealer vs private vs auction, TD forms, export route, insurance gap, and the deductions you can sometimes claim.`,
+    title: `Selling Your Car in Hong Kong: 6-Week Exit Countdown`,
+    desc: `Departing expats: maximise HK$ recovery selling a car in Hong Kong. 6-week plan, dealer vs private vs auction, TD forms, export route, insurance gap.`,
     type: `article`,
   },
   '/singapore/coe-bidding-strategy': {
-    title: `COE Bidding Strategy for UK Expats in Singapore: 3 Approaches (2026)`,
-    desc: `How Singapore's twice-monthly COE auction actually works, the 3 bidding strategies UK expats use (Top of Market / Recent Cut-off / Patient Below), worked outcomes, when to bid vs wait, and the most common S$10-15k mistakes.`,
+    title: `Singapore COE Bidding 2026: 3 Strategies for UK Expats`,
+    desc: `How Singapore's twice-monthly COE auction works, the 3 bidding strategies UK expats use, worked outcomes, when to bid vs wait, and the S$10-15k mistakes to avoid.`,
     type: `article`,
     faq: [
       {
@@ -406,9 +406,47 @@ const META = {
       },
     ],
   },
+  '/singapore/selling-guide': {
+    title: `Selling Your Car Leaving Singapore: PARF + COE Rebates 2026`,
+    desc: `Departing UK expats: claim PARF and COE rebates, pick dealer vs instant-offer vs private sale, and avoid the deadline traps that cost four-figure refunds.`,
+    type: `article`,
+    faq: [
+      {
+        q: `How is the PARF rebate calculated when selling a car in Singapore?`,
+        a: `PARF rebate is a percentage of the original ARF (Additional Registration Fee) paid when the car was first registered, stepping down by age: 75% if deregistered up to 5 years, 70% (5-6yr), 65% (6-7yr), 60% (7-8yr), 55% (8-9yr), 50% (9-10yr), zero after 10 years. The age bands tip over on the registration date itself, not the calendar month — deregistering one day late can drop you a 5% tier and cost four figures.`,
+      },
+      {
+        q: `What's the difference between PARF rebate and COE rebate?`,
+        a: `PARF is calculated from the original ARF and only applies if you deregister before 10 years. COE rebate is the unused portion of the 10-year COE pro-rata, calculated on the original Quota Premium (QP) — not what you paid for the car or current COE prices. Both are paid by LTA directly to your bank account within 7-14 working days of deregistration, on top of whatever the buyer pays for the vehicle.`,
+      },
+      {
+        q: `Should I sell to a dealer or privately when leaving Singapore?`,
+        a: `Dealer or instant-offer (Carro/Motorist) is faster — 1-3 weeks turnaround — and they handle deregistration paperwork, but you take roughly 8-15% below private-sale value as their margin. Private sale via sgcarmart gets the highest gross but takes 4-8 weeks of viewings and negotiations. The LTA rebate is the same either way — only the cash from the buyer changes. For most departing expats with under six weeks before flying out, dealer routes win on a time-adjusted basis.`,
+      },
+    ],
+  },
+  '/singapore/car-insurance-vs-hong-kong': {
+    title: `Expat Car Insurance: Singapore vs Hong Kong 2026`,
+    desc: `SG vs HK car insurance: compulsory cover, NCD transfer, premiums, the SG forced-comp cliff at year 7, year-1 and year-5 GBP costs, and HK loadings (30-40%).`,
+    type: `article`,
+    faq: [
+      {
+        q: `Is car insurance cheaper in Singapore or Hong Kong for UK expats?`,
+        a: `In GBP terms the two markets are within striking distance of each other. Year-one comprehensive on a mid-tier saloon with UK NCD transferred runs roughly £1,180-1,770 in Singapore and £1,220-1,830 in Hong Kong. By year five with a clean record the gap narrows further (~£710-1,060 SG vs ~£760-1,020 HK). Hong Kong has a wider variance band because postcode and parking location matter much more — Mid-Levels with private parking versus Tai Po outdoors can be a 30-40% premium swing on the same driver.`,
+      },
+      {
+        q: `Will my UK no-claims discount transfer to Singapore or Hong Kong?`,
+        a: `Both markets accept UK NCD on transfer with a current certificate from your UK insurer (dated within 24 months). Singapore is more standardised — major insurers (NTUC Income, AIG, FWD, Direct Asia) accept up to 50% NCD. Hong Kong is more variable — AIG, AXA and Zurich generally accept it; smaller insurers may haircut or decline. HK has a higher NCD ceiling (60-65%) so a long-tenured expat can end up paying less in HK in real terms.`,
+      },
+      {
+        q: `What's the difference between car insurance rules in Singapore and Hong Kong?`,
+        a: `The biggest structural difference is Singapore's forced-comprehensive cliff at year 7 — most insurers won't quote third-party-only on cars older than 7 years. Hong Kong has no such cliff, so you can keep a 12-year-old car on TPL-only. Excess is also structured differently: SG typical excess is S$500-1,000, HK is HK$3,000-6,000 (roughly equivalent in GBP). HK also has typhoon-flood-landslide loadings and Mainland China driving exclusions that SG doesn't.`,
+      },
+    ],
+  },
   '/singapore/wise-vs-bank-transfer-car-deposits': {
-    title: `Wise vs Bank Transfer for Car Deposits: UK Expats to Singapore & HK (2026)`,
-    desc: `What UK high-street banks actually charge on £25-80k transfers to Singapore or Hong Kong (mostly hidden in 2-4% FX margins) vs what Wise charges (transparent 0.4-0.6% + small fee). Worked examples and the timing playbook.`,
+    title: `Wise vs Bank Transfer for Car Deposits: SG & HK 2026`,
+    desc: `What UK banks really charge on £25-80k transfers to SG/HK (2-4% hidden FX margin) vs Wise (transparent 0.4-0.6% + fee). Worked examples + timing playbook.`,
     type: `article`,
     faq: [
       {
@@ -426,8 +464,8 @@ const META = {
     ],
   },
   '/singapore/parallel-import-cars': {
-    title: `Parallel Import Cars in Singapore: AD vs PI for UK Expats (2026)`,
-    desc: `When parallel imports save UK expats real money in Singapore (7-12% on small cars, 8-12% on Continental marques) — and when the saving disappears once you account for warranty, financing, resale value, service network, and spec differences.`,
+    title: `Parallel Import Cars in Singapore: AD vs PI for UK Expats`,
+    desc: `When parallel imports save UK expats money in Singapore (7-12% on small cars, 8-12% on Continentals) — and when warranty, financing, and resale erase the gap.`,
     type: `article`,
     faq: [
       {
@@ -522,7 +560,7 @@ const META = {
   },
   '/contact': {
     title: `Contact ExpatAutoAdviser — Singapore & Hong Kong Car Help`,
-    desc: `Get in touch with ExpatAutoAdviser. Questions about expat car ownership in Singapore or Hong Kong, content corrections, or partnership enquiries — we read every message.`,
+    desc: `Get in touch with ExpatAutoAdviser. Questions about expat car ownership in Singapore or Hong Kong, content corrections, or partnerships — we read everything.`,
     type: `website`,
   },
   '/privacy': {
