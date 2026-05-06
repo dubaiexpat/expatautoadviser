@@ -14,6 +14,7 @@ export default function SGCostOfDriving() {
         { label: 'Buying Guide', to: '/singapore/buying-guide' },
         { label: 'Car Loans', to: '/singapore/car-loans' },
         { label: 'Subscription vs Ownership', to: '/singapore/subscription-vs-ownership' },
+        { label: 'Road Tax & Vehicle Fees', to: '/singapore/road-tax-vehicle-fees' },
       ]}
       markdown={markdown}
     />

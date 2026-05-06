@@ -54,7 +54,7 @@ export default function SGInsuranceGuide() {
       city="sg"
       title="Singapore Car Insurance Guide for Expats"
       description="Car insurance in Singapore explained for expats: what's bundled in leases, NCD transfers, third-party vs comprehensive, and what to do if you're buying."
-     relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }]}>
+     relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }, { label: 'SG vs HK Insurance', to: '/singapore/car-insurance-vs-hong-kong' }]}>
       <div style={{ width: "100%", height: "clamp(220px,35vw,520px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Red car Singapore" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.35) 0%, transparent 60%)" }} />

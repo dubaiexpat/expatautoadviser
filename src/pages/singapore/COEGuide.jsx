@@ -15,6 +15,7 @@ export default function SGCOEGuide() {
         { label: 'Buying Guide', to: '/singapore/buying-guide' },
         { label: 'Cost of Driving (ERP)', to: '/singapore/cost-of-driving' },
         { label: 'Car Loans (MAS LTV)', to: '/singapore/car-loans' },
+        { label: 'COE Bidding Strategy', to: '/singapore/coe-bidding-strategy' },
       ]}
       markdown={markdown}
     />

@@ -55,7 +55,7 @@ export default function SGLeasingGuide() {
       city="sg"
       title="Singapore Car Leasing Guide for Expats"
       description="Everything expats need to know about leasing a car in Singapore: costs, what's bundled, COE explained, how to choose a lease company, and what to watch out for."
-     relatedLinks={[{ label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }, { label: 'EV Guide', to: '/singapore/ev-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }]}>
+     relatedLinks={[{ label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }, { label: 'EV Guide', to: '/singapore/ev-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }, { label: 'Lease Checker', to: '/singapore/lease-checker' }]}>
       <div style={{ width: "100%", height: "clamp(220px,35vw,520px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Car on Singapore expressway" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.35) 0%, transparent 60%)" }} />

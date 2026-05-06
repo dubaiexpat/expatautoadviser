@@ -14,6 +14,8 @@ export default function SGBuyingGuide() {
         { label: 'Car Loans (MAS LTV)', to: '/singapore/car-loans' },
         { label: 'Subscription vs Ownership', to: '/singapore/subscription-vs-ownership' },
         { label: 'Cost of Driving (ERP)', to: '/singapore/cost-of-driving' },
+        { label: 'Parallel Import Cars', to: '/singapore/parallel-import-cars' },
+        { label: 'Selling Guide', to: '/singapore/selling-guide' },
       ]}
       markdown={markdown}
     />

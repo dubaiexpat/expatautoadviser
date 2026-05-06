@@ -20,7 +20,7 @@ const faqItems = [
 
 export default function HKLeasingGuide() {
   return (
-    <Layout city="hk" active="Leasing Guide" relatedLinks={[{ label: 'Should I Get a Car?', to: '/hong-kong/should-i-get-a-car' }, { label: 'Insurance Guide', to: '/hong-kong/insurance-guide' }, { label: 'EV Guide', to: '/hong-kong/ev-guide' }, { label: 'Cost Calculator', to: '/hong-kong/calculators' }]}>
+    <Layout city="hk" active="Leasing Guide" relatedLinks={[{ label: 'Should I Get a Car?', to: '/hong-kong/should-i-get-a-car' }, { label: 'Insurance Guide', to: '/hong-kong/insurance-guide' }, { label: 'EV Guide', to: '/hong-kong/ev-guide' }, { label: 'Cost Calculator', to: '/hong-kong/calculators' }, { label: 'Lease Checker', to: '/hong-kong/lease-checker' }]}>
       {/* Hero */}
       <div style={{ width: "100%", height: "clamp(220px,35vw,520px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Car on Hong Kong road" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }} />

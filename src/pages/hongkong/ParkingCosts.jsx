@@ -15,6 +15,7 @@ export default function HKParkingCosts() {
         { label: 'Hong Kong Leasing Guide', to: '/hong-kong/leasing-guide' },
         { label: 'Should I Get a Car in HK?', to: '/hong-kong/should-i-get-a-car' },
         { label: 'First Registration Tax Explained', to: '/hong-kong/frt-tax-explained' },
+        { label: 'Tunnel Tolls Explained', to: '/hong-kong/tunnel-tolls-explained' },
       ]}
       markdown={markdown}
     />

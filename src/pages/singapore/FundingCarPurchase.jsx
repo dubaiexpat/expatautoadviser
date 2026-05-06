@@ -15,6 +15,7 @@ export default function SGFundingCarPurchase() {
         { label: 'Buying Guide', to: '/singapore/buying-guide' },
         { label: 'Car Loans (MAS LTV Rules)', to: '/singapore/car-loans' },
         { label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' },
+        { label: 'Wise vs Bank Transfer', to: '/singapore/wise-vs-bank-transfer-car-deposits' },
       ]}
       markdown={markdown}
     />

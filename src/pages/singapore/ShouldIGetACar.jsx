@@ -21,7 +21,7 @@ const faqItems = [
 
 export default function SGShouldIGetACar() {
   return (
-    <Layout city="sg" active="Should I Get a Car?" relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }]}>
+    <Layout city="sg" active="Should I Get a Car?" relatedLinks={[{ label: 'Leasing Guide', to: '/singapore/leasing-guide' }, { label: 'Buying Guide', to: '/singapore/buying-guide' }, { label: 'Insurance Guide', to: '/singapore/insurance-guide' }, { label: 'Cost Calculator', to: '/singapore/calculators' }, { label: 'New Arrival Checklist', to: '/singapore/new-arrival' }]}>
       <div style={{ width: "100%", height: "clamp(220px,35vw,520px)", overflow: "hidden", borderRadius: 12, marginBottom: 32, position: "relative" }}>
         <img src={HERO_IMG} alt="Singapore MRT and city" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,26,46,0.35) 0%, transparent 60%)" }} />

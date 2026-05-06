@@ -195,8 +195,8 @@ const META = {
     ],
   },
   '/hong-kong/buying-guide': {
-    title: `Buying a Car in Hong Kong 2026: FRT 46–132% Real Cost`,
-    desc: `Hong Kong car prices nearly double once FRT (46-132%) bites. Worked HKD 200k vs 800k stacks, dealer vs private, and the buy-vs-lease calc for a 2-year posting.`,
+    title: `Buying a Car in Hong Kong 2026: Real Cost After FRT Bands`,
+    desc: `Hong Kong car prices nearly double once FRT (46–132%) bites. Worked HKD 200k vs 800k buyer stacks, dealer vs private, and the buy-vs-lease calc for short postings.`,
     type: `article`,
     faq: [
       {
@@ -225,8 +225,8 @@ const META = {
     ],
   },
   '/hong-kong/frt-tax-explained': {
-    title: `Hong Kong First Registration Tax 2026: 46–132% Bands`,
-    desc: `Hong Kong's FRT adds 46-132% to a new private car in 2026. Progressive bands, how taxable value is set, EV concessions, and worked HKD 200k vs 800k examples.`,
+    title: `Hong Kong First Registration Tax: Private Car Rates 2026`,
+    desc: `Hong Kong first registration tax rates for private cars in 2026 — full progressive bands (46–132%), how taxable value is set, EV concessions and worked HKD examples.`,
     type: `article`,
     faq: [
       {
@@ -270,7 +270,7 @@ const META = {
     ],
   },
   '/hong-kong/licence-conversion': {
-    title: `Convert UK Licence to Hong Kong: Direct vs Test 2026`,
+    title: `Convert UK Driving Licence to Hong Kong (No Test) 2026`,
     desc: `Hong Kong accepts UK + 30 foreign licences for direct conversion (no test). Full list, application steps, fees, and what to do if yours is not eligible.`,
     type: `article`,
     faq: [
@@ -354,18 +354,18 @@ const META = {
     type: `article`,
   },
   '/singapore/child-car-seats': {
-    title: `Child Car Seats and ISOFIX Laws in Singapore`,
-    desc: `Singapore's child restraint rules for expat families: the 1.35m height threshold, approved standards, the S$150 fine, and the taxi vs private-hire vehicle exemption.`,
+    title: `Child Car Seats Singapore 2026: ISOFIX, Laws & S$150 Fine`,
+    desc: `Singapore child car seat rules for expat families — the 1.35m height law, ISOFIX standards, the S$150 fine, and the taxi/private-hire vehicle exemption.`,
     type: `article`,
   },
   '/singapore/subscription-vs-ownership': {
-    title: `Car Subscription vs Ownership in Singapore for Expats`,
-    desc: `Car subscription vs ownership in Singapore: how Carro Leap and Drive Lah work, what's bundled, cost comparison, and when each suits expats.`,
+    title: `Car Subscription vs Ownership Singapore: Cost & 2026 Verdict`,
+    desc: `Car subscription vs ownership in Singapore — how Carro Leap and Drive Lah price up, what's bundled, full cost comparison, and which suits expats best.`,
     type: `article`,
   },
   '/hong-kong/parking-costs': {
-    title: `Hong Kong Parking Costs 2026: HK$1,500–12,000/mo`,
-    desc: `What parking actually costs across Hong Kong in 2026 — three layers (residential, office, discretionary), district anchor rates, and the buy-vs-lease impact.`,
+    title: `Hong Kong Parking Costs 2026: Rates by District`,
+    desc: `Hong Kong parking by district in 2026 — residential, office and visitor rates side-by-side, plus buy-vs-lease implications and where rents are softening.`,
     type: `article`,
     faq: [
       {
