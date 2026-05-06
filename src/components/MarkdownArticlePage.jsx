@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import Layout from './Layout';
 import ArticleRenderer from './ArticleRenderer';
 
@@ -14,7 +15,62 @@ const CITY_LABELS = {
   hk: 'Hong Kong',
 };
 
+/**
+ * Detect affiliate programme from a redirector URL.
+ * Returns null if it's not a known affiliate redirector.
+ */
+function detectAffiliateProgramme(url) {
+  if (!url || typeof url !== 'string') return null;
+  try {
+    const u = new URL(url);
+    const p = u.searchParams;
+    const host = u.hostname.replace(/^www\./, '');
+
+    if (host === 'go.nordvpn.net') return { programme: 'nordvpn', clickref: p.get('aff_sub') };
+    if (host === 'safetywing.com' && p.has('referenceID')) return { programme: 'safetywing', clickref: p.get('utm_campaign') };
+    if (host === 'deal.incogni.io') return { programme: 'incogni', clickref: p.get('aff_sub') };
+    if (host === 'clk.omgt6.com') return { programme: 'optimise', clickref: p.get('MID') };
+    if (host === 'awin1.com') return { programme: 'awin', clickref: p.get('clickref') };
+
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export default function MarkdownArticlePage({ city, title, description, heroImage, heroPosition, relatedLinks, markdown }) {
+  const articleRef = useRef(null);
+
+  // Click delegator: catch clicks on affiliate redirector links inside the
+  // rendered markdown and emit a GA4 affiliate_click event with the programme
+  // + per-placement attribution slug. Bypassed entirely on environments
+  // without window.gtag (e.g. SSR / prerender).
+  useEffect(() => {
+    const node = articleRef.current;
+    if (!node || typeof window === 'undefined') return;
+
+    function handleClick(e) {
+      const anchor = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!anchor) return;
+      const detected = detectAffiliateProgramme(anchor.href);
+      if (!detected) return;
+      // eslint-disable-next-line no-undef
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'affiliate_click', {
+          event_category: 'affiliate',
+          event_label: detected.programme,
+          programme: detected.programme,
+          clickref: detected.clickref,
+          destination_host: (() => { try { return new URL(anchor.href).hostname; } catch { return null; } })(),
+          page_path: window.location.pathname,
+        });
+      }
+    }
+
+    node.addEventListener('click', handleClick);
+    return () => node.removeEventListener('click', handleClick);
+  }, []);
+
   const imgStyle = heroPosition
     ? { ...HERO_STYLES.img, objectPosition: heroPosition }
     : HERO_STYLES.img;
@@ -27,7 +83,7 @@ export default function MarkdownArticlePage({ city, title, description, heroImag
           <span style={HERO_STYLES.badgeText}>{CITY_LABELS[city]}</span>
         </div>
       </div>
-      <div style={{ maxWidth: 760 }}>
+      <div ref={articleRef} style={{ maxWidth: 760 }}>
         <p style={{ color: '#0d9488', fontWeight: 600, fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 8 }}>{CITY_LABELS[city]}</p>
         {/* Only inject an h1 when the markdown body doesn't already start with one — avoids the h1_multiple SEO warning. */}
         {!/^\s*#\s+/.test(markdown) && (
