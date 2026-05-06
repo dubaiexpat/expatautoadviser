@@ -37,6 +37,9 @@ import SGWiseVsBank from './pages/singapore/WiseVsBank';
 import SGCOEBiddingStrategy from './pages/singapore/COEBiddingStrategy';
 import HKParkingCosts from './pages/hongkong/ParkingCosts';
 import SGSellingGuide from './pages/singapore/SellingGuide';
+import SGInsuranceVsHongKong from './pages/singapore/InsuranceVsHongKong';
+import SGRoadTaxAndFees from './pages/singapore/RoadTaxAndFees';
+import HKTunnelTolls from './pages/hongkong/TunnelTolls';
 import Privacy from './pages/legal/Privacy';
 import Terms from './pages/legal/Terms';
 import Cookies from './pages/legal/Cookies';
@@ -126,6 +129,9 @@ export function AppRoutes() {
       <Route path="/singapore/wise-vs-bank-transfer-car-deposits" element={<SGWiseVsBank />} />
       <Route path="/singapore/coe-bidding-strategy" element={<SGCOEBiddingStrategy />} />
       <Route path="/singapore/selling-guide" element={<SGSellingGuide />} />
+      <Route path="/singapore/car-insurance-vs-hong-kong" element={<SGInsuranceVsHongKong />} />
+      <Route path="/singapore/road-tax-vehicle-fees" element={<SGRoadTaxAndFees />} />
+      <Route path="/hong-kong/tunnel-tolls-explained" element={<HKTunnelTolls />} />
       <Route path="/hong-kong" element={<HongKong />} />
       <Route path="/hong-kong/should-i-get-a-car" element={<HKShouldIGetACar />} />
       <Route path="/hong-kong/buying-guide" element={<HKBuyingGuide />} />

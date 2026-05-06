@@ -425,6 +425,44 @@ const META = {
       },
     ],
   },
+  '/hong-kong/tunnel-tolls-explained': {
+    title: `Hong Kong Tunnel Tolls Explained: UK Expat Guide to Time-Varying Tolls (2026)`,
+    desc: `The three cross-harbour tunnels under Time-Varying Tolls, plus Tai Lam, Tate's Cairn and Lion Rock — what UK expats actually pay each month, worked commute examples, HKeToll setup, and the residential decisions that change the maths.`,
+    type: `article`,
+    faq: [
+      {
+        q: `How much do Hong Kong tunnel tolls cost in 2026?`,
+        a: `Under the Time-Varying Tolls system that has been running since December 2023, private-car cross-harbour tolls vary by time of day. At peak (Mon-Fri morning ~7:30-10:15 and evening ~17:00-19:30), expect around HK$40 at the Cross-Harbour Tunnel and Eastern Harbour Crossing, and around HK$60 at the Western Harbour Crossing. Off-peak rates drop to around HK$20-25, and weekend/public-holiday rates are a flat HK$25 across all three. Always verify current rates via the HK Transport Department or HKeToll app.`,
+      },
+      {
+        q: `What is HKeToll and how do I sign up as a new Hong Kong expat?`,
+        a: `HKeToll is the government's licence-plate-recognition tolling system that has replaced toll booths at all government-operated tunnels including the three cross-harbour tunnels, Tate's Cairn, Lion Rock and Aberdeen. Sign up at hketoll.gov.hk using your HK ID and vehicle registration document, link a credit card or bank account for auto-top-up, and add your licence plate. The system then deducts tolls automatically as you drive through. Set this up before taking possession of a car — driving through a government tunnel without an active account triggers HK$50-100 administrative fees on top of the unpaid toll.`,
+      },
+      {
+        q: `Which Hong Kong cross-harbour tunnel should I use for my commute?`,
+        a: `Under Time-Varying Tolls, the Cross-Harbour Tunnel and Eastern Harbour Crossing are now priced identically at every band, and the Western Harbour Crossing carries roughly a HK$20 peak premium. The financial argument for choosing the cheapest tunnel is now weak; the time argument dominates. Most UK expats settle on: WHC for time-critical morning commutes (faster, less congested, worth the premium), CHT or EHC for evening returns (less time pressure), and shifting timing into off-peak windows where possible (a HK$80 round trip drops to ~HK$50). Check Google Maps in real time — the fastest tunnel varies across the four time-of-day bands.`,
+      },
+    ],
+  },
+  '/singapore/road-tax-vehicle-fees': {
+    title: `Road Tax and Vehicle Fees in Singapore: UK Expat Guide (2026)`,
+    desc: `Singapore road tax explained — petrol vs diesel vs EV formulas, the 6× diesel surcharge, the inspection cycle (years 3-10 biennial, 10+ annual), VES banding, and a worked annual recurring-cost example for typical expat cars.`,
+    type: `article`,
+    faq: [
+      {
+        q: `How much is road tax for a typical car in Singapore?`,
+        a: `For a typical UK expat car of 1.6L-2.5L petrol, road tax sits in the S$700-1,500/year range. A 1.6L compact saloon runs roughly S$740-760/year; a 2.0L mid-size saloon ~S$900-950; a 2.5L SUV ~S$1,400-1,500; a 3.0L executive ~S$2,100-2,200. The exact figure is engine-cc-precise — pull it from the LTA OneMotoring road tax calculator for your specific vehicle.`,
+      },
+      {
+        q: `Why is diesel road tax so much higher in Singapore?`,
+        a: `Diesel cars pay six times the standard cc-based road tax plus an additional Special Tax surcharge calculated per cc per year. A 2.0L diesel SUV that would cost ~S$925 as a petrol equivalent runs closer to S$5,500-6,000/year as a diesel — a ~S$50,000 swing over 10 years on tax alone, before VES banding penalties. Singapore's tax structure is designed to push owners toward petrol, hybrid and EV.`,
+      },
+      {
+        q: `What happens to road tax when a Singapore COE is renewed at year 10?`,
+        a: `Renewed-COE cars pay a 10% annual road-tax surcharge on top of the standard formula for years 11-20. Renewing the COE also forfeits the PARF rebate permanently — you can never claim it once you renew. For most UK expats this decision falls to the next owner because year 10 is past their typical departure date, but if you're considering a longer Singapore stay (8+ years), the year-10 fork is worth modelling at purchase.`,
+      },
+    ],
+  },
   '/singapore/car-insurance-vs-hong-kong': {
     title: `Expat Car Insurance: Singapore vs Hong Kong 2026`,
     desc: `SG vs HK car insurance: compulsory cover, NCD transfer, premiums, the SG forced-comp cliff at year 7, year-1 and year-5 GBP costs, and HK loadings (30-40%).`,
