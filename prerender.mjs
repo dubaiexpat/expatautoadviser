@@ -426,8 +426,8 @@ const META = {
     ],
   },
   '/hong-kong/tunnel-tolls-explained': {
-    title: `Hong Kong Tunnel Tolls Explained: UK Expat Guide to Time-Varying Tolls (2026)`,
-    desc: `The three cross-harbour tunnels under Time-Varying Tolls, plus Tai Lam, Tate's Cairn and Lion Rock — what UK expats actually pay each month, worked commute examples, HKeToll setup, and the residential decisions that change the maths.`,
+    title: `Hong Kong Tunnel Tolls 2026: Time-Varying System Explained`,
+    desc: `HK's Time-Varying Tolls across cross-harbour tunnels plus Tai Lam, Tate's Cairn, Lion Rock — what UK expats pay monthly, HKeToll setup, off-peak savings.`,
     type: `article`,
     faq: [
       {
@@ -445,8 +445,8 @@ const META = {
     ],
   },
   '/singapore/road-tax-vehicle-fees': {
-    title: `Road Tax and Vehicle Fees in Singapore: UK Expat Guide (2026)`,
-    desc: `Singapore road tax explained — petrol vs diesel vs EV formulas, the 6× diesel surcharge, the inspection cycle (years 3-10 biennial, 10+ annual), VES banding, and a worked annual recurring-cost example for typical expat cars.`,
+    title: `Singapore Road Tax + Vehicle Fees 2026: UK Expat Guide`,
+    desc: `Singapore road tax for UK expats — petrol vs diesel vs EV formulas, 6× diesel surcharge, inspection cycle, VES banding, worked annual cost for expat cars.`,
     type: `article`,
     faq: [
       {
