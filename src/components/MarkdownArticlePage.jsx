@@ -31,6 +31,7 @@ function detectAffiliateProgramme(url) {
     if (host === 'deal.incogni.io') return { programme: 'incogni', clickref: p.get('aff_sub') };
     if (host === 'clk.omgt6.com') return { programme: 'optimise', clickref: p.get('MID') };
     if (host === 'awin1.com') return { programme: 'awin', clickref: p.get('clickref') };
+    if (host === 'apply.creatory.singsaver.com.sg') return { programme: 'creatory_singsaver', clickref: `o=${p.get('o')}` };
 
     return null;
   } catch {
