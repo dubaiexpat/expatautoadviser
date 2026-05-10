@@ -14,6 +14,8 @@ export default function HKLicenceConversion() {
         { label: 'Buying Guide', to: '/hong-kong/buying-guide' },
         { label: 'Insurance Guide', to: '/hong-kong/insurance-guide' },
         { label: 'Should I Get a Car?', to: '/hong-kong/should-i-get-a-car' },
+        { label: 'FRT Tax Explained', to: '/hong-kong/frt-tax-explained' },
+        { label: 'HK Tunnel Tolls', to: '/hong-kong/tunnel-tolls-explained' },
       ]}
       markdown={markdown}
     />

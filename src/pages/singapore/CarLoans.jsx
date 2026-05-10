@@ -12,6 +12,8 @@ export default function SGCarLoans() {
       heroImage={HERO_IMG}
       relatedLinks={[
         { label: 'Buying Guide', to: '/singapore/buying-guide' },
+        { label: 'Funding a Car Purchase', to: '/singapore/funding-car-purchase' },
+        { label: 'COE Bidding Strategy', to: '/singapore/coe-bidding-strategy' },
         { label: 'Subscription vs Ownership', to: '/singapore/subscription-vs-ownership' },
         { label: 'Cost of Driving (ERP)', to: '/singapore/cost-of-driving' },
       ]}

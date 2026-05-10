@@ -14,6 +14,8 @@ export default function HKInsuranceGuide() {
         { label: 'Buying Guide', to: '/hong-kong/buying-guide' },
         { label: 'FRT Explained', to: '/hong-kong/frt-tax-explained' },
         { label: 'Licence Conversion', to: '/hong-kong/licence-conversion' },
+        { label: 'HK Tunnel Tolls', to: '/hong-kong/tunnel-tolls-explained' },
+        { label: 'HK Selling Guide', to: '/hong-kong/selling-guide' },
       ]}
       markdown={markdown}
     />

@@ -13,7 +13,9 @@ export default function SGChildCarSeats() {
       relatedLinks={[
         { label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' },
         { label: 'Buying Guide', to: '/singapore/buying-guide' },
+        { label: 'Best Family Cars', to: '/singapore/best-family-cars' },
         { label: 'Insurance Guide', to: '/singapore/insurance-guide' },
+        { label: 'Insurance: SG vs HK', to: '/singapore/car-insurance-vs-hong-kong' },
       ]}
       markdown={markdown}
     />

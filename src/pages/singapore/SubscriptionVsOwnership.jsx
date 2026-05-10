@@ -14,6 +14,8 @@ export default function SGSubscriptionVsOwnership() {
         { label: 'Buying Guide', to: '/singapore/buying-guide' },
         { label: 'Leasing Guide', to: '/singapore/leasing-guide' },
         { label: 'Car Loans', to: '/singapore/car-loans' },
+        { label: 'Cost of Driving (ERP)', to: '/singapore/cost-of-driving' },
+        { label: 'Should I Get a Car?', to: '/singapore/should-i-get-a-car' },
       ]}
       markdown={markdown}
     />
