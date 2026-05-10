@@ -463,6 +463,29 @@ const META = {
       },
     ],
   },
+  '/singapore/best-family-cars': {
+    title: `Best Family Cars in Singapore for UK Expats 2026`,
+    desc: `Realistic 2026 family-car options for UK expats — three budget tiers from S$160K to S$340K, top picks per band, used-car alternatives, and key trade-offs.`,
+    type: `article`,
+    faq: [
+      {
+        q: `What's a realistic budget for a family car in Singapore in 2026?`,
+        a: `New family cars start at ~S$160K all-in for a small SUV or saloon (Honda HR-V, Toyota Corolla Cross), rise to S$200-260K for mid-size SUVs (Toyota RAV4, Honda CR-V, Mazda CX-5), and S$260-340K for premium or 7-seater (Volvo XC60, BMW X3, Toyota Alphard). The "under S$100K new car" search result you may have seen is from pre-COE-spike content and isn't achievable in 2026 — COE alone runs ~S$120-125K.`,
+      },
+      {
+        q: `Should UK expat families buy new or used in Singapore?`,
+        a: `For 3-year postings used is almost always the right call. New-car depreciation in years 1-3 is the steepest part of the curve; you won't extract that value before leaving. A 3-year-old Toyota RAV4 or Honda CR-V trades at S$130-148K with 7 years of COE remaining — meaningfully better cost-per-year-of-ownership than buying new and selling at year 3.`,
+      },
+      {
+        q: `Which family car holds value best in Singapore?`,
+        a: `Toyota RAV4 Hybrid leads on resale at year 5 in the mid-SUV segment. Honda CR-V is close behind. Toyota Alphard holds value brutally well across all segments because of strong demand from Japanese parallel-import buyers — a 2-year-old Alphard typically retains 75-85% of its all-in price. European premium SUVs (BMW X3, Mercedes GLC) depreciate faster than Japanese equivalents.`,
+      },
+      {
+        q: `What should I avoid when buying a family car in Singapore?`,
+        a: `Three traps: (1) "cheap" Chinese-brand new cars under S$140K — the new-car price is competitive but resale in SG is unproven and risks 2-3 year postings; (2) parallel-imported Honda Vezel (JDM HR-V) — saves S$15K up front but no SG dealer warranty and weaker resale; (3) Tesla in 2026 — competitive new-car price but high insurance premiums, thin SG service network, and weakening resale. Stick to Japanese-brand authorised dealers for the cleanest 3-year exit picture.`,
+      },
+    ],
+  },
   '/singapore/car-insurance-vs-hong-kong': {
     title: `Expat Car Insurance: Singapore vs Hong Kong 2026`,
     desc: `SG vs HK car insurance: compulsory cover, NCD transfer, premiums, the SG forced-comp cliff at year 7, year-1 and year-5 GBP costs, and HK loadings (30-40%).`,

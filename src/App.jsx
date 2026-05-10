@@ -39,6 +39,7 @@ import HKParkingCosts from './pages/hongkong/ParkingCosts';
 import SGSellingGuide from './pages/singapore/SellingGuide';
 import SGInsuranceVsHongKong from './pages/singapore/InsuranceVsHongKong';
 import SGRoadTaxAndFees from './pages/singapore/RoadTaxAndFees';
+import SGBestFamilyCars from './pages/singapore/BestFamilyCars';
 import HKTunnelTolls from './pages/hongkong/TunnelTolls';
 import Privacy from './pages/legal/Privacy';
 import Terms from './pages/legal/Terms';
@@ -131,6 +132,7 @@ export function AppRoutes() {
       <Route path="/singapore/selling-guide" element={<SGSellingGuide />} />
       <Route path="/singapore/car-insurance-vs-hong-kong" element={<SGInsuranceVsHongKong />} />
       <Route path="/singapore/road-tax-vehicle-fees" element={<SGRoadTaxAndFees />} />
+      <Route path="/singapore/best-family-cars" element={<SGBestFamilyCars />} />
       <Route path="/hong-kong/tunnel-tolls-explained" element={<HKTunnelTolls />} />
       <Route path="/hong-kong" element={<HongKong />} />
       <Route path="/hong-kong/should-i-get-a-car" element={<HKShouldIGetACar />} />
